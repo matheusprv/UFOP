@@ -1,0 +1,14 @@
+<p>
+    Para criar o bit overflow, primeiro foi gerado um output reg denominado bit_overflow.
+    Depois, o if ternário foi alterado para um if normal, onde o op continua sendo a condição, mas ao invés
+    do resultado da operação ser somente o R, ele foi concatenado com o bit_overflow.
+</p>
+<p>
+    Dessa forma, podemos verificar as saídas para os valores de 0 a 15, tanto de A para o B. Porém, para
+    acelerar a visualização do overflow, o A foi iniciado com 0, pois B+0=B e o B foi iniciado com 7.
+</p>
+<p>
+    Para uma soma de doi valores positivos grandes, o resultado será um negativo, caso o overflow seja 
+    considerado como um bit de sinal. Dessa forma, tomando como exemplo a soma 9 (1001) + 13 (1101), teremos
+    um overflow 1 e resultado 0110, que corresponde a 6. Considerando o overflow como bit de sinal, temos o -6.
+</p>

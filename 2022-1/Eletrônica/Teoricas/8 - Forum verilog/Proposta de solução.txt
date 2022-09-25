@@ -1,0 +1,6 @@
+A ideia é ignorar a leitura quando duas teclas forem pressionadas ao mesmo tempo
+Quando duas ou mais são pressionadas ao mesmo tempo, o valor gerado é o default, ou seja, recebe o valor zero
+Dessa forma, pode-se atribuir um valor com uma unidade a mais, assim, o zero recebe um, o dois recebe três e assim por diante.
+Assim, depois basta verificar se o valor é zero, se não, subtrair um, obtendo, então o valor original
+
+O reg s deverá ter 4 bits, para que assim, possa-se cobrir o número 9, que é representado por 1001
