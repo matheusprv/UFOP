@@ -22,11 +22,10 @@ void imprimeTabuleiro(char **);
 //Retorna 0 caso o jogo esteja acontecendo, 1 caso o jogador 1 ganhe, 2 caso o jogador 2 ganhe ou 3 caso de velha
 int jogoFinalziado(char **);
 
-int jogo(char **, char [][TAM_MAX_NOMES]);
+void jogo(char **, char [][TAM_MAX_NOMES]);
 
 //1 para marcar, 2 para salvar, 3 para voltar, 0 caso inválido, -1 posicoes inválidas
-int lerComandos(int *, int*);
-
+int lerComandos(int *, int*, char**);
 
 
 
@@ -135,7 +134,7 @@ void menuNovoJogo(){
         }
     }
 
-    int respostaJogo = jogo(disposicaoJogadas, nomeJogadores);
+    jogo(disposicaoJogadas, nomeJogadores);
 
     liberarMatrizeChar(disposicaoJogadas);
 
@@ -168,48 +167,64 @@ void imprimeTabuleiro(char **disposicaoJogadas){
 
 }
 
-int jogo(char **disposicaoJogadas, char nomeJogadores[][TAM_MAX_NOMES]){
+void jogo(char **disposicaoJogadas, char nomeJogadores[][TAM_MAX_NOMES]){
     
     int numeroJogadas = -1;
-
+    int verificaJogoFinalizado;
+    //Loop para solicitar o usuário um comando
     do{
         numeroJogadas++;
         limparTerminal();
         imprimeTabuleiro(disposicaoJogadas);
         int linha, coluna, comando;
 
+        //Lendo um comando e verificando se ele é válido
         printf("%s, digite o comando: ", nomeJogadores[numeroJogadas%2]);
-        comando = lerComandos(&linha, &coluna);
+        comando = lerComandos(&linha, &coluna, disposicaoJogadas);
 
         while(comando == 0 || comando == -1){
             printf("Comando inválido\n");
             printf("%s, digite o comando: ", nomeJogadores[numeroJogadas%2]);
-            comando = lerComandos(&linha, &coluna);
+            comando = lerComandos(&linha, &coluna, disposicaoJogadas);
         }
 
-        switch(comando){
-            case 1:
-                break;
+        //Executando os comandos
+        if(comando == 1){
+            //Jogador 1 é o X e o jogador 2 é o O
+            disposicaoJogadas[linha][coluna] = numeroJogadas%2 == 0 ? 'X' : 'O';
 
-            case 2:
-                break;
+        }
+        else if(comando == 2){
 
-            case 3:
-                break;
+        }
+        else{
+            //Interrompe o jogo e volta para o menu principal
+            break;
         }
 
-    }while(!jogoFinalziado(disposicaoJogadas));
+        verificaJogoFinalizado = jogoFinalziado(disposicaoJogadas);
 
-    return 1;
+    }while( verificaJogoFinalizado == 0);
+
+    //Exibe o tabuleiro e quem venceu.
+    limparTerminal();
+    imprimeTabuleiro(disposicaoJogadas);
+
+    switch (verificaJogoFinalizado){
+        case 1:
+            printf("%s venceu!\n", nomeJogadores[0]);
+            break;
+        case 2:
+            printf("%s venceu!\n", nomeJogadores[1]);
+            break;
+        default:
+            printf("Empate! Nenhum Jogador venceu!\n");
+    }
 }
 
-//Retorna 0 caso o jogo esteja acontecendo, 1 caso o jogador 1 ganhe, 2 caso o jogador 2 ganhe ou 3 caso de velha
-int jogoFinalziado(char **disposicaoJogadas){
-    return 1;
-}
 
 //1 para marcar, 2 para salvar, 3 para voltar, 0 caso inválido, -1 posicoes inválidas
-int lerComandos(int *linha, int *coluna){
+int lerComandos(int *linha, int *coluna, char ** disposicaoJogadas){
     
     char comando[12];
     //Lendo o comando feito pelo usuário
@@ -224,28 +239,109 @@ int lerComandos(int *linha, int *coluna){
         char charColuna = comando[tamanhoComando-1];
 
         //Transforma o char em inteiro a partir da subtração do valor do inteiro na tabela ascii com o valor de zero também na tabela ascii
-        *linha = charLinha - '0';
-        *coluna = charColuna - '0';
+        *linha = charLinha - '0' - 1;
+        *coluna = charColuna - '0' - 1;
 
-        if(*linha<1 || *linha>3 || *coluna<1 || *coluna>3){
-            if(*linha<1 || *linha>3){
+        //Verificando se a linha e coluna são válidas
+        if(*linha<0 || *linha>2 || *coluna<0 || *coluna>2){
+            if(*linha<0 || *linha>2){
                 printf("Linha inválida.\n");
             }
-            if(*coluna<1 || *coluna>3){
+            if(*coluna<0 || *coluna>2){
                 printf("Coluna inválida.\n");
             }
+            return -1;
+        }
+        //Verificando se é possível utilizar o espaço solicitado
+        if(disposicaoJogadas[*linha][*coluna] != ' '){
+            printf("Esse espaço já foi marcado!\n");
             return -1;
         }
 
         return 1;
     }
+    //Salvar Jogo
     else if (strstr(comando, "salvar") != NULL) {
         return 2;
     }
+    //Voltar para o menu principal
     else if (strstr(comando, "voltar") != NULL) {
         return 3;
     }
+    //Mensagem de comando inválido
     else{
         return 0;
     }
+}
+
+
+//Retorna 0 caso o jogo esteja acontecendo, 1 caso o jogador 1 ganhe, 2 caso o jogador 2 ganhe ou 3 caso de velha
+int jogoFinalziado(char **disposicaoJogadas){
+    char vitoriaJogador1[] = "XXX"; 
+    char vitoriaJogador2[] = "OOO";
+    
+    char posicoesDoTabuleiro[4];
+    posicoesDoTabuleiro[4] = '\0';
+    
+    //Verificando as linhas do tabuleiro
+    for(int l=0; l<3; l++){
+        for(int c=0; c<3;c++){
+            posicoesDoTabuleiro[c] = disposicaoJogadas[l][c];
+        }
+        
+        if(strcmp(posicoesDoTabuleiro, vitoriaJogador1) == 0){
+            return 1;
+        }
+        else if(strcmp(posicoesDoTabuleiro, vitoriaJogador2) == 0){
+            return 2;
+        }
+    }
+
+    //Verificando as colunas do tabuleiro
+    for(int c = 0; c<3; c++){
+        for(int l=0; l<3; l++){
+            posicoesDoTabuleiro[c] = disposicaoJogadas[l][c];
+        }
+
+        if(strcmp(posicoesDoTabuleiro, vitoriaJogador1) == 0){
+            return 1;
+        }
+        else if(strcmp(posicoesDoTabuleiro, vitoriaJogador2) == 0){
+            return 2;
+        }
+    }
+
+    //Verificando na diagonal
+    for(int i=0; i<3; i++){
+        posicoesDoTabuleiro[i] = disposicaoJogadas[i][i];
+    }
+    if(strcmp(posicoesDoTabuleiro, vitoriaJogador1) == 0){
+        return 1;
+    }
+    else if(strcmp(posicoesDoTabuleiro, vitoriaJogador2) == 0){
+        return 2;
+    }
+
+    // Verificando na outra diagonal
+    for(int i=2; i>=0; i--){
+        posicoesDoTabuleiro[i] = disposicaoJogadas[i][2-i];
+    }
+    if(strcmp(posicoesDoTabuleiro, vitoriaJogador1) == 0){
+        return 1;
+    }
+    else if(strcmp(posicoesDoTabuleiro, vitoriaJogador2) == 0){
+        return 2;
+    }
+
+    //Verifica se ainda há espaços em branco, se houver, retorna 0 e o jogo continua, caso contrario, retorna 3, pois deu velha
+    int contemEspacoEmBranco = 0;
+    for(int i =0; i<3; i++){
+        for(int j=0;j<3;j++){
+            if(disposicaoJogadas[i][j] == ' '){
+                contemEspacoEmBranco = 1;
+            }
+        }
+    }
+
+    return contemEspacoEmBranco == 1 ? 0 : 3;
 }
