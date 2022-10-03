@@ -1,9 +1,11 @@
 //Matheus Peixoto Ribeiro Vieira - 22.1.4104
 
+
+//Verificar o número de jogadas para quando retornar do menu principal
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 #define TAM_MAX_NOMES 31
 
@@ -15,7 +17,9 @@ void liberarMatrizesChar(char **matriz);
 
 void imprimeMenuPrincipal(int comandoValido);
 
-void menuNovoJogo();
+void menuPrincipal(char **);
+
+void menuNovoJogo(char **, char [2][TAM_MAX_NOMES], int);
 
 void imprimeTabuleiro(char **);
 
@@ -33,6 +37,20 @@ int main(){
 
     char opcao;
     int comandoValido = 1;
+
+    //Criando a posição das jogadas
+    char **disposicaoJogadas = malloc(3 * sizeof(char));
+    for(int i=0; i<3;i++){
+        disposicaoJogadas[i] = malloc (3 * sizeof(char));
+        
+        //Preenchendo todas as posições com um valor nulo
+        for(int j=0; j<3; j++){
+            disposicaoJogadas[i][j] = ' ';
+        }
+    }
+
+    char nomeJogadores[2][TAM_MAX_NOMES];
+    int qtdJogadores;
     
     imprimeMenuPrincipal(comandoValido);
     lerCaracter(&opcao);
@@ -40,7 +58,7 @@ int main(){
     while (opcao !='0' ){
         switch (opcao){
             case '1':
-                menuNovoJogo();
+                menuNovoJogo(disposicaoJogadas, nomeJogadores, 1);
                 break;
             
             case '2':
@@ -48,11 +66,11 @@ int main(){
                 break;
 
             case '3':
-
+                menuNovoJogo(disposicaoJogadas, nomeJogadores, 0);
                 break;
 
             case '4':
-
+                
                 break;
 
             default:
@@ -63,7 +81,8 @@ int main(){
         imprimeMenuPrincipal(comandoValido);
         lerCaracter(&opcao);
     }
-    
+
+    liberarMatrizesChar(disposicaoJogadas);
 
     return 0;
 }
@@ -74,11 +93,11 @@ void limparTerminal(){
 
 void lerCaracter(char *variavel){
     scanf("%c", variavel);
-    getchar();
-    //fflush(stdin);
+    //Limpando o buffer
+    while (getchar() != '\n');
 }
 
-void liberarMatrizeChar(char **matriz){
+void liberarMatrizesChar(char **matriz){
     for(int i=0; i<3; i++)
         free(matriz[i]);
     free(matriz);
@@ -98,8 +117,8 @@ void imprimeMenuPrincipal(int comandoValido){
     printf("Escolha uma opção: ");
 }
 
-
-void menuNovoJogo(){
+//Recebe 1 caso seja um novo jogo e recebe 0 caso seja para continuar uma partida
+void menuNovoJogo(char **disposicaoJogadas, char nomeJogadores[2][TAM_MAX_NOMES], int novoJogo){
     limparTerminal();
     //Verificando quantos jogadores farão parte da partida
     printf("Digite a quantidade de jogadores (1 ou 2): ");
@@ -116,32 +135,14 @@ void menuNovoJogo(){
     int qtdJogadores = qtdJogadoresChar == '1' ? 1 : 2;
 
     //Salvando nome dos jogadores
-    char nomeJogadores[2][TAM_MAX_NOMES];
     for(int i=0; i<qtdJogadores;i++){
         printf("Digite o nome do Jogador %d: ", i+1);
         fgets(nomeJogadores[i], TAM_MAX_NOMES+1, stdin);
         nomeJogadores[i][strlen(nomeJogadores[i]) -1] = '\0' ;
     }
 
-    //Criando a posição das jogadas
-    char **disposicaoJogadas = malloc(3 * sizeof(char));
-    for(int i=0; i<3;i++){
-        disposicaoJogadas[i] = malloc (3 * sizeof(char));
-        
-        //Preenchendo todas as posições com um valor nulo
-        for(int j=0; j<3; j++){
-            disposicaoJogadas[i][j] = ' ';
-        }
-    }
-
     jogo(disposicaoJogadas, nomeJogadores);
 
-    liberarMatrizeChar(disposicaoJogadas);
-
-    //Somente durante a produção, paa evitar que o jogo saia para o menu sem exibir o que foi modificado
-    //char lixo;
-    //scanf("%c", &lixo);
-    getchar();
 }
 
 
@@ -206,20 +207,37 @@ void jogo(char **disposicaoJogadas, char nomeJogadores[][TAM_MAX_NOMES]){
 
     }while( verificaJogoFinalizado == 0);
 
-    //Exibe o tabuleiro e quem venceu.
-    limparTerminal();
-    imprimeTabuleiro(disposicaoJogadas);
+    
+    //Verifica se o jogo foi finalizado para entrar neste bloco que apaga os dados da partida atual
+    if(verificaJogoFinalizado != 0){
+        //Exibe o tabuleiro e quem venceu.
+        limparTerminal();
+        imprimeTabuleiro(disposicaoJogadas);
 
-    switch (verificaJogoFinalizado){
-        case 1:
-            printf("%s venceu!\n", nomeJogadores[0]);
-            break;
-        case 2:
-            printf("%s venceu!\n", nomeJogadores[1]);
-            break;
-        default:
-            printf("Empate! Nenhum Jogador venceu!\n");
+        //Reiniciando a matriz com um valor nulo
+        for(int i=0; i<3;i++){        
+            for(int j=0; j<3; j++){
+                disposicaoJogadas[i][j] = ' ';
+            }
+        }    
+        switch (verificaJogoFinalizado){
+            case 1:
+                printf("%s venceu!\n", nomeJogadores[0]);
+                break;
+            case 2:
+                printf("%s venceu!\n", nomeJogadores[1]);
+                break;
+            default:
+                printf("Empate! Nenhum Jogador venceu!\n");
+        }   
+
+        //Exibe a mensagem final antes de apagar a tela e voltar para o menu principal
+        printf("Jogo finalizado!\nDigite alguma tecla para continuar.\n");
+        char lixo;
+        scanf("%c", &lixo);
+        getchar();
     }
+
 }
 
 
