@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "cores.c": "cpp",
+        "funcoes.h": "c",
+        "structs.h": "c"
+    }
+}
