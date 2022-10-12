@@ -6,9 +6,53 @@
 #define TAM_MAX_NOMES 66
 
 //Retorna 0 caso o jogo esteja acontecendo, 1 caso o jogador 1 ganhe, 2 caso o jogador 2 ganhe ou 3 caso de velha
-int jogoFinalizado(char **tabuleiro){
-    char vitoriaJogador1[] = "XXX", vitoriaJogador2[] = "OOO";
+int jogoFinalizado(char **tabuleiro, int numJogadas){
+
+    int jogador=numJogadas%2 + 1;
+    char vitoria[4];
+    vitoria[4] = '\0';
+    strcpy(vitoria, ((jogador == 1) ? "XXX" : "OOO"));
     
+    int espacosVazios = 0;
+
+    //verificacoes[0] horizontal - verificacoes[1] vertical
+    //verificacoes[2] diagonal 1 - verificacoes[3] diagonal 2
+    char verificacoes[4][4];
+    
+    
+    //Coletando todos os espaços do tabuleiro e salvando-os como strings para 
+    //depois verificar se corresponde a forma de ganhar da variavel vitoria
+    for(int i=0; i<3;i++){
+
+        //Reiniciando as strings de verificação
+        for(int j =0; j<4; j++){
+            verificacoes[0][j] = '\0';
+            verificacoes[1][j] = '\0';
+        }
+
+        for(int j=0; j<3; j++){
+            verificacoes[0][j] = tabuleiro[i][j];
+            verificacoes[1][j] = tabuleiro[j][i];
+            
+            if(tabuleiro[i][j] == ' ')
+                espacosVazios++;
+        }
+        //Verifica se ganhou na horizontal ou na vertical
+        if(strcmp(verificacoes[0], vitoria) == 0 || strcmp(verificacoes[1], vitoria) == 0)
+            return jogador;
+
+        verificacoes[2][i] = tabuleiro[i][i];
+        verificacoes[3][i] = tabuleiro[3-i-1][3-i-1];
+    }
+    //Verifica se ganhou em uma diagonal
+    if(strcmp(verificacoes[2], vitoria) == 0 || strcmp(verificacoes[3], vitoria) == 0)
+        return jogador;
+
+    if(espacosVazios>0)
+        return 0;
+    else 
+        return 3;
+
 }
 
 int lerComandos(int *linha, int *coluna, char **tabuleiro){
@@ -70,7 +114,6 @@ void jogo(Partida *partida){
     do{
         *numJogadas+=1;
         limparTerminal();
-        printf("Num Jogadas: %d\n", *numJogadas);
         imprimeTabuleiro(partida->tabuleiro);
 
         //Lendo um comando e verificando se ele é válido
@@ -99,9 +142,21 @@ void jogo(Partida *partida){
             break;
         }
 
+        //Fazer a verificação de uma vitória somente caso o número mínimo de jogadas seja atendido, ou seja,5
+        //É adicionado +1 na comparação pelo fato do número de jogadas começar em 0
+        if(*numJogadas+1>=5)
+        verificaJogoFinalizado = jogoFinalizado(partida->tabuleiro, *numJogadas);
     }while(verificaJogoFinalizado == 0);
 
-    if(verificaJogoFinalizado == 1){
+    //Verificação para não exibir quando o usuário for para o menu principal
+    if(verificaJogoFinalizado >= 1){
+        limparTerminal();
+        imprimeTabuleiro(partida->tabuleiro);
+        if(verificaJogoFinalizado == 3)
+            printf("Empate! Nenhum Jogador venceu!\n");
+        else
+            printf("%s venceu!\n", partida->nomeJogadores[verificaJogoFinalizado-1]);
+
         printf("Digite uma tecla para prosseguir: ");
         char descarte;
         lerCaracter(&descarte);
