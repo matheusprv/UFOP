@@ -4,14 +4,16 @@
 
 #include "structs.h"
 
-#define TAM_MAX_NOMES 66
+#define TAM_MAX_STRING 266
+
+void salvarJogo(Partida partida, char*);
 
 //Retorna 0 caso o jogo esteja acontecendo, 1 caso o jogador 1 ganhe, 2 caso o jogador 2 ganhe ou 3 caso de velha
 int jogoFinalizado(char **, int);
 
 //Lê o comando dos jogadore e retorna 1 para marcar posicao,
 //2 para salvar, ou 3 para ir ao menu principal 
-int lerComandos(int *, int*, char**);
+int lerComandos(int *, int*, char**, char[TAM_MAX_STRING]);
 
 //Exibe o menu de jogo
 void jogo(Partida *partida);

@@ -1,9 +1,11 @@
 //Matheus Peixoto Ribeiro Vieira - 22.1.4104
 
 #include "funcoes.h"
+#include "manipulacao_arquivo.h"
+#include "computador.h"
 #include "structs.h"
 
-#define TAM_MAX_NOMES 66
+#define TAM_MAX_STRING 266
 
 //Retorna 0 caso o jogo esteja acontecendo, 1 caso o jogador 1 ganhe, 2 caso o jogador 2 ganhe ou 3 caso de velha
 int jogoFinalizado(char **tabuleiro, int numJogadas){
@@ -58,19 +60,46 @@ int jogoFinalizado(char **tabuleiro, int numJogadas){
 
 }
 
-int lerComandos(int *linha, int *coluna, char **tabuleiro){
+int lerComandos(int *linha, int *coluna, char **tabuleiro, char arquivoSalvarJogo[TAM_MAX_STRING]){
     
-    char comando[12];
-    //Lendo o comando feito pelo usuário
-    fgets(comando, 12, stdin);
-    comando[strlen(comando)-1] = '\0';
-    int tamanhoComando = strlen(comando);
+    char leitorComando [TAM_MAX_STRING]; //String responsavel por ler o comando do usuário
+    char comando[2][TAM_MAX_STRING]; //A primeira posição indica se irá marcar ou salvar e a segunda indica o parametro
 
+    lerString(leitorComando);
+    int tamanhoLeitorComando = strlen(leitorComando);
+
+    //O comando deve possuir, no máximo, duas substrings
+    int qtdSubstring = 0;
+    for(int i=0; i<=tamanhoLeitorComando; i++){
+        if(leitorComando[i] == ' ' || leitorComando[i] == '\0')
+            qtdSubstring++;
+    }
+
+    //Retorna mensagem de erro por não haver nenhum comando com mais de duas palavras
+    if(qtdSubstring>2)
+        return 0;
+
+    //Verificando se o comando é o de voltar, pois somente ele possui uma palavra
+    if(qtdSubstring == 1 && strcmp(leitorComando, "voltar") == 0)
+        return 3;//Volta ao menu principal
+    else if(qtdSubstring == 1 && strcmp(leitorComando, "voltar") != 0)
+        return 0;//Retorna uma mesangem de erro, pois não há comandos de um palavra que não seja o voltar
+
+    strcpy(comando[0],strtok(leitorComando, " "));
+    strcpy(comando[1],strtok(NULL, " "));
+    
     //Verificando se foi digitado um comando válido
-    if (strstr(comando, "marcar") != NULL) {
-        
-        char charLinha = comando[tamanhoComando-2];
-        char charColuna = comando[tamanhoComando-1];
+    if (strcmp(comando[0], "marcar") == 0) {
+
+        int tamanhoParametro = strlen(comando[1]);
+        //Retorna -1 para quando o usuário colocar uma quantidade diferente de uma linha e uma coluna. Ex: marcar 111
+        if(tamanhoParametro != 2){
+            printf("Quantidade de linha e coluna supera o esperado.\n");
+            return -1;
+        }
+
+        char charLinha = comando[1][0];
+        char charColuna = comando[1][1];
 
         //Transforma o char em inteiro a partir da subtração do valor do inteiro na tabela ascii com o valor de zero também na tabela ascii
         *linha = charLinha - '0' - 1;
@@ -95,12 +124,9 @@ int lerComandos(int *linha, int *coluna, char **tabuleiro){
         return 1;
     }
     //Salvar Jogo
-    else if (strstr(comando, "salvar") != NULL) {
+    else if (strstr(comando[0], "salvar") != NULL) {
+        strcpy(arquivoSalvarJogo, comando[1]);
         return 2;
-    }
-    //Voltar para o menu principal
-    else if (strstr(comando, "voltar") != NULL) {
-        return 3;
     }
     //Mensagem de comando inválido
     else{
@@ -113,36 +139,49 @@ void jogo(Partida *partida){
     int linha, coluna, comando;
     int *numJogadas = &partida->numJogadas;
 
+    char arquivoSalvarJogo[TAM_MAX_STRING];
+
     //Loop para solicitar um comando
     do{
         *numJogadas+=1;
         limparTerminal();
         imprimeTabuleiro(partida->tabuleiro);
 
-        //Lendo um comando e verificando se ele é válido
-        do{
-            printf("%s, digite o comando: ", partida->nomeJogadores[*numJogadas%2]);
-            comando = lerComandos(&linha, &coluna, partida->tabuleiro);
-            if(comando == 0 || comando == -1)
-                printf("Comando inválido\n");
-            else
+        //Só entra no if caso a partida seja para dois jogadores ou o jogador da vez é o jogador 1
+        if(partida->numJogadores == 2 || (partida->numJogadas%2==0)){
+            //Lendo um comando e verificando se ele é válido
+            do{
+                printf("%s, digite o comando: ", partida->nomeJogadores[*numJogadas%2]);
+                comando = lerComandos(&linha, &coluna, partida->tabuleiro, arquivoSalvarJogo);
+                if(comando == 0 || comando == -1)
+                    printf("Comando inválido\n");
+                else
+                    break;
+            }while(1);
+
+            //Executando os comandos
+            if(comando == 1){
+                //Marca no tabuleiro
+                //Jogador 1 é o X e o jogador 2 é o O
+                partida->tabuleiro[linha][coluna] = *numJogadas%2 == 0 ? 'X' : 'O';
+
+            }
+            else if(comando == 2){
+                *numJogadas-=1;//Diminui em 1 o número de jogadas pois o jogador ainda não realizou a sua jogada, somente salvou o jogo
+                //Salva o jogo
+                printf("Salvar %s\n", arquivoSalvarJogo);
+                salvarJogo(*partida, arquivoSalvarJogo);
+                getchar();
+            }
+            else{
+                //Interrompe o jogo e volta para o menu principal
+                partida->numJogadas -= 1;
                 break;
-        }while(1);
+            }        
 
-        //Executando os comandos
-        if(comando == 1){
-            //Marca no tabuleiro
-            //Jogador 1 é o X e o jogador 2 é o O
-            partida->tabuleiro[linha][coluna] = *numJogadas%2 == 0 ? 'X' : 'O';
-
-        }
-        else if(comando == 2){
-            //Salva o jogo
         }
         else{
-            //Interrompe o jogo e volta para o menu principal
-            partida->numJogadas -= 1;
-            break;
+            printf("Computador, digite um comando: ");
         }
 
         //Fazer a verificação de uma vitória somente caso o número mínimo de jogadas seja atendido, ou seja,5
@@ -190,8 +229,9 @@ void menuNovoJogo(Partida *partida, int novoJogo){
         //Salvando nome dos jogadores
         for(int i=0; i<partida->numJogadores;i++){
             printf("Digite o nome do Jogador %d: ", i+1);
-            fgets(partida->nomeJogadores[i], TAM_MAX_NOMES+1, stdin);
-            partida->nomeJogadores[i][strlen(partida->nomeJogadores[i]) -1] = '\0' ;
+            lerString(partida->nomeJogadores[i]);
+            //fgets(partida->nomeJogadores[i], TAM_MAX_STRING+1, stdin);
+            //partida->nomeJogadores[i][strlen(partida->nomeJogadores[i]) -1] = '\0' ;
         }
         
     }

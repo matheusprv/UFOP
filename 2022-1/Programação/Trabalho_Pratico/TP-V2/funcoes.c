@@ -15,21 +15,53 @@ void imprimeMenuPrincipal(int comandoValido){
         printf("Comando inválido!\n");
     else if(comandoValido == -1)
         printf("Nenhum jogo foi iniciado para ser retornado.\n");
+    else if(comandoValido == -2)
+        printf("Arquivo não encontrado!\n");
     printf("Bem vindo(a) ao Jogo da Velha\n");
-    printf("\t1 - Começar novo jogo.\n");
+    printf("\n\t1 - Começar novo jogo.\n");
     printf("\t2 - Carregar um jogo salvo.\n");
     printf("\t3 - Voltar para o jogo em andamento.\n");
     printf("\t4 - Exibir ranking.\n");
-    printf("\t0 - Sair\n");
+    printf("\t0 - Sair\n\n");
     printf("Durante o jogo, digite \"voltar\" para retornar ao menu.\n");
     printf("Escolha uma opção: ");
 }
 
-//Lê um único caracter e limpa o buffer, evitando o erro do \n
+//Lê uma string e retorna o primeiro caracter. Caso o usuário tenha escrito mais de um, retorna um valor inválido e limpa o buffer
 void lerCaracter(char *variavel){
-    scanf("%c", variavel);
+    char string[3];
+    fgets(string, 3, stdin);
+    if(string[1] != '\n')
+        string[0] = 'a';
+
     //Limpando o buffer
-    while (getchar() != '\n');
+    if(strlen(string)>2)
+        while (getchar() != '\n');
+    
+    //Como todas as leituras de caracteres são para números, caso receba uma letra, a verificação entrará no loop
+    *variavel = string [0];
+}
+
+void lerString(char *string){
+    fgets(string, 266, stdin);
+    
+    int tamanhoString = strlen(string);
+    
+    //Limpando o buffer, caso tenha sido ultrapassado o limite máximo
+    if(tamanhoString>266)
+        while (getchar() != '\n');       
+    
+
+    //Verificando se a string contem o \n e removendo-o
+    int posicaoBarraN = -1;
+    for(int i=0; i<tamanhoString; i++){
+        if(string[i] == '\n'){
+            posicaoBarraN = i;
+            break;
+        }
+    }
+    if(posicaoBarraN >= 0)
+        string[posicaoBarraN] = '\0';
 }
 
 
@@ -41,7 +73,15 @@ void reiniciarPartida(Partida *partida){
             ((*partida).tabuleiro)[i][j] = ' ';
         }
     }
+
+    //Para exibir o jogador da vez, utiliza-se o módulo do número de jogadas por 2, pois os nomes estão em um vetor
+    //A primeira jogada é a zero, pois o módulo de 0 por 2 é 0, portanto apresenta o nome do jogador 1
     partida->numJogadas = -1;
+
+    //Alterando o nome do segundo jogador para computador
+    //Caso o jogador seja humano, somente irá alterar o seu valor na variavel
+    char computador[] = "Computador";
+    strcpy(partida->nomeJogadores[1], computador);
 }
 
 //Imprime a situação atual do tabuleiro da struct partida

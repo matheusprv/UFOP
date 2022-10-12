@@ -5,7 +5,7 @@
 
 typedef struct{
     char **tabuleiro;
-    char nomeJogadores[2][66];
+    char nomeJogadores[2][266];
     int numJogadas;
     int numJogadores;
 }Partida;

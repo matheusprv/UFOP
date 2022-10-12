@@ -2,6 +2,7 @@
 
 #include "funcoes.h"
 #include "funcoes_jogo.h"
+#include "manipulacao_arquivo.h"
 #include "structs.h"
 
 int main(){
@@ -33,6 +34,14 @@ int main(){
             
             //Continuar jogo salvo
             case '2':
+                if(lerJogoSalvo(&partida)){
+
+                    printf("Número jogadores: %d",partida.numJogadores);
+
+                    menuNovoJogo(&partida, 0);
+                }
+                else
+                    comandoValido = -2;
                 break;
 
             //Voltar para o jogo em andamento
