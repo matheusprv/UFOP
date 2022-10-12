@@ -10,4 +10,10 @@ typedef struct{
     int numJogadores;
 }Partida;
 
+typedef struct{
+    int linha[3];
+    int coluna[3];
+    int somatorio;
+}Vitoria;
+
 #endif
