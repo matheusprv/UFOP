@@ -7,51 +7,54 @@
 
 //Retorna 0 caso o jogo esteja acontecendo, 1 caso o jogador 1 ganhe, 2 caso o jogador 2 ganhe ou 3 caso de velha
 int jogoFinalizado(char **tabuleiro, int numJogadas){
+    //Cria-se um vetor para salvar as quatro formas de ganhar (horizontal, vertical, diagonais)
+    //Com o verificador sendo X ou O, varre todo o tabuleiro e soma +1 no verificacoes toda vez que houver uma correspondencia
+    //Reinicia em todas as repeticoes exteriores as verificacoes da linha e coluna, já que sempre serão as mesmas dentro da verificação interna
+    //Compara se a soma feita é igual a 3. Se for, retorna o jogador vencedor
 
-    int jogador=numJogadas%2 + 1;
-    char vitoria[4];
-    vitoria[4] = '\0';
-    strcpy(vitoria, ((jogador == 1) ? "XXX" : "OOO"));
+    //Como só há dois jogadores, para saber o atual, basta fazer o módulode dois no número de jogadas e somar mais um
+    int jogador = numJogadas%2 + 1;
+    char verificador = jogador == 1 ? 'X' : 'O';
     
-    int espacosVazios = 0;
+    //verificacoes[0] - horizontal  |  verificacoes[1] - Vertical  |  verificacoes[2] - Diagonal princ|  verificacoes[3] - Diagonal sec
+    int verificacoes[4];
+    for(int i=0; i<4; i++)
+        verificacoes[i] = 0;
 
-    //verificacoes[0] horizontal - verificacoes[1] vertical
-    //verificacoes[2] diagonal 1 - verificacoes[3] diagonal 2
-    char verificacoes[4][4];
+    int espacosEmBranco = 0;
     
-    
-    //Coletando todos os espaços do tabuleiro e salvando-os como strings para 
-    //depois verificar se corresponde a forma de ganhar da variavel vitoria
-    for(int i=0; i<3;i++){
-
-        //Reiniciando as strings de verificação
-        for(int j =0; j<4; j++){
-            verificacoes[0][j] = '\0';
-            verificacoes[1][j] = '\0';
-        }
-
+    for(int i=0; i<3; i++){
+        verificacoes[0] = 0;
+        verificacoes[1] = 0;
+        
+        //Verificando as linhas, colunas e se há espaços em branco no tabuleiro
         for(int j=0; j<3; j++){
-            verificacoes[0][j] = tabuleiro[i][j];
-            verificacoes[1][j] = tabuleiro[j][i];
-            
             if(tabuleiro[i][j] == ' ')
-                espacosVazios++;
+                espacosEmBranco++;
+
+            if(tabuleiro[i][j] == verificador)
+                verificacoes[0] ++;
+
+            if(tabuleiro[j][i] == verificador)
+                verificacoes[1]++;
         }
-        //Verifica se ganhou na horizontal ou na vertical
-        if(strcmp(verificacoes[0], vitoria) == 0 || strcmp(verificacoes[1], vitoria) == 0)
+
+        //Verificando se ganhou na horizontal ou vertical
+        if(verificacoes[0] == 3 || verificacoes[1] == 3)
             return jogador;
 
-        verificacoes[2][i] = tabuleiro[i][i];
-        verificacoes[3][i] = tabuleiro[3-i-1][3-i-1];
+        if(tabuleiro[i][i] == verificador)
+            verificacoes[2]++;
+        if(tabuleiro[3-i-1][3-i-1] == verificador)
+            verificacoes[3]++;
     }
-    //Verifica se ganhou em uma diagonal
-    if(strcmp(verificacoes[2], vitoria) == 0 || strcmp(verificacoes[3], vitoria) == 0)
+
+    //Verificando se ganhou nas diagonais
+    if(verificacoes[2] == 3 || verificacoes[3] == 3)
         return jogador;
 
-    if(espacosVazios>0)
-        return 0;
-    else 
-        return 3;
+    //0 para caso o jogo ainda pode continuar ou 3 para caso seja velha
+    return espacosEmBranco>=1 ? 0 : 3;
 
 }
 
