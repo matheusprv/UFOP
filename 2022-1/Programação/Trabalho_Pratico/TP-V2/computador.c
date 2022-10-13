@@ -4,6 +4,7 @@
 #include "funcoes.h"
 #include "computador.h"
 #include <time.h>
+#include <unistd.h>
 
 int procurarVitoria(int *linha, int *coluna, Partida *partida, char identificador){
     char identificadorOposto = identificador == 'X' ? 'O' : 'X';
@@ -43,9 +44,9 @@ int procurarVitoria(int *linha, int *coluna, Partida *partida, char identificado
         else if(partida->tabuleiro[i][i] == identificadorOposto)
             pontuacaoDiagonalPrinc -=3;
 
-        if(partida->tabuleiro[3-i-1][3-i-1] == identificador)
+        if(partida->tabuleiro[2-i][2-i] == identificador)
             pontuacaoDiagonalSec ++;
-        else if(partida->tabuleiro[3-i-1][3-i-1] == identificadorOposto)
+        else if(partida->tabuleiro[2-i][2-i] == identificadorOposto)
             pontuacaoDiagonalSec -=3;
     }
 
@@ -56,7 +57,7 @@ int procurarVitoria(int *linha, int *coluna, Partida *partida, char identificado
                 *coluna = i;
                 return 1;
             }
-            if(partida->tabuleiro[3-i-1][3-i-1] == ' '){
+            if(partida->tabuleiro[2-i][2-i] == ' '){
                 *linha = i;
                 *coluna = i;
                 return 1;
@@ -67,19 +68,30 @@ int procurarVitoria(int *linha, int *coluna, Partida *partida, char identificado
     return 0;
 }
 
-int melhorPosicao(int *, int*, Partida *partida){
-    if(partida->tabuleiro[2][2] == ' '){
-        *linha = 2;
-        *coluna = 2;
+int melhorPosicao(int *linha, int *coluna, Partida *partida){
+    
+    if(partida->tabuleiro[1][1] == ' '){
+        *linha = 1;
+        *coluna = 1;
         return 1;
     }
-    //Escolhendo aleatoriamente uma quina do tabuleiro
-    srand(time(NULL));
-    while(1){
-        int aleatorio = rand()%5;
+    //Escolhendo uma quina do tabuleiro
+    for(int i = 0; i<2; i+=2){
+        if(partida->tabuleiro[i][0] == ' '){
+            *linha = i;
+            *coluna = 0;
+            return 1;
+        }
+        if(partida->tabuleiro[i][0] == ' '){
+            *linha = i;
+            *coluna = 2;
+            return 1;
+        }
+
     }
+    
 
-
+    return 0;
 }
 
 void jogadaComputador(Partida *partida){
@@ -92,6 +104,10 @@ void jogadaComputador(Partida *partida){
         partida->tabuleiro[linha][coluna] = 'O';
     //Procurando a melhor posição para marcar
     else{
-
+        melhorPosicao(&linha, &coluna, partida);
+        partida->tabuleiro[linha][coluna] = 'O';
     }
+    printf("marcar %d%d\n", linha+1, coluna+1);
+    sleep(0.7);
+    
 }

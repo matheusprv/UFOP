@@ -182,6 +182,7 @@ void jogo(Partida *partida){
         }
         else{
             printf("Computador, digite um comando: ");
+            jogadaComputador(partida);
         }
 
         //Fazer a verificação de uma vitória somente caso o número mínimo de jogadas seja atendido, ou seja,5

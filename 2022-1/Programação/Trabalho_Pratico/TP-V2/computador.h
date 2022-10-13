@@ -7,7 +7,7 @@
 
 int procurarVitoria(int *,int *, Partida *partida, char);
 
-int melhorPosicao(int *, int*, Partida);
+int melhorPosicao(int *, int*, Partida*);
 
 void jogadaComputador(Partida *partida);
 
