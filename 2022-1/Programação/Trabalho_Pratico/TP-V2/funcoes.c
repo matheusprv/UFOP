@@ -2,6 +2,7 @@
 
 #include "funcoes.h"
 #include "structs.h"
+#include "cores.c"
 
 //Apaga tudo que está escrito no terminal
 void limparTerminal(){
@@ -87,21 +88,21 @@ void reiniciarPartida(Partida *partida){
 //Imprime a situação atual do tabuleiro da struct partida
 void imprimeTabuleiro(char **tabuleiro){
 
-    char linhaHorizontal[] = "---------------";
-    printf("  | ");
+    printf("  \u2503 ");
     // Imprimindo o cabeçalho
     for(int i=1;i<=3; i++){
-        printf("%-2d| ", i);
+        printf("%-2d\u2503 ", i);
     }
-    printf("\n%s", linhaHorizontal);
+
+    printf("\n%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR);
 
     // Imprimindo a disposição das jogadas
     for (int i = 0; i < 3; i++){
-        printf("\n%-2d| ",i+1);
+        printf("\n%-2d\u2503 ",i+1);
         for(int j=0; j <3; j++){
-            printf("%-2c| ", tabuleiro[i][j]);
+            printf("%-2c\u2503 ", tabuleiro[i][j]);
         }
-        printf("\n%s", linhaHorizontal);
+        printf("\n%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s", TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR,TAB_HOR);
     }
     printf("\n");
 

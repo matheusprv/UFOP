@@ -1,2 +1,5 @@
 Colocar um número de dois valores na seleção do menu.
 está pegando o primeiro
+
+
+Se eu coloco marcar 11 no menu principal ele buga e vai para o jogo

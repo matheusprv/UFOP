@@ -4,90 +4,181 @@
 #include "funcoes.h"
 #include "computador.h"
 #include <time.h>
-#include <unistd.h>
 
-int procurarVitoria(int *linha, int *coluna, Partida *partida, char identificador){
+int procurarVitoria(int *linha, int *coluna, char **tabuleiro, char identificador){
+    /*
+        Sempre que a função é chamada, ela recebe como identificador o X ou O, para identificar se está procurando onde ocorrerá a vitória do jogador ou a do computador, respectivamente.
+        A verificação da possibilidade de vitória é feita a partir de dois FOR que varrem toda a matriz.
+        Dentro do segundo for é feita a verificação das linhas e colunas e, fora dele, é feita a verificação das diagonais, posi elas precisam somente do parametro da linha atual.
+
+        Para verificar uma possível vitória, é atribuida uma pontuação para a quantidade de X ou O presente naquele espaço, cada identificador presente acrescenta +1 e cada identificador oposto remove -1
+        caso a pontuação nesse espaço seja igual a 2, então uma vitória pode ocorrer naquele local. Dessa forma, é salva a coluna e linha em branco dessa área e ela é marcada na main para o computador.
+        Em caso de não ser encontrado nenhuma possível vitória, é retornado 0 para que possa ser passado para o próximo tipo de veridicação.
+    */
+
+   //Marcam quantas presenças do identificador há no determinado espaço
+    int somadorLinha = 0, somadorColuna = 0, somDiagonalPrinc = 0, somDiagonalSec = 0;
     char identificadorOposto = identificador == 'X' ? 'O' : 'X';
-    int pontuacaoLinha = 0, pontuacaoColuna = 0;
-    int pontuacaoDiagonalPrinc = 0, pontuacaoDiagonalSec = 0;
-    //Verificando vitorias nas linhas
+    
     for(int i=0; i<3; i++){
-        pontuacaoLinha = 0;
-        pontuacaoColuna = 0;
-        for(int j=0; j<3; j++){
-            if(partida->tabuleiro[i][j] == identificador)
-                pontuacaoLinha++;
-            else if(partida->tabuleiro[i][j] == identificadorOposto)
-                pontuacaoLinha -=3;
+        somadorLinha = 0; 
+        somadorColuna = 0;
+        //Verificando linhas e colunas
+        for(int j=0;j<3; j++){
+            //Gerando a pontuação para a linha atual
+            if(tabuleiro[i][j] == identificador)
+                somadorLinha++;
+            else if(tabuleiro[i][j] == identificadorOposto)
+                somadorLinha--;
 
-            if(partida->tabuleiro[j][i] == identificador)
-                pontuacaoColuna++;
-            else if(partida->tabuleiro[j][i] == identificadorOposto)
-                pontuacaoColuna -=3;
-        }      
-        if(pontuacaoLinha == 2 || pontuacaoColuna == 2){
+            //Gerando pontuação para a coluna atual
+            if(tabuleiro[j][i] == identificador)
+                somadorColuna++;
+            else if(tabuleiro[j][i] == identificadorOposto)
+                somadorColuna--;
+        }
+        //Verificando possibilidade de vitória em uma linha
+        if(somadorLinha == 2){
             for(int j=0; j<3; j++){
-                if(partida->tabuleiro[i][j] == ' '){
+                if(tabuleiro[i][j] == ' '){
                     *linha = i;
                     *coluna = j;
                     return 1;
                 }
-                if(partida->tabuleiro[j][i] == ' '){
+            }
+        }
+
+        //Verificando possibilidade de vitória em uma coluna
+        if(somadorColuna == 2){
+            for(int j=0; j<3; j++){
+                if(tabuleiro[j][i] == ' '){
                     *linha = j;
                     *coluna = i;
                     return 1;
                 }
             }
         }
-        if(partida->tabuleiro[i][i] == identificador)
-            pontuacaoDiagonalPrinc ++;
-        else if(partida->tabuleiro[i][i] == identificadorOposto)
-            pontuacaoDiagonalPrinc -=3;
+    
+        //Gerando a pontuação para a diagonal principal
+        if(tabuleiro[i][i] == identificador)
+            somDiagonalPrinc++;
+        else if(tabuleiro[i][i] == identificadorOposto)
+            somDiagonalPrinc--;
 
-        if(partida->tabuleiro[2-i][2-i] == identificador)
-            pontuacaoDiagonalSec ++;
-        else if(partida->tabuleiro[2-i][2-i] == identificadorOposto)
-            pontuacaoDiagonalSec -=3;
+        //Gerando a pontuação para a diagonal secundária
+        if(tabuleiro[i][2-i] == identificador)
+            somDiagonalSec++;
+        if(tabuleiro[i][2-i] == identificadorOposto)
+            somDiagonalSec--;
     }
 
-    if(pontuacaoDiagonalPrinc == 2 || pontuacaoDiagonalSec == 2){
-        for(int i=0; i<3;i++){
-            if(partida->tabuleiro[i][i] == ' '){
+    //Verificando possibilidade de vitória na diagonal principal
+    if(somDiagonalPrinc == 2){
+        for(int i = 0; i<3; i++){
+            if(tabuleiro[i][i] == ' '){
                 *linha = i;
-                *coluna = i;
+                *coluna =i;
                 return 1;
             }
-            if(partida->tabuleiro[2-i][2-i] == ' '){
-                *linha = i;
-                *coluna = i;
-                return 1;
-            }
-
         }
     }
+
+    //Verificando possibilidade de vitória na diagonal secundária
+    if(somDiagonalSec == 2){
+        for(int i = 0; i<3; i++){
+            if(tabuleiro[i][2-i] == ' '){
+                *linha = i;
+                *coluna = 2-i;
+                return 1;
+            }
+        }
+    }
+    //Não encontrou nenhuma possibilidade de vencer
     return 0;
 }
 
-int melhorPosicao(int *linha, int *coluna, Partida *partida){
-    
-    if(partida->tabuleiro[1][1] == ' '){
+
+int melhorPosicao(int *linha, int *coluna, char **tabuleiro){
+    //Procura a melhor posição para marcar no tabuleiro quando não há nenhuma outra possibilidade de vitória
+    if(tabuleiro[1][1] == ' '){
         *linha = 1;
         *coluna = 1;
         return 1;
     }
+
+    //Evitando com que o jogador tenha duas quinas marcadas formando o L
+    if(tabuleiro[0][0] == 'X'){
+        if(tabuleiro[0][1] == ' '){
+            *linha = 0;
+            *coluna = 1;
+            return 1;
+        }
+        else if(tabuleiro[1][0] == ' '){
+            *linha = 1;
+            *coluna = 0;
+            return 1;
+        }
+    }
+    else if(tabuleiro[0][2] == 'X'){
+        if(tabuleiro[0][1] == ' '){
+            *linha = 0;
+            *coluna = 1;
+            return 1;
+        }
+        else if(tabuleiro[1][2] == ' '){
+            *linha = 1;
+            *coluna = 2;
+            return 1;
+        }
+    }
+    else if(tabuleiro[0][2] == 'X'){
+        if(tabuleiro[1][2] == ' '){
+            *linha = 1;
+            *coluna = 2;
+            return 1;
+        }
+        else if(tabuleiro[2][1] == ' '){
+            *linha = 2;
+            *coluna = 1;
+            return 1;
+        }
+    }
+    else if(tabuleiro[2][2] == 'X'){
+        if(tabuleiro[2][1] == ' '){
+            *linha = 2;
+            *coluna = 1;
+            return 1;
+        }
+        else if(tabuleiro[1][2] == ' '){
+            *linha = 1;
+            *coluna = 2;
+            return 1;
+        }
+    }
+
     //Escolhendo uma quina do tabuleiro
-    for(int i = 0; i<2; i+=2){
-        if(partida->tabuleiro[i][0] == ' '){
+    for(int i = 0; i<3; i+=2){
+        if(tabuleiro[i][0] == ' '){
             *linha = i;
             *coluna = 0;
             return 1;
         }
-        if(partida->tabuleiro[i][0] == ' '){
+        if(tabuleiro[i][2] == ' '){
             *linha = i;
             *coluna = 2;
             return 1;
         }
+    }
 
+    //Procura por qualquer posição livre
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            if(tabuleiro[i][j] == ' '){
+                *linha = i;
+                *coluna = j;
+                return 3;
+            }
+        }
     }
     
 
@@ -96,18 +187,20 @@ int melhorPosicao(int *linha, int *coluna, Partida *partida){
 
 void jogadaComputador(Partida *partida){
     int linha=-1, coluna=-1;
-    //Verificando as posições do jogador para procurar uma vitória
-    if(procurarVitoria(&linha, &coluna, partida, 'X'))
-        partida->tabuleiro[linha][coluna] = 'O';
-    //Verificando as posições do computador para procurar uma vitória
-    else if(procurarVitoria(&linha, &coluna, partida, 'O'))
-        partida->tabuleiro[linha][coluna] = 'O';
-    //Procurando a melhor posição para marcar
-    else{
-        melhorPosicao(&linha, &coluna, partida);
+
+    //Procurar onde o computador pode ganhar
+    if(procurarVitoria(&linha, &coluna, partida->tabuleiro, 'O')){
         partida->tabuleiro[linha][coluna] = 'O';
     }
-    printf("marcar %d%d\n", linha+1, coluna+1);
-    sleep(0.7);
+    //Procurar onde o jogador pode ganhar para impedí-lo
+    else if(procurarVitoria(&linha, &coluna, partida->tabuleiro, 'X')){
+        partida->tabuleiro[linha][coluna] = 'O';
+    }
+    //Procurando a melhor posição para marcar já que não há possibilidade de vencer
+    else{
+        melhorPosicao(&linha, &coluna, partida->tabuleiro);
+        partida->tabuleiro[linha][coluna] = 'O';
+        
+    }
     
 }

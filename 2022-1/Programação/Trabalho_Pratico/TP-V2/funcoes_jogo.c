@@ -181,7 +181,6 @@ void jogo(Partida *partida){
 
         }
         else{
-            printf("Computador, digite um comando: ");
             jogadaComputador(partida);
         }
 
@@ -189,6 +188,7 @@ void jogo(Partida *partida){
         //É adicionado +1 na comparação pelo fato do número de jogadas começar em 0
         if(*numJogadas+1>=5)
         verificaJogoFinalizado = jogoFinalizado(partida->tabuleiro, *numJogadas);
+        
     }while(verificaJogoFinalizado == 0);
 
     //Verificação para não exibir quando o usuário for para o menu principal

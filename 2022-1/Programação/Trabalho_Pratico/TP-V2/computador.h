@@ -5,9 +5,9 @@
 
 #include "structs.h"
 
-int procurarVitoria(int *,int *, Partida *partida, char);
+int procurarVitoria(int *,int *, char **, char);
 
-int melhorPosicao(int *, int*, Partida*);
+int melhorPosicao(int *, int*, char **);
 
 void jogadaComputador(Partida *partida);
 
