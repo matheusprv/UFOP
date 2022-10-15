@@ -21,7 +21,7 @@ int main(){
     }
     partida.numJogadas = -1;
 
-    int comandoValido=1, finalizarPrograma = 0;
+    int comandoValido=1, finalizarPrograma = 0, resultadoPartida = 0;
     char opcaoMenu;
 
     //Menu do Jogo
@@ -37,7 +37,7 @@ int main(){
                 break;
             //Novo Jogo
             case '1':
-                menuNovoJogo(&partida, 1, ranking, &qtdJogadoresRanking);
+                resultadoPartida = menuNovoJogo(&partida, 1);
                 break;
             
             //Continuar jogo salvo
@@ -46,7 +46,7 @@ int main(){
 
                     printf("Número jogadores: %d",partida.numJogadores);
 
-                    menuNovoJogo(&partida, 0, ranking, &qtdJogadoresRanking);
+                    resultadoPartida = menuNovoJogo(&partida, 0);
                 }
                 else
                     comandoValido = -2;
@@ -58,7 +58,7 @@ int main(){
                     comandoValido =-1;
                 }
                 else{
-                    menuNovoJogo(&partida, 0, ranking, &qtdJogadoresRanking);
+                    resultadoPartida = menuNovoJogo(&partida, 0);
                 }
                 break;
 
@@ -75,6 +75,12 @@ int main(){
                 comandoValido = 0;
                 break;
         }
+
+        if(resultadoPartida!=0){
+            organizarRanking(&ranking, &qtdJogadoresRanking, partida, resultadoPartida);
+            exibirRanking(ranking, qtdJogadoresRanking);
+        }
+        resultadoPartida = 0;
 
     }while(!finalizarPrograma);
 

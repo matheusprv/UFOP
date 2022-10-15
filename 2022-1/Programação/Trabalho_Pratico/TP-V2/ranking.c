@@ -4,14 +4,13 @@
 #include "cores.c"
 
 void exibirRanking(Ranking *ranking, int qtdJogadores){
-    printf("Quantidade de jogadores = %d\n", qtdJogadores);
+
     for(int i=0; i<qtdJogadores; i++){
-        //printf("I = %d\n", i);
-        // if(i==0)
-        //     printf(YELLOW("%s"), ranking[i].nomeJogador);
-        // else
-        printf("%s ", ranking[i].nomeJogador);
-        printf("\nVitórias: %d - Empates: %d - Derrotas: %d\n", ranking[i].vitorias, ranking[i].empates, ranking[i].derrotas);
+        if(i==0)
+            printf(YELLOW("%s"), ranking[i].nomeJogador);
+        else
+            printf("%s ", ranking[i].nomeJogador);
+        printf("\n\tVitórias: %d - Empates: %d - Derrotas: %d\n", ranking[i].vitorias, ranking[i].empates, ranking[i].derrotas);
     }
     printf("Digite qualquer tecla para continuar: ");
     getchar();
@@ -20,8 +19,9 @@ void exibirRanking(Ranking *ranking, int qtdJogadores){
 void adicionarJogdorNoRanking(Ranking **ranking, int *qtdJogadores, char * nomeJogador){
     //Aumentando a quantidade de jogadores da variavel e no vetor de jogadores no ranking
     *qtdJogadores += 1;
-    *ranking = realloc(*ranking, (*qtdJogadores)*sizeof(Ranking));
+    *ranking = (Ranking *) realloc(*ranking, (*qtdJogadores)*sizeof(Ranking));
     strcpy((*ranking)[*qtdJogadores-1].nomeJogador, nomeJogador);
+
     //Ajustando todas as estatísticas para zero
     (*ranking)[*qtdJogadores-1].derrotas = 0;
     (*ranking)[*qtdJogadores-1].empates = 0;
@@ -48,7 +48,7 @@ void organizarRanking(Ranking **ranking, int *qtdJogadoresRanking, Partida parti
             }
         }
         if(!jogadorNoRanking){
-            adicionarJogdorNoRanking(ranking, *qtdJogadoresRanking, partida.nomeJogadores[cont]);
+            adicionarJogdorNoRanking(ranking, qtdJogadoresRanking, partida.nomeJogadores[cont]);
         }
     }
 
@@ -69,7 +69,16 @@ void organizarRanking(Ranking **ranking, int *qtdJogadoresRanking, Partida parti
         (*ranking)[posicaoJ2].empates += 1;   
     }
 
-    //printf("\nNome: %s - Vitórias: %d - Empates: %d - Derrotas: %d\n\n", ranking[0].nomeJogador,ranking[0].vitorias, ranking[0].empates, ranking[0].derrotas);
-    //exibirRanking(ranking, *qtdJogadoresRanking);
+    // printf("Quantidade de jogadores = %d\n", *qtdJogadoresRanking);
+    // for(int i=0; i<*qtdJogadoresRanking; i++){
+    //     //printf("I = %d\n", i);
+    //     // if(i==0)
+    //     //     printf(YELLOW("%s"), ranking[i].nomeJogador);
+    //     // else
+    //     printf("%s ", (*ranking)[i].nomeJogador);
+    //     printf("\nVitórias: %d - Empates: %d - Derrotas: %d\n", (*ranking)[i].vitorias, (*ranking)[i].empates, (*ranking)[i].derrotas);
+    // }
+    // printf("Digite qualquer tecla para continuar: ");
+    // getchar();
     //Organizar o ranking por vitória
 }

@@ -9,7 +9,7 @@
 void exibirRanking(Ranking *ranking, int );
 
 //void adicionarJogdorNoRanking(Ranking**, int*, char*);
-void adicionarJogdorNoRanking(Ranking**, int*, char*);
+void adicionarJogdorNoRanking(Ranking **, int*, char*);
 
 
 int verificarJogadorEstaNoRanking(Ranking*, int*, char*);

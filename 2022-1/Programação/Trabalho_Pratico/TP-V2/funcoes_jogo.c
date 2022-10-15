@@ -210,7 +210,7 @@ int jogo(Partida *partida){
 
 }
 
-void menuNovoJogo(Partida *partida, int novoJogo, Ranking *ranking, int *qtdJogadoresRanking){
+int menuNovoJogo(Partida *partida, int novoJogo){
 
     limparTerminal();
     if(novoJogo){
@@ -240,8 +240,5 @@ void menuNovoJogo(Partida *partida, int novoJogo, Ranking *ranking, int *qtdJoga
         
     }
     int resultado = jogo(partida);
-    if(resultado !=0){
-        organizarRanking(&ranking, qtdJogadoresRanking, *partida, resultado);
-        exibirRanking(ranking, *qtdJogadoresRanking);
-    }
+    return resultado;
 }

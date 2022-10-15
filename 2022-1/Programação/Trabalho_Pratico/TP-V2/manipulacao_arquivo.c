@@ -91,22 +91,24 @@ int lerArquivoConfiguracao(Ranking **ranking){
         return -1;
     }
 
+    int qtdJogadores;
+    
     //Verificando se o arquivo está vazio
     fseek (arquivo, 0, SEEK_END);
     int tamanhoArquivo = ftell(arquivo);
     if (tamanhoArquivo == 0) {
-        return 0;
+        qtdJogadores = 0;
     }
 
-    int qtdJogadores;
-    fread(&qtdJogadores, sizeof(int), 1, arquivo);
-    
-    *ranking = malloc(qtdJogadores * sizeof(Ranking));
-    
-    fread(ranking, sizeof(Ranking), qtdJogadores, arquivo);
-    
-    fclose(arquivo);
-    return qtdJogadores;
+    if(qtdJogadores !=0){
+        fread(&qtdJogadores, sizeof(int), 1, arquivo);
+        
+        *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
+        
+        fread(ranking, sizeof(Ranking), qtdJogadores, arquivo);
+        
+        fclose(arquivo);        
+    }
 
-    return 1;
+    return qtdJogadores;
 }
