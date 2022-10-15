@@ -242,10 +242,6 @@ void menuNovoJogo(Partida *partida, int novoJogo, Ranking *ranking, int *qtdJoga
     int resultado = jogo(partida);
     if(resultado !=0){
         organizarRanking(ranking, qtdJogadoresRanking, *partida, resultado);
-        //exibirRanking(ranking, *qtdJogadoresRanking);
-
-        for(int i=0; i<*qtdJogadoresRanking; i++){
-            printf("Nome: %s\n", ranking[0].nomeJogador);
-        }
+        exibirRanking(ranking, *qtdJogadoresRanking);
     }
 }
