@@ -2,6 +2,7 @@
 
 #include "structs.h"
 #include "funcoes.h"
+#include "ranking.h"
 
 #define TAM_MAX_STRING 266
 
@@ -83,3 +84,29 @@ int lerJogoSalvo(Partida *partida){
     
 }
 
+int lerArquivoConfiguracao(Ranking **ranking){
+    FILE *arquivo;
+    //Verificando se o arquivo existe
+    if(!(arquivo = fopen("velha.ini", "rb"))){
+        return -1;
+    }
+
+    //Verificando se o arquivo está vazio
+    fseek (arquivo, 0, SEEK_END);
+    int tamanhoArquivo = ftell(arquivo);
+    if (tamanhoArquivo == 0) {
+        return 0;
+    }
+
+    int qtdJogadores;
+    fread(&qtdJogadores, sizeof(int), 1, arquivo);
+    
+    *ranking = malloc(qtdJogadores * sizeof(Ranking));
+    
+    fread(ranking, sizeof(Ranking), qtdJogadores, arquivo);
+    
+    fclose(arquivo);
+    return qtdJogadores;
+
+    return 1;
+}

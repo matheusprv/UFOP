@@ -6,19 +6,21 @@
 
 //Apaga tudo que está escrito no terminal
 void limparTerminal(){
-    printf("\e[1;1H\e[2J");
+    //printf("\e[1;1H\e[2J");
 }
 
 //Imprime na tela as opções de menu
 void imprimeMenuPrincipal(int comandoValido){
     limparTerminal();
     if(comandoValido == 0)
-        printf("Comando inválido!\n");
+        printf(RED("Comando inválido!\n"));
     else if(comandoValido == -1)
-        printf("Nenhum jogo foi iniciado para ser retornado.\n");
+        printf(RED("Nenhum jogo foi iniciado para ser retornado.\n"));
     else if(comandoValido == -2)
-        printf("Arquivo não encontrado!\n");
-    printf("Bem vindo(a) ao Jogo da Velha\n");
+        printf(RED("Arquivo não encontrado!\n"));
+    else if(comandoValido == -3)
+        printf(RED("Ainda não há jogadores no ranking"));
+
     printf("\n\t1 - Começar novo jogo.\n");
     printf("\t2 - Carregar um jogo salvo.\n");
     printf("\t3 - Voltar para o jogo em andamento.\n");
@@ -30,17 +32,18 @@ void imprimeMenuPrincipal(int comandoValido){
 
 //Lê uma string e retorna o primeiro caracter. Caso o usuário tenha escrito mais de um, retorna um valor inválido e limpa o buffer
 void lerCaracter(char *variavel){
-    char string[3];
-    fgets(string, 3, stdin);
+    char string[50];
+    fgets(string, 50, stdin);
     if(string[1] != '\n')
-        string[0] = 'a';
+        string[0] = '9';
 
     //Limpando o buffer
-    if(strlen(string)>2)
+    if(strlen(string)>50)
         while (getchar() != '\n');
-    
+
     //Como todas as leituras de caracteres são para números, caso receba uma letra, a verificação entrará no loop
     *variavel = string [0];
+    //printf("\n\nVariavel: %c\n\n", *variavel);
 }
 
 void lerString(char *string){
@@ -64,8 +67,6 @@ void lerString(char *string){
     if(posicaoBarraN >= 0)
         string[posicaoBarraN] = '\0';
 }
-
-
 
 //Reinicia todos os valores do struct para um valor padrao a fim de iniciar um novo jogo
 void reiniciarPartida(Partida *partida){

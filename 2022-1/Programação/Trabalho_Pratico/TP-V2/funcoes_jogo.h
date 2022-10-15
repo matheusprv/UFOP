@@ -16,9 +16,9 @@ int jogoFinalizado(char **, int);
 int lerComandos(int *, int*, char**, char[TAM_MAX_STRING]);
 
 //Exibe o menu de jogo
-void jogo(Partida *partida);
+int jogo(Partida *partida);
 
 //Exibie o formulário a ser preenchido para iniciar um novo jogo
-void menuNovoJogo(Partida *partida, int novoJogo);
+void menuNovoJogo(Partida *partida, int novoJogo, Ranking *ranking, int *qtdJogadoresRanking);
 
 #endif

@@ -4,6 +4,7 @@
 #include "manipulacao_arquivo.h"
 #include "computador.h"
 #include "structs.h"
+#include "ranking.h"
 
 #define TAM_MAX_STRING 266
 
@@ -134,7 +135,7 @@ int lerComandos(int *linha, int *coluna, char **tabuleiro, char arquivoSalvarJog
     }
 }
 
-void jogo(Partida *partida){
+int jogo(Partida *partida){
     int verificaJogoFinalizado = 0;
     int linha, coluna, comando;
     int *numJogadas = &partida->numJogadas;
@@ -144,11 +145,12 @@ void jogo(Partida *partida){
     //Loop para solicitar um comando
     do{
         *numJogadas+=1;
-        limparTerminal();
-        imprimeTabuleiro(partida->tabuleiro);
-
+        
         //Só entra no if caso a partida seja para dois jogadores ou o jogador da vez é o jogador 1
         if(partida->numJogadores == 2 || (partida->numJogadas%2==0)){
+            limparTerminal();
+            imprimeTabuleiro(partida->tabuleiro);
+            
             //Lendo um comando e verificando se ele é válido
             do{
                 printf("%s, digite o comando: ", partida->nomeJogadores[*numJogadas%2]);
@@ -204,10 +206,11 @@ void jogo(Partida *partida){
         char descarte;
         lerCaracter(&descarte);
     }
+    return verificaJogoFinalizado;
 
 }
 
-void menuNovoJogo(Partida *partida, int novoJogo){
+void menuNovoJogo(Partida *partida, int novoJogo, Ranking *ranking, int *qtdJogadoresRanking){
 
     limparTerminal();
     if(novoJogo){
@@ -236,5 +239,13 @@ void menuNovoJogo(Partida *partida, int novoJogo){
         }
         
     }
-    jogo(partida);
+    int resultado = jogo(partida);
+    if(resultado !=0){
+        organizarRanking(ranking, qtdJogadoresRanking, *partida, resultado);
+        //exibirRanking(ranking, *qtdJogadoresRanking);
+
+        for(int i=0; i<*qtdJogadoresRanking; i++){
+            printf("Nome: %s\n", ranking[0].nomeJogador);
+        }
+    }
 }

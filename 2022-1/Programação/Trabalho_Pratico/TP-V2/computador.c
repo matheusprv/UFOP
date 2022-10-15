@@ -3,7 +3,6 @@
 #include "structs.h"
 #include "funcoes.h"
 #include "computador.h"
-#include <time.h>
 
 int procurarVitoria(int *linha, int *coluna, char **tabuleiro, char identificador){
     /*
@@ -156,19 +155,7 @@ int melhorPosicao(int *linha, int *coluna, char **tabuleiro){
         }
     }
 
-    //Escolhendo uma quina do tabuleiro
-    for(int i = 0; i<3; i+=2){
-        if(tabuleiro[i][0] == ' '){
-            *linha = i;
-            *coluna = 0;
-            return 1;
-        }
-        if(tabuleiro[i][2] == ' '){
-            *linha = i;
-            *coluna = 2;
-            return 1;
-        }
-    }
+
 
     //Procura por qualquer posição livre
     for(int i=0; i<3; i++){

@@ -7,4 +7,7 @@
 void salvarJogo(Partida partida, char *arquivoSalvarJogo);
 
 int lerJogoSalvo(Partida *partida);
+
+int lerArquivoConfiguracao(Ranking **ranking);
+
 #endif

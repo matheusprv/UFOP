@@ -11,9 +11,10 @@ typedef struct{
 }Partida;
 
 typedef struct{
-    int linha[3];
-    int coluna[3];
-    int somatorio;
-}Vitoria;
+    char nomeJogador[266];
+    int vitorias;
+    int empates;
+    int derrotas;
+}Ranking;
 
 #endif

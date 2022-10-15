@@ -4,8 +4,14 @@
 #include "funcoes_jogo.h"
 #include "manipulacao_arquivo.h"
 #include "structs.h"
+#include "ranking.h"
+
 
 int main(){
+
+    //Incializando o ranking
+    Ranking *ranking = NULL;
+    int qtdJogadoresRanking = lerArquivoConfiguracao(&ranking);
 
     //Inicializando o tabuleiro
     Partida partida;
@@ -13,6 +19,7 @@ int main(){
     for(int i=0; i<3; i++){
         partida.tabuleiro[i] = malloc(3*sizeof(int));
     }
+    partida.numJogadas = -1;
 
     int comandoValido=1, finalizarPrograma = 0;
     char opcaoMenu;
@@ -24,12 +31,13 @@ int main(){
         lerCaracter(&opcaoMenu);
 
         switch (opcaoMenu){
+            //Finalizar Jogo
             case '0':
                 finalizarPrograma = 1;
                 break;
             //Novo Jogo
             case '1':
-                menuNovoJogo(&partida, 1);
+                menuNovoJogo(&partida, 1, ranking, &qtdJogadoresRanking);
                 break;
             
             //Continuar jogo salvo
@@ -38,7 +46,7 @@ int main(){
 
                     printf("Número jogadores: %d",partida.numJogadores);
 
-                    menuNovoJogo(&partida, 0);
+                    menuNovoJogo(&partida, 0, ranking, &qtdJogadoresRanking);
                 }
                 else
                     comandoValido = -2;
@@ -50,12 +58,17 @@ int main(){
                     comandoValido =-1;
                 }
                 else{
-                    menuNovoJogo(&partida, 0);
+                    menuNovoJogo(&partida, 0, ranking, &qtdJogadoresRanking);
                 }
                 break;
 
             //Visualizar o ranking
             case '4':
+                if(qtdJogadoresRanking == -1 || qtdJogadoresRanking == 0)
+                    comandoValido = -3;
+                else{
+                   exibirRanking(ranking, qtdJogadoresRanking);
+                }
                 break;
 
             default:
@@ -69,10 +82,8 @@ int main(){
         free(partida.tabuleiro[i]);
     }
     free(partida.tabuleiro);
+    free(ranking);
+
+    return 0;
 
 }
-
-
-
-
-
