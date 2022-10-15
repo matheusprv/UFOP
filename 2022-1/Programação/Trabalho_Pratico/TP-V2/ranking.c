@@ -6,11 +6,11 @@
 void exibirRanking(Ranking *ranking, int qtdJogadores){
     printf("Quantidade de jogadores = %d\n", qtdJogadores);
     for(int i=0; i<qtdJogadores; i++){
-        printf("I = %d\n", i);
+        //printf("I = %d\n", i);
         // if(i==0)
         //     printf(YELLOW("%s"), ranking[i].nomeJogador);
         // else
-        printf("%s", ranking[i].nomeJogador);
+        printf("%s ", ranking[i].nomeJogador);
         printf("\nVitórias: %d - Empates: %d - Derrotas: %d\n", ranking[i].vitorias, ranking[i].empates, ranking[i].derrotas);
     }
     printf("Digite qualquer tecla para continuar: ");
@@ -28,33 +28,27 @@ void adicionarJogdorNoRanking(Ranking **ranking, int *qtdJogadores, char * nomeJ
     (*ranking)[*qtdJogadores-1].vitorias = 0;
 }
 
-int procurarPosicao(Ranking ranking, char *nomeJogador, int qtdJogadores){
+int procurarPosicao(Ranking *ranking, char *nomeJogador, int qtdJogadores){
     for(int i=0; i<qtdJogadores; i++){
-        if(strcmp(ranking.nomeJogador, nomeJogador) == 0)
+        if(strcmp(ranking[i].nomeJogador, nomeJogador) == 0)
             return i;
     }
     return -1;
 }
 
 
-void organizarRanking(Ranking *ranking, int *qtdJogadoresRanking, Partida partida, int resultado){
+void organizarRanking(Ranking **ranking, int *qtdJogadoresRanking, Partida partida, int resultado){
     //Verificando se os jogadores já estão no ranking
     for(int cont = 0; cont<2; cont++){
         int jogadorNoRanking = 0;
         for(int i=0; i<*qtdJogadoresRanking; i++){
-            if(strcmp(partida.nomeJogadores[cont], ranking[i].nomeJogador) == 0){
+            if(strcmp(partida.nomeJogadores[cont], (*ranking)[i].nomeJogador) == 0){
                 jogadorNoRanking = 1;
                 break;
             }
         }
         if(!jogadorNoRanking){
-                *qtdJogadoresRanking += 1;
-                ranking = realloc(ranking, (*qtdJogadoresRanking)*sizeof(Ranking));
-                strcpy(ranking[*qtdJogadoresRanking-1].nomeJogador, partida.nomeJogadores[cont]);
-                //Ajustando todas as estatísticas para zero
-                ranking[*qtdJogadoresRanking-1].derrotas = 0;
-                ranking[*qtdJogadoresRanking-1].empates = 0;
-                ranking[*qtdJogadoresRanking-1].vitorias = 0;
+            adicionarJogdorNoRanking(ranking, qtdJogadoresRanking, partida.nomeJogadores[cont]);
         }
     }
 
@@ -63,16 +57,16 @@ void organizarRanking(Ranking *ranking, int *qtdJogadoresRanking, Partida partid
     int posicaoJ2 = procurarPosicao(*ranking, partida.nomeJogadores[1], *qtdJogadoresRanking);
     
     if(resultado == 1){
-        ranking[posicaoJ1].vitorias += 1;
-        ranking[posicaoJ2].derrotas += 1;    
+        (*ranking)[posicaoJ1].vitorias += 1;
+        (*ranking)[posicaoJ2].derrotas += 1;    
     }
     else if(resultado == 2){
-        ranking[posicaoJ2].vitorias += 1;
-        ranking[posicaoJ1].derrotas += 1;    
+        (*ranking)[posicaoJ2].vitorias += 1;
+        (*ranking)[posicaoJ1].derrotas += 1;    
     }
     else{
-        ranking[posicaoJ1].empates += 1;
-        ranking[posicaoJ2].empates += 1;   
+        (*ranking)[posicaoJ1].empates += 1;
+        (*ranking)[posicaoJ2].empates += 1;   
     }
 
     //printf("\nNome: %s - Vitórias: %d - Empates: %d - Derrotas: %d\n\n", ranking[0].nomeJogador,ranking[0].vitorias, ranking[0].empates, ranking[0].derrotas);

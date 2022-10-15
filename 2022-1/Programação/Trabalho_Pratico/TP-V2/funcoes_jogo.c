@@ -241,7 +241,7 @@ void menuNovoJogo(Partida *partida, int novoJogo, Ranking *ranking, int *qtdJoga
     }
     int resultado = jogo(partida);
     if(resultado !=0){
-        organizarRanking(ranking, qtdJogadoresRanking, *partida, resultado);
+        organizarRanking(&ranking, qtdJogadoresRanking, *partida, resultado);
         exibirRanking(ranking, *qtdJogadoresRanking);
     }
 }

@@ -8,12 +8,14 @@
 
 void exibirRanking(Ranking *ranking, int );
 
+//void adicionarJogdorNoRanking(Ranking**, int*, char*);
 void adicionarJogdorNoRanking(Ranking**, int*, char*);
+
 
 int verificarJogadorEstaNoRanking(Ranking*, int*, char*);
 
-int procurarPosicao(Ranking ranking, char *, int);
+int procurarPosicao(Ranking *ranking, char *, int);
 
-void organizarRanking(Ranking *, int*, Partida, int);
+void organizarRanking(Ranking **, int*, Partida, int);
 
 #endif
