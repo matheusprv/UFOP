@@ -48,7 +48,7 @@ void organizarRanking(Ranking **ranking, int *qtdJogadoresRanking, Partida parti
             }
         }
         if(!jogadorNoRanking){
-            adicionarJogdorNoRanking(ranking, qtdJogadoresRanking, partida.nomeJogadores[cont]);
+            adicionarJogdorNoRanking(ranking, *qtdJogadoresRanking, partida.nomeJogadores[cont]);
         }
     }
 
