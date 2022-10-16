@@ -5,3 +5,6 @@ marcar 12
 marcar 33
 marcar 13
 marcar 23
+
+
+Verificar se o arquivo com o ranking está vazio ou não

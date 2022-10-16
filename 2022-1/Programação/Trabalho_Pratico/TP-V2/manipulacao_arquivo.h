@@ -10,4 +10,7 @@ int lerJogoSalvo(Partida *partida);
 
 int lerArquivoConfiguracao(Ranking **ranking);
 
+void salvarArquivoConfiguracao(Ranking *, int );
+
+
 #endif

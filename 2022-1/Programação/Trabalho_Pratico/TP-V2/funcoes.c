@@ -6,7 +6,7 @@
 
 //Apaga tudo que está escrito no terminal
 void limparTerminal(){
-    printf("\e[1;1H\e[2J");
+    //printf("\e[1;1H\e[2J");
 }
 
 //Imprime na tela as opções de menu

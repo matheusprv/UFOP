@@ -91,24 +91,37 @@ int lerArquivoConfiguracao(Ranking **ranking){
         return -1;
     }
 
-    int qtdJogadores;
-    
+    int qtdJogadores = -1;
+
     //Verificando se o arquivo está vazio
-    fseek (arquivo, 0, SEEK_END);
-    int tamanhoArquivo = ftell(arquivo);
-    if (tamanhoArquivo == 0) {
-        qtdJogadores = 0;
-    }
+    // fseek (arquivo, 0, SEEK_END);
+    // int tamanhoArquivo = ftell(arquivo);
+    // if (tamanhoArquivo == 0) {
+    //     qtdJogadores = 0;
+    //     printf("\nZerado\n");
+    // }
 
     if(qtdJogadores !=0){
+
         fread(&qtdJogadores, sizeof(int), 1, arquivo);
         
-        *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
+         *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
         
-        fread(ranking, sizeof(Ranking), qtdJogadores, arquivo);
+         fread((*ranking), sizeof(Ranking), qtdJogadores, arquivo);
         
         fclose(arquivo);        
     }
 
     return qtdJogadores;
+}
+
+void salvarArquivoConfiguracao(Ranking *ranking, int qtdJogadores){
+    if(qtdJogadores>0){
+        FILE * arquivo = fopen("velha.ini", "wb");
+
+        fwrite(&qtdJogadores, sizeof(int), 1, arquivo);
+        fwrite(ranking, sizeof(Ranking), qtdJogadores<=10 ? qtdJogadores : 10, arquivo);
+
+        fclose(arquivo);
+    }
 }

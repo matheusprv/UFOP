@@ -84,6 +84,8 @@ int main(){
 
     }while(!finalizarPrograma);
 
+    salvarArquivoConfiguracao(ranking, qtdJogadoresRanking);
+
     for(int i=0; i<3;i++){
         free(partida.tabuleiro[i]);
     }
