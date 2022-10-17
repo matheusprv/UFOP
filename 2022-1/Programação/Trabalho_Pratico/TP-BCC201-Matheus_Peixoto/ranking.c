@@ -4,6 +4,7 @@
 #include "cores.c"
 
 void exibirRanking(Ranking *ranking, int qtdJogadores){
+    limparTerminal();
 
     //Procurando a maior string dos nomes para exibir os nomes no meio da tabela
     int maiorStringNome = strlen("Jogador");
@@ -26,7 +27,7 @@ void exibirRanking(Ranking *ranking, int qtdJogadores){
         printf("\n\tVitórias: %d - Empates: %d - Derrotas: %d\n", ranking[i].vitorias, ranking[i].empates, ranking[i].derrotas);
     
     }
-    printf("Digite qualquer tecla para continuar: ");
+    printf("\nDigite qualquer tecla para continuar: ");
     getchar();
 }
 

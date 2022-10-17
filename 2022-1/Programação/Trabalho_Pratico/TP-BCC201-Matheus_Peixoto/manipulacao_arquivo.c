@@ -86,31 +86,22 @@ int lerJogoSalvo(Partida *partida){
 
 int lerArquivoConfiguracao(Ranking **ranking){
     FILE *arquivo;
+    
+    int qtdJogadores = 0;
+
     //Verificando se o arquivo existe
     if(!(arquivo = fopen("velha.ini", "rb"))){
-        return -1;
+        *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
+        return qtdJogadores;
     }
 
-    int qtdJogadores = -1;
+    fread(&qtdJogadores, sizeof(int), 1, arquivo);
+    
+    *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
 
-    //Verificando se o arquivo está vazio
-    // fseek (arquivo, 0, SEEK_END);
-    // int tamanhoArquivo = ftell(arquivo);
-    // if (tamanhoArquivo == 0) {
-    //     qtdJogadores = 0;
-    //     printf("\nZerado\n");
-    // }
-
-    if(qtdJogadores !=0){
-
-        fread(&qtdJogadores, sizeof(int), 1, arquivo);
-        
-         *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
-        
-         fread((*ranking), sizeof(Ranking), qtdJogadores, arquivo);
-        
-        fclose(arquivo);        
-    }
+    fread((*ranking), sizeof(Ranking), qtdJogadores, arquivo);
+    
+    fclose(arquivo);        
 
     return qtdJogadores;
 }
