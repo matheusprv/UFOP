@@ -3,34 +3,37 @@
 
 int main(){
 
-    int b, n;
-    scanf("%d%d", &b,&n);
+    int bancos, dividas;
+    scanf("%d%d", &bancos, &dividas);
 
-    while(b!=0 && n!=0){
-        int *reservas = malloc(b*sizeof(int));
+    while (bancos !=0 && dividas !=0){
         
-        for(int i=0; i<b; i++){
-            scanf("%d", &reservas[i]);
+        int *dinheiro = (int *) malloc(bancos * sizeof(int));
+
+        for(int i=0; i<bancos; i++){
+            scanf("%d", &dinheiro[i]);
         }
 
-        int devedor;
-        scanf("%d", &devedor);
-
-        int credor;
-        scanf("%d", &credor);
-
-        int valor;
-        scanf("%d", &valor);
-
         char conseguePagar = 'S';
+        int banco, paraQuemDeve, divida;
+        for(int i=0; i<bancos; i++){
+            scanf("%d%d%d", &banco, &paraQuemDeve, &divida);
+            banco--;
+            paraQuemDeve--;
+            
+            dinheiro[banco] -= divida;
+            dinheiro[paraQuemDeve] += divida;
+        }
 
-
-
-        printf("%c", conseguePagar);
-
-        free(reservas);
-        scanf("%d%d", &b,&n);
+        for(int i=0; i<bancos; i++){
+            if(dinheiro[i] < 0)
+                conseguePagar = 'N';
+        }
+        free(dinheiro);
+        printf("%c\n", conseguePagar);
+        scanf("%d%d", &bancos, &dividas);
     }
+    
 
     return 0;
 }
