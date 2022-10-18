@@ -28,7 +28,8 @@ void exibirRanking(Ranking *ranking, int qtdJogadores){
     
     }
     printf("\nDigite qualquer tecla para continuar: ");
-    getchar();
+    char lixo;
+    lerCaracter(&lixo);
 }
 
 //Adiciona mais um jogador no vetor de ranking

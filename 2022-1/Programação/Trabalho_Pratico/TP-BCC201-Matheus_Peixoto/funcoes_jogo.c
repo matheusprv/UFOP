@@ -52,7 +52,6 @@ int jogoFinalizado(char **tabuleiro, int numJogadas){
         if(tabuleiro[i][2-i] == verificador)
             verificacoes[3]++;
     }
-    printf("Verificações [3]: %d\n", verificacoes[3]);
     //Verificando se ganhou nas diagonais
     if(verificacoes[2] == 3 || verificacoes[3] == 3)
         return jogador;

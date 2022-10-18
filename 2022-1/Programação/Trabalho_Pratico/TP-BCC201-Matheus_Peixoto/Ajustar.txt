@@ -12,7 +12,3 @@ marcar 32
 marcar 33
 marcar 13
 
-
-TP-BCC201-Matheus_Peixoto
-
-Verificar se o arquivo com o ranking está vazio ou não

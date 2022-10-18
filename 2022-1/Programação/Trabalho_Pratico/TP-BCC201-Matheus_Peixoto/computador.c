@@ -105,7 +105,106 @@ int melhorPosicao(int *linha, int *coluna, char **tabuleiro){
         return 1;
     }
 
-    //Evitando com que o jogador tenha duas quinas marcadas formando o L
+    if(tabuleiro[0][0] == 'X'){
+        //          [3][2]   
+        if(tabuleiro[2][1] == 'X'){
+            if(tabuleiro[1][0] == ' '){
+                *linha = 1;
+                *coluna = 0;
+                return 1; //[2][1]
+            }
+        }
+        //          [2][3]
+        if(tabuleiro[1][2] == 'X'){
+            if(tabuleiro[0][2] == ' '){
+                *linha = 0; 
+                *coluna = 2;
+                return 1; //[1][3]                
+            }
+        }
+        //          [3][3]                    
+        if(tabuleiro[2][2] == 'X'){
+            if(tabuleiro[0][1] == ' '){
+                *linha = 0;
+                *coluna = 1;
+                return 1; //[1][2]
+            }
+            if(tabuleiro[2][1] == ' '){
+                *linha = 2;
+                *coluna = 1;
+                return 1;
+            }
+        }
+    }
+    if(tabuleiro[0][2] == 'X'){
+        //          [3][2]   
+        if(tabuleiro[2][1] == 'X'){
+            if(tabuleiro[1][0] == ' '){
+                *linha = 1;
+                *coluna = 0;
+                return 1; //[2][1]
+            }
+        }
+        //          [2][1] 
+        if(tabuleiro[1][0] == 'X'){
+            if(tabuleiro[0][0] == ' '){
+                *linha = 0;
+                *coluna = 0;
+                return 1;
+            }
+        }
+        //          [1][3]
+        if(tabuleiro[0][2] == 'X'){
+            if(tabuleiro[1][2] == ' '){
+                *linha = 1;
+                *coluna = 2;
+                return 1;
+            }
+        }
+    }
+
+    //          [3][1]
+    if(tabuleiro[2][0] == 'X'){
+        //          [1][2] 
+        if(tabuleiro[0][1] == 'X' || tabuleiro[0][2]){
+            if(tabuleiro[1][0] == ' '){
+                *linha = 1;
+                *coluna = 0;
+                return 1;
+            }
+        }
+        //               [2][3]
+        else if(tabuleiro[1][2] == 'X'){
+            //          [3][2]
+            if(tabuleiro[2][1] == ' '){
+                *linha = 2;
+                *coluna = 1;
+                return 1;
+            }
+        }
+    }
+    //          [3][3]
+    if(tabuleiro[2][2] == 'X'){
+        //          [1][2]
+        if(tabuleiro[0][1] == 'X' || tabuleiro[0][0] == 'X'){
+            if(tabuleiro[1][2] == ' '){
+                *linha = 1;
+                *coluna = 2;
+                return 1;
+            }
+        }
+        if(tabuleiro[1][0] == 'X'){
+            if(tabuleiro[2][0] == ' '){
+                *linha = 2;
+                *coluna = 0;
+                return 1;
+            }
+        }
+        
+    }
+
+/*
+    //Jogando em uma quina
     if(tabuleiro[0][0] == 'X'){
         if(tabuleiro[0][1] == ' '){
             *linha = 0;
@@ -154,20 +253,7 @@ int melhorPosicao(int *linha, int *coluna, char **tabuleiro){
             return 1;
         }
     }
-
-
-
-    //Procura por qualquer posição livre
-    for(int i=0; i<3; i++){
-        for(int j=0; j<3; j++){
-            if(tabuleiro[i][j] == ' '){
-                *linha = i;
-                *coluna = j;
-                return 3;
-            }
-        }
-    }
-    
+*/
 
     return 0;
 }
@@ -177,17 +263,20 @@ void jogadaComputador(Partida *partida){
 
     //Procurar onde o computador pode ganhar
     if(procurarVitoria(&linha, &coluna, partida->tabuleiro, 'O')){
+        printf("If 1\n");
         partida->tabuleiro[linha][coluna] = 'O';
     }
     //Procurar onde o jogador pode ganhar para impedí-lo
     else if(procurarVitoria(&linha, &coluna, partida->tabuleiro, 'X')){
+        printf("If 2\n");
         partida->tabuleiro[linha][coluna] = 'O';
     }
     //Procurando a melhor posição para marcar já que não há possibilidade de vencer
     else{
+        printf("If 3\n");
         melhorPosicao(&linha, &coluna, partida->tabuleiro);
         partida->tabuleiro[linha][coluna] = 'O';
-        
     }
+    printf("Linha: %d - Coluna: %d\n", linha, coluna);
     
 }
