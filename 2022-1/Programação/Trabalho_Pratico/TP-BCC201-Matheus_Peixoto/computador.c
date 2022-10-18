@@ -97,163 +97,84 @@ int procurarVitoria(int *linha, int *coluna, char **tabuleiro, char identificado
 }
 
 
-int melhorPosicao(int *linha, int *coluna, char **tabuleiro){
+int melhorPosicao(char **tabuleiro){
     //Procura a melhor posição para marcar no tabuleiro quando não há nenhuma outra possibilidade de vitória
     if(tabuleiro[1][1] == ' '){
-        *linha = 1;
-        *coluna = 1;
+        tabuleiro[1][1] = 'O';
         return 1;
     }
-
+    
     if(tabuleiro[0][0] == 'X'){
-        //          [3][2]   
-        if(tabuleiro[2][1] == 'X'){
-            if(tabuleiro[1][0] == ' '){
-                *linha = 1;
-                *coluna = 0;
-                return 1; //[2][1]
-            }
+        if(tabuleiro[2][2] == 'X' && tabuleiro[1][2] == ' '){
+            tabuleiro[1][2] = 'O';
+            return 1;
         }
-        //          [2][3]
-        if(tabuleiro[1][2] == 'X'){
-            if(tabuleiro[0][2] == ' '){
-                *linha = 0; 
-                *coluna = 2;
-                return 1; //[1][3]                
-            }
+        if(tabuleiro[1][2] == 'X' && tabuleiro[2][2] == ' '){
+            tabuleiro[2][2] = 'O';
+            return 1;
         }
-        //          [3][3]                    
-        if(tabuleiro[2][2] == 'X'){
-            if(tabuleiro[0][1] == ' '){
-                *linha = 0;
-                *coluna = 1;
-                return 1; //[1][2]
-            }
-            if(tabuleiro[2][1] == ' '){
-                *linha = 2;
-                *coluna = 1;
-                return 1;
-            }
+        if(tabuleiro[2][1] == 'X' && tabuleiro[2][0] == ' '){
+            tabuleiro[2][0] = 'O';
+            return 1;
         }
     }
+
     if(tabuleiro[0][2] == 'X'){
-        //          [3][2]   
-        if(tabuleiro[2][1] == 'X'){
-            if(tabuleiro[1][0] == ' '){
-                *linha = 1;
-                *coluna = 0;
-                return 1; //[2][1]
-            }
+        if(tabuleiro[1][0] == 'X' && tabuleiro[0][0] == ' '){
+            tabuleiro[0][0] = 'O';
+            return 1;
         }
-        //          [2][1] 
-        if(tabuleiro[1][0] == 'X'){
-            if(tabuleiro[0][0] == ' '){
-                *linha = 0;
-                *coluna = 0;
-                return 1;
-            }
+        if(tabuleiro[2][0] == 'X' && tabuleiro[2][1] == ' '){
+            tabuleiro[2][1] = 'O';
+            return 1;
         }
-        //          [1][3]
-        if(tabuleiro[0][2] == 'X'){
-            if(tabuleiro[1][2] == ' '){
-                *linha = 1;
-                *coluna = 2;
-                return 1;
-            }
+        if(tabuleiro[2][1] == 'X' && tabuleiro[2][2] == ' '){
+            tabuleiro[2][2] = 'O';
+            return 1;
         }
     }
 
-    //          [3][1]
-    if(tabuleiro[2][0] == 'X'){
-        //          [1][2] 
-        if(tabuleiro[0][1] == 'X' || tabuleiro[0][2]){
-            if(tabuleiro[1][0] == ' '){
-                *linha = 1;
-                *coluna = 0;
-                return 1;
-            }
-        }
-        //               [2][3]
-        else if(tabuleiro[1][2] == 'X'){
-            //          [3][2]
-            if(tabuleiro[2][1] == ' '){
-                *linha = 2;
-                *coluna = 1;
-                return 1;
-            }
-        }
-    }
-    //          [3][3]
     if(tabuleiro[2][2] == 'X'){
-        //          [1][2]
-        if(tabuleiro[0][1] == 'X' || tabuleiro[0][0] == 'X'){
-            if(tabuleiro[1][2] == ' '){
-                *linha = 1;
-                *coluna = 2;
-                return 1;
-            }
+        if(tabuleiro[0][0] == 'X' && tabuleiro[1][2] == ' '){
+            tabuleiro[1][2] = 'O';
+            return 1;
         }
-        if(tabuleiro[1][0] == 'X'){
-            if(tabuleiro[2][0] == ' '){
-                *linha = 2;
-                *coluna = 0;
-                return 1;
-            }
+        if(tabuleiro[1][0] == 'X' && tabuleiro[2][0] == ' '){
+            tabuleiro[2][0] = 'O';
+            return 1;
         }
-        
+        if(tabuleiro[0][1] == 'X' && tabuleiro[0][2] == ' '){
+            tabuleiro[0][2] = 'O';
+            return 1;
+        }
     }
 
-/*
-    //Jogando em uma quina
-    if(tabuleiro[0][0] == 'X'){
-        if(tabuleiro[0][1] == ' '){
-            *linha = 0;
-            *coluna = 1;
+    if(tabuleiro[2][0] == 'X'){
+        if(tabuleiro[0][1] == 'X' && tabuleiro[0][0] == ' '){
+            tabuleiro[0][0] = 'O';
             return 1;
         }
-        else if(tabuleiro[1][0] == ' '){
-            *linha = 1;
-            *coluna = 0;
+        if(tabuleiro[0][2] == 'X' && tabuleiro[1][2] == ' '){
+            tabuleiro[1][2] = 'O';
             return 1;
         }
-    }
-    else if(tabuleiro[0][2] == 'X'){
-        if(tabuleiro[0][1] == ' '){
-            *linha = 0;
-            *coluna = 1;
-            return 1;
-        }
-        else if(tabuleiro[1][2] == ' '){
-            *linha = 1;
-            *coluna = 2;
+        if(tabuleiro[1][2] == 'X' && tabuleiro[2][2] == ' '){
+            tabuleiro[2][2] = 'O';
             return 1;
         }
     }
-    else if(tabuleiro[0][2] == 'X'){
-        if(tabuleiro[1][2] == ' '){
-            *linha = 1;
-            *coluna = 2;
+
+    if(tabuleiro[0][1] == 'X'){
+        if(tabuleiro[0][0] == ' '){
+            tabuleiro[0][0] = 'O';
             return 1;
         }
-        else if(tabuleiro[2][1] == ' '){
-            *linha = 2;
-            *coluna = 1;
-            return 1;
-        }
-    }
-    else if(tabuleiro[2][2] == 'X'){
-        if(tabuleiro[2][1] == ' '){
-            *linha = 2;
-            *coluna = 1;
-            return 1;
-        }
-        else if(tabuleiro[1][2] == ' '){
-            *linha = 1;
-            *coluna = 2;
+        if(tabuleiro[0][2] == ' '){
+            tabuleiro[0][2] = 'O';
             return 1;
         }
     }
-*/
+
 
     return 0;
 }
@@ -273,10 +194,7 @@ void jogadaComputador(Partida *partida){
     }
     //Procurando a melhor posição para marcar já que não há possibilidade de vencer
     else{
-        printf("If 3\n");
-        melhorPosicao(&linha, &coluna, partida->tabuleiro);
-        partida->tabuleiro[linha][coluna] = 'O';
+        melhorPosicao(partida->tabuleiro);
     }
-    printf("Linha: %d - Coluna: %d\n", linha, coluna);
     
 }

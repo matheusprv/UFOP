@@ -10,7 +10,7 @@
 int main(){
 
     //Incializando o ranking
-    Ranking *ranking = NULL;
+    Ranking *ranking;
     int qtdJogadoresRanking = lerArquivoConfiguracao(&ranking);
 
     //Inicializando o tabuleiro
