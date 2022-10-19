@@ -12,4 +12,9 @@ marcar 32
 marcar 33
 marcar 13
 
+marcar 33
+marcar 11
+marcar 31
+
+
 Começar no meio crasha o jogo

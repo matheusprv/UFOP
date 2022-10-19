@@ -165,16 +165,75 @@ int melhorPosicao(char **tabuleiro){
     }
 
     if(tabuleiro[0][1] == 'X'){
+        if(tabuleiro[0][1] == 'X' && tabuleiro[0][0] == ' '){
+            tabuleiro[0][0] = 'O';
+            return 1;
+        }
+        if(tabuleiro[1][2] == 'X' && tabuleiro[0][2] == ' '){
+            tabuleiro[0][2] = 'O';
+            return 1;
+        }
+    }
+    if(tabuleiro[1][2] == 'X'){
+        if(tabuleiro[0][1] == 'X' && tabuleiro[0][2] == ' '){
+            tabuleiro[0][2] = 'O';
+            return 1;
+        }
+        if(tabuleiro[2][1] == 'X' && tabuleiro[2][2] == ' '){
+            tabuleiro[2][2] = 'O';
+            return 1;
+        }
+    }
+
+    if(tabuleiro[2][1] == 'X'){
+        if(tabuleiro[1][0] == 'X' && tabuleiro[2][0] == ' '){
+            tabuleiro[2][0] = 'O';
+            return 1;
+        }
+        if(tabuleiro[1][2] == 'X' && tabuleiro[2][1] == ' '){
+            tabuleiro[2][2] = 'O';
+            return 1;
+        }
+    }
+
+    if(tabuleiro[1][0] == 'X'){
+        if(tabuleiro[0][1] == 'X' && tabuleiro[0][0] == ' '){
+            tabuleiro[0][0] = 'O';
+            return 1;
+        }
+        if(tabuleiro[2][1] == 'X' && tabuleiro[2][0] == ' '){
+            tabuleiro[2][0] = 'O';
+            return 1;
+        }
+    }
+
+    //Escolhendo uma quina
+    int quina = rand()%4;
+    
+    if(quina == 0){
         if(tabuleiro[0][0] == ' '){
             tabuleiro[0][0] = 'O';
             return 1;
         }
+    }
+    if(quina == 1){
         if(tabuleiro[0][2] == ' '){
             tabuleiro[0][2] = 'O';
             return 1;
         }
     }
-
+    if(quina == 2){
+        if(tabuleiro[2][0] == ' '){
+            tabuleiro[2][0] = 'O';
+            return 1;
+        }
+    }
+    if(quina == 3){
+        if(tabuleiro[2][2] == ' '){
+            tabuleiro[2][2] = 'O';
+            return 1;
+        }
+    }
 
     return 0;
 }
