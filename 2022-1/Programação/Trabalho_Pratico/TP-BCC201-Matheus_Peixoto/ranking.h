@@ -6,11 +6,12 @@
 #include "funcoes.h"
 #include "structs.h"
 
+void alinharAoMeioTabela(char *, int);
+
 void exibirRanking(Ranking *ranking, int );
 
 //void adicionarJogdorNoRanking(Ranking**, int*, char*);
 void adicionarJogdorNoRanking(Ranking **, int*, char*);
-
 
 int verificarJogadorEstaNoRanking(Ranking*, int*, char*);
 

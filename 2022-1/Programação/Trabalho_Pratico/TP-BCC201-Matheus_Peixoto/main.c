@@ -67,7 +67,8 @@ int main(){
                 if(qtdJogadoresRanking == -1 || qtdJogadoresRanking == 0)
                     comandoValido = -3;
                 else{
-                   exibirRanking(ranking, qtdJogadoresRanking);
+                    limparTerminal();
+                    exibirRanking(ranking, qtdJogadoresRanking);
                 }
                 break;
 
@@ -86,9 +87,9 @@ int main(){
 
     salvarArquivoConfiguracao(ranking, qtdJogadoresRanking);
 
-    for(int i=0; i<3;i++){
+    //Liberando alocações dinâmicas
+    for(int i=0; i<3;i++)
         free(partida.tabuleiro[i]);
-    }
     free(partida.tabuleiro);
     free(ranking);
 

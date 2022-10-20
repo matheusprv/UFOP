@@ -1,20 +1,5 @@
 gcc -Wall main.c funcoes.c funcoes_jogo.c manipulacao_arquivo.c computador.c cores.c ranking.c -o main
 
 
-marcar 12
-marcar 33
-marcar 13
-marcar 23
-
-marcar 11
-marcar 23
-marcar 32
-marcar 33
-marcar 13
-
-marcar 33
-marcar 11
-marcar 31
-
-
-Começar no meio crasha o jogo
+Evitar que o jogador informe um nome nulo 
+Estilizar o ranking

@@ -6,20 +6,24 @@
 
 //Apaga tudo que está escrito no terminal
 void limparTerminal(){
-    printf("\e[1;1H\e[2J");
+    //printf("\e[1;1H\e[2J");
+    system("clear");
 }
 
 //Imprime na tela as opções de menu
 void imprimeMenuPrincipal(int comandoValido){
     limparTerminal();
+
+    printf("Bem vindo(a) ao Jogo da Velha.\n");
+
     if(comandoValido == 0)
-        printf(RED("Comando inválido!\n"));
+        printf(RED("\tComando inválido!"));
     else if(comandoValido == -1)
-        printf(RED("Nenhum jogo foi iniciado para ser retornado.\n"));
+        printf(RED("\tNenhum jogo foi iniciado para ser retornado."));
     else if(comandoValido == -2)
-        printf(RED("Arquivo não encontrado!\n"));
+        printf(RED("\tArquivo não encontrado!"));
     else if(comandoValido == -3)
-        printf(RED("Ainda não há jogadores no ranking"));
+        printf(RED("\tAinda não há jogadores no ranking"));
 
     printf("\n\t1 - Começar novo jogo.\n");
     printf("\t2 - Carregar um jogo salvo.\n");

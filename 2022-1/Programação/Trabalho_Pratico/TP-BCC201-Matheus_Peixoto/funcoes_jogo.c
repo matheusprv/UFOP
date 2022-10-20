@@ -5,6 +5,7 @@
 #include "computador.h"
 #include "structs.h"
 #include "ranking.h"
+#include "cores.c"
 
 #define TAM_MAX_STRING 266
 
@@ -95,7 +96,7 @@ int lerComandos(int *linha, int *coluna, char **tabuleiro, char arquivoSalvarJog
         int tamanhoParametro = strlen(comando[1]);
         //Retorna -1 para quando o usuário colocar uma quantidade diferente de uma linha e uma coluna. Ex: marcar 111
         if(tamanhoParametro != 2){
-            printf("Quantidade de linha e coluna supera o esperado.\n");
+            printf(YELLOW("Quantidade de linha e coluna supera o esperado.\n"));
             return -1;
         }
 
@@ -109,16 +110,16 @@ int lerComandos(int *linha, int *coluna, char **tabuleiro, char arquivoSalvarJog
         //Verificando se a linha e coluna são válidas
         if(*linha<0 || *linha>2 || *coluna<0 || *coluna>2){
             if(*linha<0 || *linha>2){
-                printf("Linha inválida.\n");
+                printf(YELLOW("Linha inválida.\n"));
             }
             if(*coluna<0 || *coluna>2){
-                printf("Coluna inválida.\n");
+                printf(YELLOW("Coluna inválida.\n"));
             }
             return -1;
         }
         //Verificando se é possível utilizar o espaço solicitado
         if(tabuleiro[*linha][*coluna] != ' '){
-            printf("Esse espaço já foi marcado!\n");
+            printf(YELLOW("\nEsse espaço já foi marcado!\n"));
             return -1;
         }
 
@@ -155,8 +156,9 @@ int jogo(Partida *partida){
             do{
                 printf("%s, digite o comando: ", partida->nomeJogadores[*numJogadas%2]);
                 comando = lerComandos(&linha, &coluna, partida->tabuleiro, arquivoSalvarJogo);
-                if(comando == 0 || comando == -1)
-                    printf("Comando inválido\n");
+                if(comando == 0)
+                    printf(RED("\nComando inválido!\n"));
+                if(comando==-1){}
                 else
                     break;
             }while(1);
@@ -198,13 +200,13 @@ int jogo(Partida *partida){
         limparTerminal();
         imprimeTabuleiro(partida->tabuleiro);
         if(verificaJogoFinalizado == 3)
-            printf("Empate! Nenhum Jogador venceu!\n");
+            printf(BLUE("Empate! Nenhum Jogador venceu!\n"));
         else
-            printf("%s venceu!\n", partida->nomeJogadores[verificaJogoFinalizado-1]);
+            printf(GREEN("%s venceu!\n"), partida->nomeJogadores[verificaJogoFinalizado-1]);
 
-        printf("Digite uma tecla para prosseguir: ");
+        /*printf("Digite uma tecla para prosseguir: ");
         char descarte;
-        lerCaracter(&descarte);
+        lerCaracter(&descarte);*/
     }
     return verificaJogoFinalizado;
 
@@ -234,8 +236,6 @@ int menuNovoJogo(Partida *partida, int novoJogo){
         for(int i=0; i<partida->numJogadores;i++){
             printf("Digite o nome do Jogador %d: ", i+1);
             lerString(partida->nomeJogadores[i]);
-            //fgets(partida->nomeJogadores[i], TAM_MAX_STRING+1, stdin);
-            //partida->nomeJogadores[i][strlen(partida->nomeJogadores[i]) -1] = '\0' ;
         }
         
     }

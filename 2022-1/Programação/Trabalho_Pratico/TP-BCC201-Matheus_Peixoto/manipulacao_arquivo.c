@@ -90,17 +90,25 @@ int lerArquivoConfiguracao(Ranking **ranking){
     int qtdJogadores = 0;
 
     //Verificando se o arquivo existe
-    if(!(arquivo = fopen("velha.ini", "rb"))){
+    if(!(arquivo = fopen("velha.ini", "r"))){
+        //Criando um vetor nulo para caso não tenha ninguém no ranking
         *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
         return qtdJogadores;
     }
 
-    fread(&qtdJogadores, sizeof(int), 1, arquivo);
-    
+    //Lendo a quantidade de jogadores e criando um vetor para esse número
+    fscanf(arquivo, "%d\n", &qtdJogadores);
     *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
 
-    fread((*ranking), sizeof(Ranking), qtdJogadores, arquivo);
-    
+    //Lendo as informações de cada jogador
+    for(int i=0; i<qtdJogadores; i++){
+        fgets((*ranking)[i].nomeJogador, 266, arquivo);
+        (*ranking)[i].nomeJogador[strlen((*ranking)[i].nomeJogador)-1] = '\0';
+        fscanf(arquivo, "%d ", &(*ranking)[i].vitorias);
+        fscanf(arquivo, "%d ", &(*ranking)[i].empates);
+        fscanf(arquivo, "%d\n", &(*ranking)[i].derrotas);
+    }
+
     fclose(arquivo);        
 
     return qtdJogadores;
@@ -108,10 +116,25 @@ int lerArquivoConfiguracao(Ranking **ranking){
 
 void salvarArquivoConfiguracao(Ranking *ranking, int qtdJogadores){
     if(qtdJogadores>0){
-        FILE * arquivo = fopen("velha.ini", "wb");
 
-        fwrite(&qtdJogadores, sizeof(int), 1, arquivo);
-        fwrite(ranking, sizeof(Ranking), qtdJogadores<=10 ? qtdJogadores : 10, arquivo);
+        //Verifica se o computador está entre as 10 primeiras posições, se não estiver, coloca ele em décimo
+        if(qtdJogadores>10){
+            int posicaoComp = procurarPosicao(ranking, "Computador", qtdJogadores);
+            ranking[9] = ranking[posicaoComp];
+        }
+        
+        //Caso tenha mais de 10 jogadores, ajustar para exatamente 10
+        qtdJogadores = qtdJogadores<=10 ? qtdJogadores : 10;
+
+        //Escrevendo a quantidade de jogadores e os jogadores no arquivo
+        FILE * arquivo = fopen("velha.ini", "w");
+
+        fprintf(arquivo, "%d\n", qtdJogadores);
+
+        for(int i=0; i<qtdJogadores; i++){
+            fprintf(arquivo, "%s\n", ranking[i].nomeJogador);
+            fprintf(arquivo, "%d %d %d\n", ranking[i].vitorias, ranking[i].empates, ranking[i].derrotas);
+        }
 
         fclose(arquivo);
     }

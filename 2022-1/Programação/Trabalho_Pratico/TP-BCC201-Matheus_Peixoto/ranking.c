@@ -3,28 +3,66 @@
 #include "ranking.h"
 #include "cores.c"
 
-void exibirRanking(Ranking *ranking, int qtdJogadores){
-    limparTerminal();
+void alinharAoMeioTabela(char *nome, int maiorStringNome){
 
-    //Procurando a maior string dos nomes para exibir os nomes no meio da tabela
-    int maiorStringNome = strlen("Jogador");
+}
+
+
+void exibirRanking(Ranking *ranking, int qtdJogadores){
+    //Procurando a maior string dos nomes para exibir os nomes coma a tabela formatada
+    int tamanhoStrJogador = strlen("Jogador");
+    int maiorStringNome = tamanhoStrJogador;
     for(int i=0; i<qtdJogadores; i++){
         int tamanhoStringAtual = strlen(ranking[i].nomeJogador);
         if(tamanhoStringAtual > maiorStringNome)
             maiorStringNome = tamanhoStringAtual;
     }
+    printf("Maior String: %d\n", maiorStringNome);
+    //Verificar a quantidade de espaços para ser adicionado
+    int qtdEspacos;
+    if(maiorStringNome>tamanhoStrJogador){
+        qtdEspacos = (maiorStringNome-tamanhoStrJogador);
+    }
+    
+    printf(BOLD(" Posição "TAB_VER));
+
+    //Exibindo a palavra jogador com a quantidade de espaços necessário
+    for(int i=0; i<(qtdEspacos+1)/2; i++)
+        printf(" ");
+    printf(BOLD(" Jogador"));
+    for(int i=0; i<(qtdEspacos+1)/2; i++)
+        printf(" ");
+    printf(TAB_VER);
+
+    printf(BOLD(" Vitórias "TAB_VER " Empates "TAB_VER" Derrotas "TAB_VER"\n"));
 
     for(int i=0; i<qtdJogadores; i++){
+
+        //Exibindo a posição do jogador
+        printf("%7dº "TAB_VER, i+1);
+
+        //Verificando a quantidade de espaços para o nome do jogador
+        int tamanhoNomeJogador = strlen(ranking[i].nomeJogador);
+        if(maiorStringNome>tamanhoNomeJogador)
+            qtdEspacos = (maiorStringNome-tamanhoNomeJogador);
+        else
+            qtdEspacos = 0;
+
         //Cores para o podium
         if(i==0)
-            printf(YELLOW("%s"), ranking[i].nomeJogador);
+            printf(YELLOW(" %s"), ranking[i].nomeJogador);
         else if(i==1)
-            printf(WHITE("%s"), ranking[i].nomeJogador);
+            printf(WHITE(" %s"), ranking[i].nomeJogador);
         else if(i==2)
-            printf(BLUE("%s"), ranking[i].nomeJogador);
+            printf(BLUE(" %s"), ranking[i].nomeJogador);
         else
-            printf("%s ", ranking[i].nomeJogador);
-        printf("\n\tVitórias: %d - Empates: %d - Derrotas: %d\n", ranking[i].vitorias, ranking[i].empates, ranking[i].derrotas);
+            printf(" %s", ranking[i].nomeJogador);
+        //Imprimindo os espaços
+        for(int j=0; j<qtdEspacos+1; j++)
+            printf(" ");
+        printf(TAB_VER);
+
+        printf(" %8d "TAB_VER" %7d "TAB_VER" %8d "TAB_VER"\n", ranking[i].vitorias, ranking[i].empates, ranking[i].derrotas);
     
     }
     printf("\nDigite qualquer tecla para continuar: ");
