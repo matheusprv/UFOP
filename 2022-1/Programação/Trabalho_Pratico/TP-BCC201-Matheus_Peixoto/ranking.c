@@ -3,10 +3,36 @@
 #include "ranking.h"
 #include "cores.c"
 
-void alinharAoMeioTabela(char *nome, int maiorStringNome){
+void alinharAoMeioTabela(char *strExibir, int maiorStringNome){
+    //Verificar a quantidade de espaços para ser adicionado
+    int qtdEspacos, tamanhoStr = strlen(strExibir);
+    int caracteresImpressos = 0; //Verifica quantos caracteres já foram adicionados à esquerda e o nome para adicionar o que falta à direita
 
+    //Somente entra no if quando não for a maior palavra, pois ela não precisa ter espaços adicionados
+    if(maiorStringNome>tamanhoStr){
+
+        qtdEspacos = (maiorStringNome-tamanhoStr);
+
+        //Exibindo a palavra jogador com a quantidade de espaços necessário
+        for(int i=0; i<(qtdEspacos)/2; i++){
+            printf(" ");
+            caracteresImpressos++;
+        }
+            
+    }
+    printf("%s", strExibir);
+    caracteresImpressos += tamanhoStr;
+
+    //Somente entra no if quando não for a maior palavra, pois ela não precisa ter espaços adicionados
+    if(maiorStringNome>tamanhoStr){
+        for(; caracteresImpressos<maiorStringNome; caracteresImpressos++){
+            printf(" ");
+        }
+    }
+
+    printf("\x1b[0m "TAB_VER);
+    
 }
-
 
 void exibirRanking(Ranking *ranking, int qtdJogadores){
     //Procurando a maior string dos nomes para exibir os nomes coma a tabela formatada
@@ -17,50 +43,33 @@ void exibirRanking(Ranking *ranking, int qtdJogadores){
         if(tamanhoStringAtual > maiorStringNome)
             maiorStringNome = tamanhoStringAtual;
     }
-    printf("Maior String: %d\n", maiorStringNome);
-    //Verificar a quantidade de espaços para ser adicionado
-    int qtdEspacos;
-    if(maiorStringNome>tamanhoStrJogador){
-        qtdEspacos = (maiorStringNome-tamanhoStrJogador);
-    }
-    
+
     printf(BOLD(" Posição "TAB_VER));
 
-    //Exibindo a palavra jogador com a quantidade de espaços necessário
-    for(int i=0; i<(qtdEspacos+1)/2; i++)
-        printf(" ");
-    printf(BOLD(" Jogador"));
-    for(int i=0; i<(qtdEspacos+1)/2; i++)
-        printf(" ");
-    printf(TAB_VER);
+    //Adicionando o BOLD antes da chamada da função, que faz uma impressão, e fecha o mesmo ao fim da função
+    printf("\x1b[1m ");
+    alinharAoMeioTabela(" Jogador ", maiorStringNome);
+    printf("\x1b[0m");
 
     printf(BOLD(" Vitórias "TAB_VER " Empates "TAB_VER" Derrotas "TAB_VER"\n"));
 
     for(int i=0; i<qtdJogadores; i++){
 
         //Exibindo a posição do jogador
-        printf("%7dº "TAB_VER, i+1);
-
-        //Verificando a quantidade de espaços para o nome do jogador
-        int tamanhoNomeJogador = strlen(ranking[i].nomeJogador);
-        if(maiorStringNome>tamanhoNomeJogador)
-            qtdEspacos = (maiorStringNome-tamanhoNomeJogador);
-        else
-            qtdEspacos = 0;
+        printf("%7dº "TAB_VER" ", i+1);
 
         //Cores para o podium
-        if(i==0)
-            printf(YELLOW(" %s"), ranking[i].nomeJogador);
-        else if(i==1)
-            printf(WHITE(" %s"), ranking[i].nomeJogador);
-        else if(i==2)
-            printf(BLUE(" %s"), ranking[i].nomeJogador);
-        else
-            printf(" %s", ranking[i].nomeJogador);
-        //Imprimindo os espaços
-        for(int j=0; j<qtdEspacos+1; j++)
-            printf(" ");
-        printf(TAB_VER);
+        if(i==0){
+            printf("\x1b[33m");
+        }
+        else if(i==1){
+            printf("\x1b[37m");
+        }
+        else if(i==2){
+            printf("\x1b[34m");
+        }  
+
+        alinharAoMeioTabela(ranking[i].nomeJogador, maiorStringNome);
 
         printf(" %8d "TAB_VER" %7d "TAB_VER" %8d "TAB_VER"\n", ranking[i].vitorias, ranking[i].empates, ranking[i].derrotas);
     

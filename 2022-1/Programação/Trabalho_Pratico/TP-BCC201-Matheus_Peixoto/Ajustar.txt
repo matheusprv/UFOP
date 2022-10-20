@@ -2,4 +2,3 @@ gcc -Wall main.c funcoes.c funcoes_jogo.c manipulacao_arquivo.c computador.c cor
 
 
 Evitar que o jogador informe um nome nulo 
-Estilizar o ranking
