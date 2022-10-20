@@ -12,6 +12,9 @@ void alinharAoMeioTabela(char *, int);
 //Exibe todas as posições do ranking que está na memória
 void exibirRanking(Ranking *ranking, int );
 
+//Exibe a posição dos jogadores que acabaram de jogar
+void exibirJogadoresPartida(Ranking *ranking, int qtdJogadoresRanking, Partida partida);
+
 //void adicionarJogdorNoRanking(Ranking**, int*, char*);
 void adicionarJogdorNoRanking(Ranking **, int*, char*);
 

@@ -202,7 +202,7 @@ int jogo(Partida *partida){
         if(verificaJogoFinalizado == 3)
             printf(BLUE("Empate! Nenhum Jogador venceu!\n"));
         else
-            printf(GREEN("%s venceu!\n"), partida->nomeJogadores[verificaJogoFinalizado-1]);
+            printf(GREEN("%s venceu!\n\n"), partida->nomeJogadores[verificaJogoFinalizado-1]);
 
         /*printf("Digite uma tecla para prosseguir: ");
         char descarte;
@@ -234,8 +234,20 @@ int menuNovoJogo(Partida *partida, int novoJogo){
         partida->numJogadores = qtdJogadoresChar == '1' ? 1 : 2;
         //Salvando nome dos jogadores
         for(int i=0; i<partida->numJogadores;i++){
-            printf("Digite o nome do Jogador %d: ", i+1);
-            lerString(partida->nomeJogadores[i]);
+            do{
+                printf("Digite o nome do Jogador %d: ", i+1);
+                lerString(partida->nomeJogadores[i]);
+
+                if(strlen(partida->nomeJogadores[i]) == 0)
+                    printf(RED("O nome é muito curto\n"));
+
+                if(i == 1 && strcmp(partida->nomeJogadores[0], partida->nomeJogadores[1]) == 0){
+                    printf(RED("O nome do jogador 2 não pode ser o mesmo do jogador 1.\n"));
+                    partida->nomeJogadores[1][0] = '\0';
+                }
+            }while (strlen(partida->nomeJogadores[i]) == 0);
+            
+            
         }
         
     }

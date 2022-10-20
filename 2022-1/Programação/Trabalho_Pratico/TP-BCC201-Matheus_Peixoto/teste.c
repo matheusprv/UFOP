@@ -69,7 +69,7 @@ int main(){
     return 0;
 }
 */
-
+/*
 int main(){
     srand(time(NULL));
 
@@ -77,4 +77,4 @@ int main(){
         printf("%d\n", (rand() % 4)+1);
     }
     return 0;
-}
+}*/

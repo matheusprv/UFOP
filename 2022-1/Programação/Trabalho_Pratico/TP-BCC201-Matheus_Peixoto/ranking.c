@@ -79,6 +79,54 @@ void exibirRanking(Ranking *ranking, int qtdJogadores){
     lerCaracter(&lixo);
 }
 
+void exibirJogadoresPartida(Ranking *ranking, int qtdJogadoresRanking, Partida partida){
+    int posJogador1 = procurarPosicao(ranking, partida.nomeJogadores[0], qtdJogadoresRanking);
+    int posJogador2 = procurarPosicao(ranking, partida.nomeJogadores[1], qtdJogadoresRanking);
+
+    //Altera a posição dos jogadores caso o jogador 2 esteja em um indíce menor, ou seja na frente
+    if(posJogador2>posJogador1){
+        int aux = posJogador2;
+        posJogador2 = posJogador1;
+        posJogador1 = aux;
+    }
+
+    int posJogadores[] = {posJogador1, posJogador2};
+
+    //Procurando a maior string dos nomes para exibir os nomes coma a tabela formatada
+    int tamanhoStrJogador = strlen("Jogador");
+    int maiorStringNome = tamanhoStrJogador;
+    for(int i=0; i<qtdJogadoresRanking; i++){
+        int tamanhoStringAtual = strlen(partida.nomeJogadores[i]);
+        if(tamanhoStringAtual > maiorStringNome)
+            maiorStringNome = tamanhoStringAtual;
+    }
+
+    printf(BOLD(" Posição "TAB_VER));
+
+    //Adicionando o BOLD antes da chamada da função, que faz uma impressão, e fecha o mesmo ao fim da função
+    printf("\x1b[1m ");
+    alinharAoMeioTabela(" Jogador ", maiorStringNome);
+    printf("\x1b[0m");
+
+    printf(BOLD(" Vitórias "TAB_VER " Empates "TAB_VER" Derrotas "TAB_VER"\n"));
+
+    for(int i=0; i<2; i++){
+
+        //Exibindo a posição do jogador
+        printf("%7dº "TAB_VER" ", posJogadores[i] +1);
+
+        alinharAoMeioTabela(partida.nomeJogadores[i], maiorStringNome);
+
+        printf(" %8d "TAB_VER" %7d "TAB_VER" %8d "TAB_VER"\n", ranking[posJogadores[i]].vitorias, ranking[posJogadores[i]].empates, ranking[posJogadores[i]].derrotas);
+    
+    }
+    printf("\nDigite qualquer tecla para continuar: ");
+    char lixo;
+    lerCaracter(&lixo);
+    
+
+}
+
 //Adiciona mais um jogador no vetor de ranking
 void adicionarJogdorNoRanking(Ranking **ranking, int *qtdJogadores, char * nomeJogador){
     //Aumentando a quantidade de jogadores da variavel e no vetor de jogadores no ranking

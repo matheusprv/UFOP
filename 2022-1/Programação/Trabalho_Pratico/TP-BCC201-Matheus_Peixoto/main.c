@@ -79,7 +79,7 @@ int main(){
 
         if(resultadoPartida!=0){
             organizarRanking(&ranking, &qtdJogadoresRanking, partida, resultadoPartida);
-            exibirRanking(ranking, qtdJogadoresRanking);
+            exibirJogadoresPartida(ranking, qtdJogadoresRanking, partida);
         }
         resultadoPartida = 0;
 
