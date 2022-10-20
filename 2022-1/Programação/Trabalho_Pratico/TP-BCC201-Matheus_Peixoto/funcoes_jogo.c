@@ -96,7 +96,6 @@ int lerComandos(int *linha, int *coluna, char **tabuleiro, char arquivoSalvarJog
         int tamanhoParametro = strlen(comando[1]);
         //Retorna -1 para quando o usuário colocar uma quantidade diferente de uma linha e uma coluna. Ex: marcar 111
         if(tamanhoParametro != 2){
-            printf(YELLOW("Quantidade de linha e coluna supera o esperado.\n"));
             return -1;
         }
 
@@ -156,12 +155,17 @@ int jogo(Partida *partida){
             do{
                 printf("%s, digite o comando: ", partida->nomeJogadores[*numJogadas%2]);
                 comando = lerComandos(&linha, &coluna, partida->tabuleiro, arquivoSalvarJogo);
-                if(comando == 0)
-                    printf(RED("\nComando inválido!\n"));
-                if(comando==-1){}
-                else
+                
+                if(comando == 0){
+                    printf(RED("Comando inválido!\n"));
+                }
+                else if(comando==-1){
+                    printf(YELLOW("Quantidade de linha e coluna supera o esperado.\n"));
+                }
+                else{
                     break;
-            }while(1);
+                }
+            }while(comando <= 0);
 
             //Executando os comandos
             if(comando == 1){
@@ -175,11 +179,10 @@ int jogo(Partida *partida){
                 //Salva o jogo
                 printf("Salvar %s\n", arquivoSalvarJogo);
                 salvarJogo(*partida, arquivoSalvarJogo);
-                getchar();
             }
             else{
                 //Interrompe o jogo e volta para o menu principal
-                partida->numJogadas -= 1;
+                partida->numJogadas -= 1;//Removendo a jogada atual
                 break;
             }        
 
@@ -226,7 +229,7 @@ int menuNovoJogo(Partida *partida, int novoJogo){
         //Verificação para que a quantidade de jogadores seja somente 1 ou 2
         while(qtdJogadoresChar != '1' && qtdJogadoresChar != '2'){
             limparTerminal();
-            printf("Quantidade de jogadores inválida.\n");
+            printf(RED("Quantidade de jogadores inválida.\n"));
             printf("Digite a quantidade de jogadores (1 ou 2): ");
             lerCaracter(&qtdJogadoresChar);
         }
@@ -243,13 +246,16 @@ int menuNovoJogo(Partida *partida, int novoJogo){
 
                 if(i == 1 && strcmp(partida->nomeJogadores[0], partida->nomeJogadores[1]) == 0){
                     printf(RED("O nome do jogador 2 não pode ser o mesmo do jogador 1.\n"));
-                    partida->nomeJogadores[1][0] = '\0';
+                    partida->nomeJogadores[1][0] = '\0';//Alterando o nome do usuário para um valor nulo para ele ficar preso no loop
+                }
+                if(strcmp(partida->nomeJogadores[i], "Computador") == 0){
+                    printf(RED("O nome não pode ser \"Computador\"\n"));
+                    partida->nomeJogadores[i][0] = '\0';//Alterando o nome do usuário para um valor nulo para ele ficar preso no loop
                 }
             }while (strlen(partida->nomeJogadores[i]) == 0);
             
-            
         }
-        
+        partida->partidaIniciada = 1;
     }
     int resultado = jogo(partida);
     return resultado;

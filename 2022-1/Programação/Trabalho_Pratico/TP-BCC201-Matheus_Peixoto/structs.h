@@ -8,6 +8,7 @@ typedef struct{
     char nomeJogadores[2][266];
     int numJogadas;
     int numJogadores;
+    int partidaIniciada;
 }Partida;
 
 typedef struct{

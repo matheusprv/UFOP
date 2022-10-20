@@ -3,6 +3,7 @@
 #include "structs.h"
 #include "funcoes.h"
 #include "ranking.h"
+#include "cores.c"
 
 #define TAM_MAX_STRING 266
 
@@ -29,6 +30,8 @@ void salvarJogo(Partida partida, char *arquivoSalvarJogo){
     fprintf(arquivo, "%d", (partida.numJogadas)%2 == 0 ? 1 : 2);
 
     fclose(arquivo);
+
+    printf(GREEN("Jogo salvo com sucesso.\n"));
 }
 
 int lerJogoSalvo(Partida *partida){
@@ -46,7 +49,17 @@ int lerJogoSalvo(Partida *partida){
     //Verificando se é humano X humano ou humano X maquina
     char qtdJogadores[3];
     fgets(qtdJogadores, 3, arquivo);
-    partida->numJogadores = qtdJogadores[0] == '1' ? 1 : 2;
+    //Verificando a primeira posição, pois ela 
+    if(qtdJogadores[0] == '1'){
+        partida->numJogadores = 1;
+        strcpy(partida->nomeJogadores[1], "Computador");
+    }
+    else if(qtdJogadores[0] == '2'){
+        partida->numJogadores = 2;
+    }
+    else{
+        return -1;
+    }
 
     //Lendo o nome do jogador e removendo o \n
     for(int i=0; i<partida->numJogadores; i++){
@@ -77,7 +90,7 @@ int lerJogoSalvo(Partida *partida){
         }
 
     }
-    //getchar();
+    
     fclose(arquivo);
 
     return 1;
@@ -85,31 +98,67 @@ int lerJogoSalvo(Partida *partida){
 }
 
 int lerArquivoConfiguracao(Ranking **ranking){
-    FILE *arquivo;
     
     int qtdJogadores = 0;
+    
+    FILE *arquivo;
+    arquivo = fopen("velha.ini", "r");
 
-    //Verificando se o arquivo existe
-    if(!(arquivo = fopen("velha.ini", "r"))){
-        //Criando um vetor nulo para caso não tenha ninguém no ranking
+    //Verifica se o arquivo é nulo ou não
+    int arquivoNulo = arquivo == NULL ? 1:0;
+    int arquivoVazio;
+
+    //Verificando se o arquivo está vazio, enviando o ponteiro para o final do arquivo e verificando a posição 
+    if(!arquivoNulo){
+        fseek(arquivo, 0, SEEK_END);
+        int tamanhoArq = ftell(arquivo);
+        arquivoVazio = tamanhoArq > 0 ? 0 : 1;
+    }
+
+    //Verificando se o arquivo é nulo ou está vazio
+    if(arquivoNulo || arquivoVazio){
+        //Criando um vetor somente com o Computador para caso não tenha ninguem no arquivo
+        qtdJogadores = 1;
+        
         *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
+        
+        strcpy((*ranking)[0].nomeJogador, "Computador");
+        
+        //Ajustando todas as estatísticas para zero
+        (*ranking)[0].derrotas = 0;
+        (*ranking)[0].empates = 0;
+        (*ranking)[0].vitorias = 0;
+        
         return qtdJogadores;
     }
+
+    //Voltando o ponteiro para o incio do arquivo
+    fseek(arquivo, 0, SEEK_SET);
 
     //Lendo a quantidade de jogadores e criando um vetor para esse número
     fscanf(arquivo, "%d\n", &qtdJogadores);
     *ranking =(Ranking *) malloc(qtdJogadores * sizeof(Ranking));
 
     //Lendo as informações de cada jogador
+    int verificaComputadorNoArquivo = 0;
     for(int i=0; i<qtdJogadores; i++){
         fgets((*ranking)[i].nomeJogador, 266, arquivo);
         (*ranking)[i].nomeJogador[strlen((*ranking)[i].nomeJogador)-1] = '\0';
+
+        //Verificando se o computador está no ranking, para adicioná-lo caso necessário
+        if(strcmp((*ranking)[i].nomeJogador, "Computador") == 0)
+            verificaComputadorNoArquivo = 1;
+
         fscanf(arquivo, "%d ", &(*ranking)[i].vitorias);
         fscanf(arquivo, "%d ", &(*ranking)[i].empates);
         fscanf(arquivo, "%d\n", &(*ranking)[i].derrotas);
     }
 
     fclose(arquivo);        
+
+    //Adicionando o Computrador no ranking, caso necessário
+    if(!verificaComputadorNoArquivo)
+        adicionarJogdorNoRanking(ranking, &qtdJogadores, "Computador");
 
     return qtdJogadores;
 }

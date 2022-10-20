@@ -243,12 +243,10 @@ void jogadaComputador(Partida *partida){
 
     //Procurar onde o computador pode ganhar
     if(procurarVitoria(&linha, &coluna, partida->tabuleiro, 'O')){
-        printf("If 1\n");
         partida->tabuleiro[linha][coluna] = 'O';
     }
     //Procurar onde o jogador pode ganhar para impedí-lo
     else if(procurarVitoria(&linha, &coluna, partida->tabuleiro, 'X')){
-        printf("If 2\n");
         partida->tabuleiro[linha][coluna] = 'O';
     }
     //Procurando a melhor posição para marcar já que não há possibilidade de vencer

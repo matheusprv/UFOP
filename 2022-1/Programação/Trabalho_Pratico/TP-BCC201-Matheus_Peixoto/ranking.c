@@ -52,6 +52,15 @@ void exibirRanking(Ranking *ranking, int qtdJogadores){
     printf("\x1b[0m");
 
     printf(BOLD(" Vitórias "TAB_VER " Empates "TAB_VER" Derrotas "TAB_VER"\n"));
+    int qtdBarrasHorizontais [] = {9, (maiorStringNome+2), 10, 9, 10};
+    for(int i=0; i<5; i++){
+        for(int j=0; j<qtdBarrasHorizontais[i]; j++){
+            printf(TAB_HOR);
+        }
+        printf(TAB_MJ);
+    }
+
+    printf("\n");
 
     for(int i=0; i<qtdJogadores; i++){
 
@@ -84,7 +93,7 @@ void exibirJogadoresPartida(Ranking *ranking, int qtdJogadoresRanking, Partida p
     int posJogador2 = procurarPosicao(ranking, partida.nomeJogadores[1], qtdJogadoresRanking);
 
     //Altera a posição dos jogadores caso o jogador 2 esteja em um indíce menor, ou seja na frente
-    if(posJogador2>posJogador1){
+    if(posJogador2<posJogador1){
         int aux = posJogador2;
         posJogador2 = posJogador1;
         posJogador1 = aux;
@@ -115,7 +124,7 @@ void exibirJogadoresPartida(Ranking *ranking, int qtdJogadoresRanking, Partida p
         //Exibindo a posição do jogador
         printf("%7dº "TAB_VER" ", posJogadores[i] +1);
 
-        alinharAoMeioTabela(partida.nomeJogadores[i], maiorStringNome);
+        alinharAoMeioTabela(ranking[posJogadores[i]].nomeJogador, maiorStringNome);
 
         printf(" %8d "TAB_VER" %7d "TAB_VER" %8d "TAB_VER"\n", ranking[posJogadores[i]].vitorias, ranking[posJogadores[i]].empates, ranking[posJogadores[i]].derrotas);
     
@@ -130,8 +139,23 @@ void exibirJogadoresPartida(Ranking *ranking, int qtdJogadoresRanking, Partida p
 //Adiciona mais um jogador no vetor de ranking
 void adicionarJogdorNoRanking(Ranking **ranking, int *qtdJogadores, char * nomeJogador){
     //Aumentando a quantidade de jogadores da variavel e no vetor de jogadores no ranking
+    
+
+    Ranking *aux = malloc(*qtdJogadores * sizeof(Ranking));
+    
+    for(int i=0; i < *qtdJogadores; i++){
+        aux[i] = (*ranking)[i];
+    }
+
+    free((*ranking));
+
     *qtdJogadores += 1;
-    *ranking = (Ranking *) realloc(*ranking, (*qtdJogadores)*sizeof(Ranking));
+    (*ranking) = malloc(*qtdJogadores * sizeof(Ranking));
+
+    for(int i=0; i < *qtdJogadores-1; i++){
+        (*ranking)[i] = aux[i];
+    }
+
     strcpy((*ranking)[*qtdJogadores-1].nomeJogador, nomeJogador);
 
     //Ajustando todas as estatísticas para zero

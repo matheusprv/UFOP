@@ -14,7 +14,7 @@ void limparTerminal(){
 void imprimeMenuPrincipal(int comandoValido){
     limparTerminal();
 
-    printf("Bem vindo(a) ao Jogo da Velha.\n");
+    printf(BOLD("Bem vindo(a) ao Jogo da Velha.\n"));
 
     if(comandoValido == 0)
         printf(RED("\tComando inválido!"));
@@ -24,6 +24,8 @@ void imprimeMenuPrincipal(int comandoValido){
         printf(RED("\tArquivo não encontrado!"));
     else if(comandoValido == -3)
         printf(RED("\tAinda não há jogadores no ranking"));
+    else if(comandoValido == -4)
+        printf(RED("\tO arquivo foi alterado de uma maneira que o programa não pode lidar"));
 
     printf("\n\t1 - Começar novo jogo.\n");
     printf("\t2 - Carregar um jogo salvo.\n");
@@ -48,6 +50,7 @@ void lerCaracter(char *variavel){
     //Como todas as leituras de caracteres são para números, caso receba uma letra, a verificação entrará no loop
     *variavel = string [0];
     //printf("\n\nVariavel: %c\n\n", *variavel);
+    printf("\n");
 }
 
 void lerString(char *string){
@@ -70,6 +73,8 @@ void lerString(char *string){
     }
     if(posicaoBarraN >= 0)
         string[posicaoBarraN] = '\0';
+
+    printf("\n");
 }
 
 //Reinicia todos os valores do struct para um valor padrao a fim de iniciar um novo jogo
@@ -83,6 +88,8 @@ void reiniciarPartida(Partida *partida){
     //Para exibir o jogador da vez, utiliza-se o módulo do número de jogadas por 2, pois os nomes estão em um vetor
     //A primeira jogada é a zero, pois o módulo de 0 por 2 é 0, portanto apresenta o nome do jogador 1
     partida->numJogadas = -1;
+
+    partida->partidaIniciada = 0;
 
     //Alterando o nome do segundo jogador para computador
     //Caso o jogador seja humano, somente irá alterar o seu valor na variavel

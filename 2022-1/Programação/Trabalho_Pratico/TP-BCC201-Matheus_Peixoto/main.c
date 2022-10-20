@@ -19,7 +19,7 @@ int main(){
     for(int i=0; i<3; i++){
         partida.tabuleiro[i] = malloc(3*sizeof(int));
     }
-    partida.numJogadas = -1;
+    reiniciarPartida(&partida);
 
     int comandoValido=1, finalizarPrograma = 0, resultadoPartida = 0;
     char opcaoMenu;
@@ -29,7 +29,7 @@ int main(){
         imprimeMenuPrincipal(comandoValido);
         comandoValido = 1;
         lerCaracter(&opcaoMenu);
-
+        
         switch (opcaoMenu){
             //Finalizar Jogo
             case '0':
@@ -42,19 +42,19 @@ int main(){
             
             //Continuar jogo salvo
             case '2':
-                if(lerJogoSalvo(&partida)){
-
-                    printf("Número jogadores: %d",partida.numJogadores);
-
+                int leitura = lerJogoSalvo(&partida);
+                if(leitura == 1){
                     resultadoPartida = menuNovoJogo(&partida, 0);
                 }
-                else
+                else if(leitura ==0)
                     comandoValido = -2;
+                else if(leitura == -1)
+                    comandoValido = -4;
                 break;
 
             //Voltar para o jogo em andamento
             case '3':
-                if(partida.numJogadas == -1){
+                if(partida.partidaIniciada == 0){
                     comandoValido =-1;
                 }
                 else{
