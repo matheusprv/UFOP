@@ -157,9 +157,10 @@ int lerArquivoConfiguracao(Ranking **ranking){
     fclose(arquivo);        
 
     //Adicionando o Computrador no ranking, caso necessário
-    if(!verificaComputadorNoArquivo)
+    if(!verificaComputadorNoArquivo){
+        qtdJogadores--;
         adicionarJogdorNoRanking(ranking, &qtdJogadores, "Computador");
-
+    }
     return qtdJogadores;
 }
 
