@@ -1,10 +1,3 @@
 gcc -Wall main.c funcoes.c funcoes_jogo.c manipulacao_arquivo.c computador.c cores.c ranking.c -o main
 gcc -Wall ./*.c -o main
 
-OK = Evitar que o jogador informe um nome nulo 
-OK = Evitar colocar um nome igual tanto para o jogador 1 quanto para o jogador 2
-OK = Mostrar somente a posição do jogador no ranking
-
-OK = Colocar o bot no arquivo de configuração mesmo quando não tiver ocorrido uma partida com o computador
-OK = Evitar que o jogador consiga usar o nome computador
-OK = Mudar o realloc para malloc

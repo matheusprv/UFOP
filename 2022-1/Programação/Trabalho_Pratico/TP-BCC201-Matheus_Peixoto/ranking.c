@@ -36,7 +36,7 @@ void alinharAoMeioTabela(char *strExibir, int maiorStringNome){
 
 void exibirRanking(Ranking *ranking, int qtdJogadores){
     //Procurando a maior string dos nomes para exibir os nomes coma a tabela formatada
-    int tamanhoStrJogador = strlen("Jogador");
+    int tamanhoStrJogador = strlen(" Jogador ");
     int maiorStringNome = tamanhoStrJogador;
     for(int i=0; i<qtdJogadores; i++){
         int tamanhoStringAtual = strlen(ranking[i].nomeJogador);
@@ -102,7 +102,7 @@ void exibirJogadoresPartida(Ranking *ranking, int qtdJogadoresRanking, Partida p
     int posJogadores[] = {posJogador1, posJogador2};
 
     //Procurando a maior string dos nomes para exibir os nomes coma a tabela formatada
-    int tamanhoStrJogador = strlen("Jogador");
+    int tamanhoStrJogador = strlen(" Jogador ");
     int maiorStringNome = tamanhoStrJogador;
     for(int i=0; i<qtdJogadoresRanking; i++){
         int tamanhoStringAtual = strlen(partida.nomeJogadores[i]);
