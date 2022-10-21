@@ -76,17 +76,23 @@ int lerComandos(int *linha, int *coluna, char **tabuleiro, char arquivoSalvarJog
         if(leitorComando[i] == ' ' || leitorComando[i] == '\0')
             qtdSubstring++;
     }
-
-    //Retorna mensagem de erro por não haver nenhum comando com mais de duas palavras
-    if(qtdSubstring>2)
-        return 0;
-
+        
     //Verificando se o comando é o de voltar, pois somente ele possui uma palavra
     if(qtdSubstring == 1 && strcmp(leitorComando, "voltar") == 0)
         return 3;//Volta ao menu principal
     else if(qtdSubstring == 1 && strcmp(leitorComando, "voltar") != 0)
         return 0;//Retorna uma mesangem de erro, pois não há comandos de um palavra que não seja o voltar
 
+    //Retorna mensagem de erro por não haver nenhum comando com mais de duas palavras ou um comando diferente do voltar somente com uma substring
+    if(qtdSubstring != 2)
+        return 0;
+
+    //Verifica se não está nulo após o primeiro espaço 
+    if(qtdSubstring == 2 && tamanhoLeitorComando == 7){
+        return 0;
+    }
+
+    //Salvando as substrings da string de comando
     strcpy(comando[0],strtok(leitorComando, " "));
     strcpy(comando[1],strtok(NULL, " "));
     
