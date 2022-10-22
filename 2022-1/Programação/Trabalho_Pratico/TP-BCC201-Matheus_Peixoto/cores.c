@@ -18,6 +18,8 @@
 #define ANSI_BG_COLOR_CYAN    "\x1b[46m"
 #define ANSI_BG_COLOR_WHITE   "\x1b[47m"
 
+#define ANSI_COLOR_GRAY "\x1b[1;30m"
+
 // macros para facilitar o uso
 #define BOLD(string)       ANSI_BOLD             string ANSI_RESET
 #define BLACK(string)      ANSI_COLOR_BLACK      string ANSI_RESET
@@ -29,6 +31,9 @@
 #define MAGENTA(string)    ANSI_COLOR_MAGENTA    string ANSI_RESET
 #define CYAN(string)       ANSI_COLOR_CYAN       string ANSI_RESET
 #define WHITE(string)      ANSI_COLOR_WHITE      string ANSI_RESET
+
+#define GRAY(string)       ANSI_COLOR_GRAY string ANSI_RESET
+
 #define BG_BLACK(string)   ANSI_BG_COLOR_BLACK   string ANSI_RESET
 #define BG_BLUE(string)    ANSI_BG_COLOR_BLUE    string ANSI_RESET
 #define BG_RED(string)     ANSI_BG_COLOR_RED     string ANSI_RESET

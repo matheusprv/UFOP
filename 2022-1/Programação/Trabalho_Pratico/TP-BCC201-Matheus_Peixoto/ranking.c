@@ -69,13 +69,13 @@ void exibirRanking(Ranking *ranking, int qtdJogadores){
 
         //Cores para o podium
         if(i==0){
-            printf("\x1b[33m");
+            printf(ANSI_COLOR_YELLOW);
         }
         else if(i==1){
-            printf("\x1b[37m");
+            printf(ANSI_COLOR_GRAY);
         }
         else if(i==2){
-            printf("\x1b[34m");
+            printf(ANSI_COLOR_BLUE);
         }  
 
         alinharAoMeioTabela(ranking[i].nomeJogador, maiorStringNome);

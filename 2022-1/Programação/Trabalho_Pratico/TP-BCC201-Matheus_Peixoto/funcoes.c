@@ -33,7 +33,7 @@ void imprimeMenuPrincipal(int comandoValido){
     printf("\t4 - Exibir ranking.\n");
     printf("\t0 - Sair\n\n");
     printf("Durante o jogo, digite \"voltar\" para retornar ao menu.\n");
-    printf("Escolha uma opção: ");
+    printf(BOLD("\nEscolha uma opção: "));
 }
 
 //Lê uma string e retorna o primeiro caracter. Caso o usuário tenha escrito mais de um, retorna um valor inválido e limpa o buffer

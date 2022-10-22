@@ -159,7 +159,7 @@ int jogo(Partida *partida){
             
             //Lendo um comando e verificando se ele é válido
             do{
-                printf("%s, digite o comando: ", partida->nomeJogadores[*numJogadas%2]);
+                printf(BOLD("%s, digite o comando: "), partida->nomeJogadores[*numJogadas%2]);
                 comando = lerComandos(&linha, &coluna, partida->tabuleiro, arquivoSalvarJogo);
                 
                 if(comando == 0){
@@ -228,7 +228,7 @@ int menuNovoJogo(Partida *partida, int novoJogo){
 
         reiniciarPartida(partida);
 
-        printf("Digite a quantidade de jogadores (1 ou 2): ");
+        printf(BOLD("Digite a quantidade de jogadores (1 ou 2): "));
         char qtdJogadoresChar;
         lerCaracter(&qtdJogadoresChar);
 
@@ -236,7 +236,7 @@ int menuNovoJogo(Partida *partida, int novoJogo){
         while(qtdJogadoresChar != '1' && qtdJogadoresChar != '2'){
             limparTerminal();
             printf(RED("Quantidade de jogadores inválida.\n"));
-            printf("Digite a quantidade de jogadores (1 ou 2): ");
+            printf(BOLD("Digite a quantidade de jogadores (1 ou 2): "));
             lerCaracter(&qtdJogadoresChar);
         }
 
@@ -244,7 +244,7 @@ int menuNovoJogo(Partida *partida, int novoJogo){
         //Salvando nome dos jogadores
         for(int i=0; i<partida->numJogadores;i++){
             do{
-                printf("Digite o nome do Jogador %d: ", i+1);
+                printf(BOLD("Digite o nome do Jogador %d: "), i+1);
                 lerString(partida->nomeJogadores[i]);
 
                 if(strlen(partida->nomeJogadores[i]) == 0)
