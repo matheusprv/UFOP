@@ -67,7 +67,6 @@ int main(){
                 if(qtdJogadoresRanking == -1 || qtdJogadoresRanking == 0)
                     comandoValido = -3;
                 else{
-                    limparTerminal();
                     exibirRanking(ranking, qtdJogadoresRanking);
                 }
                 break;

@@ -4,18 +4,13 @@
 #include "structs.h"
 #include "cores.c"
 
-//Apaga tudo que está escrito no terminal
-void limparTerminal(){
-    //printf("\e[1;1H\e[2J");
-    system("clear");
-}
 
 //Imprime na tela as opções de menu
 void imprimeMenuPrincipal(int comandoValido){
-    limparTerminal();
 
-    printf(BOLD("Bem vindo(a) ao Jogo da Velha.\n"));
+    printf(MAGENTA(BOLD("Bem vindo(a) ao Jogo da Velha.\n")));
 
+    //Verificando se foi passado alguma mensagem de erro
     if(comandoValido == 0)
         printf(RED("\tComando inválido!"));
     else if(comandoValido == -1)

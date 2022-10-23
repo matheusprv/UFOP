@@ -1,4 +1,5 @@
-//Matheus Peixoto Ribeiro Vieira
+//Matheus Peixoto Ribeiro Vieira - 22.1.4104
+
 #ifndef FUNCOES_JOGO_H
 #define FUNCOES_JOGO_H
 
@@ -6,7 +7,6 @@
 
 #define TAM_MAX_STRING 266
 
-void salvarJogo(Partida partida, char*);
 
 //Retorna 0 caso o jogo esteja acontecendo, 1 caso o jogador 1 ganhe, 2 caso o jogador 2 ganhe ou 3 caso de velha
 int jogoFinalizado(char **, int);

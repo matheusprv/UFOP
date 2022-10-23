@@ -35,6 +35,9 @@ void alinharAoMeioTabela(char *strExibir, int maiorStringNome){
 }
 
 void exibirRanking(Ranking *ranking, int qtdJogadores){
+
+    printf(MAGENTA(BOLD("Exibindo o Ranking de %d jogadores.\n\n")), qtdJogadores);
+
     //Procurando a maior string dos nomes para exibir os nomes coma a tabela formatada
     int tamanhoStrJogador = strlen(" Jogador ");
     int maiorStringNome = tamanhoStrJogador;
@@ -64,19 +67,22 @@ void exibirRanking(Ranking *ranking, int qtdJogadores){
 
     for(int i=0; i<qtdJogadores; i++){
 
-        //Exibindo a posição do jogador
-        printf("%7dº "TAB_VER" ", i+1);
-
-        //Cores para o podium
+        //Configurações para o podium
         if(i==0){
+            printf("%10s "TAB_VER" ", "🥇");
             printf(ANSI_COLOR_YELLOW);
         }
         else if(i==1){
+            printf("%10s "TAB_VER" ", "🥈");
             printf(ANSI_COLOR_GRAY);
         }
         else if(i==2){
+            printf("%10s "TAB_VER" ", "🥉");
             printf(ANSI_COLOR_BLUE);
         }  
+        else{
+            printf("%7dº "TAB_VER" ", i+1);
+        }
 
         alinharAoMeioTabela(ranking[i].nomeJogador, maiorStringNome);
 

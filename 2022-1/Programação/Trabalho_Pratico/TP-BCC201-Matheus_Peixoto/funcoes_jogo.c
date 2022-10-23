@@ -124,8 +124,8 @@ int lerComandos(int *linha, int *coluna, char **tabuleiro, char arquivoSalvarJog
         }
         //Verificando se é possível utilizar o espaço solicitado
         if(tabuleiro[*linha][*coluna] != ' '){
-            printf(YELLOW("\nEsse espaço já foi marcado!\n"));
-            return -1;
+            printf(YELLOW("Esse espaço já foi marcado!\n"));
+            return -3; //Retorno genérico para sair da função
         }
 
         return 1;
@@ -154,7 +154,6 @@ int jogo(Partida *partida){
         
         //Só entra no if caso a partida seja para dois jogadores ou o jogador da vez é o jogador 1
         if(partida->numJogadores == 2 || (partida->numJogadas%2==0)){
-            limparTerminal();
             imprimeTabuleiro(partida->tabuleiro);
             
             //Lendo um comando e verificando se ele é válido
@@ -168,7 +167,8 @@ int jogo(Partida *partida){
                 else if(comando==-1){
                     printf(YELLOW("Quantidade de linha e coluna supera o esperado.\n"));
                 }
-                else{
+                else if(comando == 3){
+                    //Sai do loop para voltar ao menu principal
                     break;
                 }
             }while(comando <= 0);
@@ -183,7 +183,7 @@ int jogo(Partida *partida){
             else if(comando == 2){
                 *numJogadas-=1;//Diminui em 1 o número de jogadas pois o jogador ainda não realizou a sua jogada, somente salvou o jogo
                 //Salva o jogo
-                printf("Salvar %s\n", arquivoSalvarJogo);
+                printf("Salvando arquivo \"%s\"\n", arquivoSalvarJogo);
                 salvarJogo(*partida, arquivoSalvarJogo);
             }
             else{
@@ -206,7 +206,6 @@ int jogo(Partida *partida){
 
     //Verificação para não exibir quando o usuário for para o menu principal
     if(verificaJogoFinalizado >= 1){
-        limparTerminal();
         imprimeTabuleiro(partida->tabuleiro);
         if(verificaJogoFinalizado == 3)
             printf(BLUE("Empate! Nenhum Jogador venceu!\n"));
@@ -223,8 +222,9 @@ int jogo(Partida *partida){
 
 int menuNovoJogo(Partida *partida, int novoJogo){
 
-    limparTerminal();
     if(novoJogo){
+
+        printf(CYAN("NOVO JOGO\n"));
 
         reiniciarPartida(partida);
 
@@ -234,7 +234,6 @@ int menuNovoJogo(Partida *partida, int novoJogo){
 
         //Verificação para que a quantidade de jogadores seja somente 1 ou 2
         while(qtdJogadoresChar != '1' && qtdJogadoresChar != '2'){
-            limparTerminal();
             printf(RED("Quantidade de jogadores inválida.\n"));
             printf(BOLD("Digite a quantidade de jogadores (1 ou 2): "));
             lerCaracter(&qtdJogadoresChar);

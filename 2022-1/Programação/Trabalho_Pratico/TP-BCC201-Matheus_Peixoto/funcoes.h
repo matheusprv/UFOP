@@ -8,8 +8,8 @@
 
 #include "structs.h"
 
-void limparTerminal();
 void imprimeMenuPrincipal(int comandoValido);
+
 void lerCaracter(char *);
 
 void lerString(char *);
