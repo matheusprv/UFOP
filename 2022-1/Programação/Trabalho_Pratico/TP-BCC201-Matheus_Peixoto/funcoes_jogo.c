@@ -220,6 +220,34 @@ int jogo(Partida *partida){
 
 }
 
+int verificaNomeJogador(Partida *partida, int i){
+    //Verificando se o nome é nulo
+    int tamanhoNome = strlen(partida->nomeJogadores[i]);
+    int somenteEspacos = 1;
+    for(int j=0; j<tamanhoNome; j++){
+        if(partida->nomeJogadores[i][j] != ' '){
+            somenteEspacos = 0;
+            break;
+        }
+    }
+
+    if(somenteEspacos == 1){
+        printf(RED("O nome não pode ser nulo\n"));
+        return 1;
+    }
+
+    else if(i == 1 && strcmp(partida->nomeJogadores[0], partida->nomeJogadores[1]) == 0){
+        printf(RED("O nome do jogador 2 não pode ser o mesmo do jogador 1.\n"));
+        return 1;
+    }
+
+    else if(strcmp(partida->nomeJogadores[i], "Computador") == 0){
+        printf(RED("O nome não pode ser \"Computador\"\n"));
+        return 1;
+    }
+    return 0;
+}
+
 int menuNovoJogo(Partida *partida, int novoJogo){
 
     if(novoJogo){
@@ -245,20 +273,7 @@ int menuNovoJogo(Partida *partida, int novoJogo){
             do{
                 printf(BOLD("Digite o nome do Jogador %d: "), i+1);
                 lerString(partida->nomeJogadores[i]);
-
-                if(strlen(partida->nomeJogadores[i]) == 0)
-                    printf(RED("O nome é muito curto\n"));
-
-                if(i == 1 && strcmp(partida->nomeJogadores[0], partida->nomeJogadores[1]) == 0){
-                    printf(RED("O nome do jogador 2 não pode ser o mesmo do jogador 1.\n"));
-                    partida->nomeJogadores[1][0] = '\0';//Alterando o nome do usuário para um valor nulo para ele ficar preso no loop
-                }
-                if(strcmp(partida->nomeJogadores[i], "Computador") == 0){
-                    printf(RED("O nome não pode ser \"Computador\"\n"));
-                    partida->nomeJogadores[i][0] = '\0';//Alterando o nome do usuário para um valor nulo para ele ficar preso no loop
-                }
-            }while (strlen(partida->nomeJogadores[i]) == 0);
-            
+            }while (verificaNomeJogador(partida, i));
         }
         partida->partidaIniciada = 1;
     }

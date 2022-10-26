@@ -18,6 +18,9 @@ int lerComandos(int *, int*, char**, char[TAM_MAX_STRING]);
 //Exibe o menu de jogo
 int jogo(Partida *partida);
 
+//Verifica se o nome do jogador é válido ou não
+int verificaNomeJogador(Partida *partida, int i);
+
 //Exibie o formulário a ser preenchido para iniciar um novo jogo
 int menuNovoJogo(Partida *partida, int novoJogo);
 

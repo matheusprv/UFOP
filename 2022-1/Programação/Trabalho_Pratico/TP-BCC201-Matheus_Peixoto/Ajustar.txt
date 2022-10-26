@@ -1,4 +1,0 @@
-gcc -Wall main.c funcoes.c funcoes_jogo.c manipulacao_arquivo.c computador.c cores.c ranking.c -o main
-gcc -Wall ./*.c -o main
-
-gcc -Wall main.c funcoes.c funcoes_jogo.c manipulacao_arquivo.c computador.c cores.c ranking.c -o main

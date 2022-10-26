@@ -31,7 +31,24 @@ void salvarJogo(Partida partida, char *arquivoSalvarJogo){
 
     fclose(arquivo);
 
-    printf(GREEN("Jogo salvo com sucesso.\n"));
+
+    //Verificando se o arquivo foi salvo corretamente
+    arquivo = fopen(arquivoSalvarJogo, "r");
+    if(arquivo != NULL){
+        fseek(arquivo, 0, SEEK_END);
+        int tamanhoArq = ftell(arquivo);
+        if(tamanhoArq>0){
+            printf(GREEN("Arquivo salvo com sucesso!\n"));
+        }
+        else{
+            printf(RED("Erro ao salvar jogo.\n"));
+        }
+    }
+    else{
+        printf(RED("Erro ao salvar jogo.\n"));
+    }
+
+    
 }
 
 int lerJogoSalvo(Partida *partida){
