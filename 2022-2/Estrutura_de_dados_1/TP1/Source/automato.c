@@ -41,15 +41,16 @@ int verificaStatusCelula(int celulasVizinhasVivas, int statusDaCelula){
     //Caso a celula atual estiver viva
     if(statusDaCelula){
         if(celulasVizinhasVivas > 3 || celulasVizinhasVivas < 2)
-            return 0; //Morte por sufocamento ou solidao
+            statusDaCelula = 0; //Morte por sufocamento ou solidao
 
     }
     //Caso a celula atual estiver mortas
     else{
         if(celulasVizinhasVivas == 3)
-            return 1;//Celula torna-se viva
+            statusDaCelula =  1;//Celula torna-se viva
     }
     
+    return statusDaCelula;
 }
 
 void copiaMatriz(int** matrizOrigem, int** matrizDestino, int ordem){
