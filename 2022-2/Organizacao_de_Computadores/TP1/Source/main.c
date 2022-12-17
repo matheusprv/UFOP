@@ -27,6 +27,10 @@ int main(int argc, char**argv) {
     } else if (strcmp(argv[1], "file") == 0) {
         instructions = readInstructions(argv[2], &ramSize);
     } 
+    else if(strcmp(argv[1], "multiply") == 0){
+        ramSize = atoi(argv[2]);
+        instructions = generateMultiplicationInstructions();
+    }
     else {
         printf("Opcao invalida.\n");
         return 0;

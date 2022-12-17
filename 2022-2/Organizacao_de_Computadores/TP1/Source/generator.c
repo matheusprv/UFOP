@@ -36,6 +36,26 @@ Instruction* generateRandomInstructions(int ramSize) {
     return instructions;
 }
 
+Instruction* generateMultiplicationInstructions(int multiplicador,int multiplicando){
+    Instruction* instrucoes = (Instruction*) malloc((3 + multiplicador) * sizeof(Instruction));
+
+    instrucoes[0].opcode = 0;
+    instrucoes[0].info1 = multiplicando;
+    instrucoes[0].info2 = 0;
+
+    instrucoes[1].opcode = 0;
+    instrucoes[1].info1 = 0;
+    instrucoes[1].info2 = 0;
+
+    for(int i=0; i < multiplicador; i++){
+        instrucoes[i+2].opcode = 1;
+        instrucoes[i+2].info1 = 0;
+        instrucoes[i+2].info2 = 1;
+        instrucoes[i+2].info3 = 1;
+    }
+    instrucoes[multiplicador+2].opcode = 1;
+}
+
 Instruction* readInstructions(char* fileName, int* ramSize) {
     printf("FILE -> %s\n", fileName);
     FILE* file = fopen(fileName, "r"); // Abrindo arquivo no modo leitura
