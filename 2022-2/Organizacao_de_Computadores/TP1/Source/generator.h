@@ -5,7 +5,11 @@
 
 Instruction* generateRandomInstructions(int);
 
-Instruction* generateMultiplicationInstructions(int, int);
+Instruction* generateMultiplicationInstructions(int, int, int);
+
+//Instruction* generateDivisionInstructions(int, int);
+
+Instruction* gerarInstrucoesExponenciacao(int n1, int n2);
 
 Instruction* readInstructions(char*, int*);
 

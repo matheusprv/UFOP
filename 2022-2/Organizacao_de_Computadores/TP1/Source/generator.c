@@ -36,25 +36,73 @@ Instruction* generateRandomInstructions(int ramSize) {
     return instructions;
 }
 
-Instruction* generateMultiplicationInstructions(int multiplicador,int multiplicando){
-    Instruction* instrucoes = (Instruction*) malloc((3 + multiplicador) * sizeof(Instruction));
+Instruction* generateMultiplicationInstructions(int n1, int n2, int execHalt){
+    //Vetor de instrucoes contendo as duas instrucoes de levar informacao na RAM e o comando de finalizacao mais a quantidade de vezes que o n1 sera multiplicado, ou seja, o n2
+    int qtdInstrucoesExtras = execHalt ? 3 : 2;
+    Instruction* instrucoes = (Instruction*) malloc((qtdInstrucoesExtras + n2) * sizeof(Instruction));
 
+    //Levando o n1 para a RAM e colocando no endereco 0
     instrucoes[0].opcode = 0;
-    instrucoes[0].info1 = multiplicando;
-    instrucoes[0].info2 = 0;
+    instrucoes[0].info1 = n1;//Valor para ser salvo na RAM
+    instrucoes[0].info2 = 0;//Posicao na RAM
+
+    //Levando o valor 0 (termo neutro da soma) para a RAM na posicao 1
+    instrucoes[1].opcode = 0;
+    instrucoes[1].info1 = 0;//Valor para ser salvo na RAM
+    instrucoes[1].info2 = 1;//Posicao na RAM
+
+    for(int i = 2; i < n2+2; i++){
+        instrucoes[i].opcode = 1; //Operacao de soma
+        instrucoes[i].info1 = 0; //Posicao do n1
+        instrucoes[i].info2 = 1; //Posicao do n2
+        instrucoes[i].info3 = 1; //Onde irá salvar a soma
+    }
+
+    if(execHalt){
+        instrucoes[2+n2].opcode = -1;
+        instrucoes[2+n2].info1 = -1;
+        instrucoes[2+n2].info2 = -1;
+        instrucoes[2+n2].info3 = -1;
+    }
+
+    return instrucoes;
+
+}
+
+Instruction* gerarInstrucoesExponenciacao(int base, int expoente){
+
+    Instruction* instrucoes = ();
+
+
+} 
+
+/*Instruction* generateDivisionInstructions(int n1, int n2){
+    //Vetor de instrucoes contendo as duas instrucoes de levar informacao na RAM e o comando de finalizacao mais a quantidade de vezes que o n1 sera multiplicado, ou seja, o n2
+    Instruction* instrucoes = (Instruction*) malloc((3 + (n1/n2)) * sizeof(Instruction));
+
+    //Levando o n1 para a RAM e colocando no endereco 0
+    instrucoes[0].opcode = 0;
+    instrucoes[0].info1 = n1;//Valor para ser salvo na RAM
+    instrucoes[0].info2 = 0;//Posicao na RAM
 
     instrucoes[1].opcode = 0;
-    instrucoes[1].info1 = 0;
-    instrucoes[1].info2 = 0;
+    instrucoes[1].info1 = n2;//Valor para ser salvo na RAM
+    instrucoes[1].info2 = 1;//Posicao na RAM
 
-    for(int i=0; i < multiplicador; i++){
-        instrucoes[i+2].opcode = 1;
-        instrucoes[i+2].info1 = 0;
-        instrucoes[i+2].info2 = 1;
-        instrucoes[i+2].info3 = 1;
+    for(int i = 2; i < n1/n2+2; i++){
+        instrucoes[i].opcode = 2; //Operacao de subtracao
+        instrucoes[i].info1 = 0; //Posicao do n1
+        instrucoes[i].info2 = 1; //Posicao do n2
+        instrucoes[i].info3 = 0; //Onde irá salvar a subtracao
     }
-    instrucoes[multiplicador+2].opcode = 1;
-}
+
+    instrucoes[2+n2].opcode = -1;
+    instrucoes[2+n2].info1 = -1;
+    instrucoes[2+n2].info2 = -1;
+    instrucoes[2+n2].info3 = -1;
+
+    return instrucoes;
+}*/
 
 Instruction* readInstructions(char* fileName, int* ramSize) {
     printf("FILE -> %s\n", fileName);
