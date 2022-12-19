@@ -5,7 +5,7 @@
 
 Instruction* generateRandomInstructions(int);
 
-Instruction* generateMultiplicationInstructions(int, int, int);
+Instruction* generateMultiplicationInstructions(int, int, int, int);
 
 //Instruction* generateDivisionInstructions(int, int);
 

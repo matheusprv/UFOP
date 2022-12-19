@@ -29,11 +29,15 @@ int main(int argc, char**argv) {
     } 
     else if(strcmp(argv[1], "multiply") == 0){
         ramSize = atoi(argv[2]);
-        instructions = generateMultiplicationInstructions(50, 30, 1);
+        instructions = generateMultiplicationInstructions(5, 3, 1, 1);
     }
     else if(strcmp(argv[1], "division") == 0){
         ramSize = atoi(argv[2]);
         //instructions = generateDivisionInstructions(50, 5);
+    }
+    else if(strcmp(argv[1], "expoente") == 0){
+        ramSize = atoi(argv[2]);
+        instructions = gerarInstrucoesExponenciacao(2, 4);
     }
     else {
         printf("Opcao invalida.\n");
