@@ -189,7 +189,7 @@ Instruction* gerarInstrucoesExponenciacao(int base, int expoente){//a partir de 
 
 } 
 
-Instruction* generateDivisionInstructions(int n1, int n2){
+Instruction* generateDivisionInstructions(int dividendo, int divisor){
     //n1 = Dividendo
     //n2 = DIvisor
 
@@ -199,12 +199,12 @@ Instruction* generateDivisionInstructions(int n1, int n2){
 
     //Levando o n1 para a RAM e colocando no endereco 0
     instrucoes[0].opcode = 0;
-    instrucoes[0].info1 = n1;//Valor para ser salvo na RAM
+    instrucoes[0].info1 = dividendo;//Valor para ser salvo na RAM
     instrucoes[0].info2 = 0;//Posicao na RAM      
 
     //Levando n2 para a RAM e colocando no endereco 1
     instrucoes[1].opcode = 0;
-    instrucoes[1].info1 = n2;//Valor para ser salvo na RAM
+    instrucoes[1].info1 = divisor;//Valor para ser salvo na RAM
     instrucoes[1].info2 = 1;//Posicao na RAM  
 
     //Levando o valor 0 para a posicao 2 da RAM para ser o quociente
@@ -218,8 +218,8 @@ Instruction* generateDivisionInstructions(int n1, int n2){
     instrucoes[3].info2 = 3;//Posicao na RAM 
 
 
-    for(int i=n2; i < n1; i+=n2){
-
+    for(int i=divisor; i < dividendo; i+=divisor){
+        
         qtdInstrucoes+=2;
 
         instrucoes = realloc(instrucoes, qtdInstrucoes*sizeof(Instruction));
@@ -230,11 +230,17 @@ Instruction* generateDivisionInstructions(int n1, int n2){
         instrucoes[qtdInstrucoes- 2].info2 = 1; //Posicao do n2
         instrucoes[qtdInstrucoes- 2].info3 = 0; //Onde ira salvar a subtracao
 
-        //Adicionando mais um no quociente
-        instrucoes[qtdInstrucoes - 1].opcode = 1; //Operacao de soma
-        instrucoes[qtdInstrucoes - 1].info1 = 2; //Posicao do n1
-        instrucoes[qtdInstrucoes - 1].info2 = 3; //Posicao do n2
-        instrucoes[qtdInstrucoes - 1].info3 = 2; //Onde ira salvar a soma
+        //verificacao para quando o resultado tera resto. Evitando que some mais um ao quociente         
+        if((dividendo-i) >= divisor){
+            //Adicionando mais um no quociente
+            instrucoes[qtdInstrucoes - 1].opcode = 1; //Operacao de soma
+            instrucoes[qtdInstrucoes - 1].info1 = 2; //Posicao do n1
+            instrucoes[qtdInstrucoes - 1].info2 = 3; //Posicao do n2
+            instrucoes[qtdInstrucoes - 1].info3 = 2; //Onde ira salvar a soma
+        }
+        else{
+            qtdInstrucoes--;
+        }
         
     }
 
