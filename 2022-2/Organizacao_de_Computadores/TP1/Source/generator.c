@@ -209,7 +209,7 @@ Instruction* generateDivisionInstructions(int dividendo, int divisor){
 
     //Levando o valor 0 para a posicao 2 da RAM para ser o quociente
     instrucoes[2].opcode = 0;
-    instrucoes[2].info1 = 1;//Valor para ser salvo na RAM
+    instrucoes[2].info1 = 0;//Valor para ser salvo na RAM
     instrucoes[2].info2 = 2;//Posicao na RAM 
 
     //Levando o valor 1 para a posicao 3 da RAM para somar mais um ao quociente
@@ -217,8 +217,10 @@ Instruction* generateDivisionInstructions(int dividendo, int divisor){
     instrucoes[3].info1 = 1;//Valor para ser salvo na RAM
     instrucoes[3].info2 = 3;//Posicao na RAM 
 
+    int i;
+    for(i=divisor; i <= dividendo; i+=divisor){
 
-    for(int i=divisor; i < dividendo; i+=divisor){
+        printf("N1: %d -- I: %d\n", dividendo, i);
         
         qtdInstrucoes+=2;
 
@@ -230,19 +232,13 @@ Instruction* generateDivisionInstructions(int dividendo, int divisor){
         instrucoes[qtdInstrucoes- 2].info2 = 1; //Posicao do n2
         instrucoes[qtdInstrucoes- 2].info3 = 0; //Onde ira salvar a subtracao
 
-        //verificacao para quando o resultado tera resto. Evitando que some mais um ao quociente         
-        if((dividendo-i) >= divisor){
-            //Adicionando mais um no quociente
-            instrucoes[qtdInstrucoes - 1].opcode = 1; //Operacao de soma
-            instrucoes[qtdInstrucoes - 1].info1 = 2; //Posicao do n1
-            instrucoes[qtdInstrucoes - 1].info2 = 3; //Posicao do n2
-            instrucoes[qtdInstrucoes - 1].info3 = 2; //Onde ira salvar a soma
-        }
-        else{
-            qtdInstrucoes--;
-        }
-        
+        instrucoes[qtdInstrucoes - 1].opcode = 1; //Operacao de soma
+        instrucoes[qtdInstrucoes - 1].info1 = 2; //Posicao do n1
+        instrucoes[qtdInstrucoes - 1].info2 = 3; //Posicao do n2
+        instrucoes[qtdInstrucoes - 1].info3 = 2; //Onde ira salvar a soma
+
     }
+
 
     //Resto sera a posicao 0
     //O resultado sera a posicao 2
