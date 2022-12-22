@@ -33,11 +33,11 @@ int main(int argc, char**argv) {
     }
     else if(strcmp(argv[1], "division") == 0){
         ramSize = atoi(argv[2]);
-        //instructions = generateDivisionInstructions(50, 5);
+        instructions = generateDivisionInstructions(103, 5);
     }
     else if(strcmp(argv[1], "expoente") == 0){
         ramSize = atoi(argv[2]);
-        instructions = gerarInstrucoesExponenciacao(2, 4);
+        instructions = gerarInstrucoesExponenciacao(2, 3);
     }
     else {
         printf("Opcao invalida.\n");

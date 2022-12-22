@@ -40,7 +40,7 @@ Instruction* generateMultiplicationInstructions(int n1, int n2, int execHalt, in
     //Vetor de instrucoes contendo as duas instrucoes de levar informacao na RAM e o comando de finalizacao mais a quantidade de vezes que o n1 sera multiplicado, ou seja, o n2
     int qtdInstrucoesExtras = execHalt ? 3 : 2;
     if(salvarValorNaRam == 0)
-        qtdInstrucoesExtras = 0;
+        qtdInstrucoesExtras = 1;
 
     
     Instruction* instrucoes = (Instruction*) malloc((qtdInstrucoesExtras + n2) * sizeof(Instruction));
@@ -49,13 +49,13 @@ Instruction* generateMultiplicationInstructions(int n1, int n2, int execHalt, in
         //Levando o n1 para a RAM e colocando no endereco 0
         instrucoes[0].opcode = 0;
         instrucoes[0].info1 = n1;//Valor para ser salvo na RAM
-        instrucoes[0].info2 = 0;//Posicao na RAM
-
-        //Levando o valor 0 (termo neutro da soma) para a RAM na posicao 1
-        instrucoes[1].opcode = 0;
-        instrucoes[1].info1 = 0;//Valor para ser salvo na RAM
-        instrucoes[1].info2 = 1;//Posicao na RAM        
+        instrucoes[0].info2 = 0;//Posicao na RAM      
     }
+
+    //Levando o valor 0 (termo neutro da soma) para a RAM na posicao 1
+    instrucoes[1].opcode = 0;
+    instrucoes[1].info1 = 0;//Valor para ser salvo na RAM
+    instrucoes[1].info2 = 1;//Posicao na RAM  
 
     int instrucaoInicial = salvarValorNaRam == 1 ? 2 : 0;
 
@@ -81,22 +81,20 @@ Instruction* gerarInstrucoesExponenciacao(int base, int expoente){//a partir de 
 
     int qtdInstrucoes = 0;
     for(int i=0; i<expoente-1; i++){
-        qtdInstrucoes += (base + 2);//Mais um para copiar o valor da posicao 1 para a 0 e outro para adicionar 0 na p0
+        qtdInstrucoes += (base + 3);//Mais um para copiar o valor da posicao 1 para a 0 e outro para adicionar 0 na p0
     }
     qtdInstrucoes+= 3;//Executar o halt e levar os valores iniciais para a RAM
-    printf("Quantidade de instrucoes: %d\n", qtdInstrucoes);
 
     Instruction* instrucoes = malloc(qtdInstrucoes * sizeof(Instruction));
 
     Instruction * instrucoesAux;
     int salvarNaRam = 1;
     int posicaoAtual = 0;
+    int j;
     for(int i=0; i<expoente-1; i++){
-        printf("Posicao atual: %d\n", posicaoAtual);
         instrucoesAux = generateMultiplicationInstructions(base, base, 0, salvarNaRam);
 
-        int j;
-        for(j=0; j<base+2*salvarNaRam; j++){
+        for(j=0; j<base+1+salvarNaRam; j++){
             instrucoes[posicaoAtual] = instrucoesAux[j];
             posicaoAtual++;
         }
@@ -111,18 +109,17 @@ Instruction* gerarInstrucoesExponenciacao(int base, int expoente){//a partir de 
 
         //somando o que esta na posicao 1 com a 0, para passar o que esta na posicao 1 para a zero
         instrucoes[posicaoAtual].opcode = 1;
-        instrucoes[posicaoAtual].info1 = 0;
-        instrucoes[posicaoAtual].info2 = 1;
-        instrucoes[posicaoAtual].info3 = 0;
+        instrucoes[posicaoAtual].info1 = 0;//Posicao do n1
+        instrucoes[posicaoAtual].info2 = 1;// Posicao do n2
+        instrucoes[posicaoAtual].info3 = 0;// Onde vai salvar
 
         posicaoAtual++;
 
-        //Colcoar 0 na posicao 1
+        //lembrar que depois disso precisa ser colocado 0 na posicao 1 da ram
 
         free(instrucoesAux);
 
     }
-    printf("Posicao atual: %d\n", posicaoAtual);
 
     instrucoes[posicaoAtual].opcode = -1;
     instrucoes[posicaoAtual].info1 = -1;
@@ -193,36 +190,63 @@ Instruction* gerarInstrucoesExponenciacao(int base, int expoente){//a partir de 
 } 
 
 Instruction* generateDivisionInstructions(int n1, int n2){
-    
-    int qtdInstrucoes = 0;
-    int temp = n2;
-    while(temp <= n1){
-        temp+=n2;
-    }
-    
-    //Vetor de instrucoes contendo as duas instrucoes de levar informacao na RAM e o comando de finalizacao mais a quantidade de vezes que o n1 sera multiplicado, ou seja, o n2
-    Instruction* instrucoes = (Instruction*) malloc((3 + qtdInstrucoes) * sizeof(Instruction));
+    //n1 = Dividendo
+    //n2 = DIvisor
+
+    int qtdInstrucoes = 4;
+
+    Instruction* instrucoes = malloc(qtdInstrucoes * sizeof(Instruction));
 
     //Levando o n1 para a RAM e colocando no endereco 0
     instrucoes[0].opcode = 0;
     instrucoes[0].info1 = n1;//Valor para ser salvo na RAM
-    instrucoes[0].info2 = 0;//Posicao na RAM
+    instrucoes[0].info2 = 0;//Posicao na RAM      
 
+    //Levando n2 para a RAM e colocando no endereco 1
     instrucoes[1].opcode = 0;
     instrucoes[1].info1 = n2;//Valor para ser salvo na RAM
-    instrucoes[1].info2 = 1;//Posicao na RAM
+    instrucoes[1].info2 = 1;//Posicao na RAM  
 
-    for(int i = 2; i < qtdInstrucoes+2; i++){
-        instrucoes[i].opcode = 2; //Operacao de subtracao
-        instrucoes[i].info1 = 0; //Posicao do n1
-        instrucoes[i].info2 = 1; //Posicao do n2
-        instrucoes[i].info3 = 0; //Onde irá salvar a subtracao
+    //Levando o valor 0 para a posicao 2 da RAM para ser o quociente
+    instrucoes[2].opcode = 0;
+    instrucoes[2].info1 = 1;//Valor para ser salvo na RAM
+    instrucoes[2].info2 = 2;//Posicao na RAM 
+
+    //Levando o valor 1 para a posicao 3 da RAM para somar mais um ao quociente
+    instrucoes[3].opcode = 0;
+    instrucoes[3].info1 = 1;//Valor para ser salvo na RAM
+    instrucoes[3].info2 = 3;//Posicao na RAM 
+
+
+    for(int i=n2; i < n1; i+=n2){
+
+        qtdInstrucoes+=2;
+
+        instrucoes = realloc(instrucoes, qtdInstrucoes*sizeof(Instruction));
+
+        //Subtraindo n2 de n1
+        instrucoes[qtdInstrucoes- 2].opcode = 2; //Operacao de subtracao
+        instrucoes[qtdInstrucoes- 2].info1 = 0; //Posicao do n1
+        instrucoes[qtdInstrucoes- 2].info2 = 1; //Posicao do n2
+        instrucoes[qtdInstrucoes- 2].info3 = 0; //Onde ira salvar a subtracao
+
+        //Adicionando mais um no quociente
+        instrucoes[qtdInstrucoes - 1].opcode = 1; //Operacao de soma
+        instrucoes[qtdInstrucoes - 1].info1 = 2; //Posicao do n1
+        instrucoes[qtdInstrucoes - 1].info2 = 3; //Posicao do n2
+        instrucoes[qtdInstrucoes - 1].info3 = 2; //Onde ira salvar a soma
+        
     }
 
-    instrucoes[2+n2].opcode = -1;
-    instrucoes[2+n2].info1 = -1;
-    instrucoes[2+n2].info2 = -1;
-    instrucoes[2+n2].info3 = -1;
+    //Resto sera a posicao 0
+    //O resultado sera a posicao 2
+
+    instrucoes = realloc(instrucoes, (qtdInstrucoes+1) * sizeof(Instruction));
+
+    instrucoes[qtdInstrucoes].opcode = -1;
+    instrucoes[qtdInstrucoes].info1 = -1;
+    instrucoes[qtdInstrucoes].info2 = -1;
+    instrucoes[qtdInstrucoes].info3 = -1;
 
     return instrucoes;
 }
