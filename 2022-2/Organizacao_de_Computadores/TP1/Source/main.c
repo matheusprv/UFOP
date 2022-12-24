@@ -37,7 +37,7 @@ int main(int argc, char**argv) {
     }
     else if(strcmp(argv[1], "expoente") == 0){
         ramSize = atoi(argv[2]);
-        instructions = gerarInstrucoesExponenciacao(2, 3);
+        instructions = gerarInstrucoesExponenciacao(2, 10);
     }
     else {
         printf("Opcao invalida.\n");
