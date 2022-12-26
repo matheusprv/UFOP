@@ -20,10 +20,9 @@ int main() {
     return 0; //nao remova
 
     /*
-        escalarTimes: 2n²           proximoMaisVelho e ohmega de escalarTimes
+        escalarTimes: 2n² = O(n²)
 
-        proximoMaisVelho: 2n        escalarTimes e big O de escalarTimes
-
+        proximoMaisVelho: 2n = O(n)
     
     */
 }

@@ -1,15 +1,7 @@
+#include "dtime.h"
+#include "duende.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include "dtime.h"
-
-typedef enum { NAO=0, SIM } ESCALADO;
-
-struct duende {
-    char nome[20];
-    int idade;
-    ESCALADO escalado;
-};
 
 struct time {
     Duende* lider;
@@ -17,15 +9,9 @@ struct time {
     Duende* entregador;
 };
 
-
 // Manter como especificado
 Time *alocaTimes(int n) {
     Time* times = malloc(n * sizeof(Time));
-    for(int i=0; i<n;i++){
-        times[i].entregador = malloc(sizeof(Duende));
-        times[i].lider = malloc(sizeof(Duende));
-        times[i].piloto = malloc(sizeof(Duende));
-    }
     return times;
 }
 
@@ -40,32 +26,29 @@ void desalocaTimes(Time **times, int n) {
 }
 
 //Manter como especificado
-void escalarTimes(Duende *duendes, Time *times, int qtdDuendes) {
+void escalarTimes(Duende *duendes, Time *times, int qtdDuendes) {    
     int i, index;
     int qtdTime = qtdDuendes/3;
-    
+   
     // Escalando os lideres
     for (i=0; i<qtdTime; i++) {
         index = proximoMaisVelho(duendes, qtdDuendes);
-        duendes[index].escalado = SIM;
-        strcpy(times[i].lider->nome, duendes[index].nome);
-        times[i].lider->idade = duendes[index].idade;
+        escalarDuende(duendes, index);
+        times[i].lider = copiaDuende(duendes, index);
     }
 
     // Escalando os pilotos
     for (i=0; i<qtdTime; i++) {
         index = proximoMaisVelho(duendes, qtdDuendes);
-        duendes[index].escalado = SIM;
-        strcpy(times[i].piloto->nome, duendes[index].nome);
-        times[i].piloto->idade = duendes[index].idade;
+        escalarDuende(duendes, index);
+        times[i].piloto = copiaDuende(duendes, index);
     }
 
     // Escalando os entregadores
     for (i=0; i<qtdTime; i++) {
         index = proximoMaisVelho(duendes, qtdDuendes);
-        duendes[index].escalado = SIM;
-        strcpy(times[i].entregador->nome, duendes[index].nome);
-        times[i].entregador->idade = duendes[index].idade;
+        escalarDuende(duendes, index);
+        times[i].entregador = copiaDuende(duendes, index);
     }
 }
 
