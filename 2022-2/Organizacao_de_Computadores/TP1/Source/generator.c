@@ -109,7 +109,7 @@ Instruction* gerarInstrucoesExponenciacao(int base, int expoente){//a partir de 
 
         free(instrucoesTemp);
 
-        //Trocando o valor que está no P1 para o P0 para continuar fazendo as multiplicacoes com os valores corretos. Ex: 2⁴ estava fazendo 8+2+2, e nao 8+0+8
+        //Trocando o valor que está no P1 (resultado da multiplicacao) para o P0 para continuar fazendo as multiplicacoes com os valores corretos. Ex: 2⁴ estava fazendo 8+2+2, e nao 8+0+8
 
         //Levando 0 para p0
         instrucoes[i].opcode = 0;
@@ -193,6 +193,86 @@ Instruction* generateDivisionInstructions(int dividendo, int divisor){
 
     //Resto sera a posicao 0
     //O resultado sera a posicao 2
+
+    instrucoes = realloc(instrucoes, (qtdInstrucoes+1) * sizeof(Instruction));
+
+    instrucoes[qtdInstrucoes].opcode = -1;
+    instrucoes[qtdInstrucoes].info1 = -1;
+    instrucoes[qtdInstrucoes].info2 = -1;
+    instrucoes[qtdInstrucoes].info3 = -1;
+
+    return instrucoes;
+}
+
+Instruction* generateFactorialInstructions(int n1){
+
+    int qtdInstrucoes = 4;
+    Instruction* instrucoes = malloc(qtdInstrucoes * sizeof(Instruction));
+
+    //Levando o n1 para a RAM e colocando no endereco 0
+    instrucoes[0].opcode = 0;
+    instrucoes[0].info1 = n1;//Valor para ser salvo na RAM
+    instrucoes[0].info2 = 0;//Posicao na RAM      
+
+    //Levando 0 para a RAM e colocando no endereco 1
+    instrucoes[1].opcode = 0;
+    instrucoes[1].info1 = 0;//Valor para ser salvo na RAM
+    instrucoes[1].info2 = 1;//Posicao na RAM  
+
+    //Parte do código apenas para mostrar o número que está sendo multiplicado do fatorial:
+    //Levando o n1 para a RAM e colocando no endereco 2
+    instrucoes[2].opcode = 0;
+    instrucoes[2].info1 = n1-1;//Valor para ser salvo na RAM
+    instrucoes[2].info2 = 2;//Posicao na RAM     
+
+    //Levando o 1 para a RAM e colocando no endereco 3 para ser o subtraendo
+    instrucoes[3].opcode = 0;
+    instrucoes[3].info1 = 1;//Valor para ser salvo na RAM
+    instrucoes[3].info2 = 3;//Posicao na RAM    
+
+    Instruction* instrucoesTemp;
+
+    for (int i = n1-1; i > 1; i--){
+        qtdInstrucoes += i+4;
+        instrucoes = realloc(instrucoes, qtdInstrucoes * sizeof(Instruction));
+
+        instrucoesTemp = generateMultiplicationInstructions(i, i, 0, 0);
+        
+        for (int j = i; j > 0; j--){
+            instrucoes[qtdInstrucoes - j - 4] = instrucoesTemp[i-j];
+        }
+
+        free(instrucoesTemp);
+        
+        //Trocando o valor que está no P1 (resultado da multiplicacao) para o P0 para continuar fazendo as multiplicacoes com os valores corretos
+
+        //Levando 0 para p0
+        instrucoes[qtdInstrucoes-4].opcode = 0;
+        instrucoes[qtdInstrucoes-4].info1 = 0;//Valor para ser salvo na RAM
+        instrucoes[qtdInstrucoes-4].info2 = 0;//Posicao na RAM 
+
+        //Levando o valor de p1 para p0
+        instrucoes[qtdInstrucoes-3].opcode = 1; //Operacao de soma
+        instrucoes[qtdInstrucoes-3].info1 = 0; //Posicao do n1
+        instrucoes[qtdInstrucoes-3].info2 = 1; //Posicao do n2
+        instrucoes[qtdInstrucoes-3].info3 = 0; //Onde irá salvar a soma
+
+        //Levando 0 para p1
+        instrucoes[qtdInstrucoes-2].opcode = 0;
+        instrucoes[qtdInstrucoes-2].info1 = 0;//Valor para ser salvo na RAM
+        instrucoes[qtdInstrucoes-2].info2 = 1;//Posicao na RAM 
+
+
+        //Subtraindo 1 (posicao 3) da posicao 2
+        instrucoes[qtdInstrucoes-1].opcode = 2; //Operacao de subtracao
+        instrucoes[qtdInstrucoes-1].info1 = 2; //Posicao do n1
+        instrucoes[qtdInstrucoes-1].info2 = 3; //Posicao do n2
+        instrucoes[qtdInstrucoes-1].info3 = 2; //Onde irá salvar a soma
+    }
+
+    //o resultado do fatorial fica armazenado na posicao 0
+    //os números do fatorial que estao sendo multiplicados ficam na posicao 2, mas o primeiro de todos começa na posicao 0
+    //ex: 4!: comeca com 4 na posicao 0, e 3 na posicao 2. A partir dai, na posicao 2 ficara salvo os outros numeros do fatorial
 
     instrucoes = realloc(instrucoes, (qtdInstrucoes+1) * sizeof(Instruction));
 

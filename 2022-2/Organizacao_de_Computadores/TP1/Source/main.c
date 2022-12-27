@@ -39,6 +39,10 @@ int main(int argc, char**argv) {
         ramSize = atoi(argv[2]);
         instructions = gerarInstrucoesExponenciacao(2, 10);
     }
+    else if(strcmp(argv[1], "factorial") == 0){
+        ramSize = atoi(argv[2]);
+        instructions = generateFactorialInstructions(4);
+    }
     else {
         printf("Opcao invalida.\n");
         return 0;
