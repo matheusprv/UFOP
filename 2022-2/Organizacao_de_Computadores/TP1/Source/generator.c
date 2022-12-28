@@ -75,7 +75,7 @@ Instruction* generateMultiplicationInstructions(int n1, int n2, int execHalt, in
 
 }
 
-Instruction* gerarInstrucoesExponenciacao(int base, int expoente){//a partir de expoentes maior do que 2, dará erro por causa da logica na função de mutiplicacao, ex: 4³ daria 32
+Instruction* generateExponentiationInstructions(int base, int expoente){
 
     int qtdInstrucoes = 0;
     for(int i=0; i<expoente-1; i++){

@@ -9,7 +9,7 @@ Instruction* generateMultiplicationInstructions(int, int, int, int);
 
 Instruction* generateDivisionInstructions(int, int);
 
-Instruction* gerarInstrucoesExponenciacao(int, int);
+Instruction* generateExponentiationInstructions(int, int);
 
 Instruction* generateFactorialInstructions(int);
 

@@ -1,0 +1,21 @@
+Compilação:
+
+    gcc -Wall Source/*.c -o exe
+
+
+
+Inicializacao:
+
+    Os valores para cada item deverão ser alterados no próprio código fonte
+
+    Multiplicação
+    ./exe multiply tam_ram
+
+    Divisão 
+    ./exe division tam_ram
+
+    Exponenciação
+    ./exe expoente tam_ram
+
+    Fatorial
+    ./exe factorial tam_ram

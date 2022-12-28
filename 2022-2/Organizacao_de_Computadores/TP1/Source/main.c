@@ -29,7 +29,9 @@ int main(int argc, char**argv) {
     } 
     else if(strcmp(argv[1], "multiply") == 0){
         ramSize = atoi(argv[2]);
-        instructions = generateMultiplicationInstructions(5, 3, 1, 1);
+        int n1 = 5;
+        int n2 = 3;
+        instructions = generateMultiplicationInstructions(n1, n2, 1, 1);
     }
     else if(strcmp(argv[1], "division") == 0){
         ramSize = atoi(argv[2]);
@@ -37,7 +39,7 @@ int main(int argc, char**argv) {
     }
     else if(strcmp(argv[1], "expoente") == 0){
         ramSize = atoi(argv[2]);
-        instructions = gerarInstrucoesExponenciacao(2, 10);
+        instructions = generateExponentiationInstructions(2, 10);
     }
     else if(strcmp(argv[1], "factorial") == 0){
         ramSize = atoi(argv[2]);
