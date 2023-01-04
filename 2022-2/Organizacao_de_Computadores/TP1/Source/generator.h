@@ -13,6 +13,8 @@ Instruction* generateExponentiationInstructions(int, int);
 
 Instruction* generateFactorialInstructions(int);
 
+Instruction* generateAritmeticProgressionInstructions(int, int, int);
+
 Instruction* readInstructions(char*, int*);
 
 #endif // !GENERATOR_H

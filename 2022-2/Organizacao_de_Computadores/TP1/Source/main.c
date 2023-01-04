@@ -45,6 +45,10 @@ int main(int argc, char**argv) {
         ramSize = atoi(argv[2]);
         instructions = generateFactorialInstructions(4);
     }
+    else if(strcmp(argv[1], "ap") == 0){
+        ramSize = atoi(argv[2]);
+        instructions = generateAritmeticProgressionInstructions(2, 47, 3);
+    }
     else {
         printf("Opcao invalida.\n");
         return 0;

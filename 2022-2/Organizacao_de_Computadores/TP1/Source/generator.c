@@ -40,6 +40,7 @@ Instruction* generateMultiplicationInstructions(int n1, int n2, int execHalt, in
     //Vetor de instrucoes contendo as duas instrucoes de levar informacao na RAM e o comando de finalizacao mais a quantidade de vezes que o n1 sera multiplicado, ou seja, o n2
     int qtdInstrucoesExtras = execHalt ? 3 : (salvarValorNaRam == 1 ? 2 : 0);
     
+    printf("Tamanho Vetor: %d\n\n", qtdInstrucoesExtras + n2);
     Instruction* instrucoes = (Instruction*) malloc((qtdInstrucoesExtras + n2) * sizeof(Instruction));
 
     if(salvarValorNaRam == 1){
@@ -170,8 +171,6 @@ Instruction* generateDivisionInstructions(int dividendo, int divisor){
 
     int i;
     for(i=divisor; i <= dividendo; i+=divisor){
-
-        printf("N1: %d -- I: %d\n", dividendo, i);
         
         qtdInstrucoes+=2;
 
@@ -183,13 +182,13 @@ Instruction* generateDivisionInstructions(int dividendo, int divisor){
         instrucoes[qtdInstrucoes- 2].info2 = 1; //Posicao do n2
         instrucoes[qtdInstrucoes- 2].info3 = 0; //Onde ira salvar a subtracao
 
+        //Somando a quantidade de subtracoes feitas
         instrucoes[qtdInstrucoes - 1].opcode = 1; //Operacao de soma
         instrucoes[qtdInstrucoes - 1].info1 = 2; //Posicao do n1
         instrucoes[qtdInstrucoes - 1].info2 = 3; //Posicao do n2
         instrucoes[qtdInstrucoes - 1].info3 = 2; //Onde ira salvar a soma
 
     }
-
 
     //Resto sera a posicao 0
     //O resultado sera a posicao 2
@@ -282,6 +281,72 @@ Instruction* generateFactorialInstructions(int n1){
     instrucoes[qtdInstrucoes].info3 = -1;
 
     return instrucoes;
+}
+
+Instruction* generateAritmeticProgressionInstructions(int a1, int n, int razao){
+
+    //an = (n-1)*razao + a1
+
+    Instruction* instrucoes = malloc((7 + razao) * sizeof(Instruction)); //Num de instrucoes padrao mais a multiplicacao
+
+    //Levando n e 1 para a RAM
+    instrucoes[0].opcode = 0;
+    instrucoes[0].info1 = n; //Valor
+    instrucoes[0].info2 = 0; //Posicao
+
+    instrucoes[1].opcode = 0;
+    instrucoes[1].info1 = 1; //Valor
+    instrucoes[1].info2 = 1; //Posicao
+
+    //Subtraindo 1 de n
+    instrucoes[2].opcode = 2;
+    instrucoes[2].info1 = 0; //Posicao do valor 1
+    instrucoes[2].info2 = 1; //Posicao do valor 2
+    instrucoes[2].info3 = 0; //Posicao onde sera salvo o resultado
+
+    //Levando o 0 para a posicao 1, pois e o termo neutro da soma, que e a base da multiplicacao
+    instrucoes[3].opcode = 0;
+    instrucoes[3].info1 = 0; //Valor
+    instrucoes[3].info2 = 1; //Posicao
+
+    Instruction* temp = generateMultiplicationInstructions(0, razao, 0, 0);
+
+    //Adicionando no vetor de instrucoes as geradas pela multiplicacao
+    int proximaInstrucao = 4;
+    for(int i = 0; i < razao; i++){
+        instrucoes[proximaInstrucao + i] = temp[i];
+    }
+
+    free(temp);
+
+    proximaInstrucao += razao;
+
+    //Multiplicacao deixa o resultado na posicao 1
+
+    //Levando a1 para a posicao 0 da RAM
+    instrucoes[proximaInstrucao].opcode = 0;
+    instrucoes[proximaInstrucao].info1 = a1; //Valor
+    instrucoes[proximaInstrucao].info2 = 0;  //Posicao
+
+    proximaInstrucao++;
+
+    //Fazendo a soma de a1 com o termo anterior
+    instrucoes[proximaInstrucao].opcode = 1;
+    instrucoes[proximaInstrucao].info1 = 0; //Posicao do valor 1
+    instrucoes[proximaInstrucao].info2 = 1; //Posicao do valor 2
+    instrucoes[proximaInstrucao].info3 = 0; // Posicao onde sera salvo o resultado
+
+    proximaInstrucao++;
+
+    //Halt
+    instrucoes[proximaInstrucao].opcode = -1;
+    instrucoes[proximaInstrucao].info1 = -1;
+    instrucoes[proximaInstrucao].info2 = -1;
+    instrucoes[proximaInstrucao].info3 = -1;
+
+    //Resultado final fica na posicao 0
+    return instrucoes;
+
 }
 
 Instruction* readInstructions(char* fileName, int* ramSize) {
