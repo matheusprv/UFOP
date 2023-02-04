@@ -1,4 +1,6 @@
 #include "pilha.h"
+#include <stdlib.h>
+
 
 bool PilhaInicia(Pilha* pPilha) {
     return ListaInicia(pPilha);
