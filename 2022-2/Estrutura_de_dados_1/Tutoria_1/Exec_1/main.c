@@ -25,20 +25,23 @@ int main(){
             tamString--;
         }
 
-
+        //Indo de caracter por caracter da String
+        //Se o primeiro caracter for um [, eu vou começar do próximo
         for(int i = string[0] == '[' ? 1 : 0; i < tamString; i++){
             caracter = string[i];
 
             if(caracter == '['){
-                
+                //Fazer um for procurando até um proximo [ ou ] ou fim da string, gerando um string temporaria com os dados
                 int j;
                 for(j=i+1; j<tamString && string[j] != '[' && string[j] != ']'; j++){
                     tamTemp++;
                     temp[tamTemp] = string[j];
                 }
+                //inserir os dados da String temporaria no inicio da lista
                 for(int k = tamTemp; k>=0; k--){
                     TLista_Insere_Inicio(&lista, temp[k]);
                 }
+                //Reiniciar a string temporaria
                 temp[tamTemp+1]='\0';
                 tamTemp = -1;
                 i = j-1;
@@ -52,7 +55,6 @@ int main(){
         TLista_Imprime(&lista);
         TLista_Esvazia(&lista);
         TLista_Inicia(&lista);
-
 
     }
 
