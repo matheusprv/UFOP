@@ -37,8 +37,18 @@ bool FilaInverte(Fila *pFila)
     }
 
     //Liberando a FILA
-    FilaLibera(pFila);
-    FilaInicia(pFila);
+    Item temp;
+    aux = pFila->cabeca->prox;
+
+    Celula * prox = aux->prox;
+    while(prox != NULL){
+        FilaDesinfeleira(pFila, &temp);
+        aux = prox;
+        prox = aux->prox;
+    }
+    FilaDesinfeleira(pFila, &temp);
+
+    pFila->ultimo = pFila->cabeca;
 
     //Passando os dados da pilha para a lista
     aux = pilha.cabeca->prox;
