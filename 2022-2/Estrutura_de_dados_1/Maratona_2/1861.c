@@ -3,6 +3,7 @@
 #include <string.h>
 
 
+
 int main(){
 
     int qtdCasos = 0;
@@ -20,7 +21,7 @@ int main(){
     realloc(assassinos, qtdCasos);
     realloc(assassinados, qtdCasos);
 
-    for(int i =0; i< qtdCasos; i++){
+    for(int i = 0; i < qtdCasos; i++){
         
     }
 
