@@ -37,7 +37,16 @@ int main()
 
         calcularSaldoCesta(vetor,n);
 
-        imprimerResultados(instancia, vetor, n);
+        /*for(int i =0; i<n;i++){
+            printf("TIME: %d\n", vetor[i].identificador);
+            printf("\tPontos: %d\n", vetor[i].pontos);
+            printf("\tCestas feitas: %d\n", vetor[i].cestasFeitas);
+            printf("\tCestas Levadas: %d\n", vetor[i].cestasLevadas);
+            printf("\tSaldo cestas: %f\n", vetor[i].saldoDeCestas);
+            printf("\tVitórias: %d\n", vetor[i].vitorias);
+            printf("\tDerrotas: %d\n", vetor[i].derrotas);
+            printf("\n");
+        }*/
 
         // ordenar os times
         ordenacao(vetor, n);

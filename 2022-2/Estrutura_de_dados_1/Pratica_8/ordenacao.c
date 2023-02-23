@@ -10,6 +10,8 @@ Time *alocaVetor(int n) {
         times[i].cestasFeitas = 0;
         times[i].cestasLevadas = 0;
         times[i].saldoDeCestas = 0;
+        times[i].vitorias = 0;
+        times[i].derrotas = 0;
     }
     
     return times;
@@ -23,15 +25,15 @@ void desalocaVetor(Time **vetor) {
 void heap_refaz(Time * times, int esquerda, int direita){
     int i = esquerda;
     int j = i*2 + 1;
-    Time aux = times[j];
+    Time aux = times[i];
     
     while(j <= direita){
         // if(j < direita && times[j] < times[j+1] )
-        if(j < direita && compare(times[j], times[j+1]))
+        if(j < direita && !compare(times[j], times[j+1]))
             j++;
         
         //aux >= times[j]
-        if(!compare(aux, times[j]))
+        if(compare(aux, times[j]))
             break;
         
         times[i] = times[j];
@@ -41,12 +43,23 @@ void heap_refaz(Time * times, int esquerda, int direita){
     times[i] = aux;
 }
 
-// implemente sua funcao de ordenacao aqui, que deve invocar a funcao compare
-void ordenacao(Time *vetor, int n) {
+void heap_constroi(Time * vetor, int n){
     int esquerda = (n/2)-1;
     while(esquerda >= 0 ){
         heap_refaz(vetor, esquerda, n-1);
         esquerda--;
+    }
+}
+
+// implemente sua funcao de ordenacao aqui, que deve invocar a funcao compare
+void ordenacao(Time *vetor, int n) {
+    heap_constroi(vetor, n);
+    while(n>1){
+        Time aux = vetor[n-1];
+        vetor[n-1] = vetor[0];
+        vetor[0] = aux;
+        n--;
+        heap_refaz(vetor, 0, n-1);
     }
 }
 
@@ -56,43 +69,54 @@ int compare(const Time t1, const Time t2) {
     //Pontuação
     if(t1.pontos < t2.pontos)
         return 1;
+    else if(t1.pontos > t2.pontos)
+        return 0;
     
     //Saldo de cestas
-    else if(t1.pontos == t2.pontos && t1.saldoDeCestas < t2.saldoDeCestas)
+    else if(t1.saldoDeCestas < t2.saldoDeCestas)
         return 1;
+    else if(t1.saldoDeCestas > t2.saldoDeCestas)
+        return 0;
 
     //Maior número de pontos
-    else if(t1.pontos == t2.pontos && t1.saldoDeCestas == t2.saldoDeCestas && t1.cestasFeitas < t2.cestasFeitas)
+    else if(t1.cestasFeitas < t2.cestasFeitas)
         return 1;
+    else if(t1.cestasFeitas > t2.cestasFeitas)
+        return 0;
 
     //menor numero de inscricao
-    else if(t1.pontos == t2.pontos && t1.saldoDeCestas == t2.saldoDeCestas && t1.cestasFeitas == t2.cestasFeitas && t1.identificador < t2.identificador)
+    else if(t1.identificador > t2.identificador)
         return 1;
-
-    return 0;
+    else 
+        return 0;
 
 }
 
 void preencherDados(int time1, int pontos1, int time2, int pontos2, Time * times){
-    //Vitoria: 2 pontios
-    //Derrota: 1 ponto
-
-    int pontosTime1 = 2, pontosTime2 = 1;
-
-    if(pontos1 < pontos2){
-        pontosTime1--; 
-        pontosTime2++;
+    
+    int posTime1 = time1-1;
+    int posTime2 = time2-1;
+    
+    if(pontos1 > pontos2){
+        times[posTime1].pontos+=2;
+        times[posTime1].vitorias++;
+        times[posTime2].pontos+=1;
+        times[posTime2].derrotas++;
+    }
+    else{
+        times[posTime2].pontos+=2;
+        times[posTime2].vitorias++;
+        times[posTime1].pontos+=1;
+        times[posTime1].derrotas++;
     }
 
-    printf("TIME 1: %d -- TIME 2: %d\n", time1, time2);
 
-    times[time1-1].pontos += pontosTime1;
-    times[time1-1].cestasFeitas += pontos1;
-    times[time1-1].cestasLevadas += pontos2;
 
-    times[time2-1].pontos += pontosTime2;
-    times[time2-1].cestasFeitas += pontos2;
-    times[time2-1].cestasLevadas += pontos1;
+    times[posTime1].cestasFeitas += pontos1;
+    times[posTime1].cestasLevadas += pontos2;
+
+    times[posTime2].cestasFeitas += pontos2;
+    times[posTime2].cestasLevadas += pontos1;
 
 }
 
@@ -106,7 +130,7 @@ void calcularSaldoCesta(Time * vetor, int n){
         cestasLevadas = vetor[i].cestasLevadas;
 
         if(cestasLevadas == 0)
-            saldoCestas = vetor[i].pontos;
+            saldoCestas = vetor[i].cestasFeitas;
         
         else
             saldoCestas = ((float)cestasFeitas)/cestasLevadas;
@@ -121,5 +145,5 @@ void imprimerResultados(int instancia, Time * times, int qtdTimes){
     for(int i = 0; i < qtdTimes; i++){
         printf("%d ", times[i].identificador);
     }
-    printf("\n");
+    printf("\n\n");
 }

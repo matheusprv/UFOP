@@ -11,9 +11,13 @@ typedef struct {
     int cestasFeitas;
     int cestasLevadas;
     float saldoDeCestas; // ((float)cestasFeitas)/cestasLevadas
+    int vitorias;
+    int derrotas;
 } Time;
 
 void heap_refaz(Time * vetor, int esquerda, int direita);
+
+void heap_constroi(Time * vetor, int n);
 
 // Manter como especificado
 void ordenacao(Time *vetor, int n);
