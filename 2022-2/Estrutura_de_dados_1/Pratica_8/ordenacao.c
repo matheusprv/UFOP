@@ -145,5 +145,5 @@ void imprimerResultados(int instancia, Time * times, int qtdTimes){
     for(int i = 0; i < qtdTimes; i++){
         printf("%d ", times[i].identificador);
     }
-    printf("\n\n");
+    printf("\n");
 }

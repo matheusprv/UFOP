@@ -19,6 +19,10 @@ int main()
             return 0;
         else
             instancia++;
+            
+        if(instancia > 1){
+            printf("\n");
+        }            
 
         //aloque o vetor
         vetor = alocaVetor(n);
