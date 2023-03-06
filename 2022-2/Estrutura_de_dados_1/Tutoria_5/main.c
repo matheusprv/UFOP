@@ -1,6 +1,9 @@
 //IMPLEMENTE UTILIZANDO HEAPSORT
 #include "ordenacao.h"
 
+void limpaBuffer(){
+    while( getchar() != '\n' );
+}
 
 int main(){
 
@@ -8,26 +11,20 @@ int main(){
     scanf("%d",&n);
 
     while(n != 0){
-        getchar();
-        
+        limpaBuffer();
+
         Aluno * alunos = malloc(n * sizeof(Aluno));
 
-        for(int i=0; i<n; i++){
-            fgets(alunos[i].nome, 30, stdin);
-            alunos[i].nome[strlen(alunos[i].nome) - 1] = '\0';
-            
-            scanf("%s", alunos[i].cor);
-            scanf("%c", &alunos[i].tamanho);
-        }
+        lerNomes(alunos, n);
 
-        //ordenacao(alunos, n);
+        ordenacao(alunos, n);
 
         printNome(alunos, n);
 
         free(alunos);
-
         scanf("%d",&n);
-        break;
+        if(n != 0)
+            printf("\n");
     }
 
     return 0;

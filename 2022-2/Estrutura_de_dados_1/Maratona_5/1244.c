@@ -3,33 +3,54 @@
 #include <stdlib.h>
 
 typedef struct{
-    char palavra[52];
+    char palavra[53];
     int tamPalavra;
 }Palavra;
 
-void quicksort(Palavra *p, int start, int end){
+void merge(Palavra *v, int l, int m, int r){
+    int size_l = (m-l+1);
+    int size_r = (r-m);
 
-    int l = start;
-    int r = end;
-    Palavra pivot = p[(l+r)/2];
+    Palavra *vet_l = malloc(size_l * sizeof(Palavra));
+    Palavra *vet_r = malloc(size_r * sizeof(Palavra));
+    int i, j;
 
-    while(l<=r){
+    for (i = 0; i < size_l; i++)
+        vet_l[i] = v[i + l];
 
-        while(p[l].tamPalavra > pivot.tamPalavra ) l++;
-        while(p[r].tamPalavra < pivot.tamPalavra ) r--;
+    for(j = 0; j < size_r; j++)
+        vet_r[j] = v[m + j + 1];
+    
+    i = 0;
+    j = 0;
 
-        if(l<=r){
-            Palavra aux = p[l];
-            p[l] = p[r];
-            p[r] = aux;
-            l++;
-            r--;
-        }
+    for (int k = l; k <= r; k++){
+        if(i == size_l)
+            v[k] = vet_r[j++];
 
+        else if(j == size_r)
+            v[k] = vet_l[i++];
+
+        else if(vet_l[i].tamPalavra >= vet_r[j].tamPalavra)
+            v[k] = vet_l[i++];
+
+        else
+            v[k] = vet_r[j++];
     }
+    
+    free(vet_l);
+    free(vet_r);
+}
 
-    if(r > start) quicksort(p, start, r);
-    if(l < end) quicksort(p, l, end);
+void mergeSort(Palavra *v, int l, int r){
+    int m;
+    
+    if(l<r){
+        m = (l+r) / 2;
+        mergeSort(v, l, m);
+        mergeSort(v, m+1, r);
+        merge(v, l, m, r);
+    }
 }
 
 void copiaVetor(int tamVetor, Palavra * orginal, Palavra * copy){
@@ -46,58 +67,43 @@ int main(){
     scanf("%d",&casos_de_teste);
     getchar();
 
-    char palavra[52];
+    char palavra[100000];
     int tamPalavra;
     for(int cont=0; cont<casos_de_teste; cont++){
         
-        fgets(palavra, 52, stdin);
+        fgets(palavra, 100000, stdin);
         tamPalavra = strlen(palavra);
-        palavra[tamPalavra-1] = '\0';
-        tamPalavra--;
-
-        //Verifica a quantidade de espaços a string e, conqsequentemente, a quantidade de palavras
-        int qtdEspacos = 1;
-        for(int i=0; i<tamPalavra; i++){
-            if(palavra[i]==' ')
-                qtdEspacos++;
+        if(palavra[tamPalavra-1] == '\n'){
+            palavra[tamPalavra-1] = '\0';
+            tamPalavra--;
         }
 
-
-        Palavra* palavras = malloc(qtdEspacos  * sizeof(Palavra));
+        Palavra* palavras = malloc(50  * sizeof(Palavra));
 
         char * token = strtok(palavra, " ");
 
         //Copiando as palavras para o vetor
-        int i = 0;
+        int qtdpalavras = 0;
         while(token != NULL){
-            strcpy(palavras[i].palavra, token);
-            palavras[i].tamPalavra = strlen(palavras[i].palavra);
+            strcpy(palavras[qtdpalavras].palavra, token);
+            palavras[qtdpalavras].tamPalavra = strlen(palavras[qtdpalavras].palavra);
             token = strtok(NULL, " ");
-            i++;
+            qtdpalavras++;
         }
 
-        Palavra* palavrasOriginal = malloc(qtdEspacos  * sizeof(Palavra));
-        copiaVetor(qtdEspacos, palavras, palavrasOriginal);
+        mergeSort(palavras, 0, qtdpalavras-1);
 
-        quicksort(palavras, 0, qtdEspacos-1);
+        for(int i = 0; i < qtdpalavras; i++){
 
-        for(int i=1; i<qtdEspacos; i++){
-            if(palavras[i].tamPalavra == palavras[i-1].tamPalavra){
-                //Verificando quantas palavras com o mesmo tamanho
-                int mesmoTamanho = 0;
-                for(int j = 0; j < qtdEspacos; j++){
-                    
-                }
-            }
-            else{
-                printf("%s ", palavras[i].palavra);
-            }
+            printf("%s", palavras[i].palavra);
+            if(i != qtdpalavras-1 )
+                printf(" ");
             
         }
-        printf("\n");
+        // if(cont != casos_de_teste -1)
+            printf("\n");
 
         free(palavras);
-        free(palavrasOriginal);
 
     }
 

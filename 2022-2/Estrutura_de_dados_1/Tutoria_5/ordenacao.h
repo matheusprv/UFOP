@@ -3,12 +3,12 @@
 #include <string.h>
 
 typedef struct{
-    char nome[30];
+    char nome[100];
     char cor[10];
     char tamanho;
 }Aluno;
 
-void lerDados(Aluno * alunos, int n);
+void lerNomes(Aluno * alunos, int n);
 
 void ordenacao(Aluno *vetor, int n);
 

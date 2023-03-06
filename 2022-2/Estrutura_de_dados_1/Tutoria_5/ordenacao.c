@@ -1,5 +1,20 @@
 #include "ordenacao.h"
 
+void lerNomes(Aluno * alunos, int n){
+    for(int i = 0; i<n; i++){
+        fgets(alunos[i].nome, 100, stdin);
+        alunos[i].nome[strlen(alunos[i].nome) - 1] = '\0';
+
+        char temp[100];
+        fgets(temp, 100, stdin);
+
+        char * token = strtok(temp, " ");
+        strcpy(alunos[i].cor, token);
+        token = strtok(NULL, " ");
+        alunos[i].tamanho = token[0];
+
+    }
+}
 
 void ordenacao(Aluno *vetor, int n) {
     heap_constroi(vetor, n);
@@ -66,6 +81,6 @@ int compare(const Aluno aluno1, const Aluno aluno2) {
 
 void printNome(Aluno *alunos, int n){
     for(int i = 0; i < n; i++){
-        printf("COR: %s  -- TAMANHO: %c -- NOME: %s\n", alunos[i].cor, alunos[i].tamanho, alunos[i].nome);
+        printf("%s %c %s\n", alunos[i].cor, alunos[i].tamanho, alunos[i].nome);
     }
 }
