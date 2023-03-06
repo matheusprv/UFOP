@@ -4,7 +4,6 @@
 
 typedef struct{
     char nome[30];
-    int tamanhoNome;
     char cor[10];
     char tamanho;
 }Aluno;
