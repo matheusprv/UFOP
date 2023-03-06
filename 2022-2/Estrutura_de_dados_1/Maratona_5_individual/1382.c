@@ -47,17 +47,9 @@ int main(){
             scanf("%d",&valores[i]);
 
 
-        for(int i = 0; i < qtdItens; i++){
-            printf("%d ",valores[i]);
-        }
-        printf("\n");
-
         printf("%d\n", selection(valores, qtdItens));
-
-                for(int i = 0; i < qtdItens; i++){
-            printf("%d ",valores[i]);
+            for(int i = 0; i < qtdItens; i++){
         }
-        printf("\n");
 
         free(valores);
 
