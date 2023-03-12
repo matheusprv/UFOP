@@ -1,89 +1,89 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-typedef struct{
+typedef struct {
     int posicao;
     int tampado;
 }Furo;
 
-void preencher_buracos(int i, int j, Furo * furos){
-    for(; j <= i; j++)
-        furos[j].tampado = 1;
-}
+typedef struct {
+    int qtd;
+    int * posicoes;
+    
+}Remendo;
 
-void removerItens(int * n_furos, Furo * furos){
-    for(int i = 0; i < *n_furos; i++){
-        if(furos[i].tampado == 1){
-            for(int j = i+1; j < *n_furos; j++)
-                furos[j-1] = furos[j];
-
-            *n_furos -= 1;
+bool tem_buracos_destampados(Furo * furos, int n){
+    for(int i = 0; i< n; i++){
+        if(furos[i].tampado == 0){
+            return true;
         }
     }
+    return false;
 }
 
-int calculaRemendos(int n_furos, int c_comprimento, int t1, int t2, Furo * furos){
-    if(t1 > t2){
-        int aux = t1;
-        t1 = t2;
-        t2 = aux;
+void tampar_buracos(int i, int j, Furo * furos){
+
+}
+
+int tamanhoRemendo(int n, int tamRemendos[2], Furo * furos){
+
+    //Verificando se somente o primeiro ou o segundo já é suficiente
+    for(int i = 0; i < n; i++){
+        if(furos[n-1].posicao - furos[0].posicao <= tamRemendos[i])
+            return tamRemendos[i];
     }
 
-    int tamanho = 0;
+    int totalRemendo = 0;
 
-    for(int i = n_furos - 1; i >= 0; i--){
-        for(int j = 0; j < i; j++){
-            if(furos[i].posicao - furos[j].posicao <= t2){
-                tamanho += t2;
-                preencher_buracos(i, j, furos);
-                
-                if(j == 0 && i == n_furos-1)
-                    return tamanho;
+    Remendo remendos[2];
+    remendos[0].posicoes = malloc(n * sizeof(int));
+    remendos[0].qtd = 0;
+    remendos[1].posicoes = malloc(n * sizeof(int));
+    remendos[1].qtd = 0;
 
-                i = j;
-                break;
+    while(tem_buracos_destampados(furos, n)){
+        //Verificando quantos furos o maior tampa
+        for(int cont = 0; cont < 2; cont++){
+            for(int i = 0; i < n; i++){
+                for(int j = i+1; j < n ;j++){
+                    if(furos[j].posicao - furos[i].posicao <= tamRemendos[cont]){
+                        remendos[cont].qtd++;
+                    }
+                }
             }
         }
+
+
+
     }
 
-    removerItens(&n_furos, furos);
-
-    for(int i = n_furos - 1; i >= 0; i--){
-        for(int j = 0; j < i; j++){
-            if(furos[i].posicao - furos[j].posicao <= t1){
-                tamanho += t1;
-                preencher_buracos(i, j, furos);
-                i = j;
-                break;
-            }
-        }
-    }
-
-    for(int i = 0; i < n_furos; i++){
-        if(furos[i].tampado == 0)
-            tamanho += t1;
-    }
-        
-
-    return tamanho;
+    free(remendos[0].posicoes);
+    free(remendos[1].posicoes);
 
 }
+
 
 int main(){
 
-    int n_furos, c_comprimento, t1, t2;
+    int n, c, tamRemendos[2];
 
-    while(scanf("%d%d%d%d", &n_furos, &c_comprimento, &t1, &t2) != EOF){
-        Furo * furos = (Furo *) malloc(n_furos * sizeof(Furo));
-        
-        for(int i = 0; i < n_furos; i++){
+    while(scanf("%d%d%d%d", &n, &c, &tamRemendos[0], &tamRemendos[1]) != EOF){
+
+        if(tamRemendos[0] > tamRemendos[1]){
+            int aux = tamRemendos[0];
+            tamRemendos[0] = tamRemendos[1];
+            tamRemendos[1] = aux;
+        }
+
+        Furo * furos = malloc(n * sizeof(Furo));
+
+        for(int i = 0; i < n; i++){
             scanf("%d", &furos[i].posicao);
             furos[i].tampado = 0;
         }
 
-        printf("%d\n", calculaRemendos(n_furos, c_comprimento, t1, t2, furos));
 
-        free(furos);
     }
 
     return 0;
