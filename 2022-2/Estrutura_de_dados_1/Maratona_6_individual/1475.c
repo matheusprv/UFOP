@@ -1,101 +1,62 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct{
-    int posicao;
-    int tampado;
-}Furo;
 
-void preencher_buracos(int i, int j, Furo * furos){
-    for(; j <= i; j++)
-        furos[j].tampado = 1;
+
+int calcula_remendos(int n, int t1, int t2, int *furos, int i, int j, int * valorMinPos)
+{
+    int k, possibilidade1, possibilidade2;
+
+    if (valorMinPos[i] > 0)
+        return valorMinPos[i];
+
+    if (furos[i] - furos[j] <= t1)
+        possibilidade1 = t1;
+    else{
+        k = n;
+        while (k-- > 0)
+            if (furos[i] - furos[k] > t1)
+                break;
+        possibilidade1 = calcula_remendos(n, t1, t2, furos, k, j, valorMinPos) + t1;
+    }
+
+    if (furos[i] - furos[j] <= t2)
+        possibilidade2 = t2;
+    
+    else{
+        k = n;
+        while (k-- > 0)
+            if (furos[i] - furos[k] > t2)
+                break;
+        possibilidade2 = calcula_remendos(n, t1, t2, furos, k, j, valorMinPos) + t2;
+    }
+
+    valorMinPos[i] = possibilidade1 < possibilidade2 ? possibilidade1 : possibilidade2; 
+    return valorMinPos[i];
 }
 
-void removerItens(int * n_furos, Furo * furos){
-    for(int i = 0; i < *n_furos; i++){
-        if(furos[i].tampado == 1){
-            for(int j = i+1; j < *n_furos; j++)
-                furos[j-1] = furos[j];
-
-            *n_furos -= 1;
-        }
-    }
-}
-
-int calculaRemendos(int n_furos, int c_comprimento, int t1, int t2, Furo * furos){
-    if(t1 > t2){
-        int aux = t1;
-        t1 = t2;
-        t2 = aux;
-    }
-
-    //Testando com o menor valor
-    int tamanhoMenorValor = 0;
-    for(int i = 0; i < n_furos; i++){
-        int j = i + 1, qtdFuros = 0;
-        while(j < n_furos && furos[j].posicao - furos[i].posicao <= t1){
-            j++;
-            qtdFuros++;
-        }
-        tamanhoMenorValor += t1;
-        i += qtdFuros;
-    }
-
-
-    int tamanhoComecaFinal = 0;
-    for(int i = n_furos - 1; i >= 0; i--){
-        for(int j = 0; j <= i; j++){
-            if(furos[i].posicao - furos[j].posicao <= t1){
-                tamanhoComecaFinal += t1;
-                i = j;
-                break;
-            }
-            if(furos[i].posicao - furos[j].posicao <= t2){
-                tamanhoComecaFinal += t2;
-                i = j;
-                break;
-            }
-        }
-    }
-
-    int tamanhoComecaInicio = 0;
-    for(int i = 0 ; i < n_furos; i++){
-        for(int j = n_furos - 1; j >=i ; j--){
-            if(furos[j].posicao - furos[i].posicao <= t1){
-                tamanhoComecaInicio += t1;
-                i = j;
-                break;
-            }
-            if(furos[j].posicao - furos[i].posicao <= t2){
-                tamanhoComecaInicio += t2;
-                i = j;
-                break;
-            }
-        }
-    }
-
-    if(tamanhoMenorValor < tamanhoComecaFinal && tamanhoMenorValor < tamanhoComecaInicio)
-        return tamanhoMenorValor;
-
-    if(tamanhoComecaInicio < tamanhoComecaFinal)
-        return tamanhoComecaInicio;
-    return tamanhoComecaFinal;
-}
-
-int main(){
+int main()
+{
 
     int n_furos, c_comprimento, t1, t2;
 
-    while(scanf("%d%d%d%d", &n_furos, &c_comprimento, &t1, &t2) != EOF){
-        Furo * furos = (Furo *) malloc(n_furos * sizeof(Furo));
-        
-        for(int i = 0; i < n_furos; i++){
-            scanf("%d", &furos[i].posicao);
-            furos[i].tampado = 0;
-        }
+    while (scanf("%d%d%d%d", &n_furos, &c_comprimento, &t1, &t2) != EOF)
+    {
+        int * valorMinPos = calloc(1000, sizeof(int));
+        int *furos = (int *)malloc(n_furos * sizeof(int));
 
-        printf("%d\n", calculaRemendos(n_furos, c_comprimento, t1, t2, furos));
+        for (int i = 0; i < n_furos; i++)
+            scanf("%d", &furos[i]);
 
+        for(int i = 0; i < n_furos; i++)
+            for(int j = 0; j < n_furos; j++){
+                if(i != j )
+                    calcula_remendos(n_furos, t1, t2, furos, i, j, valorMinPos);
+            }
+
+        printf("%d\n", valorMinPos[n_furos - 1]);
+
+        free(valorMinPos);
         free(furos);
     }
 
