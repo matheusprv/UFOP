@@ -35,6 +35,8 @@ int main(){
 
         //Verifica se as bases são as mesmas e se forem, remove-as e volta o contador do i em 2
         for(int i = 0; i < rnaa.n-1; i++){
+            //if(i<0) i = 0;
+            //printf("I: %d\n", i);
             if(verifica(rnaa.rna[i+1], rnaa.rna[i])){
                 soma++;
                 removeItem(&rnaa, i);
