@@ -1,7 +1,7 @@
 #include "veiculo.h"
 #include <iostream>
 
-Veiculo :: Veiculo(string nome, double peso, int potencia){
+Veiculo :: Veiculo(const string& nome, double peso, int potencia){
     this->nome = nome;
     this->peso = peso;
     this->potencia = potencia;

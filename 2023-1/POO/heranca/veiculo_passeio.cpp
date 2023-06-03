@@ -4,8 +4,7 @@
 
 using std :: string;
 
-VeiculoPasseio :: VeiculoPasseio (double volumeInterno, string nome, double peso, int potencia){
-    Veiculo(nome, peso, potencia);
+VeiculoPasseio :: VeiculoPasseio (double volumeInterno, const string& nome, double peso, int potencia) :  Veiculo(nome, peso, potencia){
     this->volumeInterno = volumeInterno;
 }
 
@@ -22,7 +21,7 @@ double VeiculoPasseio :: pesoPotencia(){
 
 void VeiculoPasseio :: serialize(ostream & out) const{
     Veiculo :: serialize(out);
-    out << string("\nVolumeInterno: ") << getVolumeInterno();
+    out << string("\nVolumeInterno: ") << getVolumeInterno() << "\n";
 }
 
 ostream& operator <<(ostream& out, const VeiculoPasseio &obj){

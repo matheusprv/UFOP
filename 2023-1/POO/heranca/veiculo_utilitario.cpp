@@ -2,11 +2,10 @@
 #include <iostream>
 using std :: cout;
 
-VeiculoUtilitario :: VeiculoUtilitario(double volumeInterno, string nome, double peso, int potencia, double carga){
-    Veiculo(nome, peso, potencia);
-    VeiculoCarga (carga, nome, peso, potencia);
-    VeiculoPasseio (volumeInterno, nome, peso, potencia);
-
+VeiculoUtilitario :: VeiculoUtilitario(double volumeInterno, string nome, double peso, int potencia, double carga) : 
+    Veiculo(nome, peso, potencia),
+    VeiculoCarga (carga, nome, peso, potencia),
+    VeiculoPasseio (volumeInterno, nome, peso, potencia){
 }
 
 double VeiculoUtilitario :: pesoPotencia(){

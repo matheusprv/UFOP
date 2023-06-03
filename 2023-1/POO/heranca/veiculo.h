@@ -14,7 +14,7 @@ class Veiculo{
     int potencia;
 
 public:
-    Veiculo(string = "", double = 0.0, int = 0);
+    Veiculo(const string& = "", double = 0.0, int = 0);
 
     void setNome(string nome);
     void setPeso(double peso);

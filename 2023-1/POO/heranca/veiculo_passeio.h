@@ -9,7 +9,7 @@ class VeiculoPasseio : virtual public Veiculo {
     double volumeInterno;
 
 public:
-    VeiculoPasseio(double = 0.0, string = "", double = 0.0, int = 0);
+    VeiculoPasseio(double = 0.0, const string& = "", double = 0.0, int = 0);
 
     double getVolumeInterno() const;
     void setVolumeInterno(double volumeInterno);

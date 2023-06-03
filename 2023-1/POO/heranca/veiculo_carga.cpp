@@ -4,8 +4,7 @@
 
 using std :: string;
 
-VeiculoCarga :: VeiculoCarga (double carga, string nome, double peso, int potencia){
-    Veiculo(nome, peso, potencia);
+VeiculoCarga :: VeiculoCarga (double carga, string nome, double peso, int potencia) : Veiculo(nome, peso, potencia){
     this->carga = carga;
 }
 
