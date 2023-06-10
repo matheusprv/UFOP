@@ -20,10 +20,12 @@ orList (False : xs) = orList xs
 
 
 indexOf :: Int -> [Int] -> Int
-indexOf _ [] = -1
-indexOf x (y : ys) 
-    | x == y = 0
-    | otherwise = 1 + indexOf x ys
+indexOf x xs = index x xs 0
+    where
+        index _ [] _ = -1
+        index x (y : ys) ac
+            | x == y = ac
+            | otherwise = index x ys (ac+1)
 
 
 removeAll :: Int -> [Int] -> [Int]
