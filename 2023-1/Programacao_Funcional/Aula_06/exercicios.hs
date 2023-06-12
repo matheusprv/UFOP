@@ -1,5 +1,18 @@
 import Prelude hiding ( takeWhile, all, concatMap)
 
+takeWhile :: (a -> Bool) -> [a] -> [a]
+takeWhile _ []  = []
+takeWhile p (x : xs)
+    | p x       = x : takeWhile p xs
+    | otherwise = []
+
+takeWhileFold :: (a -> Bool) -> [a] -> [a]
+takeWhileFold funcao = foldr step []
+    where
+        step x ac 
+            | funcao x = x : ac
+            | otherwise = []
+
 {-- 
     A função all determina se todos os elementos de uma lista satisfazem um predicado. Seu tipo é:
     all :: (a -> Bool) -> [a] -> Bool
