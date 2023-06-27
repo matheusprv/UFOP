@@ -2,8 +2,6 @@
 using namespace std;
 
 class Mamiferos{
-private:
-    /* data */
 public:
     virtual void emitirSom(){ cout << "Som do mamifero. \n"; }
 };
@@ -26,10 +24,23 @@ public:
 
 int main(){
     //-Todos os prints serão "Som do mamifero", pois a classe derivada está sendo transformada em classe base
-    Mamiferos mamiferos_estaticos[4] = {Cachorro(),Gato(),Vaca(),Cachorro()};
-    for(int i = 0; i < 4; i++){
-        mamiferos_estaticos[i].emitirSom();
-    }
+    // Mamiferos mamiferos_estaticos[4] = {Cachorro(),Gato(),Vaca(),Cachorro()};
+    // for(int i = 0; i < 4; i++){
+    //     mamiferos_estaticos[i].emitirSom();
+    // }
+
+    cout << "\n\n";
+
+    Mamiferos * dp;
+    Cachorro d;
+    Gato g;
+    Vaca v;
+
+    dp = &d; dp->emitirSom();
+    dp = &g; dp->emitirSom();
+    dp = &v; dp->emitirSom();
+
+    cout << "\n\n";
 
     //Para que o polimorfismo ocorra, o vetor da classe base precisa receber ponteiros da classe derivada
     Mamiferos * mamiferos[4] = {
