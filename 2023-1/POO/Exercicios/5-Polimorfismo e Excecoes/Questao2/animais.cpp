@@ -6,7 +6,7 @@ class Laurasiatheria{
     vector<Laurasiatheria*> vetor;
 
 public:
-    virtual void emitirSom(){
+    void emitirSom(){
         cout << "Laurasiatheria::emitirSom()" << endl;
     };
 
@@ -31,7 +31,7 @@ public:
 
 class Carnivora : public Laurasiatheria{
 public:
-    void emitirSom(){
+    virtual void emitirSom(){
         cout << "Carnivora::emitirSom()" << endl;
     }
 };
@@ -87,16 +87,14 @@ public:
 int main(){
 
 
-    Laurasiatheria animal;
-    animal.adicionarAnimal(new Cao());
-    animal.adicionarAnimal(new Gato());
-    animal.adicionarAnimal(new Porco());
-    animal.adicionarAnimal(new Cavalo());
-    animal.adicionarAnimal(new Boi());
+    // Laurasiatheria animal;
+    // animal.adicionarAnimal(new Cao());
+    // animal.adicionarAnimal(new Gato());
+    // animal.adicionarAnimal(new Porco());
+    // animal.adicionarAnimal(new Cavalo());
+    // animal.adicionarAnimal(new Boi());
 
-    animal.listAnimal();
-
-
+    // animal.listAnimal();
 
     vector<Laurasiatheria*>animais;
 
@@ -107,7 +105,6 @@ int main(){
     animais.push_back(new Cavalo());
 
     for (Laurasiatheria * animal : animais){
-        cout << typeid(*animal).name() << endl;
         animal->emitirSom();
         cout << "--------------------------------\n";
         delete animal;
