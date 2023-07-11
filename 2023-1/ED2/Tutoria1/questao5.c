@@ -1,33 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define M 4
+#define M 2
+#define MM 4
 
-typedef struct {
-    int chave;
-}Registro;
+typedef long TipoChave;
 
-typedef struct No * nos;
+typedef struct TipoRegistro{
+    TipoChave Chave;
+    long dado1;
+    char dado2[26];
+    char dado3[101];
+} TipoRegistro;
 
-typedef struct{
-    nos filhos [2*M + 1];
-    Registro items [2*M];
-}No;
+typedef struct TipoPagina* TipoApontador;
 
-void iniciarArvore(No * arvore){
-    arvore = NULL;
-}
+typedef struct TipoPagina {
+    short n;
+    TipoRegistro r[MM];
+    TipoApontador p[MM + 1];
+} TipoPagina;
 
-Registro * procura(No * arvore, int chavePesquisa){
+TipoRegistro * procura(TipoApontador arvore, long chavePesquisa){
 
-    if (arvore == NULL) return NULL;
+    if(arvore == NULL) return NULL;
 
-    int i;
-    for (i = 0; i < 2*M && arvore->items[i].chave < chavePesquisa; i++)
-        if(arvore->items[i].chave == chavePesquisa)
-            return &(arvore->items[0]);
-    
-    return procura(&(arvore->items[i]), chavePesquisa);
+    int i = 1;
+
+    while(i < arvore->n && chavePesquisa > arvore->r[i-1].Chave) i++;
+
+    if(chavePesquisa == arvore->r[i-1].Chave) return &arvore->r[i-1];
+
+    if(chavePesquisa > arvore->r[i-1].Chave) return procura(arvore->p[i], chavePesquisa);
+
+    return procura(arvore->p[i-1], chavePesquisa);
 
 }
 

@@ -112,6 +112,8 @@ void Ins_b_estrela(TipoRegistroEstrela Reg, TipoApontadorEstrela Ap, short *cres
             return;
         }
 
+         if(Reg.Chave < Ap->UU.U1.re[i-1].Chave) i--;
+
         //Se a pagina atual comporta o item a ser inserido
         if(Ap->UU.U1.ne < MMB2){ 
             InsereNaPaginaExterna(Ap, Reg);
@@ -256,37 +258,39 @@ void liberaArvoreBEstrela(TipoApontadorEstrela Arvore){
 
 bool Media(TipoRegistroEstrela *x, TipoApontadorEstrela *Ap, long * media){
     
+    if((*Ap) == NULL) return false;
+
     TipoApontadorEstrela Pag = *Ap;
 
-    if(Pag == NULL) return false;
+    if(Pag -> Pt == Interna){
 
-    if(Pag->Pt == Interna){
-        
+
         int i = 1;
 
-        while(i < Pag->UU.U0.ni && x->Chave > Pag->UU.U0.ri[i-1]) i++;
+        while (i < Pag->UU.U0.ni && x->Chave > Pag->UU.U0.ri[i-1]) i++;
 
-        if(x->Chave >= Pag->UU.U0.ri[i-1]) return Media(x, &Pag->UU.U0.pi[i], media);
-        else return Media(x, &Pag->UU.U0.pi[i-1], media);
+        if(x->Chave > Pag->UU.U0.ri[i-1]) return Media(x, Pag->UU.U0.ri[i+1], media);
+        else return Media(x, Pag->UU.U0.ri[i], media);
+
+
     }
+
     else{
-        //Verificando se o item existe na pagina
+        bool encontrou = false;
         int i;
-        long somatorio = 0;
-        bool existe = false;
-        
+
+        *media = 0;
+
         for(i = 0; i < Pag->UU.U1.ne; i++){
-            somatorio += Pag->UU.U1.re[i].dado1;
+            *media += Pag->UU.U1.re[i].dado1;
             
             if(Pag->UU.U1.re[i].Chave == x->Chave)
-                existe = true;
+                encontrou = true;
         }
-
-        if(existe){
-            *media = somatorio/i;
-            return true;
-        }
-        return false;
+    
+        *media /= i;
+        
+        return encontrou;
     }
 
 }
@@ -318,19 +322,24 @@ int main(){
     TipoApontadorEstrela Ap;
     inicializa_b_estrela(&Ap);
 
-    for(int i = 0; i<16; i++){
+    for(int i = 0; i < 16; i++){
+        printf("INSERINDO %ld\n", inserir[i]);
         TipoRegistroEstrela reg;
         reg.Chave = inserir[i];
         reg.dado1 = valor[i];
 
         Insere_b_estrela(reg, &Ap);
+
+        exibirItensArvoreBEstrela(&Ap);
+
+        printf("==============================================\n");
     }
 
     exibirItensArvoreBEstrela(&Ap);
 
     long media;
     TipoRegistroEstrela pesq;
-    pesq.Chave = 36;
+    pesq.Chave = 81;
     if(Media(&pesq, &Ap, &media))
         printf("Média: %ld\n", media);
     else
