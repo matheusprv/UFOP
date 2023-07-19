@@ -22,13 +22,14 @@ realizarTentativa valorCorreto = do
     tentativaStr <- getLine
     let tentativa = read tentativaStr
 
-    if tentativa == valorCorreto then putStrLn "Você acertou."
+    if tentativa == valorCorreto then do
+        putStrLn "Você acertou."
     
     else if tentativa < valorCorreto then do
-        putStrLn "O valor correto é maior do que o que foi escrito";
+        putStrLn "O valor correto é maior do que o que foi escrito"
     
     else do
-        putStrLn "O valor correto é menor do que o que foi escrito";
+        putStrLn "O valor correto é menor do que o que foi escrito"
 
 
 guess :: Int -> Int -> IO ()
@@ -40,5 +41,5 @@ guess valorCorreto qtdTentativas = do
     else putStrLn "As chances acabaram"
     
 
-main :: Int -> IO ()
-main valorCorreto = guess valorCorreto qtdTentativas
+inicio :: Int -> IO ()
+main valorCorreto = guess valorCorreto 5
