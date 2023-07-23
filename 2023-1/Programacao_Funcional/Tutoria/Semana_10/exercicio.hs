@@ -74,17 +74,14 @@ bitList n = (:) <$> bitParser <*> bitList (n-1)
 fieldParser :: Int -> Parser Char Field
 fieldParser n = Parser (\ inp -> case inp of
         [] -> []
-        xs -> [(
-                    Field n  $ extract $ runParser (bitList n) xs, 
-                    xs
-                )]
+        xs -> [extract n $ runParser (bitList n) xs]
     )
 
-extract :: [(k, a)] -> k
-extract [(value, _)] = value
+extract :: Int ->  [([Bit], a)] -> (Field, a)
+extract n [(value, rest)] = (Field n value, rest)
 {-
-    runParser (fieldParser 6) "110011"
-    [(Field {size = 6, content = [I,I,O,O,I,I]},"110011")]
+    runParser (fieldParser 5) "110011"
+    [(Field {size = 5, content = [I,I,O,O,I]},"1")]
 -}
 
 
