@@ -15,14 +15,11 @@ symbol s = Parser (\ inp -> case inp of
                                           then [(s,xs)]
                                           else [])
 
--- runParser (symbol '1') "123456"
 
 token :: Eq s => [s] -> Parser s [s]
-token s = Parser (\inp -> if s == (take n inp) 
-                        then [(s, drop n inp)]  
+token s = Parser (\inp -> if s == (take (length s) inp) --PEga os primeiros itens da lista 
+                        then [(s, drop (length s) inp)]  
                         else [])
-    where 
-        n = length s
         
 -- Processando um símbolo que atende uma condição
 sat :: (s -> Bool) -> Parser s s
@@ -32,7 +29,6 @@ sat p = Parser (\ inp -> case inp of
                                        then [(x,xs)]
                                        else [])
 
-
 digitChar :: Parser Char Char
 digitChar = sat isDigit
 
@@ -41,9 +37,9 @@ instance Functor (Parser s) where
 
 --Transformando digitos em inteiros
 digit :: Parser Char Int
-digit = f <$> digitChar 
+digit = funcao <$> digitChar 
     where
-        f c = ord c - ord '0' 
+        funcao c = ord c - ord '0' 
 
 
 -- Parser que não falaha
@@ -56,14 +52,61 @@ failure = Parser (\ _ -> [])
 
 
 -- Escolha entre dois parseres
---infixr 4 <|>
+infixr 4 <|>
 
 (<|>) :: Parser s a -> Parser s a -> Parser s a
-(Parser p) <|> (Parser q)
-   = Parser (\ inp -> p inp ++ q inp)
+(Parser p) <|> (Parser q) = Parser (\ inp -> p inp ++ q inp)
 
 
 instance Applicative (Parser s) where
    pure = succeed
    (Parser p) <*> (Parser q) = Parser (\ inp -> [(f x, xs) | (f, ys) <- p inp, (x, xs) <- q ys])
 
+
+ex1 :: Parser Char String
+ex1 = token "ab" <|> token "ba"
+
+
+data Paren = Match Paren Paren | Empty deriving Show
+
+open :: Parser Char Char
+open = symbol '('
+
+close :: Parser Char Char
+close = symbol ')'
+
+parens :: Parser Char Paren
+parens = (f <$> open <*> parens <*> close <*> parens) <|> succeed Empty
+         where
+           f _ p _ p' = Match p p'
+
+option :: Parser s a -> a -> Parser s a
+option p d = p <|> succeed d
+
+many :: Parser s a -> Parser s [a]
+many p = ((:) <$> p <*> many p) <|> succeed []
+
+many1 :: Parser s a -> Parser s [a]
+many1 p = (:) <$> p <*> many p
+
+-- natural :: Parser Char Int
+-- natural = foldl step 0 <$> (many digit)
+--      where
+--        step ac d = ac * 10 + d
+
+natural :: Parser Char Int
+natural = many digit
+     where
+       step ac d = ac * 10 + d
+
+first :: Parser s a -> Parser s a
+first (Parser p)
+   = Parser (\ inp -> let r = p inp
+                      in if null r then []
+                         else [head r])
+
+greedy :: Parser s a -> Parser s [a]
+greedy = first . many
+
+greedy1 :: Parser s a -> Parser s [a]
+greedy1 = first . many1
