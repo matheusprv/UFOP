@@ -63,8 +63,14 @@ instance Applicative (Parser s) where
    (Parser p) <*> (Parser q) = Parser (\ inp -> [(f x, xs) | (f, ys) <- p inp, (x, xs) <- q ys])
 
 
+-- Retorna um parser para cada uma das opções ou uma lista vazia
 ex1 :: Parser Char String
-ex1 = token "ab" <|> token "ba"
+ex1 = ab <|> ba <|> ac
+    where 
+         ab = token "ab"
+         ba = token "ba"
+         ac = token "ac"
+
 
 
 data Paren = Match Paren Paren | Empty deriving Show
@@ -80,33 +86,53 @@ parens = (f <$> open <*> parens <*> close <*> parens) <|> succeed Empty
          where
            f _ p _ p' = Match p p'
 
+-- Reconhece ou o parser p ou o resultado D
 option :: Parser s a -> a -> Parser s a
 option p d = p <|> succeed d
 
+--Executa vários parsers em sequência a partir dos itens não consumidos 
 many :: Parser s a -> Parser s [a]
 many p = ((:) <$> p <*> many p) <|> succeed []
 
 many1 :: Parser s a -> Parser s [a]
 many1 p = (:) <$> p <*> many p
 
--- natural :: Parser Char Int
--- natural = foldl step 0 <$> (many digit)
---      where
---        step ac d = ac * 10 + d
-
-natural :: Parser Char Int
-natural = many digit
-     where
-       step ac d = ac * 10 + d
-
+-- Reconhece somente o primeiro parser e descarta todo o resto da lista
 first :: Parser s a -> Parser s a
 first (Parser p)
    = Parser (\ inp -> let r = p inp
                       in if null r then []
                          else [head r])
 
+-- Descarta todos os resultados intermediarios e retorn somente o primeiro parser
 greedy :: Parser s a -> Parser s [a]
 greedy = first . many
 
 greedy1 :: Parser s a -> Parser s [a]
 greedy1 = first . many1
+
+--Executa o parser ex1 sobre uma string de entrada e retorna todos os parsers validos
+teste :: String -> [String]
+teste inp = remove (runParser (greedy ex1) inp)
+    where 
+        remove [(xs, b)] = xs
+
+
+-- Reconhecendo identificadores
+identifier :: Parser Char String
+identifier
+   = (:) <$> letter <*> greedy (sat isAlphaNum)
+     where
+       letter = sat isLetter
+
+listOf :: Parser s a -> Parser s b -> Parser s [a]
+listOf p sep = (:) <$> p <*> many ((\ x y -> y) <$> sep <*> p)
+
+paramList :: Parser Char [String]
+paramList = listOf identifier (symbol ',')
+
+endBy :: Parser s a -> Parser s b -> Parser s [a]
+endBy p sep = greedy ((\ x _ -> x) <$> p <*> sep)
+
+paramList1 :: Parser Char [String]
+paramList1 = endBy identifier (symbol ',')
