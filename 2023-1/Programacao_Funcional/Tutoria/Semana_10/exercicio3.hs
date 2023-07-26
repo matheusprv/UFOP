@@ -20,3 +20,19 @@ data UDP
 
 
 bitParser :: Parser Char Bit
+bitParser = zero <|> um
+    where
+        zero = const O <$> symbol '0'
+        um = const I <$> symbol '1'
+
+
+bitList :: Int -> Parser Char [Bit]
+bitList n 
+    | n <= 0 = succeed []
+    | otherwise = (:) <$> bitParser <*> bitList (n-1)
+
+fieldParser :: Int -> Parser Char Field
+fieldParser n = Field n <$> bitList n
+
+udpParser :: Parser Char UDP
+udpParser = UDP <$> fieldParser 16 <*> fieldParser 16 <*> fieldParser 16 <*> fieldParser 16 <*> greedy (fieldParser 32)

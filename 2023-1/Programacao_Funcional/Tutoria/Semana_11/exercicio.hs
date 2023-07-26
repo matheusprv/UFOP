@@ -34,7 +34,7 @@ data Program
 instance Show Robot where
     show (Robot energy distance (x, y)) = "Energy: " ++ show energy ++ "\nDistance: " ++ show distance ++ "\nPosition:\n\tx: " ++ show x ++ "\n\ty: "++ show y
 
-    --show robo = "Energy: " ++ show (energy robo) ++ "\nDistance: " ++ show (distance robo) ++ "\nPosition:\n\tx: " ++ show ( (\(x, _) -> x) <$> current robo ) ++ "\n\ty: "++ show ( (\(_, y) -> y) <$> current robo )
+    show robo = "Energy: " ++ show (energy robo) ++ "\nDistance: " ++ show (distance robo) ++ "\nPosition:\n\tx: " ++ show ( (fst . current) robo ) ++ "\n\ty: "++ show ( (\(_, y) -> y) <$> current robo )
     
     --show robo = "Energy: " ++ show (energy robo) ++ "\nDistance: " ++ show (distance robo) ++ "\nPosition:\n\tx: " ++ show (fst $ current robo ) ++ "\n\ty: "++ show ( snd $ current robo )
     
