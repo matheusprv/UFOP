@@ -48,3 +48,60 @@ Proof.
     assumption.
 Qed.
 
+
+(*Exercício 9*)
+Lemma ex9 : forall x : U, P x -> exists y : U, P y.
+Proof.
+  intro x.
+  intro P.
+  exists x.
+  apply P.
+Qed.
+
+(*Exercício 10*)
+Lemma ex10 : (forall x : U, P x -> ~ Q x) -> ~ exists y : U, P y /\ Q y.
+  intro H1.
+  intro H2.
+  destruct H2 as [x HPQ].
+  destruct HPQ as [HP HQ].
+  apply (H1 x).
+  apply HP.
+  apply HQ.
+Qed.
+
+
+(*Exercício 11*)
+Lemma ex11 : (forall x : U, P x -> Q x) -> (forall x : U, ~ Q x) -> (forall x : U, ~ P x).
+  intro H1.
+  intro H2.
+  intro x.
+  intro HPx.
+  apply (H2 x).
+  apply(H1).
+  apply HPx.
+Qed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
