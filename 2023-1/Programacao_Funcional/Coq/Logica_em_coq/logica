@@ -180,6 +180,7 @@ Qed.
 
 (*Disjunção*)
 Lemma or_comm : (A \/ B) -> (B \/ A).
+Proof.
   intro Hab.
   destruct Hab as [Ha | Hb].
   +
@@ -191,6 +192,7 @@ Lemma or_comm : (A \/ B) -> (B \/ A).
 Qed.
 
 Lemma or_assoc : A \/ (B \/ C) -> (A \/ B) \/ C.
+Proof.
   intro Habc.
   destruct Habc as [Ha | [Hb | Hc]].
   +
@@ -221,6 +223,7 @@ Qed.
 
 (*Exercício 8*)
 Lemma ex8 : (A \/ (B /\ C)) -> (A \/ B) /\ (A \/ C).
+Proof.
   intro Habc.
   destruct Habc as [Ha | Hbc].
   +
@@ -241,13 +244,3 @@ Lemma ex8 : (A \/ (B /\ C)) -> (A \/ B) /\ (A \/ C).
       right.
       assumption.
 Qed.
-
-
-
-
-
-
-
-
-    
-  
