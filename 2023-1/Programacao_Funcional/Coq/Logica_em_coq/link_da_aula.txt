@@ -1,0 +1,1 @@
+https://rodrigogribeiro.github.io/posts/2018/01/logic-in-coq
