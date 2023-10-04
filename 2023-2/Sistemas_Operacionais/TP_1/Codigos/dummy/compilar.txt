@@ -1,0 +1,11 @@
+gcc -Wall *.c -o dummy_1
+gcc -Wall *.c -o dummy_2
+gcc -Wall *.c -o dummy_3
+gcc -Wall *.c -o dummy_4
+gcc -Wall *.c -o dummy_5
+gcc -Wall *.c -o dummy_6
+gcc -Wall *.c -o dummy_7
+gcc -Wall *.c -o dummy_8
+gcc -Wall *.c -o dummy_9
+gcc -Wall *.c -o dummy_10
+gcc -Wall *.c -o evita_pkill

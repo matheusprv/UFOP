@@ -1,0 +1,29 @@
+Para o trabalho, foi criado um codigo em C que lê o arquivo os-release do ubuntu para exibir a versão do mesmo e outras informações.
+
+Este memso código também lê todo o arquivo MatheusPeixoto.txt que contém algumas informações.
+
+Em sequência, são realizados todos os comandos solicitados, porém o meu container não possuia nenhum processo que poderia ser utilizado, o que impediria a execução do comando kill, por exemplo.
+
+Dessa forma, foi criada uma pasta chamada de "dummy" que possui um simples código em C que possui um loop infinito. Assim, esse programa foi compilado dez vezes com nomes que vão de `dummy_1` a `dummy_10` e um `evita_pkill`.
+
+Agora, com tudo isso, podemos executar o `c_program.c`, que esta compilado com o nome `exe` e pode ser executado da seguinte forma `./c_program`
+
+A primeira parte do programa irá ler os arquivos os-release e o MatheusPeixoto.txt e depois executa os códigos solicitados.
+
+O primeiro código é o top, depois é preciso apertar a tecla Q para continuar.
+
+Em sequência é exectado o `ps` e o ps com o grepy para filtrar somente os processos `dummy`.
+
+Depois é executado o `pstree`.
+
+Todos os que foram citados não necessitam de uma interação, mas agora teremos.
+
+Para executar o comando `kill`, é perguntado para o usuário qual o processo ele deseja terminar, então o programa lerá uma string com os PID's dos processos e os encerrará e novamente o `ps` será executado.
+
+Em seguida, será executado o `killall` e será solicitado o processo que deseja ser interrompido, ele será lido como uma string e depois o comando será executado, com o `ps` novamente sendo executado.
+
+O mesmo ocorrerá para o `pkill`.
+
+Por fim é executado o renice, mas para isso, é solicitado o PID do processo e qual o valor que será a nova prioridade do mesmo. Após ler as informações, o comando é executado e o `top` também, mostrando a modificação.
+
+Novamente, para executar o código, basta escrever, estando no diretório `MatheusPeixoto`, `./c_program`

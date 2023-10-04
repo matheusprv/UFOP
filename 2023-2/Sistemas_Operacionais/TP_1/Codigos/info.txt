@@ -1,0 +1,4 @@
+ => exporting to image                                                                                                       3.9s
+ => => exporting layers                                                                                                      3.8s
+ => => writing image sha256:ccdf61bd308716ee2b7595616381a6b117091e13063d66716d61ca5d6d344b2a                                 0.0s
+ => => naming to docker.io/library/matheus:bcc264.1
