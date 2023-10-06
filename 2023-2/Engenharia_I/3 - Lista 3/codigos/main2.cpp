@@ -37,6 +37,13 @@ public:
 
 // QUEST�O 2: Explique o código abaixo e cada uma das linhas de texto que 
 // formam sua sa�da.
+/*
+    O código instancia um objeto da classe Casa na variavel c1 e referencia o
+    mesmo na variavel c2.
+    Depois exibe na tela os valores de orc de ambos e altera o orc de c2 para, depois,
+    exibir novamente os valores, agora modificados, pois c2 referencia c1, logo os valores
+    são os mesmos
+*/
 int main(int argc, char *argv[])
 {
     //Instanciando um objeto c1 da classe Casa com o valor de orc como c7 

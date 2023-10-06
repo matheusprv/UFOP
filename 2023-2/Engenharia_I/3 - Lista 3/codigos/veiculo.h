@@ -4,10 +4,10 @@
 // Ultima alteracao:15/12/2006
 // Responsavel: Tiago G. S. Carneiro
 //
-// Descrição:  Mantém cadastro de veiculos da concessionaria. Cada veículo 
-// possui um orçamento a ele associado. 
+// Descriï¿½ï¿½o:  Mantï¿½m cadastro de veiculos da concessionaria. Cada veï¿½culo 
+// possui um orï¿½amento a ele associado. 
 //             
-// Serviços (API): 
+// Serviï¿½os (API): 
 //           - Cria novo veiculo
 //           - Remove veiculo
 //           - Edita veiculo

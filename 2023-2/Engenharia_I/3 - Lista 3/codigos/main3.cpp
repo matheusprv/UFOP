@@ -96,7 +96,7 @@ char* criaNome( const char *prefixo )
       
 }
 
-#define MAIN_5
+#define MAIN_6
 #if defined(  MAIN_1 )
 
 // QUESTAO 2:  Antes de executar o codigo abaixo, pressione "ctrl+alt+del" e 
@@ -344,6 +344,13 @@ int main(int argc, char *argv[])
 // do metodo "getClasse()" para que seja possivel invoca-lo tanto por meio de 
 // uma variavel quanto de uma constante.
            
+/*
+    RESPSOTA: 
+    Somente é possível chamar o método para a constante caso ele seja marcado como
+    const, pois, somente assim, o código estará marcando que não ocorrerá modificações
+    nos estados das variaveis do objeto
+*/
+
 unsigned int Veiculo::cont = 0;
 int main(int argc, char *argv[])
 {
@@ -354,7 +361,7 @@ int main(int argc, char *argv[])
     cout << "Classe da moto: " << moto.getClasse() << endl;
     
     // Retire o comentario da linha a seguir para testar seu fucionamento
-    //cout << "Classe da MOTO: " << MOTO.getClasse() << endl;
+    cout << "Classe da MOTO: " << MOTO.getClasse() << endl;
 
     system("PAUSE");
     return EXIT_SUCCESS;
