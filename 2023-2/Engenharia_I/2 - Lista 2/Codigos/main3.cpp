@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     cout << "&variavel: "<< &variavel << ", variavel: " << (char) variavel <<endl;
     cout << 0xFF << endl; 
     cout << endl;
-    //system("PAUSE");          
+    system("PAUSE");          
     cout << endl << endl;
     
     {
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
          *pInt = 66;
          cout << "&variavel: "<< &variavel << ", variavel: " << (char) variavel <<endl;
     }
-    //system("PAUSE");          
+    system("PAUSE");          
     cout << endl << endl;
        
 
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
     }        
     #endif
     cout << endl;
-    //system("PAUSE");             
+    system("PAUSE");             
     cout << endl << endl;
 
   
