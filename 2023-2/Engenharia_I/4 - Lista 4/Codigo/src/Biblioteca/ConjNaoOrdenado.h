@@ -12,7 +12,11 @@ public:
 
     ConjNaoOrdenado(void){}
 
-    virtual void adicionarElemento(T elemento);
+    virtual ~ConjNaoOrdenado(){}
+
+    virtual void adicionarElemento(T elemento){
+        elementos.push_back(elemento);
+    }
 
     void imprimirElementos(){
         for(int i = 0; i < (int) elementos.size(); i++){

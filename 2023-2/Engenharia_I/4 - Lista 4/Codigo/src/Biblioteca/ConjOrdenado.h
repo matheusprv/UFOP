@@ -6,6 +6,8 @@ class ConjOrdenado : public ConjNaoOrdenado<T> {
 
 public:
 
+    virtual ~ConjOrdenado(){}
+
     void adicionarElemento(T elemento){
         ConjNaoOrdenado<T> :: adicionarElemento(elemento);
 

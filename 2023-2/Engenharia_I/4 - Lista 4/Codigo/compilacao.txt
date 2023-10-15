@@ -1,0 +1,10 @@
+biblioteca
+g++ -shared ./src/Biblioteca/*.cpp -o ./bin/biblioteca.dll
+
+
+main
+g++ ./src/main.cpp -L ./bin/ -l biblioteca -o ./bin/main.exe -Wall
+
+
+Teste
+g++ ./Teste/main.cpp -L ./bin/ -l biblioteca -o ./bin/teste.exe -Wall

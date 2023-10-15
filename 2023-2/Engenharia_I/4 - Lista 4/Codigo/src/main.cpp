@@ -1,6 +1,6 @@
-#include "Estudante.h"
-#include "Disciplina.h"
-#include "ConjOrdenado.h"
+#include "Biblioteca/Estudante.h"
+#include "Biblioteca/Disciplina.h"
+#include "Biblioteca/ConjOrdenado.h"
 
 
 int main(){
