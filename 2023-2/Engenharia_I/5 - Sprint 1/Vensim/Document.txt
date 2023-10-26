@@ -1,0 +1,95 @@
+exponencial=
+        0.01*pop1
+    Units: **undefined**
+    
+f=
+    0.01*Q1
+Units: **undefined**
+
+FINAL TIME  = 100
+Units: Month
+The final time for the simulation.
+
+g=
+    0.01*Q1
+Units: **undefined**
+
+INITIAL TIME  = 0
+Units: Month
+The initial time for the simulation.
+
+logistica=
+    0.01*p2*(1-p2/70)
+Units: **undefined**
+
+p1= INTEG (
+    -logistica,
+        100)
+Units: **undefined**
+
+p2= INTEG (
+    logistica,
+        10)
+Units: **undefined**
+
+pop1= INTEG (
+    -exponencial,
+        100
+        )
+Units: **undefined**
+
+pop2= INTEG (
+    exponencial,
+        0)
+Units: **undefined**
+
+Q1= INTEG (
+    v-f-g,
+        100)
+Units: **undefined**
+
+Q2= INTEG (
+    f-r-t,
+        0)
+Units: **undefined**
+
+Q3= INTEG (
+    g+t-u,
+        100)
+Units: **undefined**
+
+Q4= INTEG (
+    u-v,
+        0)
+Units: **undefined**
+
+Q5= INTEG (
+    r,
+        0
+        )
+Units: **undefined**
+
+r=
+    0.01*Q2
+Units: **undefined**
+
+SAVEPER  = 
+        TIME STEP
+Units: Month [0,?]
+The frequency with which output is stored.
+
+t=
+    0.01*Q2
+Units: **undefined**
+
+TIME STEP  = 1
+Units: Month [0,?]
+The time step for the simulation.
+
+u=
+    0.01*Q3
+Units: **undefined**
+
+v=
+    0.01*Q4
+Units: **undefined**
