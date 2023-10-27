@@ -98,7 +98,3 @@ int main(){
 
     return 0;
 }
-
-
-//Criar tres threads que ficam rodando eternamente enquanto o programa esta ativo e verificam uma variavel
-// para saber qual entrará em ação no momento
