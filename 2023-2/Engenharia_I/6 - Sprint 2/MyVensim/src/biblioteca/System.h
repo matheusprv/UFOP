@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -20,7 +21,7 @@ public:
     System(System & system);
 
     // Destrutor
-    virtual ~System(){}
+    virtual ~System();
 
     // Getters e setters
     string getName() const;
@@ -31,6 +32,8 @@ public:
 
     //Sobrecarga de operadores
     System& operator=(const System& system);
+    friend ostream & operator << (ostream & out, const System & system);
+
 };
 
 #endif

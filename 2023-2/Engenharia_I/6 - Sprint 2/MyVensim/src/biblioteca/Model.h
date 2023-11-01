@@ -32,6 +32,16 @@ public:
     //Sobrecarga de operadores
     Model& operator=(const Model& model);
 
+    // Informações dos containers
+    systemsIterator systemBegin();
+    systemsIterator systemEnd();
+
+    flowsIterator flowsBegin();
+    flowsIterator flowsEnd();
+
+    int flowsSize();
+    int systemsSize();
+
     // Outros métodos
     void clear();
 

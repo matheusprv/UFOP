@@ -1,4 +1,5 @@
-#include <System.h>
+#include "System.h"
+
 
 // Construtores
 System :: System(){
@@ -52,4 +53,9 @@ System& System :: operator=(const System& system){
     this->value = system.getValue();
 
     return *this;
+}
+
+ostream & operator << (ostream & out, const System & system){
+    out << "Name: " << system.getName() << ", Value: " << system.getValue() << endl;
+    return out;
 }

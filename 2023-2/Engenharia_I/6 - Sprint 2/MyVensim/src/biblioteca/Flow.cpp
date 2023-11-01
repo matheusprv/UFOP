@@ -28,10 +28,7 @@ Flow :: Flow(Flow & flow){
 }
 
 // Destrutor
-Flow :: ~Flow(){
-    delete source;
-    delete target;
-}
+Flow :: ~Flow(){}
 
 // Getters e setters
 void Flow :: setSource(System * source){

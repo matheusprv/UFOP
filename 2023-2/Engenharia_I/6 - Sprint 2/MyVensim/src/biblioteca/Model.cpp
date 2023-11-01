@@ -16,13 +16,7 @@ Model :: Model(Model & model){
 }
 
 // Destrutor
-Model :: ~Model(){
-    // for(auto system : systems)
-    //     delete system;
-
-    // for(auto flow : flows)
-    //     delete flow;
-}
+Model :: ~Model(){}
 
 // Getters e setters
 string Model :: getName() const{
@@ -44,6 +38,29 @@ Model& Model :: operator=(const Model& model){
     
     return *this;
 }
+
+// Informações dos containers
+Model :: systemsIterator Model :: systemBegin(){
+    return systems.begin();
+}
+Model :: systemsIterator Model :: systemEnd(){
+    return systems.end();
+}
+
+Model :: flowsIterator Model :: flowsBegin(){
+    return flows.begin();
+}
+Model :: flowsIterator Model :: flowsEnd(){
+    return flows.end();
+}
+
+int Model :: flowsSize(){
+    return flows.size();
+}
+int Model :: systemsSize(){
+    return systems.size();
+}
+
 
 // Outros métodos
 void Model :: clear(){
@@ -82,29 +99,37 @@ bool Model :: remove(Flow* flow){
     return false;
 }
 
-
 bool Model :: run(int tempo_inicial, int tempo_final){
 
+    // Verificando se os tempos são validos
+    if(tempo_final > tempo_final || tempo_inicial < 0 || tempo_final < 0) return false;
+
     System *source, *target;
+    int flows_size = flowsSize();
 
     // Vector criado para previnir a interferencia de valores intermediarios
-    vector<double> flowValue;
-    for(int i = 0; i < flows.size(); i++) 
-        flowValue.push_back(0.0);
+    vector<double> v;
+    for(int i = 0; i < flows_size; i++) 
+        v.push_back(0.0);
     
-
     // Executando o modelo
+    flowsIterator it;
     for(int tempo = tempo_inicial; tempo <= tempo_final; tempo++){
         
-        for(int i = 0; i < flows.size(); i++)
-            flowValue[i] = flows[i]->executeEquation();
+        it = flowsBegin();
 
-        for(int i = 0; i < flows.size(); i++){
-            source = flows[i]->getSource();
-            source->setValue(source->getValue() - flowValue[i]);
+        for(int i = 0; i  < flows_size; i++){
+            v[i] = (*it)->executeEquation();
+            it++;
+        }
 
-            target = flows[i]->getTarget();
-            target->setValue(target->getValue() + flowValue[i]);
+        it = flowsBegin();
+        for(int i = 0; i < flows_size; i++){
+            source = (*it)->getSource();
+            source->setValue(source->getValue() - v[i]);
+
+            target = (*it)->getTarget();
+            target->setValue(target->getValue() + v[i]);
         }
 
     }
@@ -113,5 +138,8 @@ bool Model :: run(int tempo_inicial, int tempo_final){
 }
 
 void Model :: showModel(){
-
+    for(systemsIterator it = systemBegin(); it < systemEnd(); it++){
+        //System * ptr = *it;
+        cout << *(*it);
+    }
 }
