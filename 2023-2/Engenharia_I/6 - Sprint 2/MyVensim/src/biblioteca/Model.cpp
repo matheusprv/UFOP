@@ -70,12 +70,12 @@ void Model :: clear(){
 }
 
 bool Model :: add(Flow * flow){
-    int original_size = flows.size();
+    size_t original_size = flows.size();
     flows.push_back(flow);
     return (flows.size() > original_size);
 }
 bool Model :: add(System * system){
-    int original_size = systems.size();
+    size_t original_size = systems.size();
     systems.push_back(system);
     return (systems.size() > original_size);
 }
@@ -102,34 +102,35 @@ bool Model :: remove(Flow* flow){
 bool Model :: run(int tempo_inicial, int tempo_final){
 
     // Verificando se os tempos são validos
-    if(tempo_final > tempo_final || tempo_inicial < 0 || tempo_final < 0) return false;
+    if(tempo_inicial > tempo_final || tempo_inicial < 0 || tempo_final < 0) return false;
 
     System *source, *target;
     int flows_size = flowsSize();
 
-    // Vector criado para previnir a interferencia de valores intermediarios
     vector<double> v;
     for(int i = 0; i < flows_size; i++) 
         v.push_back(0.0);
     
     // Executando o modelo
-    flowsIterator it;
+    flowsIterator flowIt;
     for(int tempo = tempo_inicial; tempo <= tempo_final; tempo++){
         
-        it = flowsBegin();
+        flowIt = flowsBegin();
 
         for(int i = 0; i  < flows_size; i++){
-            v[i] = (*it)->executeEquation();
-            it++;
+            v[i] = (*flowIt)->executeEquation();
+            flowIt++;
         }
 
-        it = flowsBegin();
+        flowIt = flowsBegin();
         for(int i = 0; i < flows_size; i++){
-            source = (*it)->getSource();
+            source = (*flowIt)->getSource();
             source->setValue(source->getValue() - v[i]);
 
-            target = (*it)->getTarget();
+            target = (*flowIt)->getTarget();
             target->setValue(target->getValue() + v[i]);
+
+            flowIt++;
         }
 
     }
@@ -138,8 +139,8 @@ bool Model :: run(int tempo_inicial, int tempo_final){
 }
 
 void Model :: showModel(){
+    cout << name << endl;
     for(systemsIterator it = systemBegin(); it < systemEnd(); it++){
-        //System * ptr = *it;
         cout << *(*it);
     }
 }
