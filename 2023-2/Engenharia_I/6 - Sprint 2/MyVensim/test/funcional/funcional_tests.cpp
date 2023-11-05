@@ -24,8 +24,6 @@ void exponentialFuncionalTest(){
     assert (floatingPointComparison(pop1.getValue(), 36.6032, 4) == true);
     assert (floatingPointComparison(pop2.getValue(), 63.3968, 4) == true);
 
-    model.clear();   
-
     cout << "\tTeste funcional aprovado para exponencial" << endl;
 }
 

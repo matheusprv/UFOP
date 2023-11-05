@@ -2,14 +2,14 @@
 
 // Construtores
 Model :: Model(){
-    this->clear();
+    name = "";
+    systems.clear();
+    flows.clear();    
 }
 
 Model :: Model(const string & name) : name(name){}
 
 Model :: Model(Model & model){
-    this->clear();
-
     this->name = model.getName();
     this->flows.insert(this->flows.begin(), model.flows.begin(), model.flows.end());
     this->systems.insert(this->systems.begin(), model.systems.begin(), model.systems.end());
@@ -37,13 +37,21 @@ Model::containerFlows Model :: getFlows() const{
 Model& Model :: operator=(const Model& model){
     if(this == &model) return *this;
 
-    clear();
-
     name = model.getName();
     systems.insert(systems.begin(), model.systems.begin(), model.systems.end());
     flows.insert(flows.begin(), model.flows.begin(), model.flows.end());
     
     return *this;
+}
+
+ostream & operator << (ostream & out, const Model & model){
+    out << "Model name: " << model.getName() << endl;
+
+    for(System * system : model.getSystems()){
+        out << *system;
+    }
+    
+    return out;
 }
 
 // Informações dos containers
@@ -70,12 +78,6 @@ int Model :: systemsSize(){
 
 
 // Outros métodos
-void Model :: clear(){
-    name = "";
-    systems.clear();
-    flows.clear();
-}
-
 bool Model :: add(Flow * flow){
     size_t original_size = flows.size();
     flows.push_back(flow);
@@ -145,9 +147,6 @@ bool Model :: run(int tempo_inicial, int tempo_final){
     return true;
 }
 
-void Model :: showModel(){
-    cout << name << endl;
-    for(systemsIterator it = systemBegin(); it < systemEnd(); it++){
-        cout << *(*it);
-    }
+void Model :: show(){
+    cout << *this;
 }

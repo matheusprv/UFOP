@@ -37,6 +37,7 @@ public:
 
     //Sobrecarga de operadores
     Model& operator=(const Model& model);
+    friend ostream & operator << (ostream & out, const Model & model);
 
     // Informações dos containers
     systemsIterator systemBegin();
@@ -59,7 +60,7 @@ public:
 
     bool run(int tempo_inicial, int tempo_final);
 
-    void showModel();
+    void show();
 
 };
 
