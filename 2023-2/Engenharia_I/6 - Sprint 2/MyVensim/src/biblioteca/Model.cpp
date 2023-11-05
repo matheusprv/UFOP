@@ -108,10 +108,10 @@ bool Model :: remove(Flow* flow){
     return false;
 }
 
-bool Model :: run(int tempo_inicial, int tempo_final){
+bool Model :: run(int initial_time, int final_time){
 
     // Verificando se os tempos são validos
-    if(tempo_inicial > tempo_final || tempo_inicial < 0 || tempo_final < 0) return false;
+    if(initial_time > final_time || initial_time < 0 || final_time < 0) return false;
 
     System *source, *target;
     int flows_size = flowsSize();
@@ -122,7 +122,7 @@ bool Model :: run(int tempo_inicial, int tempo_final){
     
     // Executando o modelo
     flowsIterator flowIt;
-    for(int tempo = tempo_inicial; tempo <= tempo_final; tempo++){
+    for(int time = initial_time; time <= final_time; time++){
         
         flowIt = flowsBegin();
 

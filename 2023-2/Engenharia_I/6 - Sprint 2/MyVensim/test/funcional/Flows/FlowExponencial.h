@@ -1,7 +1,7 @@
 #ifndef FLOWEXPONENCIAL_H
 #define FLOWEXPONENCIAL_H
 
-#include "../biblioteca/Flow.h"
+#include "../../../src/biblioteca/Flow.h"
 
 class FlowExponencial : public Flow{
 public:

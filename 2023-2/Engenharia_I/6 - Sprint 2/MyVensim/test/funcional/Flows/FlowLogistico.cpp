@@ -9,6 +9,6 @@ FlowLogistico :: FlowLogistico(Flow & flow) : Flow (flow) {}
 FlowLogistico :: ~FlowLogistico(){}
 
 double FlowLogistico :: executeEquation(){
-    double value = getTarget()->getValue();
-    return 0.01 * value * (1 - value / 70);
+    double p2 = getTarget()->getValue();
+    return 0.01 * p2 * (1 - p2 / 70);
 }

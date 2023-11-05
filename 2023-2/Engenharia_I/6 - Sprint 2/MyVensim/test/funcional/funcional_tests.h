@@ -7,9 +7,9 @@
 #include <string>
 using namespace std;
 
-#include "../../src/Flows/FlowComplexo.h"
-#include "../../src/Flows/FlowLogistico.h"
-#include "../../src/Flows/FlowExponencial.h"
+#include "Flows/FlowComplexo.h"
+#include "Flows/FlowLogistico.h"
+#include "Flows/FlowExponencial.h"
 
 #include "../../src/biblioteca/Model.h"
 

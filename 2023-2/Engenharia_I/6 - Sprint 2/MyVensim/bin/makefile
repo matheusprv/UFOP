@@ -1,4 +1,4 @@
-teste_funcional: Flow.o FlowComplexo.o FlowExponencial.o FlowLogistico.o Model.o System.o ../test/funcional/funcional_tests.cpp  ../test/funcional/main.cpp
+teste_funcional: Flow.o Model.o System.o FlowComplexo.o FlowExponencial.o FlowLogistico.o ../test/funcional/funcional_tests.cpp  ../test/funcional/main.cpp
 	g++ Flow.o FlowComplexo.o FlowExponencial.o FlowLogistico.o Model.o System.o ../test/funcional/funcional_tests.cpp  ../test/funcional/main.cpp -o teste_funcional -Wall
 
 
@@ -12,11 +12,11 @@ System.o: ../src/biblioteca/System.cpp
 	g++ -c ../src/biblioteca/System.cpp -o System.o
 
 
-FlowComplexo.o: ../src/Flows/FlowComplexo.cpp
-	g++ -c ../src/Flows/FlowComplexo.cpp -o FlowComplexo.o
+FlowComplexo.o: ../test/funcional/Flows/FlowComplexo.cpp
+	g++ -c ../test/funcional/Flows/FlowComplexo.cpp -o FlowComplexo.o
 
-FlowExponencial.o: ../src/Flows/FlowExponencial.cpp
-	g++ -c ../src/Flows/FlowExponencial.cpp -o FlowExponencial.o
+FlowExponencial.o: ../test/funcional/Flows/FlowExponencial.cpp
+	g++ -c ../test/funcional/Flows/FlowExponencial.cpp -o FlowExponencial.o
 
-FlowLogistico.o: ../src/Flows/FlowLogistico.cpp
-	g++ -c ../src/Flows/FlowLogistico.cpp -o FlowLogistico.o
+FlowLogistico.o: ../test/funcional/Flows/FlowLogistico.cpp
+	g++ -c ../test/funcional/Flows/FlowLogistico.cpp -o FlowLogistico.o

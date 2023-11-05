@@ -6,7 +6,7 @@ bool floatingPointComparison(double n1, double n2, int decimal_places){
 }
 
 void exponentialFuncionalTest(){
-    cout << "Iniciando teste funcional para exponencial" << endl;
+    cout << "Beggining exponential functional test." << endl;
 
     Model model ("Sistema Exponencial");
     
@@ -21,15 +21,15 @@ void exponentialFuncionalTest(){
 
     model.run(1, 100);
 
-    assert (floatingPointComparison(pop1.getValue(), 36.6032, 4) == true);
-    assert (floatingPointComparison(pop2.getValue(), 63.3968, 4) == true);
+    assert (floatingPointComparison(pop1.getValue(), 36.6032) == true);
+    assert (floatingPointComparison(pop2.getValue(), 63.3968) == true);
 
-    cout << "\tTeste funcional aprovado para exponencial" << endl;
+    cout << "Exponential functional test approved." << endl;
 }
 
 void logisticalFuncionalTest(){
 
-    cout << "Iniciando teste funcional para logistica" << endl;
+    cout << "Beggining logistic functional test." << endl;
 
     Model model("Sistema logistico");
 
@@ -44,15 +44,15 @@ void logisticalFuncionalTest(){
 
     model.run(1, 100);
 
-    assert (floatingPointComparison(p1.getValue(), 88.2167, 4) == true);
-    assert (floatingPointComparison(p2.getValue(), 21.7833, 4) == true);
+    assert (floatingPointComparison(p1.getValue(), 88.2167) == true);
+    assert (floatingPointComparison(p2.getValue(), 21.7833) == true);
 
-    cout << "\tTeste funcional aprovado para logistica" << endl;
+    cout << "Logistic functional test approved." << endl;
 
 }
 
 void complexFuncionalTest(){
-    cout << "Iniciando teste funcional para complexo" << endl;
+    cout << "Beggining complex functional test." << endl;
 
     System Q1("Q1", 100.0); 
     System Q2("Q2", 0.0);
@@ -82,12 +82,12 @@ void complexFuncionalTest(){
 
     model.run(1, 100);
 
-    assert (floatingPointComparison(Q1.getValue(), 31.8513, 4));
-    assert (floatingPointComparison(Q2.getValue(), 18.4003, 4));
-    assert (floatingPointComparison(Q3.getValue(), 77.1143, 4));
-    assert (floatingPointComparison(Q4.getValue(), 56.1728, 4));
-    assert (floatingPointComparison(Q5.getValue(), 16.4612, 4));
+    assert (floatingPointComparison(Q1.getValue(), 31.8513));
+    assert (floatingPointComparison(Q2.getValue(), 18.4003));
+    assert (floatingPointComparison(Q3.getValue(), 77.1143));
+    assert (floatingPointComparison(Q4.getValue(), 56.1728));
+    assert (floatingPointComparison(Q5.getValue(), 16.4612));
 
-    cout << "\tTeste funcional aprovado para complexo" << endl;
+    cout << "Complex functional test approved." << endl;
 
 }
