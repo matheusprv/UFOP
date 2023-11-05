@@ -16,6 +16,10 @@ public:
     typedef vector<System*> :: iterator systemsIterator;
     typedef vector<Flow*> :: iterator flowsIterator;
 
+    typedef vector<System*> containerSystems;
+    typedef vector<Flow*> containerFlows;
+
+
     // Construtores
     Model();
     Model(const string & name);
@@ -28,6 +32,8 @@ public:
     string getName() const;
     void setName(const string & name);
 
+    containerSystems getSystems() const;
+    containerFlows getFlows() const;
 
     //Sobrecarga de operadores
     Model& operator=(const Model& model);

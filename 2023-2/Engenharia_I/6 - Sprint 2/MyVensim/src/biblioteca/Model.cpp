@@ -20,21 +20,28 @@ Model :: ~Model(){}
 
 // Getters e setters
 string Model :: getName() const{
-    return this->name;
+    return name;
 }
 void Model :: setName(const string & name){
     this->name = name;
+}
+
+Model::containerSystems Model :: getSystems() const{
+    return this->systems;
+}
+Model::containerFlows Model :: getFlows() const{
+    return this->flows;
 }
 
 // Sobrecarga de operadores
 Model& Model :: operator=(const Model& model){
     if(this == &model) return *this;
 
-    this->clear();
+    clear();
 
-    this->name = model.getName();
-    this->systems.insert(this->systems.begin(), model.systems.begin(), model.systems.end());
-    this->flows.insert(this->flows.begin(), model.flows.begin(), model.flows.end());
+    name = model.getName();
+    systems.insert(systems.begin(), model.systems.begin(), model.systems.end());
+    flows.insert(flows.begin(), model.flows.begin(), model.flows.end());
     
     return *this;
 }
@@ -64,9 +71,9 @@ int Model :: systemsSize(){
 
 // Outros métodos
 void Model :: clear(){
-    this->name.clear();
-    this->systems.clear();
-    this->flows.clear();
+    name = "";
+    systems.clear();
+    flows.clear();
 }
 
 bool Model :: add(Flow * flow){

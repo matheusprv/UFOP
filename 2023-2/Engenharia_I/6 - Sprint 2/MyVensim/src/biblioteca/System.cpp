@@ -32,14 +32,14 @@ System :: ~System(){}
 
 //Getters and setters
 string System :: getName() const{
-    return this->name;
+    return name;
 }
 void System :: setName(const string & name){
     this->name = name;
 }
 
 double System :: getValue() const{
-    return this->value;
+    return value;
 }
 void System :: setValue(const double & value){
     this->value = value;
@@ -49,8 +49,8 @@ void System :: setValue(const double & value){
 System& System :: operator=(const System& system){
     if(this == &system) return *this;
 
-    this->name = system.getName();
-    this->value = system.getValue();
+    name = system.getName();
+    value = system.getValue();
 
     return *this;
 }

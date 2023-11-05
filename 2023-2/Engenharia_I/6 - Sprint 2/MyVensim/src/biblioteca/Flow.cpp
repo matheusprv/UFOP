@@ -35,18 +35,18 @@ void Flow :: setSource(System * source){
     this->source = source;
 }
 System * Flow :: getSource() const{
-    return this->source;
+    return source;
 }
 
 System * Flow :: getTarget() const{
-    return this->target;
+    return target;
 }
 void Flow :: setTarget(System * target){
     this->target = target;
 }
 
 string Flow :: getName() const{
-    return this->name;
+    return name;
 }
 void Flow :: setName(const string name){
     this->name = name;
