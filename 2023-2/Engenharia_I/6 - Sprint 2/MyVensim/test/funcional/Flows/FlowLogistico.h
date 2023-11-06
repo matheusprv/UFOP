@@ -1,7 +1,7 @@
 #ifndef FLOWLOGISTICO_H
 #define FLOWLOGISTICO_H
 
-#include "../../../src/biblioteca/Flow.h"
+#include "../../../src/Flow.h"
 
 class FlowLogistico : public Flow{
 public:

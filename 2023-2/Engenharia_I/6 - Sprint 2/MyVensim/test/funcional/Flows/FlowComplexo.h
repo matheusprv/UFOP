@@ -1,7 +1,7 @@
 #ifndef FLOWCOMPLEXO_H
 #define FLOWCOMPLEXO_H
 
-#include "../../../src/biblioteca/Flow.h"
+#include "../../../src/Flow.h"
 
 class FlowComplexo : public Flow{
 public:

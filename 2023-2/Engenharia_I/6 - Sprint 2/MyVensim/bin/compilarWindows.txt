@@ -1,1 +1,1 @@
-g++ ../src/biblioteca/*.cpp  ../test/funcional/Flows/*.cpp ../test/funcional/*.cpp -o teste_funcional.exe
+g++ ../src/*.cpp  ../test/funcional/Flows/*.cpp ../test/funcional/*.cpp -o teste_funcional.exe

@@ -11,7 +11,7 @@ using namespace std;
 #include "Flows/FlowLogistico.h"
 #include "Flows/FlowExponencial.h"
 
-#include "../../src/biblioteca/Model.h"
+#include "../../src/Model.h"
 
 bool floatingPointComparison(double n1, double n2, int decimal_places = 4);
 
