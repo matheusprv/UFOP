@@ -10,9 +10,13 @@ Model :: Model(){
 Model :: Model(const string & name) : name(name){}
 
 Model :: Model(Model & model){
-    this->name = model.getName();
-    this->flows.insert(this->flows.begin(), model.flows.begin(), model.flows.end());
-    this->systems.insert(this->systems.begin(), model.systems.begin(), model.systems.end());
+
+    flows.clear();
+    systems.clear();
+
+    name = model.getName();
+    flows.insert(flows.begin(), model.flows.begin(), model.flows.end());
+    systems.insert(systems.begin(), model.systems.begin(), model.systems.end());
 }
 
 // Destrutor
@@ -24,34 +28,6 @@ string Model :: getName() const{
 }
 void Model :: setName(const string & name){
     this->name = name;
-}
-
-Model::containerSystems Model :: getSystems() const{
-    return this->systems;
-}
-Model::containerFlows Model :: getFlows() const{
-    return this->flows;
-}
-
-// Sobrecarga de operadores
-Model& Model :: operator=(const Model& model){
-    if(this == &model) return *this;
-
-    name = model.getName();
-    systems.insert(systems.begin(), model.systems.begin(), model.systems.end());
-    flows.insert(flows.begin(), model.flows.begin(), model.flows.end());
-    
-    return *this;
-}
-
-ostream & operator << (ostream & out, const Model & model){
-    out << "Model name: " << model.getName() << endl;
-
-    for(System * system : model.getSystems()){
-        out << *system;
-    }
-    
-    return out;
 }
 
 // Informações dos containers
@@ -122,7 +98,7 @@ bool Model :: run(int initial_time, int final_time){
     
     // Executando o modelo
     flowsIterator flowIt;
-    for(int time = initial_time; time <= final_time; time++){
+    for(int time = initial_time; time < final_time; time++){
         
         flowIt = flowsBegin();
 
@@ -148,5 +124,20 @@ bool Model :: run(int initial_time, int final_time){
 }
 
 void Model :: show(){
-    cout << *this;
+    systemsIterator it = systemBegin();
+
+    while (it != systemEnd()){
+        cout << *it;
+    }
+}
+
+// Sobrecarga de operadores
+Model& Model :: operator=(const Model& model){
+    if(this == &model) return *this;
+
+    name = model.getName();
+    systems.insert(systems.begin(), model.systems.begin(), model.systems.end());
+    flows.insert(flows.begin(), model.flows.begin(), model.flows.end());
+    
+    return *this;
 }

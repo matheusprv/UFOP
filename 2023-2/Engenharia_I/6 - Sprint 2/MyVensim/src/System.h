@@ -9,6 +9,7 @@
 using namespace std;
 
 class System{
+protected:
     string name;
     double value;
 

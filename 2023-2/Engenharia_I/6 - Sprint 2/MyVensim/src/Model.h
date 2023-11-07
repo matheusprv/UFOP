@@ -6,6 +6,10 @@
 #include <vector>
 
 class Model{
+    Model(Model &model);
+    Model& operator=(const Model& model);
+
+protected:
     string name;
     vector<System*> systems;
     vector<Flow*> flows;
@@ -16,14 +20,10 @@ public:
     typedef vector<System*> :: iterator systemsIterator;
     typedef vector<Flow*> :: iterator flowsIterator;
 
-    typedef vector<System*> containerSystems;
-    typedef vector<Flow*> containerFlows;
-
-
     // Construtores
     Model();
     Model(const string & name);
-    Model(Model &model);
+    
     
     // Destrutor
     virtual ~Model();
@@ -31,13 +31,6 @@ public:
     // Getters e setters
     string getName() const;
     void setName(const string & name);
-
-    containerSystems getSystems() const;
-    containerFlows getFlows() const;
-
-    //Sobrecarga de operadores
-    Model& operator=(const Model& model);
-    friend ostream & operator << (ostream & out, const Model & model);
 
     // Informações dos containers
     systemsIterator systemBegin();
@@ -50,8 +43,6 @@ public:
     int systemsSize();
 
     // Outros métodos
-    void clear();
-
     bool add(Flow * flow);
     bool add(System * system);
 

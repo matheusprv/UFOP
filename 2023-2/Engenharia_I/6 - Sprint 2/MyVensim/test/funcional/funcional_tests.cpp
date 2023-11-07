@@ -1,8 +1,7 @@
 #include "funcional_tests.h"
 
-bool floatingPointComparison(double n1, double n2, int decimal_places){
-    assert(decimal_places > 0);
-    return fabs(n1-n2) < pow(10, decimal_places * - 1);
+bool floatingPointComparison(double n1, double n2){   
+    return trunc(abs(n1-n2) * 10000) < 1;
 }
 
 void exponentialFuncionalTest(){
@@ -19,7 +18,7 @@ void exponentialFuncionalTest(){
     model.add(&pop2);
     model.add(&exponencial);
 
-    model.run(1, 100);
+    model.run(0, 100);
 
     assert (floatingPointComparison(pop1.getValue(), 36.6032) == true);
     assert (floatingPointComparison(pop2.getValue(), 63.3968) == true);
@@ -42,7 +41,7 @@ void logisticalFuncionalTest(){
     model.add(&p2);
     model.add(&logistico);
 
-    model.run(1, 100);
+    model.run(0, 100);
 
     assert (floatingPointComparison(p1.getValue(), 88.2167) == true);
     assert (floatingPointComparison(p2.getValue(), 21.7833) == true);
@@ -80,7 +79,7 @@ void complexFuncionalTest(){
     model.add(&u);
     model.add(&v);
 
-    model.run(1, 100);
+    model.run(0, 100);
 
     assert (floatingPointComparison(Q1.getValue(), 31.8513));
     assert (floatingPointComparison(Q2.getValue(), 18.4003));

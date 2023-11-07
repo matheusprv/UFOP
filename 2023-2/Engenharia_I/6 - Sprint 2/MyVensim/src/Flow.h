@@ -7,6 +7,7 @@
 using namespace std;
 
 class Flow{
+protected:
     string name;
     System * source;
     System * target;

@@ -270,6 +270,8 @@ class Dados:
 
         print(divisao_externa_string, "*{",somatorio_1_string, "-", somatorio_2_string,"}")
 
+        print(f"{divisao_externa_string} *({somatorio_1} - {somatorio_2})")
+
         variancia = divisao_externa * (somatorio_1 - somatorio_2)
 
         variancia = self.arredondar(variancia, casas_decimansi_arredondamento)
@@ -289,16 +291,23 @@ class Dados:
         print("Desvio padrão = √" + str(self.variancia) + " = " + str(dp))
 
 if __name__ == '__main__':
-    lista = [
-        8.13,8.23,8.60,8.80,8.97,9.05,9.12,9.30,9.35,9.78,
-        9.80,9.86,9.90,9.95,10.00,10.11,10.13,10.15,10.16,10.23,
-        10.31,10.33,10.40,10.46,10.50,11.14,11.29,11.46,12.05,12.14
-    ]
+    dados = Dados()
+    dados.ler_tabela_frequencia()
+
+    dados.media_tabela_frequencia(casas_decimais_arredondamento=3)
+    dados.variancia_dados_agrupados(3)
+    dados.desvio_padrao()
+
+    # lista = [
+    #     8.13,8.23,8.60,8.80,8.97,9.05,9.12,9.30,9.35,9.78,
+    #     9.80,9.86,9.90,9.95,10.00,10.11,10.13,10.15,10.16,10.23,
+    #     10.31,10.33,10.40,10.46,10.50,11.14,11.29,11.46,12.05,12.14
+    # ]
     
-    print(len(lista))
+    # print(len(lista))
 
-    dados = Dados(lista)
+    # dados = Dados(lista)
 
-    dados.tabela_frequencia()
+    # dados.tabela_frequencia()
 
-    dados.moda_tabela_frequencia(3)
+    # dados.moda_tabela_frequencia(3)

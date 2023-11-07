@@ -13,7 +13,7 @@ using namespace std;
 
 #include "../../src/Model.h"
 
-bool floatingPointComparison(double n1, double n2, int decimal_places = 4);
+bool floatingPointComparison(double n1, double n2);
 
 void exponentialFuncionalTest();
 void logisticalFuncionalTest();
