@@ -135,6 +135,9 @@ void Model :: show(){
 Model& Model :: operator=(const Model& model){
     if(this == &model) return *this;
 
+    systems.clear();
+    flows.clear();
+
     name = model.getName();
     systems.insert(systems.begin(), model.systems.begin(), model.systems.end());
     flows.insert(flows.begin(), model.flows.begin(), model.flows.end());

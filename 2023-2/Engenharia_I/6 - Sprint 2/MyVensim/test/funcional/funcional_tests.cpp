@@ -1,7 +1,7 @@
 #include "funcional_tests.h"
 
 bool floatingPointComparison(double n1, double n2){   
-    return trunc(abs(n1-n2) * 10000) < 1;
+    return round(fabs(n1 * 1e4 - n2 * 1e4)) < 1;
 }
 
 void exponentialFuncionalTest(){
