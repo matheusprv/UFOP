@@ -1,0 +1,434 @@
+\doxysection{System Class Reference}
+\hypertarget{class_system}{}\label{class_system}\index{System@{System}}
+
+
+Definition of class \doxylink{class_system}{System}, which represents the current value of the system.  
+
+
+
+
+{\ttfamily \#include $<$System.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system_ae317936c9bcf1374d61745572e0f2f8a}{System}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_ad2af075da98b4cd8d019cd2d5aa4cff7}{System}} (const string \&\mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}, const double \&\mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}})
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_system}{System} with name and value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_af8475274ed3112b6d9bf064308069dcb}{System}} (const string \&\mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_system}{System} with name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_aa47fb08195874165ee49012e66253fa3}{System}} (const double \&\mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}})
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_system}{System} with value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_aff00aca3fe162881b705da34a0a425fd}{System}} (\mbox{\hyperlink{class_system}{System}} \&system)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_system}{System} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_system_a3be70bb338e3f062f821173fd15680d0}{\texorpdfstring{$\sim$}{\string~}\+System}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_system}{System} class. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_system_a47ece132a04247cd74aea11537830bd4}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_aecfa79ded6c6a08f69ebaf55e758e5b4}{set\+Name}} (const string \&\mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}})
+\begin{DoxyCompactList}\small\item\em Set the name of the system. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_system_aa7d17369d1034e7d8643a63f69d1901d}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Get the value of the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_ae69ca1b385883bed8c5e204b3561f009}{set\+Value}} (const double \&new\+Value)
+\begin{DoxyCompactList}\small\item\em Set the value of the flow. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system}{System}} \& \mbox{\hyperlink{class_system_a7b1b2bc21110d1b7ad7524a529e5ffb1}{operator=}} (const \mbox{\hyperlink{class_system}{System}} \&system)
+\begin{DoxyCompactList}\small\item\em Overload of operator equals to copy a \doxylink{class_system}{System}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}
+\item 
+double \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_system_a693dc8ceac42165b1c3a6da82ce95204}{operator$<$$<$}} (ostream \&out, const \mbox{\hyperlink{class_system}{System}} \&system)
+\begin{DoxyCompactList}\small\item\em Overload of operator \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of class \doxylink{class_system}{System}, which represents the current value of the system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_system_ae317936c9bcf1374d61745572e0f2f8a}\label{class_system_ae317936c9bcf1374d61745572e0f2f8a} 
+\index{System@{System}!System@{System}}
+\index{System@{System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No return value. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}}\ =\ 0.0;}
+\DoxyCodeLine{00008\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_system_ad2af075da98b4cd8d019cd2d5aa4cff7}\label{class_system_ad2af075da98b4cd8d019cd2d5aa4cff7} 
+\index{System@{System}!System@{System}}
+\index{System@{System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{const string \&}]{name,  }\item[{const double \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_system}{System} with name and value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the system. \\
+\hline
+{\em value} & Value of the system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No return value. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}\ =\ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}};}
+\DoxyCodeLine{00012\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}}\ =\ \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}};}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_system_af8475274ed3112b6d9bf064308069dcb}\label{class_system_af8475274ed3112b6d9bf064308069dcb} 
+\index{System@{System}!System@{System}}
+\index{System@{System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_system}{System} with name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No return value. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}\ =\ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}};}
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}}\ =\ 0.0;}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_system_aa47fb08195874165ee49012e66253fa3}\label{class_system_aa47fb08195874165ee49012e66253fa3} 
+\index{System@{System}!System@{System}}
+\index{System@{System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{const double \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_system}{System} with value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of the system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No return value. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00022\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}}\ =\ \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}};}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_system_aff00aca3fe162881b705da34a0a425fd}\label{class_system_aff00aca3fe162881b705da34a0a425fd} 
+\index{System@{System}!System@{System}}
+\index{System@{System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \&}]{system }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the \doxylink{class_system}{System} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em system} & \doxylink{class_system}{System} object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No return value. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}\ =\ system.\mbox{\hyperlink{class_system_a47ece132a04247cd74aea11537830bd4}{getName}}();}
+\DoxyCodeLine{00027\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}}\ =\ system.\mbox{\hyperlink{class_system_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}();}
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_system_aff00aca3fe162881b705da34a0a425fd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_system_a3be70bb338e3f062f821173fd15680d0}\label{class_system_a3be70bb338e3f062f821173fd15680d0} 
+\index{System@{System}!````~System@{\texorpdfstring{$\sim$}{\string~}System}}
+\index{````~System@{\texorpdfstring{$\sim$}{\string~}System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}System()}{\string~System()}}
+{\footnotesize\ttfamily System\+::\texorpdfstring{$\sim$}{\string~}\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for the \doxylink{class_system}{System} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No return value. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_system_a47ece132a04247cd74aea11537830bd4}\label{class_system_a47ece132a04247cd74aea11537830bd4} 
+\index{System@{System}!getName@{getName}}
+\index{getName@{getName}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string System\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the name of the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of the system. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}};}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_system_a47ece132a04247cd74aea11537830bd4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_system_aa7d17369d1034e7d8643a63f69d1901d}\label{class_system_aa7d17369d1034e7d8643a63f69d1901d} 
+\index{System@{System}!getValue@{getValue}}
+\index{getValue@{getValue}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily double System\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the value of the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of the system. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}};}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_system_aa7d17369d1034e7d8643a63f69d1901d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_system_a7b1b2bc21110d1b7ad7524a529e5ffb1}\label{class_system_a7b1b2bc21110d1b7ad7524a529e5ffb1} 
+\index{System@{System}!operator=@{operator=}}
+\index{operator=@{operator=}!System@{System}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system}{System}} \& System\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_system}{System}} \&}]{system }\end{DoxyParamCaption})}
+
+
+
+Overload of operator equals to copy a \doxylink{class_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em system} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the copied \doxylink{class_system}{System}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{this}\ ==\ \&system)\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}\ =\ system.\mbox{\hyperlink{class_system_a47ece132a04247cd74aea11537830bd4}{getName}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}}\ =\ system.\mbox{\hyperlink{class_system_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00056\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_system_a7b1b2bc21110d1b7ad7524a529e5ffb1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_system_aecfa79ded6c6a08f69ebaf55e758e5b4}\label{class_system_aecfa79ded6c6a08f69ebaf55e758e5b4} 
+\index{System@{System}!setName@{setName}}
+\index{setName@{setName}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void System\+::set\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Set the name of the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No return value. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}}\ =\ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}};}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_system_ae69ca1b385883bed8c5e204b3561f009}\label{class_system_ae69ca1b385883bed8c5e204b3561f009} 
+\index{System@{System}!setValue@{setValue}}
+\index{setValue@{setValue}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void System\+::set\+Value (\begin{DoxyParamCaption}\item[{const double \&}]{new\+Value }\end{DoxyParamCaption})}
+
+
+
+Set the value of the flow. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of the flow. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No return value. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ this-\/>\mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}}\ =\ \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}};}
+\DoxyCodeLine{00046\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_system_ae69ca1b385883bed8c5e204b3561f009_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_system_a693dc8ceac42165b1c3a6da82ce95204}\label{class_system_a693dc8ceac42165b1c3a6da82ce95204} 
+\index{System@{System}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!System@{System}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_system}{System}} \&}]{system }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overload of operator \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & ostream reference that will display the system. \\
+\hline
+{\em system} & Object to be displayed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream with the system display format. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}Name:\ "{}}\ <<\ system.\mbox{\hyperlink{class_system_a47ece132a04247cd74aea11537830bd4}{getName}}()\ <<\ \textcolor{stringliteral}{"{},\ Value:\ "{}}\ <<\ system.\mbox{\hyperlink{class_system_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}()\ <<\ endl;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{00061\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}\label{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3} 
+\index{System@{System}!name@{name}}
+\index{name@{name}!System@{System}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string System\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_system_a879687b1125ef20757c2a61345fedd00}\label{class_system_a879687b1125ef20757c2a61345fedd00} 
+\index{System@{System}!value@{value}}
+\index{value@{value}!System@{System}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily double System\+::value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+My\+Vensim/src/\mbox{\hyperlink{_system_8h}{System.\+h}}\item 
+My\+Vensim/src/\mbox{\hyperlink{_system_8cpp}{System.\+cpp}}\end{DoxyCompactItemize}

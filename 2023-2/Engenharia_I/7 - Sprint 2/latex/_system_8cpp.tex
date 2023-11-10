@@ -1,0 +1,43 @@
+\doxysection{My\+Vensim/src/\+System.cpp File Reference}
+\hypertarget{_system_8cpp}{}\label{_system_8cpp}\index{MyVensim/src/System.cpp@{MyVensim/src/System.cpp}}
+{\ttfamily \#include "{}System.\+h"{}}\newline
+Include dependency graph for System.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{_system_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{_system_8cpp_a693dc8ceac42165b1c3a6da82ce95204}{operator$<$$<$}} (ostream \&out, const \mbox{\hyperlink{class_system}{System}} \&system)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_system_8cpp_a693dc8ceac42165b1c3a6da82ce95204}\label{_system_8cpp_a693dc8ceac42165b1c3a6da82ce95204} 
+\index{System.cpp@{System.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!System.cpp@{System.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_system}{System}} \&}]{system }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & ostream reference that will display the system. \\
+\hline
+{\em system} & Object to be displayed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream with the system display format. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}Name:\ "{}}\ <<\ system.\mbox{\hyperlink{class_system_a47ece132a04247cd74aea11537830bd4}{getName}}()\ <<\ \textcolor{stringliteral}{"{},\ Value:\ "{}}\ <<\ system.\mbox{\hyperlink{class_system_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}()\ <<\ endl;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{00061\ \}}
+
+\end{DoxyCode}

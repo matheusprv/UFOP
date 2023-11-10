@@ -1,0 +1,9 @@
+<map id="Flow::Flow" name="Flow::Flow">
+<area shape="rect" id="Node000001" title="Copy constructor for the Flow class." alt="" coords="5,56,89,83"/>
+<area shape="rect" id="Node000002" href="$class_flow.html#a62bbc54ff95eeb0795511519edf32077" title="Get the name of the flow." alt="" coords="140,5,249,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,53,138,35,140,40,89,58"/>
+<area shape="rect" id="Node000003" href="$class_flow.html#a1f3858f90d141807377c2640fb5dd0fc" title="Get the source system of the flow." alt="" coords="137,56,252,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="89,67,121,67,121,72,89,72"/>
+<area shape="rect" id="Node000004" href="$class_flow.html#aff8a0f8ca8dc50d37c92ab7556e172b5" title="Get the target system of the flow." alt="" coords="139,107,250,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="89,81,140,99,138,104,87,86"/>
+</map>
