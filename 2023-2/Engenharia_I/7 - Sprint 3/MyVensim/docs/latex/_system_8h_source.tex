@@ -1,0 +1,46 @@
+\doxysection{System.\+h}
+\hypertarget{_system_8h_source}{}\label{_system_8h_source}\index{src/System.h@{src/System.h}}
+\mbox{\hyperlink{_system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SYSTEM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SYSTEM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_system}{System}}\{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Construtores}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_system_ae317936c9bcf1374d61745572e0f2f8a}{System}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_system_ae317936c9bcf1374d61745572e0f2f8a}{System}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}});}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_system_ae317936c9bcf1374d61745572e0f2f8a}{System}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}});}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_system_ae317936c9bcf1374d61745572e0f2f8a}{System}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ \mbox{\hyperlink{class_system_a879687b1125ef20757c2a61345fedd00}{value}});}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_system_ae317936c9bcf1374d61745572e0f2f8a}{System}}(\mbox{\hyperlink{class_system}{System}}\ \&\ system);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Destrutor}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_system_a3be70bb338e3f062f821173fd15680d0}{\string~System}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ Getters\ e\ setters}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_system_a47ece132a04247cd74aea11537830bd4}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_aecfa79ded6c6a08f69ebaf55e758e5b4}{setName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{class_system_a29fe2868c0d56fdebc67f1bef5d5cca3}{name}});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_system_aa7d17369d1034e7d8643a63f69d1901d}{getValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_ae69ca1b385883bed8c5e204b3561f009}{setValue}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\&\ newValue);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//Sobrecarga\ de\ operadores}}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\&\ \mbox{\hyperlink{class_system_a7b1b2bc21110d1b7ad7524a529e5ffb1}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_system}{System}}\&\ system);}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{friend}\ ostream\ \&\ \mbox{\hyperlink{class_system_a693dc8ceac42165b1c3a6da82ce95204}{operator\ <<\ }}(ostream\ \&\ out,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_system}{System}}\ \&\ system);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
