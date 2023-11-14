@@ -1,5 +1,5 @@
 <map id="logisticalFuncionalTest" name="logisticalFuncionalTest">
-<area shape="rect" id="Node000001" title="Execute the functional test of the logistical flow." alt="" coords="5,81,159,108"/>
+<area shape="rect" id="Node000001" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="5,81,159,108"/>
 <area shape="rect" id="Node000002" href="$class_model.html#a1acc6a20b2e07eb467bcb253f9b82a83" title="Add a flow to the model&#39;s container of flows." alt="" coords="245,5,330,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,78,206,42,229,33,231,38,208,46,116,83"/>
 <area shape="rect" id="Node000003" href="$funcional__tests_8cpp.html#adbcc4e1dba9b8de80d1b4ba44805a9dc" title="Compare two floating numbers and check if they equals by checking if their difference is no bigger th..." alt="" coords="207,56,368,83"/>

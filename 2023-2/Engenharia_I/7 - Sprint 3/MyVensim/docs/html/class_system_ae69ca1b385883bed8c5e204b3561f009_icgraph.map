@@ -2,11 +2,11 @@
 <area shape="rect" id="Node000001" title="Set the value of the flow." alt="" coords="449,56,575,83"/>
 <area shape="rect" id="Node000002" href="$class_model.html#a79f8ff394093e3dab6a646216edce189" title="Run the model for a specified time range executing the function of the flows." alt="" coords="319,56,401,83"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="434,72,402,72,402,67,434,67"/>
-<area shape="rect" id="Node000003" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Execute the functional test of the complex flow." alt="" coords="111,5,263,32"/>
+<area shape="rect" id="Node000003" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="111,5,263,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="304,56,234,35,236,30,305,51"/>
-<area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Execute the functional test of the exponential flow." alt="" coords="103,56,271,83"/>
+<area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 Wh..." alt="" coords="103,56,271,83"/>
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="303,72,272,72,272,67,303,67"/>
-<area shape="rect" id="Node000006" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Execute the functional test of the logistical flow." alt="" coords="110,107,264,133"/>
+<area shape="rect" id="Node000006" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="110,107,264,133"/>
 <area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="305,88,236,109,234,104,304,83"/>
 <area shape="rect" id="Node000004" href="$test_2funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="125,40,104,47,56,63,54,58,102,41,123,35"/>

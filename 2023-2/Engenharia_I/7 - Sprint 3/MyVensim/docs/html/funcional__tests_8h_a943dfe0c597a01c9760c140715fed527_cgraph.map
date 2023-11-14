@@ -1,5 +1,5 @@
 <map id="complexFuncionalTest" name="complexFuncionalTest">
-<area shape="rect" id="Node000001" title="Execute the functional test of the complex flow." alt="" coords="5,81,157,108"/>
+<area shape="rect" id="Node000001" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="5,81,157,108"/>
 <area shape="rect" id="Node000002" href="$class_model.html#a1acc6a20b2e07eb467bcb253f9b82a83" title="Add a flow to the model&#39;s container of flows." alt="" coords="243,5,328,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,78,204,42,227,33,229,38,206,46,115,83"/>
 <area shape="rect" id="Node000003" href="$funcional__tests_8cpp.html#adbcc4e1dba9b8de80d1b4ba44805a9dc" title="Compare two floating numbers and check if they equals by checking if their difference is no bigger th..." alt="" coords="205,56,366,83"/>

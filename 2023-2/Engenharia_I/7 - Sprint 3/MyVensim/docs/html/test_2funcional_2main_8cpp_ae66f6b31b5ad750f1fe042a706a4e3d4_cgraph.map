@@ -1,10 +1,10 @@
 <map id="main" name="main">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,94,55,120"/>
-<area shape="rect" id="Node000002" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Execute the functional test of the complex flow." alt="" coords="111,144,263,171"/>
+<area shape="rect" id="Node000002" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="111,144,263,171"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,113,104,130,125,137,123,142,102,135,54,118"/>
-<area shape="rect" id="Node000008" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Execute the functional test of the exponential flow." alt="" coords="103,94,271,120"/>
+<area shape="rect" id="Node000008" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 Wh..." alt="" coords="103,94,271,120"/>
 <area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="55,104,87,104,87,110,55,110"/>
-<area shape="rect" id="Node000009" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Execute the functional test of the logistical flow." alt="" coords="110,43,264,70"/>
+<area shape="rect" id="Node000009" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="110,43,264,70"/>
 <area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="54,96,102,79,123,72,125,77,104,84,56,101"/>
 <area shape="rect" id="Node000003" href="$class_model.html#a1acc6a20b2e07eb467bcb253f9b82a83" title="Add a flow to the model&#39;s container of flows." alt="" coords="357,43,442,70"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="246,141,270,130,284,118,293,106,302,92,318,79,341,68,343,73,320,84,306,96,297,109,288,122,272,135,248,146"/>

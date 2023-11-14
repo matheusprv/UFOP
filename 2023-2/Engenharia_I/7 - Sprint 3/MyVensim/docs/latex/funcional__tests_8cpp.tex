@@ -1,8 +1,7 @@
 \doxysection{test/funcional/funcional\+\_\+tests.cpp File Reference}
 \hypertarget{funcional__tests_8cpp}{}\label{funcional__tests_8cpp}\index{test/funcional/funcional\_tests.cpp@{test/funcional/funcional\_tests.cpp}}
 {\ttfamily \#include "{}funcional\+\_\+tests.\+h"{}}\newline
-Include dependency graph for funcional\+\_\+tests.\+cpp\+:
-\nopagebreak
+Include dependency graph for funcional\+\_\+tests.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,11 +14,11 @@ Include dependency graph for funcional\+\_\+tests.\+cpp\+:
 bool \mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floating\+Point\+Comparison}} (double n1, double n2)
 \begin{DoxyCompactList}\small\item\em Compare two floating numbers and check if they equals by checking if their difference is no bigger than 1e-\/4. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27}{exponential\+Funcional\+Test}} ()
-\begin{DoxyCompactList}\small\item\em Execute the functional test of the exponential flow. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 When the model runs, execute the equations and update the values from time 0 to 100 Then check if pop1 value is 36.\+6032 and pop2 is 63.\+3968. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29}{logistical\+Funcional\+Test}} ()
-\begin{DoxyCompactList}\small\item\em Execute the functional test of the logistical flow. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When the model runs, execute the equations and update the values from time 0 to 100 Then check if pop1 value is 88.\+2167 and pop2 is 21.\+7833. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527}{complex\+Funcional\+Test}} ()
-\begin{DoxyCompactList}\small\item\em Execute the functional test of the complex flow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Given a model with complex equation and two systems, q1 and q3 with value 100 and q2, q4 and q5 with value 0, and flows connection f (q1 to q2), g(q1 to q3), r (q2 to q5), t (q2 to q3), u (q3 to q4) and v (q4 to q3) When the model runs, execute the equations and update the values from time 0 to 100 Then check if q1 equals 31.\+8513, q2 equals 18.\+4003, q3 equals to 77.\+1143, q4 equals to 56.\+1728 and q5 equals to 16.\+4612. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -31,7 +30,7 @@ void \mbox{\hyperlink{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527}{c
 
 
 
-Execute the functional test of the complex flow. 
+Given a model with complex equation and two systems, q1 and q3 with value 100 and q2, q4 and q5 with value 0, and flows connection f (q1 to q2), g(q1 to q3), r (q2 to q5), t (q2 to q3), u (q3 to q4) and v (q4 to q3) When the model runs, execute the equations and update the values from time 0 to 100 Then check if q1 equals 31.\+8513, q2 equals 18.\+4003, q3 equals to 77.\+1143, q4 equals to 56.\+1728 and q5 equals to 16.\+4612. 
 
 
 \begin{DoxyCode}{0}
@@ -101,7 +100,7 @@ Here is the caller graph for this function\+:
 
 
 
-Execute the functional test of the exponential flow. 
+Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 When the model runs, execute the equations and update the values from time 0 to 100 Then check if pop1 value is 36.\+6032 and pop2 is 63.\+3968. 
 
 
 \begin{DoxyCode}{0}
@@ -187,7 +186,7 @@ Here is the caller graph for this function\+:
 
 
 
-Execute the functional test of the logistical flow. 
+Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When the model runs, execute the equations and update the values from time 0 to 100 Then check if pop1 value is 88.\+2167 and pop2 is 21.\+7833. 
 
 
 \begin{DoxyCode}{0}
