@@ -1,7 +1,0 @@
-<map id="System::getName" name="System::getName">
-<area shape="rect" id="Node000001" title="Get the name of the system." alt="" coords="183,31,309,57"/>
-<area shape="rect" id="Node000002" href="$class_system.html#a7b1b2bc21110d1b7ad7524a529e5ffb1" title="Overload of operator equals to copy a System." alt="" coords="5,5,135,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,35,135,31,136,25,168,30"/>
-<area shape="rect" id="Node000003" href="$class_system.html#aff00aca3fe162881b705da34a0a425fd" title="Copy constructor for the System class." alt="" coords="10,56,130,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,58,130,63,130,58,167,53"/>
-</map>

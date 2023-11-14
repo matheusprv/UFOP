@@ -47,6 +47,7 @@ if __name__ == "__main__":
 
     # Conectando com o servidor
     server_addr = ("0.tcp.sa.ngrok.io", 16872)
+
     client_socket.connect(server_addr)
 
     print("Criando thread recv...")

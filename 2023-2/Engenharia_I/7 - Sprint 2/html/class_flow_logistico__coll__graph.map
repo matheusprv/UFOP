@@ -1,7 +1,0 @@
-<map id="FlowLogistico" name="FlowLogistico">
-<area shape="rect" id="Node000001" title="Definition of class FlowLogistico, which extends the class Flow and implements the executeEquation." alt="" coords="5,188,106,215"/>
-<area shape="rect" id="Node000002" href="$class_flow.html" title="Definition of class Flow, which represents a conection between two systems." alt="" coords="31,112,80,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,154,58,188,53,188,53,154"/>
-<area shape="rect" id="Node000003" href="$class_system.html" title="Definition of class System, which represents the current value of the system." alt="" coords="22,5,89,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="58,47,58,112,53,112,53,47"/>
-</map>

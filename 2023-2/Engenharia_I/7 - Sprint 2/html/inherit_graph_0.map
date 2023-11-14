@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_flow.html" title="Definition of class Flow, which represents a conection between two systems." alt="" coords="5,56,54,83"/>
-<area shape="rect" id="Node000001" href="$class_flow_complexo.html" title="Definition of class FlowComplexo, which extends the class Flow and implements the executeEquation." alt="" coords="108,5,215,32"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="67,52,123,30,125,35,69,57"/>
-<area shape="rect" id="Node000002" href="$class_flow_exponencial.html" title="Definition of class FlowExponencial, which extends the class Flow and implements the executeEquation." alt="" coords="102,56,221,83"/>
-<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="69,67,101,67,101,72,69,72"/>
-<area shape="rect" id="Node000003" href="$class_flow_logistico.html" title="Definition of class FlowLogistico, which extends the class Flow and implements the executeEquation." alt="" coords="111,107,212,133"/>
-<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="69,81,125,104,123,109,67,86"/>
-</map>
