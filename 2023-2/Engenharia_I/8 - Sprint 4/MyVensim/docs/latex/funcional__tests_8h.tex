@@ -1,0 +1,268 @@
+\doxysection{test/funcional/funcional\+\_\+tests.h File Reference}
+\hypertarget{funcional__tests_8h}{}\label{funcional__tests_8h}\index{test/funcional/funcional\_tests.h@{test/funcional/funcional\_tests.h}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include "{}../\+Flows/\+Flow\+Complexo.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Flows/\+Flow\+Logistico.\+h"{}}\newline
+{\ttfamily \#include "{}../\+Flows/\+Flow\+Exponencial.\+h"{}}\newline
+{\ttfamily \#include "{}../../src/\+Model\+Impl.\+h"{}}\newline
+{\ttfamily \#include "{}../../src/\+System\+Impl.\+h"{}}\newline
+Include dependency graph for funcional\+\_\+tests.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcional__tests_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{funcional__tests_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{funcional__tests_8h_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floating\+Point\+Comparison}} (double n1, double n2)
+\begin{DoxyCompactList}\small\item\em Compare two floating numbers and check if they equals by checking if their difference is no bigger than 1e-\/4. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27}{exponential\+Funcional\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 When the model runs, execute the equations and update the values from time 0 to 100 Then check if pop1 value is 36.\+6032 and pop2 is 63.\+3968. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcional__tests_8h_a60914db64bde71b56d69320797266c29}{logistical\+Funcional\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When the model runs, execute the equations and update the values from time 0 to 100 Then check if pop1 value is 88.\+2167 and pop2 is 21.\+7833. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcional__tests_8h_a943dfe0c597a01c9760c140715fed527}{complex\+Funcional\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Given a model with complex equation and two systems, q1 and q3 with value 100 and q2, q4 and q5 with value 0, and flows connection f (q1 to q2), g(q1 to q3), r (q2 to q5), t (q2 to q3), u (q3 to q4) and v (q4 to q3) When the model runs, execute the equations and update the values from time 0 to 100 Then check if q1 equals 31.\+8513, q2 equals 18.\+4003, q3 equals to 77.\+1143, q4 equals to 56.\+1728 and q5 equals to 16.\+4612. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{funcional__tests_8h_a943dfe0c597a01c9760c140715fed527}\label{funcional__tests_8h_a943dfe0c597a01c9760c140715fed527} 
+\index{funcional\_tests.h@{funcional\_tests.h}!complexFuncionalTest@{complexFuncionalTest}}
+\index{complexFuncionalTest@{complexFuncionalTest}!funcional\_tests.h@{funcional\_tests.h}}
+\doxysubsubsection{\texorpdfstring{complexFuncionalTest()}{complexFuncionalTest()}}
+{\footnotesize\ttfamily void complex\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Given a model with complex equation and two systems, q1 and q3 with value 100 and q2, q4 and q5 with value 0, and flows connection f (q1 to q2), g(q1 to q3), r (q2 to q5), t (q2 to q3), u (q3 to q4) and v (q4 to q3) When the model runs, execute the equations and update the values from time 0 to 100 Then check if q1 equals 31.\+8513, q2 equals 18.\+4003, q3 equals to 77.\+1143, q4 equals to 56.\+1728 and q5 equals to 16.\+4612. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Beggining\ complex\ functional\ test."{}}\ <<\ endl;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\ *\ Q1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q1"{}},\ 100.0);\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\ *\ Q2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q2"{}},\ 0.0);}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\ *\ Q3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q3"{}},\ 100.0);}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\ *\ Q4\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q4"{}},\ 0.0);}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\ *\ Q5\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{stringliteral}{"{}Q5"{}},\ 0.0);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}\ *\ f\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}(\textcolor{stringliteral}{"{}f"{}},\ Q1,\ Q2);}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}\ *\ g\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}(\textcolor{stringliteral}{"{}g"{}},\ Q1,\ Q3);}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}\ *\ r\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}(\textcolor{stringliteral}{"{}r"{}},\ Q2,\ Q5);}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}\ *\ t\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}(\textcolor{stringliteral}{"{}t"{}},\ Q2,\ Q3);}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}\ *\ u\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}(\textcolor{stringliteral}{"{}u"{}},\ Q3,\ Q4);}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}\ *\ v\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flow_complexo}{FlowComplexo}}(\textcolor{stringliteral}{"{}v"{}},\ Q4,\ Q1);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{class_model_impl}{ModelImpl}}\ model;}
+\DoxyCodeLine{00077\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(Q1);}
+\DoxyCodeLine{00078\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(Q2);}
+\DoxyCodeLine{00079\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(Q3);}
+\DoxyCodeLine{00080\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(Q4);}
+\DoxyCodeLine{00081\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(Q5);}
+\DoxyCodeLine{00082\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(f);}
+\DoxyCodeLine{00083\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(g);}
+\DoxyCodeLine{00084\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(r);}
+\DoxyCodeLine{00085\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(t);}
+\DoxyCodeLine{00086\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(u);}
+\DoxyCodeLine{00087\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a3f2700dfd1dae6e448060147b2d181c7}{add}}(v);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ model.\mbox{\hyperlink{class_model_impl_a0702b54772b96db4d0bd037bfa6bfce7}{run}}(0,\ 100);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ assert\ (\mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floatingPointComparison}}(Q1-\/>\mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(),\ 31.8513));}
+\DoxyCodeLine{00092\ \ \ \ \ assert\ (\mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floatingPointComparison}}(Q2-\/>\mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(),\ 18.4003));}
+\DoxyCodeLine{00093\ \ \ \ \ assert\ (\mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floatingPointComparison}}(Q3-\/>\mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(),\ 77.1143));}
+\DoxyCodeLine{00094\ \ \ \ \ assert\ (\mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floatingPointComparison}}(Q4-\/>\mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(),\ 56.1728));}
+\DoxyCodeLine{00095\ \ \ \ \ assert\ (\mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floatingPointComparison}}(Q5-\/>\mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(),\ 16.4612));}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Complex\ functional\ test\ approved."{}}\ <<\ endl;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{delete}\ f;}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{delete}\ g;}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{delete}\ r;}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{delete}\ t;}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{delete}\ u;}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{delete}\ v;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{delete}\ Q1;}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{delete}\ Q2;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{delete}\ Q3;}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{delete}\ Q4;}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{delete}\ Q5;}
+\DoxyCodeLine{00112\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcional__tests_8h_a943dfe0c597a01c9760c140715fed527_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{funcional__tests_8h_a943dfe0c597a01c9760c140715fed527_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27}\label{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27} 
+\index{funcional\_tests.h@{funcional\_tests.h}!exponentialFuncionalTest@{exponentialFuncionalTest}}
+\index{exponentialFuncionalTest@{exponentialFuncionalTest}!funcional\_tests.h@{funcional\_tests.h}}
+\doxysubsubsection{\texorpdfstring{exponentialFuncionalTest()}{exponentialFuncionalTest()}}
+{\footnotesize\ttfamily void exponential\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 When the model runs, execute the equations and update the values from time 0 to 100 Then check if pop1 value is 36.\+6032 and pop2 is 63.\+3968. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Beggining\ exponential\ functional\ test."{}}\ <<\ endl;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_model_impl}{ModelImpl}}\ model\ (\textcolor{stringliteral}{"{}Sistema\ Exponencial"{}});}
+\DoxyCodeLine{00011\ \ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\ *\ pop1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{stringliteral}{"{}pop1"{}},\ 100.0);}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\ *\ pop2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{stringliteral}{"{}pop2"{}},\ 0.0);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_flow_exponencial}{FlowExponencial}}\ *\ exponencial\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flow_exponencial}{FlowExponencial}}(\textcolor{stringliteral}{"{}exponencial"{}},\ pop1,\ pop2);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ model.add(pop1);}
+\DoxyCodeLine{00018\ \ \ \ \ model.add(pop2);}
+\DoxyCodeLine{00019\ \ \ \ \ model.add(exponencial);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ model.run(0,\ 100);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ assert\ (\mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floatingPointComparison}}(pop1-\/>\mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(),\ 36.6032)\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00024\ \ \ \ \ assert\ (\mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floatingPointComparison}}(pop2-\/>\mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(),\ 63.3968)\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Exponential\ functional\ test\ approved."{}}\ <<\ endl;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{delete}\ exponencial;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{delete}\ pop1;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{delete}\ pop2;}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{funcional__tests_8h_a2c448ffaffdff4b03c825a01dffa6f27_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcional__tests_8h_adbcc4e1dba9b8de80d1b4ba44805a9dc}\label{funcional__tests_8h_adbcc4e1dba9b8de80d1b4ba44805a9dc} 
+\index{funcional\_tests.h@{funcional\_tests.h}!floatingPointComparison@{floatingPointComparison}}
+\index{floatingPointComparison@{floatingPointComparison}!funcional\_tests.h@{funcional\_tests.h}}
+\doxysubsubsection{\texorpdfstring{floatingPointComparison()}{floatingPointComparison()}}
+{\footnotesize\ttfamily bool floating\+Point\+Comparison (\begin{DoxyParamCaption}\item[{double}]{n1,  }\item[{double}]{n2 }\end{DoxyParamCaption})}
+
+
+
+Compare two floating numbers and check if they equals by checking if their difference is no bigger than 1e-\/4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n1} & First number of the comparison. \\
+\hline
+{\em n2} & Second number of the comparsion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the difference is in the range, false otherwise. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{keywordflow}{return}\ round(fabs(n1\ *\ 1e4\ -\/\ n2\ *\ 1e4))\ <\ 1;}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcional__tests_8h_adbcc4e1dba9b8de80d1b4ba44805a9dc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcional__tests_8h_a60914db64bde71b56d69320797266c29}\label{funcional__tests_8h_a60914db64bde71b56d69320797266c29} 
+\index{funcional\_tests.h@{funcional\_tests.h}!logisticalFuncionalTest@{logisticalFuncionalTest}}
+\index{logisticalFuncionalTest@{logisticalFuncionalTest}!funcional\_tests.h@{funcional\_tests.h}}
+\doxysubsubsection{\texorpdfstring{logisticalFuncionalTest()}{logisticalFuncionalTest()}}
+{\footnotesize\ttfamily void logistical\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When the model runs, execute the equations and update the values from time 0 to 100 Then check if pop1 value is 88.\+2167 and pop2 is 21.\+7833. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Beggining\ logistic\ functional\ test."{}}\ <<\ endl;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_model_impl}{ModelImpl}}\ model(\textcolor{stringliteral}{"{}Sistema\ logistico"{}});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\ *\ p1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{stringliteral}{"{}p1"{}},\ 100.0);}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}\ *\ p2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{stringliteral}{"{}p2"{}},\ 10.0);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_flow_logistico}{FlowLogistico}}\ *\ logistico\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_flow_logistico}{FlowLogistico}}\ (\textcolor{stringliteral}{"{}logistico"{}},\ p1,\ p2);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ model.add(p1);}
+\DoxyCodeLine{00045\ \ \ \ \ model.add(p2);}
+\DoxyCodeLine{00046\ \ \ \ \ model.add(logistico);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ model.run(0,\ 100);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ assert\ (\mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floatingPointComparison}}(p1-\/>\mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(),\ 88.2167)\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00051\ \ \ \ \ assert\ (\mbox{\hyperlink{funcional__tests_8cpp_adbcc4e1dba9b8de80d1b4ba44805a9dc}{floatingPointComparison}}(p2-\/>\mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{getValue}}(),\ 21.7833)\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Logistic\ functional\ test\ approved."{}}\ <<\ endl;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{delete}\ logistico;}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{delete}\ p1;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{delete}\ p2;}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcional__tests_8h_a60914db64bde71b56d69320797266c29_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{funcional__tests_8h_a60914db64bde71b56d69320797266c29_icgraph}
+\end{center}
+\end{figure}

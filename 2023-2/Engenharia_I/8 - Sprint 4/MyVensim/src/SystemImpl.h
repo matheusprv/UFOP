@@ -42,7 +42,7 @@ public:
      * @brief   Copy constructor for the SystemImpl class.
      * @param   system SystemImpl object to be copied.
     */
-    SystemImpl(SystemImpl & system);
+    SystemImpl(System & system);
 
     // Destrutor
     /**
@@ -83,6 +83,15 @@ public:
      * @return  Reference to the copied SystemImpl.
     */
     System& operator=(const System& system);
+
+    /**
+     * @brief   Overload of operator == to compare two systems
+     * @param   s1 Object to be compared.
+     * @param   s2 Object to be compared.
+     * @return  True if they are equals. False otherwise
+    */
+    bool operator==(const System& s1) const;
+
     /**
      * @brief   Overload of operator <<.
      * @param   out ostream reference that will display the system.

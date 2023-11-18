@@ -1,0 +1,7 @@
+<map id="unit_Flow_setSource" name="unit_Flow_setSource">
+<area shape="rect" id="Node000001" title="Unit test for method setSource()" alt="" coords="5,31,148,57"/>
+<area shape="rect" id="Node000002" href="$class_flow.html#abf0f3dbb285fe82e5ba6449de06b97c8" title="Get the source system of the flow." alt="" coords="196,5,311,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,31,180,26,181,32,149,36"/>
+<area shape="rect" id="Node000003" href="$class_flow.html#a42ce99a961622788ae59bb73abad3bb3" title="Set the source system of the flow." alt="" coords="196,56,311,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,52,181,56,180,62,148,57"/>
+</map>

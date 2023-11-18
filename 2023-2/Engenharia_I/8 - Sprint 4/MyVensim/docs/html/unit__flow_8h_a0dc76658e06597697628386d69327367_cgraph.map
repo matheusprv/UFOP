@@ -1,0 +1,5 @@
+<map id="unit_Flow_getSource" name="unit_Flow_getSource">
+<area shape="rect" id="Node000001" title="Unit test for method getSource()" alt="" coords="5,5,148,32"/>
+<area shape="rect" id="Node000002" href="$class_flow.html#abf0f3dbb285fe82e5ba6449de06b97c8" title="Get the source system of the flow." alt="" coords="196,5,311,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,16,180,16,180,21,148,21"/>
+</map>

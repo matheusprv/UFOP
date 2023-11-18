@@ -1,0 +1,9 @@
+<map id="unit_Model_constructor_empty" name="unit_Model_constructor_empty">
+<area shape="rect" id="Node000001" title="Unit test for an empty constructor of model." alt="" coords="5,48,162,91"/>
+<area shape="rect" id="Node000002" href="$class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="220,5,340,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,47,210,34,211,39,163,52"/>
+<area shape="rect" id="Node000003" href="$class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="222,56,338,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,67,206,67,206,72,162,72"/>
+<area shape="rect" id="Node000004" href="$class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="210,107,350,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,87,211,100,210,105,161,92"/>
+</map>

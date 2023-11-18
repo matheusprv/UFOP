@@ -1,0 +1,9 @@
+<map id="unit_Flow_constructor_name" name="unit_Flow_constructor_name">
+<area shape="rect" id="Node000001" title="Unit test for Flow&#39;s constructor only with name." alt="" coords="5,56,193,83"/>
+<area shape="rect" id="Node000002" href="$class_flow.html#aa91a8025b6dbb27ee5137c7c9ad0c564" title="Get the name of the flow." alt="" coords="244,5,353,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,53,228,34,230,39,155,58"/>
+<area shape="rect" id="Node000003" href="$class_flow.html#abf0f3dbb285fe82e5ba6449de06b97c8" title="Get the source system of the flow." alt="" coords="241,56,356,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,67,225,67,225,72,193,72"/>
+<area shape="rect" id="Node000004" href="$class_flow.html#afb9b8d93ea0fc81868b8e02dd382a787" title="Get the target system of the flow." alt="" coords="243,107,354,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="155,81,229,100,228,105,154,86"/>
+</map>

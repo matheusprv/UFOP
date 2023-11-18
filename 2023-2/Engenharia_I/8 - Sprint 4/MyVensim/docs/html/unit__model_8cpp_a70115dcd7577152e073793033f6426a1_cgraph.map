@@ -1,0 +1,7 @@
+<map id="unit_Model_flowsBegin" name="unit_Model_flowsBegin">
+<area shape="rect" id="Node000001" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="5,31,159,57"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="227,5,337,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,32,211,25,212,30,159,37"/>
+<area shape="rect" id="Node000003" href="$class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492" title="Get the iterator pointing for the first item in the container." alt="" coords="207,56,357,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,51,191,55,191,60,159,56"/>
+</map>

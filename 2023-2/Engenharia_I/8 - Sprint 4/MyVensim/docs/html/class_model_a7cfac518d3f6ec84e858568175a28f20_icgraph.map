@@ -1,0 +1,17 @@
+<map id="Model::add" name="Model::add">
+<area shape="rect" id="Node000001" title="Add a flow to the model&#39;s container of flows." alt="" coords="664,56,749,83"/>
+<area shape="rect" id="Node000002" href="$unit__model_8cpp.html#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a" title="Unit test to check if a flow was successfully added into the container of flows." alt="" coords="454,5,595,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="648,56,615,47,575,35,576,30,616,41,649,51"/>
+<area shape="rect" id="Node000006" href="$unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="444,56,605,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="648,72,606,72,606,67,648,67"/>
+<area shape="rect" id="Node000007" href="$unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="433,107,616,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="649,88,616,97,576,109,575,104,615,92,648,83"/>
+<area shape="rect" id="Node000003" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,56,385,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="452,39,375,58,373,53,451,34"/>
+<area shape="rect" id="Node000004" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,56,199,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,72,199,72,199,67,232,67"/>
+<area shape="rect" id="Node000005" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="429,72,385,72,385,67,429,67"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="451,105,373,86,375,81,452,100"/>
+</map>

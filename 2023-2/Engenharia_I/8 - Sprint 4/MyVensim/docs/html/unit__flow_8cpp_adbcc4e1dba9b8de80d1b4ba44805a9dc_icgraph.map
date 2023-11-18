@@ -1,0 +1,11 @@
+<map id="floatingPointComparison" name="floatingPointComparison">
+<area shape="rect" id="Node000001" title="Compare two floating numbers and check if they equals by checking if their difference is no bigger th..." alt="" coords="659,5,820,32"/>
+<area shape="rect" id="Node000002" href="$unit__flow_8cpp.html#aeec411802718d90aceb08e34b4adc759" title="Unit test for method executeEquation()" alt="" coords="425,5,611,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="643,21,611,21,611,16,643,16"/>
+<area shape="rect" id="Node000003" href="$unit__flow_8cpp.html#a6683c1fa1a8445fa330116af20af24dc" title="Execute all unit tests." alt="" coords="247,5,377,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="410,21,378,21,378,16,410,16"/>
+<area shape="rect" id="Node000004" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,5,199,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,21,199,21,199,16,232,16"/>
+<area shape="rect" id="Node000005" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

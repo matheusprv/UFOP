@@ -1,0 +1,28 @@
+<map id="System::setValue" name="System::setValue">
+<area shape="rect" id="Node000001" title="Set the value of the flow." alt="" coords="860,157,985,184"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7" title="Run the model for a specified time range executing the function of the flows." alt="" coords="683,107,789,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="855,155,787,137,789,131,857,150"/>
+<area shape="rect" id="Node000011" href="$unit__system_8cpp.html#ac322ab5fd0cd1051b54ffab7177032e6" title="Make a unit test for the method etValue()" alt="" coords="660,183,812,209"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="845,184,813,188,812,183,844,179"/>
+<area shape="rect" id="Node000003" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="452,5,603,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="702,100,659,72,611,46,581,35,583,30,613,42,662,68,705,95"/>
+<area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 Wh..." alt="" coords="443,56,612,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="667,106,585,86,586,81,668,101"/>
+<area shape="rect" id="Node000006" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="451,107,604,133"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="667,123,604,123,604,117,667,117"/>
+<area shape="rect" id="Node000007" href="$unit__model_8cpp.html#a37286918320acd70d56642498fa32c18" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="473,157,582,184"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="668,139,583,160,582,155,667,134"/>
+<area shape="rect" id="Node000004" href="$funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="297,56,346,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="456,39,347,66,345,61,455,34"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="427,72,346,72,346,67,427,67"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="455,105,345,78,347,73,456,100"/>
+<area shape="rect" id="Node000008" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="252,157,390,184"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="457,173,391,173,391,168,457,168"/>
+<area shape="rect" id="Node000009" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,183,199,209"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="237,186,200,192,199,186,236,181"/>
+<area shape="rect" id="Node000010" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,183,55,209"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="87,199,55,199,55,193,87,193"/>
+<area shape="rect" id="Node000012" href="$unit__system_8cpp.html#a508d8501edd77719732fca2f7985d316" title="Execute all the unit tests." alt="" coords="247,208,395,235"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="645,204,396,219,396,214,644,199"/>
+<area shape="poly" id="edge14_Node000012_Node000009" title=" " alt="" coords="231,211,199,206,200,200,232,205"/>
+</map>

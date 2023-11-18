@@ -52,6 +52,13 @@ public:
     */
     virtual System& operator=(const System& system) = 0;
     /**
+     * @brief   Overload of operator == to compare two systems
+     * @param   s1 Object to be compared.
+     * @param   s2 Object to be compared.
+     * @return  True if they are equals. False otherwise
+    */
+    virtual bool operator==(const System& s1) const = 0;
+    /**
      * @brief   Overload of operator <<.
      * @param   out ostream reference that will display the system.
      * @param   system Object to be displayed.

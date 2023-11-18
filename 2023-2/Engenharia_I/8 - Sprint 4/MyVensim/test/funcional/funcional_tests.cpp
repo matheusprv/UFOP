@@ -28,7 +28,6 @@ void exponentialFuncionalTest(){
     delete exponencial;
     delete pop1;
     delete pop2;
-
 }
 
 void logisticalFuncionalTest(){

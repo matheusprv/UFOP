@@ -21,7 +21,7 @@ SystemImpl :: SystemImpl(const double& value){
     this->value = value;
 }
 
-SystemImpl :: SystemImpl (SystemImpl & system){
+SystemImpl :: SystemImpl (System & system){
     this->name = system.getName();
     this->value = system.getValue();
 }
@@ -52,6 +52,12 @@ System& SystemImpl :: operator=(const System& system){
     value = system.getValue();
 
     return *this;
+}
+
+bool SystemImpl :: operator==(const System& s1) const{
+    if( name != s1.getName()) return false;
+    if( value != s1.getValue()) return false;
+    return true;
 }
 
 ostream & operator << (ostream & out, const SystemImpl & system){

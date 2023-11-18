@@ -5,9 +5,9 @@
 #include <math.h>
 using namespace std;
 
-#include "Flows/FlowComplexo.h"
-#include "Flows/FlowLogistico.h"
-#include "Flows/FlowExponencial.h"
+#include "../Flows/FlowComplexo.h"
+#include "../Flows/FlowLogistico.h"
+#include "../Flows/FlowExponencial.h"
 
 #include "../../src/ModelImpl.h"
 #include "../../src/SystemImpl.h"

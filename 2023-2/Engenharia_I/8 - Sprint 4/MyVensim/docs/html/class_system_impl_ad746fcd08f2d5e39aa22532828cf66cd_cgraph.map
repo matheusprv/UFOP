@@ -1,0 +1,7 @@
+<map id="SystemImpl::operator=" name="SystemImpl::operator=">
+<area shape="rect" id="Node000001" title="Overload of operator equals to copy a SystemImpl." alt="" coords="5,31,159,57"/>
+<area shape="rect" id="Node000002" href="$class_system.html#ab4f23c21832d6bbef462a5a20b296912" title="Get the name of the system." alt="" coords="207,5,333,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,31,191,27,191,32,160,36"/>
+<area shape="rect" id="Node000003" href="$class_system.html#a41b673faa6c199eb8e4f204639fab4f2" title="Get the value of the system." alt="" coords="207,56,333,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,52,192,56,191,61,159,57"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="complexFuncionalTest" name="complexFuncionalTest">
+<area shape="rect" id="Node000001" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="5,81,157,108"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="231,5,340,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,78,204,42,223,35,225,40,206,46,115,83"/>
+<area shape="rect" id="Node000003" href="$funcional__tests_8cpp.html#adbcc4e1dba9b8de80d1b4ba44805a9dc" title="Compare two floating numbers and check if they equals by checking if their difference is no bigger th..." alt="" coords="205,56,366,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,83,189,79,189,84,157,88"/>
+<area shape="rect" id="Node000004" href="$class_system.html#a41b673faa6c199eb8e4f204639fab4f2" title="Get the value of the system." alt="" coords="414,107,539,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="157,97,399,112,398,118,157,102"/>
+<area shape="rect" id="Node000005" href="$class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7" title="Run the model for a specified time range executing the function of the flows." alt="" coords="232,157,339,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="120,106,234,149,232,154,118,111"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="338,154,408,135,409,140,339,159"/>
+<area shape="rect" id="Node000006" href="$class_system.html#afc591b66c17ddcd2d0a5421f66750d2c" title="Set the value of the flow." alt="" coords="414,157,539,184"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="339,168,398,168,398,173,339,173"/>
+</map>

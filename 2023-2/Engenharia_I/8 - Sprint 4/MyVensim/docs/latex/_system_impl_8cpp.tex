@@ -1,0 +1,43 @@
+\doxysection{src/\+System\+Impl.cpp File Reference}
+\hypertarget{_system_impl_8cpp}{}\label{_system_impl_8cpp}\index{src/SystemImpl.cpp@{src/SystemImpl.cpp}}
+{\ttfamily \#include "{}System\+Impl.\+h"{}}\newline
+Include dependency graph for System\+Impl.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{_system_impl_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{_system_impl_8cpp_a99966aa6748f5d66114340d003523f63}{operator$<$$<$}} (ostream \&out, const \mbox{\hyperlink{class_system_impl}{System\+Impl}} \&system)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_system_impl_8cpp_a99966aa6748f5d66114340d003523f63}\label{_system_impl_8cpp_a99966aa6748f5d66114340d003523f63} 
+\index{SystemImpl.cpp@{SystemImpl.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!SystemImpl.cpp@{SystemImpl.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_system_impl}{System\+Impl}} \&}]{system }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & ostream reference that will display the system. \\
+\hline
+{\em system} & Object to be displayed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream with the system display format. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}Name:\ "{}}\ <<\ system.\mbox{\hyperlink{class_system_impl_a4407f82b905d49335f76c4a18fbfef8d}{getName}}()\ <<\ \textcolor{stringliteral}{"{},\ Value:\ "{}}\ <<\ system.\mbox{\hyperlink{class_system_impl_aa21b5abc7021e73715c06449fea9e08f}{getValue}}()\ <<\ endl;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{00066\ \}}
+
+\end{DoxyCode}

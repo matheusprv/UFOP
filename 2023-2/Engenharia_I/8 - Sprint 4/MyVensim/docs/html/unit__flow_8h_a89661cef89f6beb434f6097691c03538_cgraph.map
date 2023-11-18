@@ -1,0 +1,5 @@
+<map id="unit_Flow_getTarget" name="unit_Flow_getTarget">
+<area shape="rect" id="Node000001" title="Unit test for method getTarget()" alt="" coords="5,5,143,32"/>
+<area shape="rect" id="Node000002" href="$class_flow.html#afb9b8d93ea0fc81868b8e02dd382a787" title="Get the target system of the flow." alt="" coords="191,5,301,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,16,175,16,175,21,143,21"/>
+</map>

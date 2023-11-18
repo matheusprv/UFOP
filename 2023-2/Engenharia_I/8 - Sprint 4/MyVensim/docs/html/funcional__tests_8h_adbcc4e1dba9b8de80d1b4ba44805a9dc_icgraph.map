@@ -1,0 +1,21 @@
+<map id="floatingPointComparison" name="floatingPointComparison">
+<area shape="rect" id="Node000001" title="Compare two floating numbers and check if they equals by checking if their difference is no bigger th..." alt="" coords="659,81,820,108"/>
+<area shape="rect" id="Node000002" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="442,5,594,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="691,77,610,47,572,35,574,30,612,41,693,72"/>
+<area shape="rect" id="Node000004" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 Wh..." alt="" coords="434,56,602,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="643,86,602,82,603,76,644,81"/>
+<area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="441,107,595,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="644,108,595,114,595,109,643,103"/>
+<area shape="rect" id="Node000006" href="$unit__flow_8cpp.html#aeec411802718d90aceb08e34b4adc759" title="Unit test for method executeEquation()" alt="" coords="425,157,611,184"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="693,117,612,148,574,159,572,154,610,143,691,112"/>
+<area shape="rect" id="Node000003" href="$funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="288,56,337,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="447,39,338,66,336,61,445,34"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="418,72,337,72,337,67,418,67"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="445,105,336,78,338,73,447,100"/>
+<area shape="rect" id="Node000007" href="$unit__flow_8cpp.html#a6683c1fa1a8445fa330116af20af24dc" title="Execute all unit tests." alt="" coords="247,157,377,184"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="410,173,378,173,378,168,410,168"/>
+<area shape="rect" id="Node000008" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,157,199,184"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="232,173,199,173,199,168,232,168"/>
+<area shape="rect" id="Node000009" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,157,55,184"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="87,173,55,173,55,168,87,168"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="unit_Model_add_system" name="unit_Model_add_system">
+<area shape="rect" id="Node000001" title="Unit test to check if a flow was successfully added into the container of systems." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="216,5,325,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,16,200,16,200,21,168,21"/>
+</map>
