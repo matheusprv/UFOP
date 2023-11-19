@@ -1,0 +1,9 @@
+<map id="FlowImpl::operator==" name="FlowImpl::operator==">
+<area shape="rect" id="Node000001" title="Overload of operator == to compare two Flow." alt="" coords="5,56,149,83"/>
+<area shape="rect" id="Node000002" href="$class_flow.html#aa91a8025b6dbb27ee5137c7c9ad0c564" title="Get the name of the flow." alt="" coords="200,5,309,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,53,190,34,191,39,127,58"/>
+<area shape="rect" id="Node000003" href="$class_flow.html#abf0f3dbb285fe82e5ba6449de06b97c8" title="Get the source system of the flow." alt="" coords="197,56,312,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,67,181,67,181,72,149,72"/>
+<area shape="rect" id="Node000004" href="$class_flow.html#afb9b8d93ea0fc81868b8e02dd382a787" title="Get the target system of the flow." alt="" coords="199,107,310,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="127,81,191,99,190,105,126,86"/>
+</map>

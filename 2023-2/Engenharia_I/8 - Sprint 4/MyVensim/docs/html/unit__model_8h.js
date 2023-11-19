@@ -4,7 +4,7 @@ var unit__model_8h =
     [ "unit_getName", "unit__model_8h.html#adc98c33e4754d8fbc7ac6f4c304fc1ca", null ],
     [ "unit_Model_add_flow", "unit__model_8h.html#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a", null ],
     [ "unit_Model_add_system", "unit__model_8h.html#ab3a10b6e696b6a91d6c33dcbb18aceb4", null ],
-    [ "unit_Model_constructor_empty", "unit__model_8h.html#a663a2431dd744af11e546e0262f6c94c", null ],
+    [ "unit_Model_constructor_default", "unit__model_8h.html#aef9d3af61dfc50dcbd295ee49b77e704", null ],
     [ "unit_Model_constructor_name", "unit__model_8h.html#a73a3b2f94a5ddae65bdb3761c8e2cb91", null ],
     [ "unit_Model_destrucotr", "unit__model_8h.html#ad01aeb5b55b08bf32359b2c0480fea08", null ],
     [ "unit_Model_flowsBegin", "unit__model_8h.html#a70115dcd7577152e073793033f6426a1", null ],

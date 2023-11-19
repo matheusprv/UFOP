@@ -1,9 +1,0 @@
-<map id="FlowImpl::FlowImpl" name="FlowImpl::FlowImpl">
-<area shape="rect" id="Node000001" title="Copy constructor for the Flow class." alt="" coords="5,56,137,83"/>
-<area shape="rect" id="Node000002" href="$class_flow_impl.html#a63453811afa24e0799e54e22161738a8" title="Get the name of the flow." alt="" coords="188,5,321,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,53,188,34,189,39,123,58"/>
-<area shape="rect" id="Node000003" href="$class_flow_impl.html#a54940323059d2c4158f4146080841f32" title="Get the source system of the flow." alt="" coords="185,56,324,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,67,169,67,169,72,137,72"/>
-<area shape="rect" id="Node000004" href="$class_flow_impl.html#ab07923bc230308cd949f627a92901bca" title="Get the target system of the flow." alt="" coords="187,107,322,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="123,81,189,99,188,105,121,86"/>
-</map>

@@ -51,7 +51,7 @@ public:
      * @brief   Copy constructor for the Flow class.
      * @param   flow  Flow object to be copied.
     */
-    FlowImpl(FlowImpl& flow);
+    FlowImpl(Flow& flow);
 
     /**
      * @brief   Virtual destructor for the Flow class.
@@ -102,6 +102,13 @@ public:
      * @return  Reference to the copied Flow.
     */
     Flow& operator=(const Flow& flow);
+
+    /**
+     * @brief   Overload of operator == to compare two Flow
+     * @param   flow Object to be compared.
+     * @return  True if they are equals. False otherwise
+    */
+   bool operator==(const Flow& flow) const;
 
     /**
      * @brief   Pure virtual function to execute the flow equation.

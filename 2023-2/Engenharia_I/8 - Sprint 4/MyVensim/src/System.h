@@ -54,7 +54,6 @@ public:
     /**
      * @brief   Overload of operator == to compare two systems
      * @param   s1 Object to be compared.
-     * @param   s2 Object to be compared.
      * @return  True if they are equals. False otherwise
     */
     virtual bool operator==(const System& s1) const = 0;

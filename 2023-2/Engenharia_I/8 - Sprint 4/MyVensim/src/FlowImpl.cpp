@@ -21,7 +21,7 @@ FlowImpl :: FlowImpl(System * source, System * target){
     this->target = target;
 }
 
-FlowImpl :: FlowImpl(FlowImpl & flow){
+FlowImpl :: FlowImpl(Flow& flow){
     this->name = flow.getName();
     this->source = flow.getSource();
     this->target = flow.getTarget();
@@ -61,4 +61,11 @@ Flow& FlowImpl :: operator=(const Flow& flow){
     this->target = flow.getTarget();
 
     return *this;
+}
+
+bool FlowImpl :: operator==(const Flow& flow) const{
+    if(name != flow.getName()) return false;
+    if(source != flow.getSource()) return false;
+    if(target != flow.getTarget()) return false;
+    return true;
 }

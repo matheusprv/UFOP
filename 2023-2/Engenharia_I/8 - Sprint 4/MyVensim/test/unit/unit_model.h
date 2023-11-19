@@ -12,7 +12,7 @@
 /**
  * @brief Unit test for an empty constructor of model
 */
-void unit_Model_constructor_empty();
+void unit_Model_constructor_default();
 /**
  * @brief Unit test for a constructor with name of the model
 */

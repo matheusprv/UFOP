@@ -6,6 +6,7 @@ var class_flow =
     [ "getSource", "class_flow.html#abf0f3dbb285fe82e5ba6449de06b97c8", null ],
     [ "getTarget", "class_flow.html#afb9b8d93ea0fc81868b8e02dd382a787", null ],
     [ "operator=", "class_flow.html#a1fd4ebe3ee5eb7efb6cbe11c9ce419f6", null ],
+    [ "operator==", "class_flow.html#ad214c3b7f56ef1a8bb2c09cb6072915a", null ],
     [ "setName", "class_flow.html#a719883d550abcfcb9dfcd4a7e1b86443", null ],
     [ "setSource", "class_flow.html#a42ce99a961622788ae59bb73abad3bb3", null ],
     [ "setTarget", "class_flow.html#a6121cf6e400af1aa8b4c9f9f2dc8e68b", null ]

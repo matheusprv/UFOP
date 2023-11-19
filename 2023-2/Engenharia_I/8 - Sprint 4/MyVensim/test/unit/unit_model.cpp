@@ -1,6 +1,6 @@
 #include "unit_model.h"
 
-void unit_Model_constructor_empty(){
+void unit_Model_constructor_default(){
     Model * model = new ModelImpl();
 
     assert(model->getName() == "");
@@ -275,7 +275,7 @@ void unit_Model_run(){
 }
 
 void run_unit_test_Model(){
-    unit_Model_constructor_empty();
+    unit_Model_constructor_default();
     unit_Model_constructor_name();
     unit_Model_destrucotr();
     unit_getName();

@@ -1,9 +1,7 @@
 <map id="unit_Flow_execute_equation" name="unit_Flow_execute_equation">
-<area shape="rect" id="Node000001" title="Unit test for method executeEquation()" alt="" coords="5,56,191,83"/>
+<area shape="rect" id="Node000001" title="Unit test for method executeEquation()" alt="" coords="5,31,191,57"/>
 <area shape="rect" id="Node000002" href="$class_flow_complexo.html#a306918ddd1858e9473b641e7a65aa65a" title="Execute the equation of the flow." alt="" coords="239,5,450,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,53,261,33,262,38,167,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,32,223,28,223,34,191,37"/>
 <area shape="rect" id="Node000003" href="$class_flow.html#aa72cd33b5f91e59e84afbf2800b8e71d" title="Pure virtual function to execute the flow equation." alt="" coords="268,56,421,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,67,252,67,252,72,191,72"/>
-<area shape="rect" id="Node000004" href="$unit__flow_8cpp.html#adbcc4e1dba9b8de80d1b4ba44805a9dc" title="Compare two floating numbers and check if they equals by checking if their difference is no bigger th..." alt="" coords="264,107,425,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,81,262,100,261,106,166,86"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,51,252,57,252,63,191,56"/>
 </map>

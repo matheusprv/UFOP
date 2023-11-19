@@ -1,11 +1,6 @@
 #include "unit_flow.h"
 
-bool floatingPointComparison(double n1, double n2){   
-    return round(fabs(n1 * 1e4 - n2 * 1e4)) < 1;
-}
-
-
-void unit_Flow_constructor_empty(){
+void unit_Flow_constructor_default(){
     //Flow complexo
     Flow * flowComplexo = new FlowComplexo();
     assert(flowComplexo->getName() == "");
@@ -102,6 +97,37 @@ void unit_Flow_constructor_source_target(){
     assert(flowLogistico->getSource() == s1);
     assert(flowLogistico->getTarget() == s2);
     delete flowLogistico;
+
+    delete s1;
+    delete s2;
+}
+void unit_Flow_constructor_copy(){
+    System * s1 = new SystemImpl("S1", 100.0);
+    System * s2 = new SystemImpl("S2", 0.0);
+
+    //Flow complexo
+    Flow * flowComplexo = new FlowComplexo(s1, s2);
+    Flow * complexoCopy = new FlowComplexo(*flowComplexo);
+    assert(flowComplexo != complexoCopy);
+    assert((*flowComplexo) == (*complexoCopy));
+    delete flowComplexo;
+    delete complexoCopy;
+
+    //Flow Exponencial
+    Flow * flowExponencial = new FlowExponencial(s1, s2);
+    Flow * exponencialCopy = new FlowExponencial(*flowExponencial);
+    assert(flowExponencial != exponencialCopy);
+    assert((*flowExponencial) == (*exponencialCopy));
+    delete flowExponencial;
+    delete exponencialCopy;
+
+    //Flow Logistico
+    Flow * flowLogistico = new FlowLogistico(s1, s2);
+    Flow * logisticoCopy = new FlowLogistico(*flowLogistico);
+    assert(flowLogistico != logisticoCopy);
+    assert((*flowLogistico) == (*logisticoCopy));
+    delete flowLogistico;
+    delete logisticoCopy;
 
     delete s1;
     delete s2;
@@ -243,6 +269,32 @@ void unit_Flow_setName(){
     delete flowExponencial;
 }
 
+void unit_Flow_operator_equals(){
+    System * s1 = new SystemImpl("S1", 100.0);
+    System * s2 = new SystemImpl("S2", 0.0);
+
+    //Flow complexo
+    Flow * flowComplexo = new FlowComplexo(s1, s2);
+    Flow * complexoCopy = flowComplexo;
+    assert(flowComplexo == complexoCopy);
+    delete flowComplexo;
+
+    //Flow Exponencial
+    Flow * flowExponencial = new FlowExponencial(s1, s2);
+    Flow * exponencialCopy = flowExponencial;
+    assert(flowExponencial == exponencialCopy);
+    delete flowExponencial;
+
+    //Flow Logistico
+    Flow * flowLogistico = new FlowLogistico(s1, s2);
+    Flow * logisticoCopy = flowLogistico;
+    assert(flowLogistico == logisticoCopy);
+    delete flowLogistico;
+
+    delete s1;
+    delete s2;
+}
+
 void unit_Flow_execute_equation(){
     //Flow complexo
     System * Q1 = new SystemImpl("Q1", 100.0); 
@@ -294,7 +346,7 @@ void unit_Flow_execute_equation(){
     System * pop2 = new SystemImpl("pop2", 0);
     Flow * flowComplexo = new FlowComplexo("F1", pop1, pop2);
     double result = flowComplexo->executeEquation();
-    assert(floatingPointComparison(result, 1));
+    assert(round(fabs(result * 1e4 - 1 * 1e4)) < 1);
 
     delete pop1;
     delete pop2;
@@ -304,7 +356,7 @@ void unit_Flow_execute_equation(){
     System * p1 = new SystemImpl("p1", 100.0);
     System * p2 = new SystemImpl("p2", 10.0);
     Flow * flowLogistico = new FlowLogistico("F1", p1, p2);
-    assert(floatingPointComparison(flowLogistico->executeEquation(), 0.0857));
+    assert(round(fabs(flowLogistico->executeEquation() * 1e4 - 0.0857 * 1e4)) < 1);
 
     delete flowLogistico;
     delete p1;
@@ -312,10 +364,11 @@ void unit_Flow_execute_equation(){
 }
 
 void run_unit_test_Flow(){
-    unit_Flow_constructor_empty();
+    unit_Flow_constructor_default();
     unit_Flow_constructor_complete();
     unit_Flow_constructor_name();
     unit_Flow_constructor_source_target();
+    unit_Flow_constructor_copy();
     unit_Flow_destructor();
     unit_Flow_getSource();
     unit_Flow_setSource();
@@ -323,5 +376,6 @@ void run_unit_test_Flow(){
     unit_Flow_setTarget();
     unit_Flow_getName();
     unit_Flow_setName();
+    unit_Flow_operator_equals();
     unit_Flow_execute_equation();
 }

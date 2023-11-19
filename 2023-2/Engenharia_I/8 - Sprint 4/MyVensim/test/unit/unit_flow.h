@@ -12,9 +12,9 @@
 #include <assert.h>
 
 /**
- * @brief Unit test for Flow's empty constructor
+ * @brief Unit test for Flow's default constructor
 */
-void unit_Flow_constructor_empty();
+void unit_Flow_constructor_default();
 /**
  * @brief Unit test for Flow's constructor
 */
@@ -27,6 +27,10 @@ void unit_Flow_constructor_name();
  * @brief Unit test for Flow's constructor with source and target
 */
 void unit_Flow_constructor_source_target();
+/**
+ * @brief Unit test for Flow's copy constructor
+*/
+void unit_Flow_constructor_copy();
 /**
  * @brief Unit test for Flow's destructor
 */
@@ -59,6 +63,11 @@ void unit_Flow_setName();
  * @brief Unit test for method executeEquation()
 */
 void unit_Flow_execute_equation();
+
+/**
+ * @brief Unit test for the overload of the = operator
+*/
+void unit_Flow_operator_equals();
 
 /**
  * @brief Execute all unit tests

@@ -3,16 +3,16 @@ teste_funcional: Flow.o Model.o System.o FlowComplexo.o FlowExponencial.o FlowLo
 
 
 testes_unitarios: Flow.o Model.o System.o FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp
-	g++ Flow.o FlowComplexo.o FlowExponencial.o FlowLogistico.o Model.o System.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp  -o teste_unitario -Wall -g
+	g++ Flow.o FlowComplexo.o FlowExponencial.o FlowLogistico.o Model.o System.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp  -o testes_unitarios -Wall -g
 	
 
-Flow.o: ../src/FlowImpl.cpp ../src/FlowImpl.h
+Flow.o: ../src/FlowImpl.cpp ../src/Flow.h ../src/FlowImpl.h
 	g++ -c ../src/FlowImpl.cpp -o Flow.o -Wall -g
 
-Model.o: ../src/ModelImpl.cpp ../src/ModelImpl.h
+Model.o: ../src/ModelImpl.cpp ../src/Model.h ../src/ModelImpl.h
 	g++ -c ../src/ModelImpl.cpp -o Model.o -Wall -g
 
-System.o: ../src/SystemImpl.cpp ../src/SystemImpl.h
+System.o: ../src/SystemImpl.cpp ../src/System.h ../src/SystemImpl.h
 	g++ -c ../src/SystemImpl.cpp -o System.o -Wall -g
 
 
