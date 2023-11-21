@@ -1,11 +1,8 @@
 #ifndef SYSTEMIMPL_H
 #define SYSTEMIMPL_H
 
-#include <string>
-#include <iostream>
 #include "System.h"
 
-using namespace std;
 /**
 * @brief   Definition of class SystemImpl, which represents the current value of the system
 */

@@ -1,42 +1,39 @@
 <map id="ModelImpl::add" name="ModelImpl::add">
-<area shape="rect" id="Node000001" title="Add a flow to the model&#39;s container of flows." alt="" coords="650,259,759,285"/>
+<area shape="rect" id="Node000001" title="Add a flow to the model&#39;s container of flows." alt="" coords="650,233,759,260"/>
 <area shape="rect" id="Node000002" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="442,5,593,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="696,244,685,200,667,147,639,93,621,68,600,46,583,35,586,30,603,42,625,64,643,90,672,145,690,199,701,243"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="694,219,682,180,663,133,636,86,600,46,582,35,585,30,603,42,640,83,668,131,687,178,699,218"/>
 <area shape="rect" id="Node000004" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 Wh..." alt="" coords="433,56,602,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="692,245,679,211,659,171,633,131,600,97,581,86,584,81,603,93,637,127,664,168,684,209,697,243"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="689,220,655,158,630,125,600,97,580,86,583,81,603,93,634,121,660,155,694,218"/>
 <area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="441,107,594,133"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="686,247,651,196,627,170,600,148,578,136,581,132,603,143,631,166,655,193,690,244"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="682,223,646,184,600,148,576,136,579,132,603,143,650,180,686,219"/>
 <area shape="rect" id="Node000006" href="$unit__model_8cpp.html#ab3a10b6e696b6a91d6c33dcbb18aceb4" title="Unit test to check if a flow was successfully added into the container of systems." alt="" coords="436,157,599,184"/>
-<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="675,250,641,223,600,198,573,187,575,182,603,194,644,219,678,246"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="664,228,601,198,568,187,570,182,603,194,666,223"/>
 <area shape="rect" id="Node000010" href="$unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="441,208,594,235"/>
-<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="637,257,569,238,570,233,639,252"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="634,240,594,234,595,229,635,235"/>
 <area shape="rect" id="Node000011" href="$unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7" title="Unit test to check if the end is the element after the last one in flows container." alt="" coords="446,259,589,285"/>
-<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="634,275,590,275,590,269,634,269"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="635,259,590,265,589,260,634,253"/>
 <area shape="rect" id="Node000012" href="$unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="444,309,591,336"/>
-<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="639,292,570,311,569,306,637,287"/>
-<area shape="rect" id="Node000013" href="$unit__model_8cpp.html#a37286918320acd70d56642498fa32c18" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="463,360,572,387"/>
-<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="678,298,644,325,603,350,573,362,571,357,600,346,641,321,675,294"/>
-<area shape="rect" id="Node000014" href="$unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d" title="Unit test to check if the begin is the first element of the system container." alt="" coords="434,411,601,437"/>
-<area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="690,300,655,351,631,378,603,401,581,412,578,408,600,396,627,374,651,348,686,297"/>
-<area shape="rect" id="Node000015" href="$unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="439,461,596,488"/>
-<area shape="poly" id="edge21_Node000001_Node000015" title=" " alt="" coords="697,301,684,335,664,376,637,417,603,451,584,463,581,458,600,447,633,413,659,373,679,333,692,299"/>
-<area shape="rect" id="Node000016" href="$unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="437,512,598,539"/>
-<area shape="poly" id="edge23_Node000001_Node000016" title=" " alt="" coords="701,301,690,345,672,399,643,454,625,480,603,502,586,514,583,509,600,498,621,476,639,451,667,397,685,344,696,300"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="666,270,603,300,570,311,568,306,601,295,664,265"/>
+<area shape="rect" id="Node000013" href="$unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d" title="Unit test to check if the begin is the first element of the system container." alt="" coords="434,360,601,387"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="686,274,650,313,603,350,579,362,576,357,600,346,646,309,682,270"/>
+<area shape="rect" id="Node000014" href="$unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="439,411,596,437"/>
+<area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="694,275,660,338,634,372,603,401,583,412,580,408,600,397,630,368,655,336,689,273"/>
+<area shape="rect" id="Node000015" href="$unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="437,461,598,488"/>
+<area shape="poly" id="edge21_Node000001_Node000015" title=" " alt="" coords="699,276,687,315,668,362,640,410,603,451,585,463,582,458,600,447,636,407,663,360,682,313,694,274"/>
 <area shape="rect" id="Node000003" href="$funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="292,56,341,83"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="447,39,342,66,340,61,446,34"/>
 <area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="418,72,341,72,341,67,418,67"/>
 <area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="446,105,340,78,342,73,447,100"/>
-<area shape="rect" id="Node000007" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,335,385,361"/>
-<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="442,193,435,198,397,231,366,270,326,336,322,333,362,267,394,228,432,194,440,189"/>
-<area shape="rect" id="Node000008" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,335,199,361"/>
-<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="232,351,199,351,199,345,232,345"/>
-<area shape="rect" id="Node000009" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,335,55,361"/>
-<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="87,351,55,351,55,345,87,345"/>
-<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="446,243,435,249,403,270,375,293,332,336,328,332,371,289,400,265,432,244,444,238"/>
-<area shape="poly" id="edge14_Node000011_Node000007" title=" " alt="" coords="454,293,434,300,348,337,346,332,432,295,452,288"/>
-<area shape="poly" id="edge16_Node000012_Node000007" title=" " alt="" coords="429,336,386,342,385,337,429,331"/>
-<area shape="poly" id="edge18_Node000013_Node000007" title=" " alt="" coords="447,367,386,359,386,354,448,362"/>
-<area shape="poly" id="edge20_Node000014_Node000007" title=" " alt="" coords="452,408,432,401,346,364,348,359,434,396,454,403"/>
-<area shape="poly" id="edge22_Node000015_Node000007" title=" " alt="" coords="444,458,432,452,400,431,371,407,328,364,332,360,375,403,403,426,435,447,446,453"/>
-<area shape="poly" id="edge24_Node000016_Node000007" title=" " alt="" coords="440,507,432,502,394,468,362,429,322,363,326,360,366,426,397,465,435,498,442,503"/>
+<area shape="rect" id="Node000007" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,309,385,336"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="444,193,435,198,400,225,370,256,328,311,324,307,366,253,397,221,432,194,441,188"/>
+<area shape="rect" id="Node000008" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,309,199,336"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="232,325,199,325,199,320,232,320"/>
+<area shape="rect" id="Node000009" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,309,55,336"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="87,325,55,325,55,320,87,320"/>
+<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="450,243,435,249,380,280,337,311,333,307,377,276,432,244,448,238"/>
+<area shape="poly" id="edge14_Node000011_Node000007" title=" " alt="" coords="447,292,373,311,371,306,446,287"/>
+<area shape="poly" id="edge16_Node000012_Node000007" title=" " alt="" coords="429,325,385,325,385,320,429,320"/>
+<area shape="poly" id="edge18_Node000013_Node000007" title=" " alt="" coords="446,358,371,339,373,334,447,353"/>
+<area shape="poly" id="edge20_Node000014_Node000007" title=" " alt="" coords="448,408,432,401,377,370,333,339,337,334,380,365,435,396,450,403"/>
+<area shape="poly" id="edge22_Node000015_Node000007" title=" " alt="" coords="441,457,432,452,397,424,366,393,324,338,328,335,370,389,400,420,435,447,444,452"/>
 </map>

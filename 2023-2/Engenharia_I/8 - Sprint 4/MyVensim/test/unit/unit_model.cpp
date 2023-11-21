@@ -254,24 +254,12 @@ void unit_Model_remove_system(){
 
 void unit_Model_run(){
     ModelImpl model ("Sistema Exponencial");
-    
-    System * pop1 = new SystemImpl("pop1", 100.0);
-    System * pop2 = new SystemImpl("pop2", 0.0);
-
-    FlowExponencial * exponencial = new FlowExponencial("exponencial", pop1, pop2);
-
-    model.add(pop1);
-    model.add(pop2);
-    model.add(exponencial);
 
     assert(model.run(0, 100));
     assert(!model.run(101, 100));
     assert(!model.run(-20, 100));
     assert(!model.run(-200, -100));
-
-    delete exponencial;
-    delete pop1;
-    delete pop2;
+    
 }
 
 void run_unit_test_Model(){

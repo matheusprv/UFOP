@@ -2,11 +2,7 @@
 #ifndef FLOWIMPL_H
 #define FLOWIMPL_H
 
-#include "SystemImpl.h"
 #include "Flow.h"
-
-#include <string>
-using namespace std;
 
 /**
 * @brief   Definition of class Flow, which represents a conection between two systems.

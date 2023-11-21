@@ -1,10 +1,7 @@
 #ifndef MODELIMPL_H
 #define MODELIMPL_H
 
-#include "System.h"
-#include "Flow.h"
 #include "Model.h"
-#include <vector>
 
 /**
 * @brief   Definition of class ModelImpl, which represents the model to be executed.

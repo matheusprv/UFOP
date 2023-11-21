@@ -98,7 +98,8 @@ bool ModelImpl :: run(int initial_time, int final_time){
     
     // Executando o modelo
     flowsIterator flowIt;
-    for(int time = initial_time; time < final_time; time++){
+    int time;
+    for(time = initial_time; time < final_time; time++){
         
         flowIt = flowsBegin();
 
@@ -120,7 +121,7 @@ bool ModelImpl :: run(int initial_time, int final_time){
 
     }
 
-    return true;
+    return time == final_time;
 }
 
 void ModelImpl :: show(){

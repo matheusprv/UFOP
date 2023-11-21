@@ -1,11 +1,9 @@
 <map id="unit_Model_run" name="unit_Model_run">
 <area shape="rect" id="Node000001" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="5,31,115,57"/>
-<area shape="rect" id="Node000002" href="$class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="163,5,272,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,33,147,27,148,33,115,38"/>
-<area shape="rect" id="Node000003" href="$class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7" title="Run the model for a specified time range executing the function of the flows." alt="" coords="164,56,271,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,50,150,56,149,61,115,55"/>
-<area shape="rect" id="Node000004" href="$class_system.html#a41b673faa6c199eb8e4f204639fab4f2" title="Get the value of the system." alt="" coords="320,31,445,57"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="271,59,304,53,305,59,271,64"/>
-<area shape="rect" id="Node000005" href="$class_system.html#afc591b66c17ddcd2d0a5421f66750d2c" title="Set the value of the flow." alt="" coords="320,81,445,108"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="271,75,305,80,304,85,271,80"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7" title="Run the model for a specified time range executing the function of the flows." alt="" coords="163,31,269,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,41,147,41,147,47,115,47"/>
+<area shape="rect" id="Node000003" href="$class_system.html#a41b673faa6c199eb8e4f204639fab4f2" title="Get the value of the system." alt="" coords="317,5,442,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,33,301,28,302,33,270,38"/>
+<area shape="rect" id="Node000004" href="$class_system.html#afc591b66c17ddcd2d0a5421f66750d2c" title="Set the value of the flow." alt="" coords="317,56,442,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="270,50,302,55,301,60,269,55"/>
 </map>
