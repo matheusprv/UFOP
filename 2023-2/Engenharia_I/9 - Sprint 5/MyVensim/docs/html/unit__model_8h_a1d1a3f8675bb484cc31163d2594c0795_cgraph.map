@@ -1,0 +1,11 @@
+<map id="unit_Model_systemEnd" name="unit_Model_systemEnd">
+<area shape="rect" id="Node000001" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="5,81,163,108"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="238,5,348,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,78,210,41,229,35,231,40,212,47,118,83"/>
+<area shape="rect" id="Node000003" href="$class_model_impl.html#a9ac06e337a6f2b114a334112b1aa5818" title="Get the iterator pointing for the first item in the container." alt="" coords="211,56,375,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,82,195,79,195,84,164,88"/>
+<area shape="rect" id="Node000004" href="$class_model_impl.html#af633f7f0976a01150ada93977963e539" title="Get the iterator pointing for the last item in the container." alt="" coords="216,107,370,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="164,102,201,106,200,111,163,107"/>
+<area shape="rect" id="Node000005" href="$class_model_impl.html#ad95b31c43021dec4c4b67cb74a2dc138" title="Return the number of items in systems&#39; container." alt="" coords="211,157,375,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="118,106,212,143,231,150,229,155,210,148,117,111"/>
+</map>

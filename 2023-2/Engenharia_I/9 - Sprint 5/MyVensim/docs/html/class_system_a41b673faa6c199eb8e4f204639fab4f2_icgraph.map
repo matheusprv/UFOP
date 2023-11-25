@@ -1,0 +1,49 @@
+<map id="System::getValue" name="System::getValue">
+<area shape="rect" id="Node000001" title="Get the value of the system." alt="" coords="876,309,1001,336"/>
+<area shape="rect" id="Node000002" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="653,5,805,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="932,294,923,241,905,174,891,139,873,105,852,73,826,46,804,32,806,28,830,42,856,70,878,102,896,137,910,172,928,240,937,294"/>
+<area shape="rect" id="Node000004" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 Wh..." alt="" coords="645,56,813,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="929,295,917,250,897,197,867,143,848,118,826,97,808,86,811,81,830,93,852,115,872,140,902,195,922,249,934,293"/>
+<area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="652,107,806,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="925,296,911,261,890,221,861,181,826,147,805,136,807,131,830,143,866,178,894,218,916,259,930,294"/>
+<area shape="rect" id="Node000006" href="$class_system_impl.html#ad746fcd08f2d5e39aa22532828cf66cd" title="Overload of operator equals to copy a SystemImpl." alt="" coords="652,157,806,184"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="919,298,881,246,855,220,827,198,803,187,805,182,829,194,859,216,885,243,924,294"/>
+<area shape="rect" id="Node000007" href="$class_system_impl.html#aeae15485fb4cc1c62d20a7bbc2e105f5" title="Overload of operator == to compare two systems." alt="" coords="648,208,810,235"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="908,301,871,274,827,249,796,238,798,233,829,244,874,270,911,297"/>
+<area shape="rect" id="Node000008" href="$class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7" title="Run the model for a specified time range executing the function of the flows." alt="" coords="676,259,782,285"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="865,308,782,287,783,282,866,302"/>
+<area shape="rect" id="Node000013" href="$class_system_impl.html#a5353c771f99c85eaaf60c556fc718f7c" title="Copy constructor for the SystemImpl class." alt="" coords="645,309,813,336"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="861,325,813,325,813,320,861,320"/>
+<area shape="rect" id="Node000014" href="$unit__system_8cpp.html#a119239607b00029c8eb7cc7b71313fec" title="Make a unit test for the default constructor." alt="" coords="646,360,812,403"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="874,343,808,362,807,357,873,338"/>
+<area shape="rect" id="Node000016" href="$unit__system_8cpp.html#a38d58772ba0448f93ae3cf4f644dae18" title="Make a unit test for the constructor with only the name." alt="" coords="630,427,828,453"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="917,349,878,384,829,417,801,428,799,424,827,412,875,380,913,345"/>
+<area shape="rect" id="Node000017" href="$unit__system_8cpp.html#a4a978e9715b8d162af938d3338e2f781" title="Make a unit test for the constructor with only the value." alt="" coords="649,477,809,520"/>
+<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="925,351,887,410,860,441,830,467,810,479,807,474,826,463,857,437,883,406,921,348"/>
+<area shape="rect" id="Node000018" href="$unit__system_8cpp.html#ad5119187894c5bc804338730dbe2b312" title="Make a unit test for the constructor with all atributes." alt="" coords="649,544,809,587"/>
+<area shape="poly" id="edge22_Node000001_Node000018" title=" " alt="" coords="932,352,919,392,898,441,868,491,830,534,810,547,807,542,826,530,864,488,893,439,914,390,927,350"/>
+<area shape="rect" id="Node000019" href="$unit__system_8cpp.html#ab320622db511f54344c510a9cfdbff94" title="Make a unit test for the method etValue()" alt="" coords="653,611,805,637"/>
+<area shape="poly" id="edge24_Node000001_Node000019" title=" " alt="" coords="937,352,928,405,909,472,878,541,856,573,830,601,807,615,804,610,826,597,852,570,873,539,904,471,923,404,932,351"/>
+<area shape="rect" id="Node000020" href="$unit__system_8cpp.html#ac322ab5fd0cd1051b54ffab7177032e6" title="Make a unit test for the method etValue()" alt="" coords="653,661,805,688"/>
+<area shape="poly" id="edge26_Node000001_Node000020" title=" " alt="" coords="939,352,933,414,916,495,902,537,884,579,860,617,830,651,807,666,804,661,826,647,855,614,879,576,897,535,911,493,928,413,934,351"/>
+<area shape="rect" id="Node000003" href="$funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="483,56,532,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="653,39,533,66,532,61,652,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="629,72,532,72,532,67,629,67"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="652,105,532,77,533,72,653,100"/>
+<area shape="rect" id="Node000009" href="$unit__model_8cpp.html#a37286918320acd70d56642498fa32c18" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="453,347,562,373"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="661,290,631,300,577,324,533,348,530,344,575,319,629,295,660,285"/>
+<area shape="rect" id="Node000010" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,368,385,395"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="438,370,386,376,385,371,437,365"/>
+<area shape="rect" id="Node000011" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,437,199,464"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="270,404,186,439,184,434,268,399"/>
+<area shape="rect" id="Node000012" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,437,55,464"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="87,453,55,453,55,448,87,448"/>
+<area shape="rect" id="Node000015" href="$unit__system_8cpp.html#a508d8501edd77719732fca2f7985d316" title="Execute all the unit tests." alt="" coords="433,485,582,512"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="643,411,631,417,573,453,527,487,524,483,570,448,628,412,640,407"/>
+<area shape="poly" id="edge17_Node000015_Node000011" title=" " alt="" coords="418,489,199,460,200,454,418,484"/>
+<area shape="poly" id="edge19_Node000016_Node000015" title=" " alt="" coords="659,460,630,468,559,487,558,482,629,463,658,455"/>
+<area shape="poly" id="edge21_Node000017_Node000015" title=" " alt="" coords="634,501,582,501,582,496,634,496"/>
+<area shape="poly" id="edge23_Node000018_Node000015" title=" " alt="" coords="641,542,554,515,555,510,642,537"/>
+<area shape="poly" id="edge25_Node000019_Node000015" title=" " alt="" coords="643,608,628,601,595,581,565,557,520,514,523,511,568,553,598,576,631,596,645,603"/>
+<area shape="poly" id="edge27_Node000020_Node000015" title=" " alt="" coords="638,657,628,652,589,619,556,580,514,514,518,511,560,577,592,615,631,647,640,652"/>
+</map>

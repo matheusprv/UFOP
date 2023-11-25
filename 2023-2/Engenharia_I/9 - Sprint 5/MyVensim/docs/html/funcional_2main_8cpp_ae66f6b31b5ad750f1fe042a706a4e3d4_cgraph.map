@@ -1,0 +1,31 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,107,55,133"/>
+<area shape="rect" id="Node000002" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="111,56,263,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,109,102,92,123,85,125,90,104,97,56,114"/>
+<area shape="rect" id="Node000009" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 Wh..." alt="" coords="103,107,271,133"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="55,117,87,117,87,123,55,123"/>
+<area shape="rect" id="Node000010" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="110,157,264,184"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="56,126,104,143,125,150,123,155,102,148,54,131"/>
+<area shape="rect" id="Node000003" href="$class_model.html#aada2bc25c07fec056a11cec64ab38194" title="Template to include a Flow into the container of flow." alt="" coords="336,56,463,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,67,321,67,321,72,263,72"/>
+<area shape="rect" id="Node000005" href="$class_model.html#aeba26e42578aa913811da206a108fc2d" title="Creates a systems and add it to the system container." alt="" coords="327,107,472,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="247,81,326,100,325,105,246,86"/>
+<area shape="rect" id="Node000006" href="$funcional__tests_8cpp.html#adbcc4e1dba9b8de80d1b4ba44805a9dc" title="Compare two floating numbers and check if they equals by checking if their difference is no bigger th..." alt="" coords="319,157,480,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="248,81,272,92,288,105,297,118,306,131,321,143,330,148,327,153,317,148,302,135,293,121,284,109,270,97,246,86"/>
+<area shape="rect" id="Node000007" href="$class_system.html#a41b673faa6c199eb8e4f204639fab4f2" title="Get the value of the system." alt="" coords="337,208,462,235"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="254,81,273,93,285,105,292,119,298,145,303,170,310,182,321,194,325,198,322,202,317,198,306,185,298,172,292,146,287,121,280,109,269,97,252,85"/>
+<area shape="rect" id="Node000008" href="$class_model.html#a2328056dbe721d55cbdbc55e86a777e3" title="Run the model for a specified time range executing the function of the flows." alt="" coords="359,5,441,32"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="246,53,342,29,344,35,247,58"/>
+<area shape="rect" id="Node000004" href="$class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="528,56,614,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="464,67,513,67,513,72,464,72"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="246,103,325,84,326,89,247,109"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="271,117,311,117,311,123,271,123"/>
+<area shape="poly" id="edge11_Node000009_Node000006" title=" " alt="" coords="247,131,326,151,325,156,246,137"/>
+<area shape="poly" id="edge12_Node000009_Node000007" title=" " alt="" coords="248,132,272,143,288,156,297,169,306,182,321,194,330,199,327,204,317,198,302,185,293,172,284,160,270,148,246,136"/>
+<area shape="poly" id="edge13_Node000009_Node000008" title=" " alt="" coords="246,104,270,92,284,80,293,68,302,55,318,42,342,30,345,35,320,46,306,58,297,71,288,84,272,97,248,108"/>
+<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="246,154,270,143,284,131,293,119,302,105,317,92,327,87,330,92,321,97,306,109,297,122,288,135,272,148,248,159"/>
+<area shape="poly" id="edge16_Node000010_Node000005" title=" " alt="" coords="246,154,325,135,326,140,247,159"/>
+<area shape="poly" id="edge17_Node000010_Node000006" title=" " alt="" coords="264,168,303,168,303,173,264,173"/>
+<area shape="poly" id="edge18_Node000010_Node000007" title=" " alt="" coords="247,182,326,201,325,206,246,187"/>
+<area shape="poly" id="edge19_Node000010_Node000008" title=" " alt="" coords="252,155,269,143,280,131,287,119,292,94,298,68,306,55,317,42,342,27,345,32,321,46,310,58,303,70,298,95,292,121,285,135,273,147,254,159"/>
+</map>

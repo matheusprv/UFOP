@@ -1,0 +1,29 @@
+<map id="Model::add" name="Model::add">
+<area shape="rect" id="Node000001" title="Add a flow to the model&#39;s container of flows." alt="" coords="694,132,779,159"/>
+<area shape="rect" id="Node000002" href="$class_model.html#aada2bc25c07fec056a11cec64ab38194" title="Template to include a Flow into the container of flow." alt="" coords="491,56,618,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="700,126,645,97,612,86,614,81,647,92,703,121"/>
+<area shape="rect" id="Node000007" href="$unit__model_8cpp.html#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a" title="Unit test to check if a flow was successfully added into the container of flows." alt="" coords="484,107,625,133"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="678,140,625,133,626,127,679,135"/>
+<area shape="rect" id="Node000011" href="$unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="474,157,635,184"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="679,156,636,162,635,157,678,151"/>
+<area shape="rect" id="Node000012" href="$unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="463,208,646,235"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="703,169,647,198,614,210,612,205,645,194,700,165"/>
+<area shape="rect" id="Node000003" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="256,5,407,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="477,55,393,35,394,30,478,49"/>
+<area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 Wh..." alt="" coords="247,56,415,83"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="475,72,416,72,416,67,475,67"/>
+<area shape="rect" id="Node000006" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="255,107,408,133"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="478,89,394,109,393,103,477,84"/>
+<area shape="rect" id="Node000004" href="$funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="126,56,176,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="267,39,177,65,175,60,266,34"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="232,72,176,72,176,67,232,67"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="266,104,175,79,177,74,267,99"/>
+<area shape="rect" id="Node000008" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="262,157,400,184"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="478,140,394,159,393,154,477,135"/>
+<area shape="rect" id="Node000009" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,157,199,184"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="246,173,200,173,200,168,246,168"/>
+<area shape="rect" id="Node000010" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,157,55,184"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="87,173,55,173,55,168,87,168"/>
+<area shape="poly" id="edge13_Node000011_Node000008" title=" " alt="" coords="458,173,401,173,401,168,458,168"/>
+<area shape="poly" id="edge15_Node000012_Node000008" title=" " alt="" coords="477,207,393,187,394,182,478,201"/>
+</map>

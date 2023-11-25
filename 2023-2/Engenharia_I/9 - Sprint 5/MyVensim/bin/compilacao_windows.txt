@@ -1,0 +1,2 @@
+g++ -shared ../src/*.cpp -o MyVensim.dll
+g++ ../test/Flows/*.cpp ../test/funcional/*.cpp -L. -lMyVensim -o teste_funcional.exe -g -Wall

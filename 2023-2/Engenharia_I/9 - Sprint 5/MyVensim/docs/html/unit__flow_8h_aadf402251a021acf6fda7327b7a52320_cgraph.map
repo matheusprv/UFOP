@@ -1,0 +1,7 @@
+<map id="unit_Flow_setName" name="unit_Flow_setName">
+<area shape="rect" id="Node000001" title="Unit test for method setName()" alt="" coords="5,31,141,57"/>
+<area shape="rect" id="Node000002" href="$class_flow.html#aa91a8025b6dbb27ee5137c7c9ad0c564" title="Get the name of the flow." alt="" coords="189,5,297,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,31,172,26,173,32,141,37"/>
+<area shape="rect" id="Node000003" href="$class_flow.html#a719883d550abcfcb9dfcd4a7e1b86443" title="Set the name of the flow." alt="" coords="189,56,297,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,51,173,56,172,62,140,57"/>
+</map>
