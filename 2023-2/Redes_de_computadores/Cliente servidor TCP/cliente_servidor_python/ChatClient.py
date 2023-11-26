@@ -46,7 +46,8 @@ if __name__ == "__main__":
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     # Conectando com o servidor
-    server_addr = ("0.tcp.sa.ngrok.io", 16872)
+    server_addr = ("localhost", 7891)
+    #server_addr = ("0.tcp.sa.ngrok.io", 16872)
 
     client_socket.connect(server_addr)
 
