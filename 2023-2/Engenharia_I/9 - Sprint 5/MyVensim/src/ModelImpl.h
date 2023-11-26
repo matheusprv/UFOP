@@ -30,6 +30,19 @@ private:
     */
     ModelImpl& operator=(const ModelImpl& model);
 
+    /**
+    * @brief  Add a flow to the model's container of flows.
+    * @param  flow Pointer to the flow to be added.
+    * @return True if the addition is successful, false otherwise.
+    */
+    bool add(Flow * flow);
+    /**
+    * @brief  Add a system to the model's container of systems.
+    * @param  flow Pointer to the flow to be added.
+    * @return True if the addition is successful, false otherwise.
+    */
+    bool add(System * system);
+
 public:
     /// @brief Defining a name for the system vector
     typedef vector<System*> :: iterator systemsIterator;
@@ -127,19 +140,6 @@ public:
     static int modelsSize();
 
     /**
-    * @brief  Add a flow to the model's container of flows.
-    * @param  flow Pointer to the flow to be added.
-    * @return True if the addition is successful, false otherwise.
-    */
-    bool add(Flow * flow);
-    /**
-    * @brief  Add a system to the model's container of systems.
-    * @param  flow Pointer to the flow to be added.
-    * @return True if the addition is successful, false otherwise.
-    */
-    bool add(System * system);
-
-    /**
     * @brief  Remove a flow from the model's container of flows.
     * @param  flow Pointer to the flow to be removed.
     * @return True if the removal is successful, false otherwise.
@@ -179,7 +179,7 @@ public:
      * @param name Name of the model. Default value is an empty string.
      * @return Pointer to Model object.
     */
-    static Model* createModel(string name = "");
+    static Model& createModel(string name = "");
     /**
      * @brief Add a model to the static container of models.
      * @param model Pointer of Model object.
@@ -193,6 +193,6 @@ public:
      * @param value Initial value of the system. Default value is 0.0.
      * @return Pointer to the created System.
     */
-    System* createSystem(string name = "", double value = 0.0);
+    System& createSystem(string name = "", double value = 0.0);
 };
 #endif

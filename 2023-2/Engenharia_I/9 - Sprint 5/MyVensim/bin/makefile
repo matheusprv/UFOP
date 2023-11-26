@@ -11,14 +11,16 @@ teste_unitario: Flow.o Model.o System.o FlowComplexo.o FlowExponencial.o FlowLog
 #===============================================================================================================================================================================
 
 MyVensim: Flow.o Model.o System.o
-	g++ -c ../src/FlowImpl.cpp ../src/ModelImpl.cpp ../src/SystemImpl.cpp -fpic
-	g++ FlowImpl.o ModelImpl.o SystemImpl.o -shared -o lib_MyVensim.so
+	g++ -c ../src/FlowImpl.cpp ../src/ModelImpl.cpp ../src/SystemImpl.cpp -fpic -g -Wall
+	g++ FlowImpl.o ModelImpl.o SystemImpl.o -shared -o lib_MyVensim.so -g -Wall
 
 teste_funcional_dll: MyVensim Functional_test.o FlowComplexo.o FlowExponencial.o FlowLogistico.o ../test/funcional/main.cpp 
-	g++ Functional_test.o FlowComplexo.o FlowExponencial.o FlowLogistico.o ../test/funcional/main.cpp -L. -l_MyVensim -o teste_funcional
+	g++ Functional_test.o FlowComplexo.o FlowExponencial.o FlowLogistico.o ../test/funcional/main.cpp -L. -l_MyVensim -o teste_funcional -g -Wall
+	export LD_LIBRARY_PATH=:'/home/matheus/UFOP/2023-2/Engenharia_I/9 - Sprint 5/MyVensim/bin'
 
 teste_unitario_dll: MyVensim FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp
 	g++ FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp -L. -l_MyVensim -o teste_unitario -Wall -g
+	export LD_LIBRARY_PATH=:'/home/matheus/UFOP/2023-2/Engenharia_I/9 - Sprint 5/MyVensim/bin'
 
 #===============================================================================================================================================================================
 
@@ -58,3 +60,8 @@ Unit_system.o: ../test/unit/unit_system.cpp ../test/unit/unit_system.h System.o
 
 Unit_model.o: ../test/unit/unit_model.cpp ../test/unit/unit_model.h Model.o
 	g++ -c ../test/unit/unit_model.cpp -o Unit_model.o -Wall -g
+
+#===============================================================================================================================================================================
+export_dll_path:
+	pwd
+	export LD_LIBRARY_PATH=:'/home/matheus/UFOP/2023-2/Engenharia_I/9 - Sprint 5/MyVensim/bin'

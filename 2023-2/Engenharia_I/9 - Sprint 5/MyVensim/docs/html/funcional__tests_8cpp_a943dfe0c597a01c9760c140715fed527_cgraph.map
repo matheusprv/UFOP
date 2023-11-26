@@ -1,8 +1,8 @@
 <map id="complexFuncionalTest" name="complexFuncionalTest">
 <area shape="rect" id="Node000001" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="5,107,157,133"/>
-<area shape="rect" id="Node000002" href="$class_model.html#aada2bc25c07fec056a11cec64ab38194" title="Template to include a Flow into the container of flow." alt="" coords="222,5,349,32"/>
+<area shape="rect" id="Node000002" href="$class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="222,5,349,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,104,146,73,204,42,218,35,220,40,206,46,149,78,103,108"/>
-<area shape="rect" id="Node000004" href="$class_model.html#aeba26e42578aa913811da206a108fc2d" title="Creates a systems and add it to the system container." alt="" coords="213,56,358,83"/>
+<area shape="rect" id="Node000004" href="$class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="213,56,358,83"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="137,103,213,84,215,90,139,109"/>
 <area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#adbcc4e1dba9b8de80d1b4ba44805a9dc" title="Compare two floating numbers and check if they equals by checking if their difference is no bigger th..." alt="" coords="205,107,366,133"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="157,117,189,117,189,123,157,123"/>

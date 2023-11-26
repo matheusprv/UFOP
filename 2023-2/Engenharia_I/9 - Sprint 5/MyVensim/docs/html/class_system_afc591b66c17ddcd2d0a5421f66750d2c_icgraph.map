@@ -1,18 +1,13 @@
 <map id="System::setValue" name="System::setValue">
-<area shape="rect" id="Node000001" title="Set the value of the flow." alt="" coords="801,31,926,57"/>
-<area shape="rect" id="Node000002" href="$class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7" title="Run the model for a specified time range executing the function of the flows." alt="" coords="624,5,730,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="785,36,730,28,731,23,786,31"/>
-<area shape="rect" id="Node000007" href="$unit__system_8cpp.html#ac322ab5fd0cd1051b54ffab7177032e6" title="Make a unit test for the method etValue()" alt="" coords="601,56,753,83"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="786,57,754,62,753,56,785,52"/>
-<area shape="rect" id="Node000003" href="$unit__model_8cpp.html#a37286918320acd70d56642498fa32c18" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="443,5,553,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="608,21,553,21,553,16,608,16"/>
-<area shape="rect" id="Node000004" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="252,5,390,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="428,21,390,21,390,16,428,16"/>
-<area shape="rect" id="Node000005" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,31,199,57"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,34,200,40,199,34,236,29"/>
-<area shape="rect" id="Node000006" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,55,57"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,47,55,47,55,41,87,41"/>
-<area shape="rect" id="Node000008" href="$unit__system_8cpp.html#a508d8501edd77719732fca2f7985d316" title="Execute all the unit tests." alt="" coords="247,56,395,83"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="585,72,396,72,396,67,585,67"/>
-<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="231,59,199,54,200,48,232,53"/>
+<area shape="rect" id="Node000001" title="Set the value of the flow." alt="" coords="644,31,769,57"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7" title="Run the model for a specified time range executing the function of the flows." alt="" coords="466,5,573,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="628,36,573,28,573,23,629,31"/>
+<area shape="rect" id="Node000003" href="$unit__system_8cpp.html#ac322ab5fd0cd1051b54ffab7177032e6" title="Make a unit test for the method etValue()" alt="" coords="443,56,596,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="628,57,597,62,596,56,628,52"/>
+<area shape="rect" id="Node000004" href="$unit__system_8cpp.html#a508d8501edd77719732fca2f7985d316" title="Execute all the unit tests." alt="" coords="247,56,395,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="428,72,396,72,396,67,428,67"/>
+<area shape="rect" id="Node000005" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,56,199,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="232,72,199,72,199,67,232,67"/>
+<area shape="rect" id="Node000006" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
 </map>

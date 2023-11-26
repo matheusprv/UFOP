@@ -1,7 +1,9 @@
 <map id="unit_Model_remove_system" name="unit_Model_remove_system">
-<area shape="rect" id="Node000001" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="5,31,188,57"/>
-<area shape="rect" id="Node000002" href="$class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="246,5,331,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,29,230,24,231,29,188,35"/>
-<area shape="rect" id="Node000003" href="$class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows." alt="" coords="236,56,341,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,53,221,58,220,63,188,59"/>
+<area shape="rect" id="Node000001" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="5,56,188,83"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="241,5,376,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,53,234,34,235,39,156,58"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="236,56,381,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,67,220,67,220,72,188,72"/>
+<area shape="rect" id="Node000004" href="$class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows." alt="" coords="256,107,361,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,81,241,101,240,106,155,86"/>
 </map>

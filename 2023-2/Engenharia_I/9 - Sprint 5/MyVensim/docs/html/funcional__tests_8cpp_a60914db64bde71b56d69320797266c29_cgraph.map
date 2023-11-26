@@ -1,8 +1,8 @@
 <map id="logisticalFuncionalTest" name="logisticalFuncionalTest">
 <area shape="rect" id="Node000001" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="5,107,159,133"/>
-<area shape="rect" id="Node000002" href="$class_model.html#aada2bc25c07fec056a11cec64ab38194" title="Template to include a Flow into the container of flow." alt="" coords="224,5,351,32"/>
+<area shape="rect" id="Node000002" href="$class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="224,5,351,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,104,148,73,206,42,220,35,222,40,208,46,150,78,104,108"/>
-<area shape="rect" id="Node000004" href="$class_model.html#aeba26e42578aa913811da206a108fc2d" title="Creates a systems and add it to the system container." alt="" coords="215,56,360,83"/>
+<area shape="rect" id="Node000004" href="$class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="215,56,360,83"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,103,215,84,216,90,140,109"/>
 <area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#adbcc4e1dba9b8de80d1b4ba44805a9dc" title="Compare two floating numbers and check if they equals by checking if their difference is no bigger th..." alt="" coords="207,107,368,133"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="159,117,191,117,191,123,159,123"/>

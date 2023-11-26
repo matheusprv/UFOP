@@ -1,5 +1,7 @@
 <map id="unit_getName" name="unit_getName">
-<area shape="rect" id="Node000001" title="Unit test for the method getName." alt="" coords="5,5,107,32"/>
-<area shape="rect" id="Node000002" href="$class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="155,5,271,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,16,139,16,139,21,107,21"/>
+<area shape="rect" id="Node000001" title="Unit test for the method getName." alt="" coords="5,31,107,57"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="155,5,290,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,34,139,29,140,34,108,39"/>
+<area shape="rect" id="Node000003" href="$class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="164,56,281,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,49,149,56,148,61,107,54"/>
 </map>

@@ -10,6 +10,25 @@
 */
 class Model{
 protected:
+    /**
+    * @brief  Add a flow to the model's container of flows.
+    * @param  flow Pointer to the flow to be added.
+    * @return True if the addition is successful, false otherwise.
+    */
+    virtual bool add(Flow * flow) = 0;
+    /**
+    * @brief  Add a system to the model's container of systems.
+    * @param  flow Pointer to the flow to be added.
+    * @return True if the addition is successful, false otherwise.
+    */
+    virtual bool add(System * system) = 0;
+    /**
+     * @brief Add a model to the static container of models.
+     * @param model Pointer of Model object.
+     * @return True if added correctly. False otherwise.
+    */
+    static bool add(Model* model);
+
 public:
 
     //typedefs
@@ -87,25 +106,6 @@ public:
     static int modelsSize();
 
     /**
-    * @brief  Add a flow to the model's container of flows.
-    * @param  flow Pointer to the flow to be added.
-    * @return True if the addition is successful, false otherwise.
-    */
-    virtual bool add(Flow * flow) = 0;
-    /**
-    * @brief  Add a system to the model's container of systems.
-    * @param  flow Pointer to the flow to be added.
-    * @return True if the addition is successful, false otherwise.
-    */
-    virtual bool add(System * system) = 0;
-    /**
-     * @brief Add a model to the static container of models.
-     * @param model Pointer of Model object.
-     * @return True if added correctly. False otherwise.
-    */
-    static bool add(Model* model);
-
-    /**
     * @brief  Remove a flow from the model's container of flows.
     * @param  flow Pointer to the flow to be removed.
     * @return True if the removal is successful, false otherwise.
@@ -144,7 +144,7 @@ public:
      * @param name Name of the model. Default value is an empty string.
      * @return Pointer to Model object.
     */
-    static Model* createModel(string name = "");
+    static Model& createModel(string name = "");
 
     /**
      * @brief Creates a systems and add it to the system container.
@@ -152,7 +152,7 @@ public:
      * @param value Initial value of the system. Default value is 0.0.
      * @return Pointer to the created System.
     */
-    virtual System* createSystem(string name = "", double value = 0.0) = 0;
+    virtual System& createSystem(string name = "", double value = 0.0) = 0;
 
     /**
      * @brief Template to include a Flow into the container of flow.
@@ -162,10 +162,10 @@ public:
      * @return Pointer of the created flow.
     */
     template<typename T>
-    Flow * createFlow(string name = "", System * source = NULL, System * target = NULL){
+    Flow & createFlow(string name = "", System * source = NULL, System * target = NULL){
         Flow * flow = new T(name, source, target);
         add(flow);
-        return flow;
+        return *flow;
     }
 
 };

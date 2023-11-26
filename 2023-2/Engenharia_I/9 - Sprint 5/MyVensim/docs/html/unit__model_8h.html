@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MyVensim<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">MyVensim<span id="projectnumber">&#160;0.5</span>
    </div>
    <div id="projectbrief">MyVensim - Matheus Peixoto</div>
   </td>
@@ -96,9 +96,6 @@ $(document).ready(function(){initNavTree('unit__model_8h.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_model_8h_source.html">../../src/Model.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_model_impl_8h_source.html">../../src/ModelImpl.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_flow_impl_8h_source.html">../../src/FlowImpl.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_system_impl_8h_source.html">../../src/SystemImpl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_flow_complexo_8h_source.html">../Flows/FlowComplexo.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_flow_exponencial_8h_source.html">../Flows/FlowExponencial.h</a>&quot;</code><br />
 <code>#include &quot;assert.h&quot;</code><br />
@@ -107,42 +104,35 @@ Include dependency graph for unit_model.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h__incl.png" border="0" usemap="#atest_2unit_2unit__model_8h" alt=""/></div>
 <map name="atest_2unit_2unit__model_8h" id="atest_2unit_2unit__model_8h">
-<area shape="rect" title=" " alt="" coords="315,5,462,32"/>
-<area shape="rect" href="_model_8h.html" title=" " alt="" coords="194,155,308,181"/>
-<area shape="poly" title=" " alt="" coords="361,35,327,54,294,82,275,111,262,141,257,139,270,108,290,78,324,50,358,30"/>
-<area shape="rect" href="_model_impl_8h.html" title=" " alt="" coords="92,80,229,107"/>
-<area shape="poly" title=" " alt="" coords="349,35,216,77,214,72,348,30"/>
-<area shape="rect" href="_flow_impl_8h.html" title=" " alt="" coords="340,155,469,181"/>
-<area shape="poly" title=" " alt="" coords="462,22,527,28,595,39,653,55,675,66,690,78,703,103,702,115,697,125,678,140,647,152,568,165,485,170,484,165,568,160,646,147,675,136,693,122,697,113,698,105,686,82,672,70,651,60,594,44,527,34,462,27"/>
-<area shape="rect" href="_system_impl_8h.html" title=" " alt="" coords="5,155,153,181"/>
-<area shape="poly" title=" " alt="" coords="315,27,248,33,178,44,119,60,97,70,82,82,75,94,72,109,74,140,69,140,67,109,70,93,78,78,94,66,117,55,177,38,247,28,314,21"/>
-<area shape="rect" href="_flow_complexo_8h.html" title=" " alt="" coords="305,80,472,107"/>
-<area shape="poly" title=" " alt="" coords="391,33,391,64,386,64,386,33"/>
-<area shape="rect" href="_flow_exponencial_8h.html" title=" " alt="" coords="496,80,676,107"/>
-<area shape="poly" title=" " alt="" coords="424,30,538,72,536,77,422,35"/>
-<area shape="rect" title=" " alt="" coords="752,80,820,107"/>
-<area shape="poly" title=" " alt="" coords="462,29,733,77,737,78,736,83,732,83,462,34"/>
-<area shape="rect" href="_system_8h.html" title=" " alt="" coords="208,304,286,331"/>
-<area shape="poly" title=" " alt="" coords="253,182,250,289,245,288,248,182"/>
-<area shape="rect" href="_flow_8h.html" title=" " alt="" coords="293,229,353,256"/>
-<area shape="poly" title=" " alt="" coords="265,180,302,216,298,220,262,184"/>
-<area shape="rect" title=" " alt="" coords="158,229,213,256"/>
-<area shape="poly" title=" " alt="" coords="242,184,209,220,205,216,238,180"/>
-<area shape="rect" title=" " alt="" coords="217,379,277,405"/>
-<area shape="poly" title=" " alt="" coords="250,331,250,363,244,363,244,331"/>
-<area shape="rect" title=" " alt="" coords="34,379,97,405"/>
-<area shape="poly" title=" " alt="" coords="216,334,113,375,111,370,214,329"/>
-<area shape="rect" title=" " alt="" coords="302,379,355,405"/>
-<area shape="poly" title=" " alt="" coords="263,329,305,366,301,370,259,333"/>
-<area shape="rect" title=" " alt="" coords="122,379,193,405"/>
-<area shape="poly" title=" " alt="" coords="233,333,187,371,183,367,230,329"/>
-<area shape="poly" title=" " alt="" coords="312,258,273,295,269,291,308,255"/>
-<area shape="poly" title=" " alt="" coords="326,256,330,363,325,363,321,257"/>
-<area shape="poly" title=" " alt="" coords="178,105,225,143,222,147,174,109"/>
-<area shape="poly" title=" " alt="" coords="392,184,350,221,346,217,388,180"/>
-<area shape="poly" title=" " alt="" coords="89,180,113,215,147,254,177,276,208,294,205,299,174,281,144,258,109,219,84,183"/>
-<area shape="poly" title=" " alt="" coords="394,107,401,139,396,140,389,108"/>
-<area shape="poly" title=" " alt="" coords="555,110,451,151,449,146,553,105"/>
+<area shape="rect" title=" " alt="" coords="333,5,479,32"/>
+<area shape="rect" href="_model_8h.html" title=" " alt="" coords="130,155,243,181"/>
+<area shape="poly" title=" " alt="" coords="333,28,302,35,270,46,240,61,214,82,197,109,190,140,185,139,192,107,209,78,237,57,268,41,300,30,332,23"/>
+<area shape="rect" href="_flow_complexo_8h.html" title=" " alt="" coords="224,80,391,107"/>
+<area shape="poly" title=" " alt="" coords="391,35,338,73,335,69,387,30"/>
+<area shape="rect" href="_flow_exponencial_8h.html" title=" " alt="" coords="415,80,595,107"/>
+<area shape="poly" title=" " alt="" coords="425,30,477,69,474,73,422,35"/>
+<area shape="rect" title=" " alt="" coords="619,80,687,107"/>
+<area shape="poly" title=" " alt="" coords="450,30,605,75,603,80,448,35"/>
+<area shape="rect" href="_system_8h.html" title=" " alt="" coords="144,304,221,331"/>
+<area shape="poly" title=" " alt="" coords="187,182,181,229,182,289,177,289,176,229,181,181"/>
+<area shape="rect" href="_flow_8h.html" title=" " alt="" coords="270,229,329,256"/>
+<area shape="poly" title=" " alt="" coords="207,180,268,218,265,223,204,184"/>
+<area shape="rect" title=" " alt="" coords="191,229,246,256"/>
+<area shape="poly" title=" " alt="" coords="194,181,209,214,204,216,189,183"/>
+<area shape="rect" title=" " alt="" coords="5,379,66,405"/>
+<area shape="poly" title=" " alt="" coords="158,334,76,374,74,369,155,329"/>
+<area shape="rect" title=" " alt="" coords="89,379,153,405"/>
+<area shape="poly" title=" " alt="" coords="174,333,143,369,139,365,169,329"/>
+<area shape="rect" title=" " alt="" coords="273,379,326,405"/>
+<area shape="poly" title=" " alt="" coords="204,329,268,368,265,373,201,333"/>
+<area shape="rect" title=" " alt="" coords="177,379,249,405"/>
+<area shape="poly" title=" " alt="" coords="190,330,204,363,199,365,185,332"/>
+<area shape="poly" title=" " alt="" coords="280,259,217,298,214,293,278,254"/>
+<area shape="poly" title=" " alt="" coords="302,257,302,363,297,363,297,257"/>
+<area shape="rect" href="_flow_impl_8h.html" title=" " alt="" coords="267,155,396,181"/>
+<area shape="poly" title=" " alt="" coords="314,106,325,139,320,141,309,108"/>
+<area shape="poly" title=" " alt="" coords="328,183,314,216,309,214,323,181"/>
+<area shape="poly" title=" " alt="" coords="476,110,377,151,375,146,474,105"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -202,12 +192,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a650be75cfe00d74ba2d81ec8229a47e5" id="r_a650be75cfe00d74ba2d81ec8229a47e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__model_8h.html#a650be75cfe00d74ba2d81ec8229a47e5">unit_Model_systemSize</a> ()</td></tr>
 <tr class="memdesc:a650be75cfe00d74ba2d81ec8229a47e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test to check if the return value is the correct number of elements in the container.  <br /></td></tr>
 <tr class="separator:a650be75cfe00d74ba2d81ec8229a47e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4f8c7bb8b3cb64a0b1959bb0eb01b9a" id="r_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__model_8h.html#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a">unit_Model_add_flow</a> ()</td></tr>
-<tr class="memdesc:aa4f8c7bb8b3cb64a0b1959bb0eb01b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test to check if a flow was successfully added into the container of flows.  <br /></td></tr>
-<tr class="separator:aa4f8c7bb8b3cb64a0b1959bb0eb01b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3a10b6e696b6a91d6c33dcbb18aceb4" id="r_ab3a10b6e696b6a91d6c33dcbb18aceb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__model_8h.html#ab3a10b6e696b6a91d6c33dcbb18aceb4">unit_Model_add_system</a> ()</td></tr>
-<tr class="memdesc:ab3a10b6e696b6a91d6c33dcbb18aceb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test to check if a flow was successfully added into the container of systems.  <br /></td></tr>
-<tr class="separator:ab3a10b6e696b6a91d6c33dcbb18aceb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac044ab223c8b3b6df04969f1f254ae01" id="r_ac044ab223c8b3b6df04969f1f254ae01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__model_8h.html#ac044ab223c8b3b6df04969f1f254ae01">unit_Model_createFlow</a> ()</td></tr>
+<tr class="memdesc:ac044ab223c8b3b6df04969f1f254ae01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test to check if a flow was successfully created and added into the container of flows.  <br /></td></tr>
+<tr class="separator:ac044ab223c8b3b6df04969f1f254ae01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1860c0004f2ef09cbc14cf1e904fe0d" id="r_af1860c0004f2ef09cbc14cf1e904fe0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__model_8h.html#af1860c0004f2ef09cbc14cf1e904fe0d">unit_Model_createSystem</a> ()</td></tr>
+<tr class="memdesc:af1860c0004f2ef09cbc14cf1e904fe0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test to check if a system was successfully created and added into the container of systems.  <br /></td></tr>
+<tr class="separator:af1860c0004f2ef09cbc14cf1e904fe0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88d0b5198399c11b8634906fb753d72c" id="r_a88d0b5198399c11b8634906fb753d72c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__model_8h.html#a88d0b5198399c11b8634906fb753d72c">unit_Model_remove_flow</a> ()</td></tr>
 <tr class="memdesc:a88d0b5198399c11b8634906fb753d72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test to check if a flow was successfully removed from the flow's container.  <br /></td></tr>
 <tr class="separator:a88d0b5198399c11b8634906fb753d72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,42 +228,42 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Execute the unit tests from the methods implemented on the class <a class="el" href="class_model.html" title="Definition of class Model, which represents the model to be executed.">Model</a>. </p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                          {</div>
-<div class="line"><span class="lineno">  253</span>    <a class="code hl_function" href="unit__model_8cpp.html#aef9d3af61dfc50dcbd295ee49b77e704">unit_Model_constructor_default</a>();</div>
-<div class="line"><span class="lineno">  254</span>    <a class="code hl_function" href="unit__model_8cpp.html#a73a3b2f94a5ddae65bdb3761c8e2cb91">unit_Model_constructor_name</a>();</div>
-<div class="line"><span class="lineno">  255</span>    <a class="code hl_function" href="unit__model_8cpp.html#abb49fbd77462625039c6d5ec4a8c7667">unit_Model_createModel</a>();</div>
-<div class="line"><span class="lineno">  256</span>    <a class="code hl_function" href="unit__model_8cpp.html#adc00b5a0ad5085f85564b39319ae6662">unit_Model_destructor</a>();</div>
-<div class="line"><span class="lineno">  257</span>    <a class="code hl_function" href="unit__model_8cpp.html#adc98c33e4754d8fbc7ac6f4c304fc1ca">unit_getName</a>();</div>
-<div class="line"><span class="lineno">  258</span>    <a class="code hl_function" href="unit__model_8cpp.html#a9c446da28d0edbe87f0850d93c57649b">unit_setName</a>();</div>
-<div class="line"><span class="lineno">  259</span>    <a class="code hl_function" href="unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d">unit_Model_systemBegin</a>();</div>
-<div class="line"><span class="lineno">  260</span>    <a class="code hl_function" href="unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795">unit_Model_systemEnd</a>();</div>
-<div class="line"><span class="lineno">  261</span>    <a class="code hl_function" href="unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1">unit_Model_flowsBegin</a>();</div>
-<div class="line"><span class="lineno">  262</span>    <a class="code hl_function" href="unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7">unit_Model_flowsEnd</a>();</div>
-<div class="line"><span class="lineno">  263</span>    <a class="code hl_function" href="unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c">unit_Model_flowsSize</a>();</div>
-<div class="line"><span class="lineno">  264</span>    <a class="code hl_function" href="unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5">unit_Model_systemSize</a>();</div>
-<div class="line"><span class="lineno">  265</span>    <a class="code hl_function" href="unit__model_8cpp.html#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a">unit_Model_add_flow</a>();</div>
-<div class="line"><span class="lineno">  266</span>    <a class="code hl_function" href="unit__model_8cpp.html#ab3a10b6e696b6a91d6c33dcbb18aceb4">unit_Model_add_system</a>();</div>
-<div class="line"><span class="lineno">  267</span>    <a class="code hl_function" href="unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c">unit_Model_remove_flow</a>();</div>
-<div class="line"><span class="lineno">  268</span>    <a class="code hl_function" href="unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566">unit_Model_remove_system</a>();</div>
-<div class="line"><span class="lineno">  269</span>    <a class="code hl_function" href="unit__model_8cpp.html#a37286918320acd70d56642498fa32c18">unit_Model_run</a>();</div>
-<div class="line"><span class="lineno">  270</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>                          {</div>
+<div class="line"><span class="lineno">  233</span>    <a class="code hl_function" href="unit__model_8cpp.html#aef9d3af61dfc50dcbd295ee49b77e704">unit_Model_constructor_default</a>();</div>
+<div class="line"><span class="lineno">  234</span>    <a class="code hl_function" href="unit__model_8cpp.html#a73a3b2f94a5ddae65bdb3761c8e2cb91">unit_Model_constructor_name</a>();</div>
+<div class="line"><span class="lineno">  235</span>    <a class="code hl_function" href="unit__model_8cpp.html#abb49fbd77462625039c6d5ec4a8c7667">unit_Model_createModel</a>();</div>
+<div class="line"><span class="lineno">  236</span>    <a class="code hl_function" href="unit__model_8cpp.html#adc00b5a0ad5085f85564b39319ae6662">unit_Model_destructor</a>();</div>
+<div class="line"><span class="lineno">  237</span>    <a class="code hl_function" href="unit__model_8cpp.html#af1860c0004f2ef09cbc14cf1e904fe0d">unit_Model_createSystem</a>();</div>
+<div class="line"><span class="lineno">  238</span>    <a class="code hl_function" href="unit__model_8cpp.html#ac044ab223c8b3b6df04969f1f254ae01">unit_Model_createFlow</a>();</div>
+<div class="line"><span class="lineno">  239</span>    <a class="code hl_function" href="unit__model_8cpp.html#adc98c33e4754d8fbc7ac6f4c304fc1ca">unit_getName</a>();</div>
+<div class="line"><span class="lineno">  240</span>    <a class="code hl_function" href="unit__model_8cpp.html#a9c446da28d0edbe87f0850d93c57649b">unit_setName</a>();</div>
+<div class="line"><span class="lineno">  241</span>    <a class="code hl_function" href="unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d">unit_Model_systemBegin</a>();</div>
+<div class="line"><span class="lineno">  242</span>    <a class="code hl_function" href="unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795">unit_Model_systemEnd</a>();</div>
+<div class="line"><span class="lineno">  243</span>    <a class="code hl_function" href="unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1">unit_Model_flowsBegin</a>();</div>
+<div class="line"><span class="lineno">  244</span>    <a class="code hl_function" href="unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7">unit_Model_flowsEnd</a>();</div>
+<div class="line"><span class="lineno">  245</span>    <a class="code hl_function" href="unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c">unit_Model_flowsSize</a>();</div>
+<div class="line"><span class="lineno">  246</span>    <a class="code hl_function" href="unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5">unit_Model_systemSize</a>();</div>
+<div class="line"><span class="lineno">  247</span>    <a class="code hl_function" href="unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c">unit_Model_remove_flow</a>();</div>
+<div class="line"><span class="lineno">  248</span>    <a class="code hl_function" href="unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566">unit_Model_remove_system</a>();</div>
+<div class="line"><span class="lineno">  249</span>    <a class="code hl_function" href="unit__model_8cpp.html#a37286918320acd70d56642498fa32c18">unit_Model_run</a>();</div>
+<div class="line"><span class="lineno">  250</span>}</div>
 <div class="ttc" id="aunit__model_8cpp_html_a1d1a3f8675bb484cc31163d2594c0795"><div class="ttname"><a href="unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795">unit_Model_systemEnd</a></div><div class="ttdeci">void unit_Model_systemEnd()</div><div class="ttdoc">Unit test to check if the end is the element after the last one in system container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:76</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_a362f790b925558b01c9512d28c684f4d"><div class="ttname"><a href="unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d">unit_Model_systemBegin</a></div><div class="ttdeci">void unit_Model_systemBegin()</div><div class="ttdoc">Unit test to check if the begin is the first element of the system container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:63</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_a37286918320acd70d56642498fa32c18"><div class="ttname"><a href="unit__model_8cpp.html#a37286918320acd70d56642498fa32c18">unit_Model_run</a></div><div class="ttdeci">void unit_Model_run()</div><div class="ttdoc">Unit test to check if the system is running correctly and if the times are correct.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:242</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_a650be75cfe00d74ba2d81ec8229a47e5"><div class="ttname"><a href="unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5">unit_Model_systemSize</a></div><div class="ttdeci">void unit_Model_systemSize()</div><div class="ttdoc">Unit test to check if the return value is the correct number of elements in the container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:175</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_a70115dcd7577152e073793033f6426a1"><div class="ttname"><a href="unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1">unit_Model_flowsBegin</a></div><div class="ttdeci">void unit_Model_flowsBegin()</div><div class="ttdoc">Unit test to check if the begin is the first element of the flows container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:101</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_a362f790b925558b01c9512d28c684f4d"><div class="ttname"><a href="unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d">unit_Model_systemBegin</a></div><div class="ttdeci">void unit_Model_systemBegin()</div><div class="ttdoc">Unit test to check if the begin is the first element of the system container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:65</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_a37286918320acd70d56642498fa32c18"><div class="ttname"><a href="unit__model_8cpp.html#a37286918320acd70d56642498fa32c18">unit_Model_run</a></div><div class="ttdeci">void unit_Model_run()</div><div class="ttdoc">Unit test to check if the system is running correctly and if the times are correct.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:221</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_a650be75cfe00d74ba2d81ec8229a47e5"><div class="ttname"><a href="unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5">unit_Model_systemSize</a></div><div class="ttdeci">void unit_Model_systemSize()</div><div class="ttdoc">Unit test to check if the return value is the correct number of elements in the container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:162</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_a70115dcd7577152e073793033f6426a1"><div class="ttname"><a href="unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1">unit_Model_flowsBegin</a></div><div class="ttdeci">void unit_Model_flowsBegin()</div><div class="ttdoc">Unit test to check if the begin is the first element of the flows container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:99</div></div>
 <div class="ttc" id="aunit__model_8cpp_html_a73a3b2f94a5ddae65bdb3761c8e2cb91"><div class="ttname"><a href="unit__model_8cpp.html#a73a3b2f94a5ddae65bdb3761c8e2cb91">unit_Model_constructor_name</a></div><div class="ttdeci">void unit_Model_constructor_name()</div><div class="ttdoc">Unit test for a constructor with name of the model.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:14</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_a88d0b5198399c11b8634906fb753d72c"><div class="ttname"><a href="unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c">unit_Model_remove_flow</a></div><div class="ttdeci">void unit_Model_remove_flow()</div><div class="ttdoc">Unit test to check if a flow was successfully removed from the flow's container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:209</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_a9c446da28d0edbe87f0850d93c57649b"><div class="ttname"><a href="unit__model_8cpp.html#a9c446da28d0edbe87f0850d93c57649b">unit_setName</a></div><div class="ttdeci">void unit_setName()</div><div class="ttdoc">Unit test formethod setName.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:54</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a"><div class="ttname"><a href="unit__model_8cpp.html#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a">unit_Model_add_flow</a></div><div class="ttdeci">void unit_Model_add_flow()</div><div class="ttdoc">Unit test to check if a flow was successfully added into the container of flows.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:188</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_ab3a10b6e696b6a91d6c33dcbb18aceb4"><div class="ttname"><a href="unit__model_8cpp.html#ab3a10b6e696b6a91d6c33dcbb18aceb4">unit_Model_add_system</a></div><div class="ttdeci">void unit_Model_add_system()</div><div class="ttdoc">Unit test to check if a flow was successfully added into the container of systems.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:199</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_a88d0b5198399c11b8634906fb753d72c"><div class="ttname"><a href="unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c">unit_Model_remove_flow</a></div><div class="ttdeci">void unit_Model_remove_flow()</div><div class="ttdoc">Unit test to check if a flow was successfully removed from the flow's container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:195</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_a9c446da28d0edbe87f0850d93c57649b"><div class="ttname"><a href="unit__model_8cpp.html#a9c446da28d0edbe87f0850d93c57649b">unit_setName</a></div><div class="ttdeci">void unit_setName()</div><div class="ttdoc">Unit test formethod setName.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:56</div></div>
 <div class="ttc" id="aunit__model_8cpp_html_abb49fbd77462625039c6d5ec4a8c7667"><div class="ttname"><a href="unit__model_8cpp.html#abb49fbd77462625039c6d5ec4a8c7667">unit_Model_createModel</a></div><div class="ttdeci">void unit_Model_createModel()</div><div class="ttdoc">Unit test for createModel.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:24</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_ad658cd033e2e5f340c2cea57614b5566"><div class="ttname"><a href="unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566">unit_Model_remove_system</a></div><div class="ttdeci">void unit_Model_remove_system()</div><div class="ttdoc">Unit test to check if a flow was successfully removed from the system's container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:225</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_ac044ab223c8b3b6df04969f1f254ae01"><div class="ttname"><a href="unit__model_8cpp.html#ac044ab223c8b3b6df04969f1f254ae01">unit_Model_createFlow</a></div><div class="ttdeci">void unit_Model_createFlow()</div><div class="ttdoc">Unit test to check if a flow was successfully created and added into the container of flows.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:172</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_ad658cd033e2e5f340c2cea57614b5566"><div class="ttname"><a href="unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566">unit_Model_remove_system</a></div><div class="ttdeci">void unit_Model_remove_system()</div><div class="ttdoc">Unit test to check if a flow was successfully removed from the system's container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:208</div></div>
 <div class="ttc" id="aunit__model_8cpp_html_adc00b5a0ad5085f85564b39319ae6662"><div class="ttname"><a href="unit__model_8cpp.html#adc00b5a0ad5085f85564b39319ae6662">unit_Model_destructor</a></div><div class="ttdeci">void unit_Model_destructor()</div><div class="ttdoc">Unit test for the destrcutor.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:45</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_adc98c33e4754d8fbc7ac6f4c304fc1ca"><div class="ttname"><a href="unit__model_8cpp.html#adc98c33e4754d8fbc7ac6f4c304fc1ca">unit_getName</a></div><div class="ttdeci">void unit_getName()</div><div class="ttdoc">Unit test for the method getName.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:47</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_ae43b096254503bcf0321b700f09d1c7c"><div class="ttname"><a href="unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c">unit_Model_flowsSize</a></div><div class="ttdeci">void unit_Model_flowsSize()</div><div class="ttdoc">Unit test to check if the return value is the correct number of elements in the container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:157</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_adc98c33e4754d8fbc7ac6f4c304fc1ca"><div class="ttname"><a href="unit__model_8cpp.html#adc98c33e4754d8fbc7ac6f4c304fc1ca">unit_getName</a></div><div class="ttdeci">void unit_getName()</div><div class="ttdoc">Unit test for the method getName.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:48</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_ae43b096254503bcf0321b700f09d1c7c"><div class="ttname"><a href="unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c">unit_Model_flowsSize</a></div><div class="ttdeci">void unit_Model_flowsSize()</div><div class="ttdoc">Unit test to check if the return value is the correct number of elements in the container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:148</div></div>
 <div class="ttc" id="aunit__model_8cpp_html_aef9d3af61dfc50dcbd295ee49b77e704"><div class="ttname"><a href="unit__model_8cpp.html#aef9d3af61dfc50dcbd295ee49b77e704">unit_Model_constructor_default</a></div><div class="ttdeci">void unit_Model_constructor_default()</div><div class="ttdoc">Unit test for an empty constructor of model.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:3</div></div>
-<div class="ttc" id="aunit__model_8cpp_html_afc1883011bf49c69a5b0e14b2e64b1c7"><div class="ttname"><a href="unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7">unit_Model_flowsEnd</a></div><div class="ttdeci">void unit_Model_flowsEnd()</div><div class="ttdoc">Unit test to check if the end is the element after the last one in flows container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:125</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_af1860c0004f2ef09cbc14cf1e904fe0d"><div class="ttname"><a href="unit__model_8cpp.html#af1860c0004f2ef09cbc14cf1e904fe0d">unit_Model_createSystem</a></div><div class="ttdeci">void unit_Model_createSystem()</div><div class="ttdoc">Unit test to check if a system was successfully created and added into the container of systems.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:182</div></div>
+<div class="ttc" id="aunit__model_8cpp_html_afc1883011bf49c69a5b0e14b2e64b1c7"><div class="ttname"><a href="unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7">unit_Model_flowsEnd</a></div><div class="ttdeci">void unit_Model_flowsEnd()</div><div class="ttdoc">Unit test to check if the end is the element after the last one in flows container.</div><div class="ttdef"><b>Definition</b> unit_model.cpp:121</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -282,95 +272,107 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="5,427,144,453"/>
 <area shape="rect" href="unit__model_8cpp.html#adc98c33e4754d8fbc7ac6f4c304fc1ca" title="Unit test for the method getName." alt="" coords="239,123,340,149"/>
 <area shape="poly" title=" " alt="" coords="75,426,83,376,102,304,117,265,136,226,161,190,190,159,222,142,225,147,193,163,165,194,141,229,122,267,107,306,88,377,80,427"/>
-<area shape="rect" href="unit__model_8cpp.html#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a" title="Unit test to check if a flow was successfully added into the container of flows." alt="" coords="219,325,360,352"/>
+<area shape="rect" href="unit__model_8cpp.html#aef9d3af61dfc50dcbd295ee49b77e704" title="Unit test for an empty constructor of model." alt="" coords="211,56,368,99"/>
+<area shape="poly" title=" " alt="" coords="74,426,80,369,98,284,113,237,132,191,158,147,190,109,196,103,200,107,194,113,162,150,137,193,118,239,103,285,85,369,79,426"/>
+<area shape="rect" href="unit__model_8cpp.html#a73a3b2f94a5ddae65bdb3761c8e2cb91" title="Unit test for a constructor with name of the model." alt="" coords="192,173,387,200"/>
+<area shape="poly" title=" " alt="" coords="76,426,87,383,109,325,142,263,164,235,190,210,196,206,199,210,193,214,168,238,147,266,114,327,92,385,81,427"/>
+<area shape="rect" href="unit__model_8cpp.html#ac044ab223c8b3b6df04969f1f254ae01" title="Unit test to check if a flow was successfully created and added into the container of flows." alt="" coords="212,325,367,352"/>
 <area shape="poly" title=" " alt="" coords="91,424,135,393,191,362,208,355,210,360,193,366,138,397,94,428"/>
-<area shape="rect" href="unit__model_8cpp.html#ab3a10b6e696b6a91d6c33dcbb18aceb4" title="Unit test to check if a flow was successfully added into the container of systems." alt="" coords="208,579,371,605"/>
-<area shape="poly" title=" " alt="" coords="87,452,128,507,158,538,193,564,203,570,201,575,190,569,155,542,124,511,82,455"/>
-<area shape="rect" href="unit__model_8cpp.html#aef9d3af61dfc50dcbd295ee49b77e704" title="Unit test for an empty constructor of model." alt="" coords="211,5,368,48"/>
-<area shape="poly" title=" " alt="" coords="73,426,77,361,92,263,106,209,127,155,154,103,190,58,196,52,200,56,194,62,159,106,132,157,111,210,97,264,82,361,78,426"/>
-<area shape="rect" href="unit__model_8cpp.html#a73a3b2f94a5ddae65bdb3761c8e2cb91" title="Unit test for a constructor with name of the model." alt="" coords="192,72,387,99"/>
-<area shape="poly" title=" " alt="" coords="74,426,79,368,96,283,111,236,131,189,157,146,190,109,194,105,197,109,194,113,161,149,135,192,116,238,101,284,84,369,79,427"/>
-<area shape="rect" href="unit__model_8cpp.html#abb49fbd77462625039c6d5ec4a8c7667" title="Unit test for createModel." alt="" coords="208,376,371,403"/>
-<area shape="poly" title=" " alt="" coords="134,423,214,404,216,409,135,429"/>
-<area shape="rect" href="unit__model_8cpp.html#adc00b5a0ad5085f85564b39319ae6662" title="Unit test for the destrcutor." alt="" coords="215,781,364,808"/>
-<area shape="poly" title=" " alt="" coords="79,453,84,511,101,596,116,642,135,688,161,731,193,767,202,774,199,779,190,771,157,734,131,691,111,644,96,597,79,512,74,454"/>
-<area shape="rect" href="unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="213,477,366,504"/>
-<area shape="poly" title=" " alt="" coords="135,451,216,471,214,476,134,457"/>
-<area shape="rect" href="unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7" title="Unit test to check if the end is the element after the last one in flows container." alt="" coords="218,427,361,453"/>
-<area shape="poly" title=" " alt="" coords="144,437,202,437,202,443,144,443"/>
-<area shape="rect" href="unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="216,528,363,555"/>
+<area shape="rect" href="unit__model_8cpp.html#abb49fbd77462625039c6d5ec4a8c7667" title="Unit test for createModel." alt="" coords="208,528,371,555"/>
 <area shape="poly" title=" " alt="" coords="94,452,138,483,193,514,210,520,208,525,191,518,135,487,91,456"/>
-<area shape="rect" href="unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="209,275,370,301"/>
+<area shape="rect" href="unit__model_8cpp.html#af1860c0004f2ef09cbc14cf1e904fe0d" title="Unit test to check if a system was successfully created and added into the container of systems." alt="" coords="203,731,376,757"/>
+<area shape="poly" title=" " alt="" coords="80,453,88,503,107,574,122,613,141,651,165,686,193,717,198,720,195,724,190,721,161,690,136,654,117,615,102,576,83,504,75,454"/>
+<area shape="rect" href="unit__model_8cpp.html#adc00b5a0ad5085f85564b39319ae6662" title="Unit test for the destrcutor." alt="" coords="215,832,364,859"/>
+<area shape="poly" title=" " alt="" coords="78,454,81,519,95,617,109,671,130,725,157,775,194,818,203,825,199,829,190,822,153,778,125,727,104,673,90,619,76,520,73,454"/>
+<area shape="rect" href="unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="213,376,366,403"/>
+<area shape="poly" title=" " alt="" coords="134,423,214,404,216,409,135,429"/>
+<area shape="rect" href="unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7" title="Unit test to check if the end is the element after the last one in flows container." alt="" coords="218,224,361,251"/>
+<area shape="poly" title=" " alt="" coords="78,425,92,392,116,347,148,300,190,261,202,253,205,258,193,265,152,304,120,350,97,394,83,427"/>
+<area shape="rect" href="unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="216,275,363,301"/>
 <area shape="poly" title=" " alt="" coords="82,425,124,369,155,338,190,311,201,305,203,310,193,316,158,342,128,373,87,428"/>
-<area shape="rect" href="unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="198,224,381,251"/>
-<area shape="poly" title=" " alt="" coords="78,425,92,392,116,347,148,300,190,261,198,256,201,260,193,265,152,304,120,350,97,394,83,427"/>
-<area shape="rect" href="unit__model_8cpp.html#a37286918320acd70d56642498fa32c18" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="235,832,344,859"/>
-<area shape="poly" title=" " alt="" coords="78,454,81,519,95,617,109,671,130,725,157,775,193,818,221,834,218,839,190,822,153,778,125,727,104,673,90,619,76,520,73,454"/>
-<area shape="rect" href="unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d" title="Unit test to check if the begin is the first element of the system container." alt="" coords="206,629,373,656"/>
+<area shape="rect" href="unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="209,477,370,504"/>
+<area shape="poly" title=" " alt="" coords="135,451,216,471,214,476,134,457"/>
+<area shape="rect" href="unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="198,629,381,656"/>
 <area shape="poly" title=" " alt="" coords="83,453,97,486,120,530,152,576,193,615,201,620,198,624,190,619,148,580,116,533,92,488,78,455"/>
-<area shape="rect" href="unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="211,731,368,757"/>
-<area shape="poly" title=" " alt="" coords="80,453,88,503,107,574,122,613,141,651,165,686,193,717,199,721,195,725,190,721,161,690,136,654,117,615,102,576,83,504,75,454"/>
-<area shape="rect" href="unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="209,680,370,707"/>
+<area shape="rect" href="unit__model_8cpp.html#a37286918320acd70d56642498fa32c18" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="235,579,344,605"/>
+<area shape="poly" title=" " alt="" coords="87,452,128,507,158,538,193,564,221,577,219,582,190,569,155,542,124,511,82,455"/>
+<area shape="rect" href="unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d" title="Unit test to check if the begin is the first element of the system container." alt="" coords="206,781,373,808"/>
+<area shape="poly" title=" " alt="" coords="79,453,84,511,101,596,116,642,135,688,161,731,194,767,197,771,194,775,190,771,157,734,131,691,111,644,96,597,79,512,74,454"/>
+<area shape="rect" href="unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="211,680,368,707"/>
 <area shape="poly" title=" " alt="" coords="81,453,92,495,114,553,147,614,168,642,193,666,199,670,196,674,190,670,164,645,142,617,109,555,87,497,76,454"/>
-<area shape="rect" href="unit__model_8cpp.html#a9c446da28d0edbe87f0850d93c57649b" title="Unit test formethod setName." alt="" coords="239,173,340,200"/>
-<area shape="poly" title=" " alt="" coords="76,426,87,383,109,325,142,263,164,235,190,210,222,193,225,198,193,214,168,238,147,266,114,327,92,385,81,427"/>
-<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="459,121,575,148"/>
-<area shape="poly" title=" " alt="" coords="341,133,443,132,443,138,341,138"/>
-<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="475,275,560,301"/>
-<area shape="poly" title=" " alt="" coords="352,322,459,298,460,303,353,327"/>
-<area shape="rect" href="class_model.html#a97f352b56351b15cea6d989f82ebd19a" title="Creates a Model object from the class model." alt="" coords="450,325,585,352"/>
-<area shape="poly" title=" " alt="" coords="360,336,434,336,434,341,360,341"/>
-<area shape="rect" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="463,579,572,605"/>
-<area shape="poly" title=" " alt="" coords="371,589,447,589,447,595,371,595"/>
-<area shape="poly" title=" " alt="" coords="366,46,388,58,403,69,413,81,422,92,436,103,455,113,452,117,434,108,419,96,409,84,400,73,386,62,364,51"/>
-<area shape="rect" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="458,67,577,93"/>
-<area shape="poly" title=" " alt="" coords="369,42,443,60,442,65,368,48"/>
-<area shape="rect" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="447,15,587,41"/>
-<area shape="poly" title=" " alt="" coords="368,24,432,25,432,30,368,30"/>
-<area shape="poly" title=" " alt="" coords="355,97,444,116,443,121,353,102"/>
-<area shape="poly" title=" " alt="" coords="387,80,442,79,442,84,388,86"/>
-<area shape="poly" title=" " alt="" coords="345,69,446,43,447,48,346,74"/>
-<area shape="poly" title=" " alt="" coords="352,373,439,353,440,359,353,378"/>
-<area shape="rect" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2" title="Return the number of items in models&#39; container." alt="" coords="451,376,583,403"/>
-<area shape="poly" title=" " alt="" coords="371,387,436,387,436,392,371,392"/>
-<area shape="rect" href="class_model_impl.html#abdf1b89a2852f366c5dd6a07506b8067" title="Return the number of items in models&#39; container." alt="" coords="647,376,804,403"/>
-<area shape="poly" title=" " alt="" coords="584,387,632,387,632,392,584,392"/>
-<area shape="poly" title=" " alt="" coords="363,502,388,514,404,526,413,540,422,552,437,564,449,571,447,576,433,569,418,556,409,543,400,530,386,518,361,507"/>
-<area shape="rect" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492" title="Get the iterator pointing for the first item in the container." alt="" coords="442,477,592,504"/>
-<area shape="poly" title=" " alt="" coords="366,488,427,488,427,493,366,493"/>
-<area shape="poly" title=" " alt="" coords="363,449,389,463,401,476,408,489,414,515,420,541,426,553,437,565,450,574,447,578,433,569,422,556,415,542,409,516,403,491,396,479,385,467,360,453"/>
-<area shape="poly" title=" " alt="" coords="353,451,440,471,439,476,352,457"/>
-<area shape="rect" href="class_model_impl.html#a085f4eda6b6a6e1a63a35b779f6b3601" title="Get the iterator pointing for the last item in the container." alt="" coords="447,427,587,453"/>
-<area shape="poly" title=" " alt="" coords="361,437,432,437,432,443,361,443"/>
-<area shape="rect" href="class_model_impl.html#aa4e0c943fef808771f0800f03ae84386" title="Return the number of items in flows&#39; container." alt="" coords="446,528,589,555"/>
-<area shape="poly" title=" " alt="" coords="363,451,388,463,404,476,413,489,422,502,437,514,446,519,443,524,433,518,418,505,409,492,400,479,386,468,360,456"/>
-<area shape="poly" title=" " alt="" coords="353,553,448,574,447,579,352,558"/>
-<area shape="poly" title=" " alt="" coords="363,539,430,539,430,544,363,544"/>
-<area shape="poly" title=" " alt="" coords="370,285,459,285,459,291,370,291"/>
-<area shape="rect" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows." alt="" coords="465,224,570,251"/>
-<area shape="poly" title=" " alt="" coords="352,271,449,250,450,255,353,277"/>
-<area shape="poly" title=" " alt="" coords="353,249,460,273,459,278,352,254"/>
-<area shape="poly" title=" " alt="" coords="381,235,449,235,449,240,381,240"/>
-<area shape="rect" href="class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7" title="Run the model for a specified time range executing the function of the flows." alt="" coords="464,832,570,859"/>
-<area shape="poly" title=" " alt="" coords="345,843,448,843,448,848,345,848"/>
-<area shape="rect" href="class_system.html#a41b673faa6c199eb8e4f204639fab4f2" title="Get the value of the system." alt="" coords="663,857,788,884"/>
-<area shape="poly" title=" " alt="" coords="571,849,648,859,647,864,571,854"/>
-<area shape="rect" href="class_system.html#afc591b66c17ddcd2d0a5421f66750d2c" title="Set the value of the flow." alt="" coords="663,807,788,833"/>
-<area shape="poly" title=" " alt="" coords="571,836,647,827,648,832,571,842"/>
-<area shape="poly" title=" " alt="" coords="352,626,447,605,448,610,353,631"/>
-<area shape="rect" href="class_model_impl.html#a9ac06e337a6f2b114a334112b1aa5818" title="Get the iterator pointing for the first item in the container." alt="" coords="435,629,599,656"/>
-<area shape="poly" title=" " alt="" coords="373,640,419,640,419,645,373,645"/>
-<area shape="poly" title=" " alt="" coords="367,728,385,717,396,705,403,693,409,668,415,642,422,628,433,615,447,606,450,610,437,619,426,631,420,643,414,669,408,695,401,708,389,721,370,732"/>
-<area shape="poly" title=" " alt="" coords="361,728,386,716,400,705,409,692,418,679,433,666,443,660,446,665,437,670,422,682,413,695,404,708,388,721,363,733"/>
-<area shape="rect" href="class_model_impl.html#af633f7f0976a01150ada93977963e539" title="Get the iterator pointing for the last item in the container." alt="" coords="440,731,594,757"/>
-<area shape="poly" title=" " alt="" coords="368,741,424,741,424,747,368,747"/>
-<area shape="rect" href="class_model_impl.html#ad95b31c43021dec4c4b67cb74a2dc138" title="Return the number of items in systems&#39; container." alt="" coords="435,680,599,707"/>
-<area shape="poly" title=" " alt="" coords="352,727,439,708,440,713,353,733"/>
-<area shape="poly" title=" " alt="" coords="361,677,386,666,400,654,409,641,418,628,433,615,447,608,449,613,437,620,422,632,413,644,404,658,388,670,363,682"/>
-<area shape="poly" title=" " alt="" coords="370,691,420,691,420,696,370,696"/>
-<area shape="poly" title=" " alt="" coords="340,173,443,149,445,154,341,178"/>
-<area shape="rect" href="class_model.html#aa17012307c37e6527ae6b1d3fff540e0" title="Set the name of the model." alt="" coords="459,173,575,200"/>
-<area shape="poly" title=" " alt="" coords="341,184,443,184,443,189,341,189"/>
+<area shape="rect" href="unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="209,427,370,453"/>
+<area shape="poly" title=" " alt="" coords="144,437,194,437,194,443,144,443"/>
+<area shape="rect" href="unit__model_8cpp.html#a9c446da28d0edbe87f0850d93c57649b" title="Unit test formethod setName." alt="" coords="239,5,340,32"/>
+<area shape="poly" title=" " alt="" coords="73,426,74,358,88,255,102,198,123,141,152,88,190,42,205,31,223,23,225,28,208,35,193,46,156,91,128,143,107,199,93,256,80,358,78,426"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="440,427,575,453"/>
+<area shape="poly" title=" " alt="" coords="341,136,367,144,389,159,411,192,420,224,420,256,415,287,410,319,410,350,417,381,437,413,439,415,435,419,433,416,412,383,404,350,405,318,410,286,414,255,414,224,406,194,385,163,364,149,339,141"/>
+<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="450,93,566,120"/>
+<area shape="poly" title=" " alt="" coords="340,127,434,114,434,119,341,132"/>
+<area shape="poly" title=" " alt="" coords="369,93,389,109,413,149,422,187,420,225,414,263,407,300,406,337,414,375,437,413,439,415,435,419,433,416,409,377,400,338,402,300,409,262,415,225,417,188,408,151,385,112,366,97"/>
+<area shape="poly" title=" " alt="" coords="368,85,434,94,434,99,368,90"/>
+<area shape="rect" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="448,173,567,200"/>
+<area shape="poly" title=" " alt="" coords="361,97,388,108,436,135,477,162,474,167,433,139,386,113,359,102"/>
+<area shape="rect" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="438,224,578,251"/>
+<area shape="poly" title=" " alt="" coords="369,95,389,109,400,122,407,135,414,161,420,186,426,198,437,210,441,214,438,218,433,214,422,201,415,188,408,162,402,137,396,125,385,113,366,100"/>
+<area shape="poly" title=" " alt="" coords="373,198,389,210,407,236,416,261,417,287,415,313,412,338,413,363,420,388,437,413,439,415,435,419,433,416,415,390,408,364,407,338,409,312,412,287,410,262,403,238,385,214,370,203"/>
+<area shape="poly" title=" " alt="" coords="349,170,386,159,465,125,467,130,388,164,351,175"/>
+<area shape="poly" title=" " alt="" coords="387,184,433,184,433,189,387,189"/>
+<area shape="poly" title=" " alt="" coords="351,198,433,217,431,222,350,203"/>
+<area shape="poly" title=" " alt="" coords="363,350,388,362,404,374,413,387,422,400,437,413,445,417,442,422,433,417,418,404,409,390,400,378,386,366,361,355"/>
+<area shape="poly" title=" " alt="" coords="366,323,385,311,396,300,403,288,409,263,415,237,422,223,433,210,438,206,441,210,437,214,426,226,420,238,414,264,408,290,401,303,389,315,368,328"/>
+<area shape="rect" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="444,376,571,403"/>
+<area shape="poly" title=" " alt="" coords="351,350,433,369,431,374,350,355"/>
+<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="664,376,749,403"/>
+<area shape="poly" title=" " alt="" coords="572,387,648,387,648,392,572,392"/>
+<area shape="poly" title=" " alt="" coords="354,525,386,514,434,488,475,460,478,465,437,492,388,518,356,530"/>
+<area shape="rect" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2" title="Return the number of items in models&#39; container." alt="" coords="442,528,574,555"/>
+<area shape="poly" title=" " alt="" coords="371,539,426,539,426,544,371,544"/>
+<area shape="rect" href="class_model_impl.html#abdf1b89a2852f366c5dd6a07506b8067" title="Return the number of items in models&#39; container." alt="" coords="628,528,785,555"/>
+<area shape="poly" title=" " alt="" coords="574,539,613,539,613,544,574,544"/>
+<area shape="poly" title=" " alt="" coords="370,728,385,717,404,693,413,670,416,647,416,623,415,573,420,545,433,515,453,486,476,462,480,466,457,489,437,517,426,546,421,573,421,623,422,647,418,671,408,696,389,721,373,732"/>
+<area shape="rect" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="435,680,580,707"/>
+<area shape="poly" title=" " alt="" coords="350,727,431,708,433,713,351,733"/>
+<area shape="rect" href="class_model.html#af929bf04a3a2780a6d82e901cf763f52" title="Get the iterator pointing for the first item in the container." alt="" coords="438,781,578,808"/>
+<area shape="poly" title=" " alt="" coords="351,755,433,775,431,780,350,761"/>
+<area shape="poly" title=" " alt="" coords="351,401,433,420,431,425,350,406"/>
+<area shape="poly" title=" " alt="" coords="366,387,428,387,428,392,366,392"/>
+<area shape="rect" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1" title="Get the iterator pointing for the first item in the container." alt="" coords="445,325,571,352"/>
+<area shape="poly" title=" " alt="" coords="350,373,431,354,433,359,351,378"/>
+<area shape="poly" title=" " alt="" coords="363,245,389,261,404,280,412,299,414,338,417,376,423,394,437,413,440,416,436,420,433,416,419,397,411,377,409,338,407,300,399,282,385,265,360,249"/>
+<area shape="poly" title=" " alt="" coords="350,221,432,201,433,207,351,226"/>
+<area shape="poly" title=" " alt="" coords="363,246,389,261,401,273,408,286,414,312,420,338,426,350,437,362,441,366,438,370,433,366,422,353,415,339,409,313,403,288,396,276,385,265,360,251"/>
+<area shape="poly" title=" " alt="" coords="363,249,388,260,404,273,413,286,422,299,437,311,445,316,442,321,433,315,418,302,409,289,400,277,386,265,360,253"/>
+<area shape="rect" href="class_model.html#a865a19570378a396e1751c8ce4e6590b" title="Get the iterator pointing for the last item in the container." alt="" coords="450,275,566,301"/>
+<area shape="poly" title=" " alt="" coords="351,249,435,268,434,274,350,254"/>
+<area shape="poly" title=" " alt="" coords="364,297,389,311,401,324,408,337,414,363,420,388,426,401,437,413,441,416,438,420,433,417,422,404,415,390,409,364,403,339,396,327,385,315,362,302"/>
+<area shape="poly" title=" " alt="" coords="361,272,386,260,400,249,409,236,418,223,433,210,442,205,445,209,437,214,422,227,413,239,404,252,388,265,363,277"/>
+<area shape="poly" title=" " alt="" coords="363,299,388,311,404,324,413,337,422,349,437,362,445,367,442,371,433,366,418,353,409,340,400,327,386,316,361,304"/>
+<area shape="poly" title=" " alt="" coords="350,474,431,455,433,460,351,479"/>
+<area shape="poly" title=" " alt="" coords="361,474,386,463,400,451,409,439,418,426,433,413,442,407,445,412,437,417,422,429,413,442,404,455,388,468,363,479"/>
+<area shape="rect" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows." alt="" coords="455,629,560,656"/>
+<area shape="poly" title=" " alt="" coords="370,502,389,514,401,527,408,540,414,565,420,591,426,603,437,615,443,620,440,624,433,619,422,606,415,593,409,567,403,542,396,530,385,518,367,507"/>
+<area shape="poly" title=" " alt="" coords="367,627,385,615,404,593,412,569,419,544,433,515,478,462,482,466,437,517,424,546,417,571,409,595,389,619,370,631"/>
+<area shape="poly" title=" " alt="" coords="351,654,433,673,431,678,350,659"/>
+<area shape="poly" title=" " alt="" coords="381,640,440,640,440,645,381,645"/>
+<area shape="poly" title=" " alt="" coords="343,581,386,564,481,463,485,467,388,569,345,586"/>
+<area shape="rect" href="class_model.html#a2328056dbe721d55cbdbc55e86a777e3" title="Run the model for a specified time range executing the function of the flows." alt="" coords="467,579,549,605"/>
+<area shape="poly" title=" " alt="" coords="345,589,451,589,451,595,345,595"/>
+<area shape="poly" title=" " alt="" coords="371,779,385,767,407,737,418,708,420,679,418,650,414,587,419,552,433,515,452,486,475,462,479,465,456,489,437,517,424,553,419,587,423,649,425,679,423,709,412,740,389,771,374,783"/>
+<area shape="poly" title=" " alt="" coords="361,778,386,767,400,755,409,743,418,730,433,717,442,711,445,716,437,721,422,733,413,746,404,759,388,772,363,783"/>
+<area shape="poly" title=" " alt="" coords="373,792,422,792,422,797,373,797"/>
+<area shape="poly" title=" " alt="" coords="367,678,385,666,400,648,409,631,414,596,417,558,422,537,433,515,454,486,477,462,481,465,458,489,437,517,427,539,422,559,419,597,414,633,405,651,389,670,370,683"/>
+<area shape="poly" title=" " alt="" coords="367,680,385,666,404,641,416,616,423,591,426,567,422,517,411,468,399,418,394,367,396,341,403,314,415,288,433,261,435,259,439,262,437,264,419,290,408,316,401,341,399,367,404,417,416,467,427,517,431,567,429,592,421,618,408,644,389,670,370,684"/>
+<area shape="poly" title=" " alt="" coords="369,691,419,691,419,696,369,696"/>
+<area shape="poly" title=" " alt="" coords="363,705,388,716,404,729,413,742,422,755,437,767,445,772,442,777,433,771,418,758,409,745,400,733,386,721,361,710"/>
+<area shape="rect" href="class_model.html#a931d4a69527930401a1599e38b43b505" title="Get the iterator pointing for the last item in the container." alt="" coords="443,731,573,757"/>
+<area shape="poly" title=" " alt="" coords="351,705,433,724,431,729,350,710"/>
+<area shape="poly" title=" " alt="" coords="370,437,425,437,425,443,370,443"/>
+<area shape="poly" title=" " alt="" coords="368,424,385,413,399,395,407,377,409,339,411,301,419,281,433,261,436,258,440,262,437,264,423,283,417,302,414,340,412,378,404,398,389,417,372,429"/>
+<area shape="poly" title=" " alt="" coords="371,451,389,463,407,489,416,515,417,540,415,566,412,591,413,616,420,641,437,666,439,669,435,672,433,670,415,643,408,617,407,591,409,565,412,540,410,516,403,491,385,467,368,455"/>
+<area shape="poly" title=" " alt="" coords="341,18,367,26,389,42,407,66,419,89,426,113,429,136,426,182,416,228,406,274,402,320,404,343,410,366,421,389,437,413,439,415,435,419,433,416,416,392,405,368,399,344,396,320,400,273,410,227,420,182,423,136,421,114,414,91,402,69,385,46,365,31,340,23"/>
+<area shape="poly" title=" " alt="" coords="341,27,388,42,433,62,472,83,470,88,430,66,386,46,340,32"/>
+<area shape="rect" href="class_model.html#aa17012307c37e6527ae6b1d3fff540e0" title="Set the name of the model." alt="" coords="450,5,566,32"/>
+<area shape="poly" title=" " alt="" coords="340,16,434,16,434,21,340,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -404,24 +406,27 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test for the method getName. </p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                   {</div>
-<div class="line"><span class="lineno">   48</span>    <a class="code hl_class" href="class_model.html">Model</a> * model = <span class="keyword">new</span> <a class="code hl_class" href="class_model_impl.html">ModelImpl</a>(<span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">   49</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() == <span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">   50</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() != <span class="stringliteral">&quot;Modelo&quot;</span>);</div>
-<div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>    <span class="keyword">delete</span> model;</div>
-<div class="line"><span class="lineno">   53</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                   {</div>
+<div class="line"><span class="lineno">   49</span>    </div>
+<div class="line"><span class="lineno">   50</span>    <a class="code hl_class" href="class_model.html">Model</a> &amp;model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>(<span class="stringliteral">&quot;Modelo&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>    assert(model.<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() == <span class="stringliteral">&quot;Modelo&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>    assert(model.<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() != <span class="stringliteral">&quot;Model&quot;</span>);</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">   55</span>}</div>
 <div class="ttc" id="aclass_model_html"><div class="ttname"><a href="class_model.html">Model</a></div><div class="ttdoc">Definition of class Model, which represents the model to be executed.</div><div class="ttdef"><b>Definition</b> Model.h:11</div></div>
 <div class="ttc" id="aclass_model_html_aa5365ab557ae47efffdf14ba7a46dac8"><div class="ttname"><a href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">Model::getName</a></div><div class="ttdeci">virtual string getName() const =0</div><div class="ttdoc">Get the name of the model.</div></div>
-<div class="ttc" id="aclass_model_impl_html"><div class="ttname"><a href="class_model_impl.html">ModelImpl</a></div><div class="ttdoc">Definition of class ModelImpl, which represents the model to be executed.</div><div class="ttdef"><b>Definition</b> ModelImpl.h:9</div></div>
+<div class="ttc" id="aclass_model_html_adfb6f5fc757a8d8f417a9da0fa5083f8"><div class="ttname"><a href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a></div><div class="ttdeci">static Model &amp; createModel(string name=&quot;&quot;)</div><div class="ttdoc">Creates a Model object from the class model.</div><div class="ttdef"><b>Definition</b> ModelImpl.cpp:203</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_adc98c33e4754d8fbc7ac6f4c304fc1ca_cgraph.png" border="0" usemap="#aunit__model_8h_adc98c33e4754d8fbc7ac6f4c304fc1ca_cgraph" alt=""/></div>
 <map name="aunit__model_8h_adc98c33e4754d8fbc7ac6f4c304fc1ca_cgraph" id="aunit__model_8h_adc98c33e4754d8fbc7ac6f4c304fc1ca_cgraph">
-<area shape="rect" title="Unit test for the method getName." alt="" coords="5,5,107,32"/>
-<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="155,5,271,32"/>
-<area shape="poly" title=" " alt="" coords="107,16,139,16,139,21,107,21"/>
+<area shape="rect" title="Unit test for the method getName." alt="" coords="5,31,107,57"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="155,5,290,32"/>
+<area shape="poly" title=" " alt="" coords="107,34,139,29,140,34,108,39"/>
+<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="164,56,281,83"/>
+<area shape="poly" title=" " alt="" coords="108,49,149,56,148,61,107,54"/>
 </map>
 </div>
 <div class="dynheader">
@@ -430,119 +435,6 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="unit__model_8h_adc98c33e4754d8fbc7ac6f4c304fc1ca_icgraph.png" border="0" usemap="#aunit__model_8h_adc98c33e4754d8fbc7ac6f4c304fc1ca_icgraph" alt=""/></div>
 <map name="aunit__model_8h_adc98c33e4754d8fbc7ac6f4c304fc1ca_icgraph" id="aunit__model_8h_adc98c33e4754d8fbc7ac6f4c304fc1ca_icgraph">
 <area shape="rect" title="Unit test for the method getName." alt="" coords="433,5,535,32"/>
-<area shape="rect" href="unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,5,385,32"/>
-<area shape="poly" title=" " alt="" coords="418,21,386,21,386,16,418,16"/>
-<area shape="rect" href="unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,5,199,32"/>
-<area shape="poly" title=" " alt="" coords="232,21,199,21,199,16,232,16"/>
-<area shape="rect" href="unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aa4f8c7bb8b3cb64a0b1959bb0eb01b9a" name="aa4f8c7bb8b3cb64a0b1959bb0eb01b9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a">&#9670;&#160;</a></span>unit_Model_add_flow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void unit_Model_add_flow </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unit test to check if a flow was successfully added into the container of flows. </p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                          {</div>
-<div class="line"><span class="lineno">  189</span>    <a class="code hl_class" href="class_model.html">Model</a> * modelo = <a class="code hl_function" href="class_model.html#a97f352b56351b15cea6d989f82ebd19a">Model::createModel</a>();</div>
-<div class="line"><span class="lineno">  190</span> </div>
-<div class="line"><span class="lineno">  191</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * f = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;f&quot;</span>);</div>
-<div class="line"><span class="lineno">  192</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * g = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;g&quot;</span>);</div>
-<div class="line"><span class="lineno">  193</span> </div>
-<div class="line"><span class="lineno">  194</span>    assert(modelo-&gt;<a class="code hl_function" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20">add</a>(f));</div>
-<div class="line"><span class="lineno">  195</span>    assert(modelo-&gt;<a class="code hl_function" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20">add</a>(g));</div>
-<div class="line"><span class="lineno">  196</span> </div>
-<div class="line"><span class="lineno">  197</span>    <span class="keyword">delete</span> modelo;</div>
-<div class="line"><span class="lineno">  198</span>}</div>
-<div class="ttc" id="aclass_flow_complexo_html"><div class="ttname"><a href="class_flow_complexo.html">FlowComplexo</a></div><div class="ttdoc">Definition of class FlowComplexo, which extends the class Flow and implements the executeEquation.</div><div class="ttdef"><b>Definition</b> FlowComplexo.h:9</div></div>
-<div class="ttc" id="aclass_model_html_a7cfac518d3f6ec84e858568175a28f20"><div class="ttname"><a href="class_model.html#a7cfac518d3f6ec84e858568175a28f20">Model::add</a></div><div class="ttdeci">virtual bool add(Flow *flow)=0</div><div class="ttdoc">Add a flow to the model's container of flows.</div></div>
-<div class="ttc" id="aclass_model_html_a97f352b56351b15cea6d989f82ebd19a"><div class="ttname"><a href="class_model.html#a97f352b56351b15cea6d989f82ebd19a">Model::createModel</a></div><div class="ttdeci">static Model * createModel(string name=&quot;&quot;)</div><div class="ttdoc">Creates a Model object from the class model.</div><div class="ttdef"><b>Definition</b> ModelImpl.cpp:203</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="unit__model_8h_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a_cgraph.png" border="0" usemap="#aunit__model_8h_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a_cgraph" alt=""/></div>
-<map name="aunit__model_8h_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a_cgraph" id="aunit__model_8h_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a_cgraph">
-<area shape="rect" title="Unit test to check if a flow was successfully added into the container of flows." alt="" coords="5,31,147,57"/>
-<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="220,5,305,32"/>
-<area shape="poly" title=" " alt="" coords="147,32,204,24,205,29,148,37"/>
-<area shape="rect" href="class_model.html#a97f352b56351b15cea6d989f82ebd19a" title="Creates a Model object from the class model." alt="" coords="195,56,330,83"/>
-<area shape="poly" title=" " alt="" coords="148,51,180,55,179,61,147,56"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="unit__model_8h_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a_icgraph.png" border="0" usemap="#aunit__model_8h_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a_icgraph" alt=""/></div>
-<map name="aunit__model_8h_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a_icgraph" id="aunit__model_8h_aa4f8c7bb8b3cb64a0b1959bb0eb01b9a_icgraph">
-<area shape="rect" title="Unit test to check if a flow was successfully added into the container of flows." alt="" coords="433,5,575,32"/>
-<area shape="rect" href="unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,5,385,32"/>
-<area shape="poly" title=" " alt="" coords="418,21,386,21,386,16,418,16"/>
-<area shape="rect" href="unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,5,199,32"/>
-<area shape="poly" title=" " alt="" coords="232,21,199,21,199,16,232,16"/>
-<area shape="rect" href="unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ab3a10b6e696b6a91d6c33dcbb18aceb4" name="ab3a10b6e696b6a91d6c33dcbb18aceb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3a10b6e696b6a91d6c33dcbb18aceb4">&#9670;&#160;</a></span>unit_Model_add_system()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void unit_Model_add_system </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unit test to check if a flow was successfully added into the container of systems. </p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>                            {</div>
-<div class="line"><span class="lineno">  200</span>    <a class="code hl_class" href="class_model_impl.html">ModelImpl</a> model (<span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">  201</span>    </div>
-<div class="line"><span class="lineno">  202</span>    <a class="code hl_class" href="class_system.html">System</a> * pop1 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
-<div class="line"><span class="lineno">  203</span>    <a class="code hl_class" href="class_system.html">System</a> * pop2 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
-<div class="line"><span class="lineno">  204</span> </div>
-<div class="line"><span class="lineno">  205</span>    assert(model.add(pop1));</div>
-<div class="line"><span class="lineno">  206</span>    assert(model.add(pop2));</div>
-<div class="line"><span class="lineno">  207</span>}</div>
-<div class="ttc" id="aclass_system_html"><div class="ttname"><a href="class_system.html">System</a></div><div class="ttdoc">Definition of class System, which represents the current value of the system.</div><div class="ttdef"><b>Definition</b> System.h:13</div></div>
-<div class="ttc" id="aclass_system_impl_html"><div class="ttname"><a href="class_system_impl.html">SystemImpl</a></div><div class="ttdoc">Definition of class SystemImpl, which represents the current value of the system.</div><div class="ttdef"><b>Definition</b> SystemImpl.h:9</div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="unit__model_8h_ab3a10b6e696b6a91d6c33dcbb18aceb4_cgraph.png" border="0" usemap="#aunit__model_8h_ab3a10b6e696b6a91d6c33dcbb18aceb4_cgraph" alt=""/></div>
-<map name="aunit__model_8h_ab3a10b6e696b6a91d6c33dcbb18aceb4_cgraph" id="aunit__model_8h_ab3a10b6e696b6a91d6c33dcbb18aceb4_cgraph">
-<area shape="rect" title="Unit test to check if a flow was successfully added into the container of systems." alt="" coords="5,5,168,32"/>
-<area shape="rect" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="216,5,325,32"/>
-<area shape="poly" title=" " alt="" coords="168,16,200,16,200,21,168,21"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="unit__model_8h_ab3a10b6e696b6a91d6c33dcbb18aceb4_icgraph.png" border="0" usemap="#aunit__model_8h_ab3a10b6e696b6a91d6c33dcbb18aceb4_icgraph" alt=""/></div>
-<map name="aunit__model_8h_ab3a10b6e696b6a91d6c33dcbb18aceb4_icgraph" id="aunit__model_8h_ab3a10b6e696b6a91d6c33dcbb18aceb4_icgraph">
-<area shape="rect" title="Unit test to check if a flow was successfully added into the container of systems." alt="" coords="433,5,596,32"/>
 <area shape="rect" href="unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,5,385,32"/>
 <area shape="poly" title=" " alt="" coords="418,21,386,21,386,16,418,16"/>
 <area shape="rect" href="unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,5,199,32"/>
@@ -571,13 +463,13 @@ Here is the caller graph for this function:</div>
 
 <p>Unit test for an empty constructor of model. </p>
 <div class="fragment"><div class="line"><span class="lineno">    3</span>                                     {</div>
-<div class="line"><span class="lineno">    4</span>    <a class="code hl_class" href="class_model.html">Model</a> * model = <span class="keyword">new</span> <a class="code hl_class" href="class_model_impl.html">ModelImpl</a>();</div>
+<div class="line"><span class="lineno">    4</span>    <a class="code hl_class" href="class_model.html">Model</a> &amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
 <div class="line"><span class="lineno">    5</span> </div>
-<div class="line"><span class="lineno">    6</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() == <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">    7</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a">flowsSize</a>() == 0);</div>
-<div class="line"><span class="lineno">    8</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257">systemsSize</a>() == 0);</div>
+<div class="line"><span class="lineno">    6</span>    assert(model.<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() == <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">    7</span>    assert(model.<a class="code hl_function" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a">flowsSize</a>() == 0);</div>
+<div class="line"><span class="lineno">    8</span>    assert(model.<a class="code hl_function" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257">systemsSize</a>() == 0);</div>
 <div class="line"><span class="lineno">    9</span> </div>
-<div class="line"><span class="lineno">   10</span>    <span class="keyword">delete</span> model;</div>
+<div class="line"><span class="lineno">   10</span>    <span class="keyword">delete</span> &amp;model;</div>
 <div class="line"><span class="lineno">   11</span> </div>
 <div class="line"><span class="lineno">   12</span>}</div>
 <div class="ttc" id="aclass_model_html_a0fbe0f40b959f8303d23a003d4a00257"><div class="ttname"><a href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257">Model::systemsSize</a></div><div class="ttdeci">virtual int systemsSize()=0</div><div class="ttdoc">Return the number of items in systems' container.</div></div>
@@ -587,13 +479,15 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_aef9d3af61dfc50dcbd295ee49b77e704_cgraph.png" border="0" usemap="#aunit__model_8h_aef9d3af61dfc50dcbd295ee49b77e704_cgraph" alt=""/></div>
 <map name="aunit__model_8h_aef9d3af61dfc50dcbd295ee49b77e704_cgraph" id="aunit__model_8h_aef9d3af61dfc50dcbd295ee49b77e704_cgraph">
-<area shape="rect" title="Unit test for an empty constructor of model." alt="" coords="5,48,162,91"/>
-<area shape="rect" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="220,5,340,32"/>
-<area shape="poly" title=" " alt="" coords="161,47,210,34,211,39,163,52"/>
-<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="222,56,338,83"/>
-<area shape="poly" title=" " alt="" coords="162,67,206,67,206,72,162,72"/>
-<area shape="rect" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="210,107,350,133"/>
-<area shape="poly" title=" " alt="" coords="163,87,211,100,210,105,161,92"/>
+<area shape="rect" title="Unit test for an empty constructor of model." alt="" coords="5,73,162,116"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="212,5,348,32"/>
+<area shape="poly" title=" " alt="" coords="137,70,209,42,225,35,227,40,211,46,139,75"/>
+<area shape="rect" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="220,56,340,83"/>
+<area shape="poly" title=" " alt="" coords="162,82,204,76,205,82,162,87"/>
+<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="222,107,338,133"/>
+<area shape="poly" title=" " alt="" coords="162,102,207,108,206,113,162,107"/>
+<area shape="rect" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="210,157,350,184"/>
+<area shape="poly" title=" " alt="" coords="139,114,211,143,227,149,225,154,209,148,137,119"/>
 </map>
 </div>
 <div class="dynheader">
@@ -630,26 +524,28 @@ Here is the caller graph for this function:</div>
 
 <p>Unit test for a constructor with name of the model. </p>
 <div class="fragment"><div class="line"><span class="lineno">   14</span>                                  {</div>
-<div class="line"><span class="lineno">   15</span>    <a class="code hl_class" href="class_model.html">Model</a> * model = <span class="keyword">new</span> <a class="code hl_class" href="class_model_impl.html">ModelImpl</a>(<span class="stringliteral">&quot;Model&quot;</span>);</div>
+<div class="line"><span class="lineno">   15</span>    <a class="code hl_class" href="class_model.html">Model</a> &amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>(<span class="stringliteral">&quot;Model&quot;</span>);</div>
 <div class="line"><span class="lineno">   16</span> </div>
-<div class="line"><span class="lineno">   17</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() == <span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">   18</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a">flowsSize</a>() == 0);</div>
-<div class="line"><span class="lineno">   19</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257">systemsSize</a>() == 0);</div>
+<div class="line"><span class="lineno">   17</span>    assert(model.<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() == <span class="stringliteral">&quot;Model&quot;</span>);</div>
+<div class="line"><span class="lineno">   18</span>    assert(model.<a class="code hl_function" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a">flowsSize</a>() == 0);</div>
+<div class="line"><span class="lineno">   19</span>    assert(model.<a class="code hl_function" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257">systemsSize</a>() == 0);</div>
 <div class="line"><span class="lineno">   20</span> </div>
-<div class="line"><span class="lineno">   21</span>    <span class="keyword">delete</span> model;</div>
+<div class="line"><span class="lineno">   21</span>    <span class="keyword">delete</span> &amp;model;</div>
 <div class="line"><span class="lineno">   22</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_a73a3b2f94a5ddae65bdb3761c8e2cb91_cgraph.png" border="0" usemap="#aunit__model_8h_a73a3b2f94a5ddae65bdb3761c8e2cb91_cgraph" alt=""/></div>
 <map name="aunit__model_8h_a73a3b2f94a5ddae65bdb3761c8e2cb91_cgraph" id="aunit__model_8h_a73a3b2f94a5ddae65bdb3761c8e2cb91_cgraph">
-<area shape="rect" title="Unit test for a constructor with name of the model." alt="" coords="5,56,201,83"/>
-<area shape="rect" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="259,5,379,32"/>
-<area shape="poly" title=" " alt="" coords="163,53,244,34,245,39,164,58"/>
-<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="261,56,377,83"/>
-<area shape="poly" title=" " alt="" coords="201,67,245,67,245,72,201,72"/>
-<area shape="rect" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="249,107,389,133"/>
-<area shape="poly" title=" " alt="" coords="164,81,245,100,244,105,163,86"/>
+<area shape="rect" title="Unit test for a constructor with name of the model." alt="" coords="5,81,201,108"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="251,5,387,32"/>
+<area shape="poly" title=" " alt="" coords="143,78,263,35,265,40,144,83"/>
+<area shape="rect" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="259,56,379,83"/>
+<area shape="poly" title=" " alt="" coords="201,81,244,75,244,81,201,86"/>
+<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="261,107,377,133"/>
+<area shape="poly" title=" " alt="" coords="201,103,246,109,245,114,201,109"/>
+<area shape="rect" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="249,157,389,184"/>
+<area shape="poly" title=" " alt="" coords="144,106,265,149,263,154,143,111"/>
 </map>
 </div>
 <div class="dynheader">
@@ -660,6 +556,67 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Unit test for a constructor with name of the model." alt="" coords="433,5,629,32"/>
 <area shape="rect" href="unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,5,385,32"/>
 <area shape="poly" title=" " alt="" coords="418,21,386,21,386,16,418,16"/>
+<area shape="rect" href="unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,5,199,32"/>
+<area shape="poly" title=" " alt="" coords="232,21,199,21,199,16,232,16"/>
+<area shape="rect" href="unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac044ab223c8b3b6df04969f1f254ae01" name="ac044ab223c8b3b6df04969f1f254ae01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac044ab223c8b3b6df04969f1f254ae01">&#9670;&#160;</a></span>unit_Model_createFlow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unit_Model_createFlow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unit test to check if a flow was successfully created and added into the container of flows. </p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>                            {</div>
+<div class="line"><span class="lineno">  173</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;f&quot;</span>);</div>
+<div class="line"><span class="lineno">  176</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;g&quot;</span>);</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>    assert(model.<a class="code hl_function" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a">flowsSize</a>() == 2);</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">  181</span>}</div>
+<div class="ttc" id="aclass_flow_complexo_html"><div class="ttname"><a href="class_flow_complexo.html">FlowComplexo</a></div><div class="ttdoc">Definition of class FlowComplexo, which extends the class Flow and implements the executeEquation.</div><div class="ttdef"><b>Definition</b> FlowComplexo.h:9</div></div>
+<div class="ttc" id="aclass_model_html_acd3ef5a8c2b9d6aa199c61a505b11e8c"><div class="ttname"><a href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">Model::createFlow</a></div><div class="ttdeci">Flow &amp; createFlow(string name=&quot;&quot;, System *source=NULL, System *target=NULL)</div><div class="ttdoc">Template to include a Flow into the container of flow.</div><div class="ttdef"><b>Definition</b> Model.h:165</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unit__model_8h_ac044ab223c8b3b6df04969f1f254ae01_cgraph.png" border="0" usemap="#aunit__model_8h_ac044ab223c8b3b6df04969f1f254ae01_cgraph" alt=""/></div>
+<map name="aunit__model_8h_ac044ab223c8b3b6df04969f1f254ae01_cgraph" id="aunit__model_8h_ac044ab223c8b3b6df04969f1f254ae01_cgraph">
+<area shape="rect" title="Unit test to check if a flow was successfully created and added into the container of flows." alt="" coords="5,56,160,83"/>
+<area shape="rect" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="212,5,339,32"/>
+<area shape="poly" title=" " alt="" coords="136,53,206,34,208,39,137,58"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="208,56,343,83"/>
+<area shape="poly" title=" " alt="" coords="160,67,193,67,193,72,160,72"/>
+<area shape="rect" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="216,107,335,133"/>
+<area shape="poly" title=" " alt="" coords="137,81,208,100,206,105,136,86"/>
+<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="391,5,476,32"/>
+<area shape="poly" title=" " alt="" coords="340,16,376,16,376,21,340,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unit__model_8h_ac044ab223c8b3b6df04969f1f254ae01_icgraph.png" border="0" usemap="#aunit__model_8h_ac044ab223c8b3b6df04969f1f254ae01_icgraph" alt=""/></div>
+<map name="aunit__model_8h_ac044ab223c8b3b6df04969f1f254ae01_icgraph" id="aunit__model_8h_ac044ab223c8b3b6df04969f1f254ae01_icgraph">
+<area shape="rect" title="Unit test to check if a flow was successfully created and added into the container of flows." alt="" coords="433,5,588,32"/>
+<area shape="rect" href="unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,5,385,32"/>
+<area shape="poly" title=" " alt="" coords="418,21,385,21,385,16,418,16"/>
 <area shape="rect" href="unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,5,199,32"/>
 <area shape="poly" title=" " alt="" coords="232,21,199,21,199,16,232,16"/>
 <area shape="rect" href="unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
@@ -687,22 +644,22 @@ Here is the caller graph for this function:</div>
 <p>Unit test for createModel. </p>
 <div class="fragment"><div class="line"><span class="lineno">   24</span>                             {</div>
 <div class="line"><span class="lineno">   25</span>    assert(<a class="code hl_function" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2">Model::modelsSize</a>() == 0);</div>
-<div class="line"><span class="lineno">   26</span>    <a class="code hl_class" href="class_model.html">Model</a> * model1 = <a class="code hl_function" href="class_model.html#a97f352b56351b15cea6d989f82ebd19a">Model::createModel</a>(<span class="stringliteral">&quot;Modelo 1&quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model1 = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>(<span class="stringliteral">&quot;Modelo 1&quot;</span>);</div>
 <div class="line"><span class="lineno">   27</span>    assert(<a class="code hl_function" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2">Model::modelsSize</a>() == 1);</div>
 <div class="line"><span class="lineno">   28</span>    </div>
-<div class="line"><span class="lineno">   29</span>    <a class="code hl_class" href="class_model.html">Model</a> * model2 = <a class="code hl_function" href="class_model.html#a97f352b56351b15cea6d989f82ebd19a">Model::createModel</a>(<span class="stringliteral">&quot;Modelo 2&quot;</span>);</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model2 = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>(<span class="stringliteral">&quot;Modelo 2&quot;</span>);</div>
 <div class="line"><span class="lineno">   30</span>    assert(<a class="code hl_function" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2">Model::modelsSize</a>() == 2);</div>
 <div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>    <span class="keyword">delete</span> model1;</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keyword">delete</span> &amp;model1;</div>
 <div class="line"><span class="lineno">   33</span>    assert(<a class="code hl_function" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2">Model::modelsSize</a>() == 1);</div>
 <div class="line"><span class="lineno">   34</span> </div>
-<div class="line"><span class="lineno">   35</span>    <a class="code hl_class" href="class_model.html">Model</a> * model3 = <a class="code hl_function" href="class_model.html#a97f352b56351b15cea6d989f82ebd19a">Model::createModel</a>(<span class="stringliteral">&quot;Modelo 3&quot;</span>);</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model3 = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>(<span class="stringliteral">&quot;Modelo 3&quot;</span>);</div>
 <div class="line"><span class="lineno">   36</span>    assert(<a class="code hl_function" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2">Model::modelsSize</a>() == 2);</div>
 <div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>    <span class="keyword">delete</span> model2;</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keyword">delete</span> &amp;model2;</div>
 <div class="line"><span class="lineno">   39</span>    assert(<a class="code hl_function" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2">Model::modelsSize</a>() == 1);</div>
 <div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>    <span class="keyword">delete</span> model3;</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keyword">delete</span> &amp;model3;</div>
 <div class="line"><span class="lineno">   42</span>    assert(<a class="code hl_function" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2">Model::modelsSize</a>() == 0);</div>
 <div class="line"><span class="lineno">   43</span>}</div>
 <div class="ttc" id="aclass_model_html_a0a50b4f964386d6ce3b5cb462be066a2"><div class="ttname"><a href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2">Model::modelsSize</a></div><div class="ttdeci">static int modelsSize()</div><div class="ttdoc">Return the number of items in models' container.</div><div class="ttdef"><b>Definition</b> ModelImpl.cpp:83</div></div>
@@ -712,7 +669,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="unit__model_8h_abb49fbd77462625039c6d5ec4a8c7667_cgraph.png" border="0" usemap="#aunit__model_8h_abb49fbd77462625039c6d5ec4a8c7667_cgraph" alt=""/></div>
 <map name="aunit__model_8h_abb49fbd77462625039c6d5ec4a8c7667_cgraph" id="aunit__model_8h_abb49fbd77462625039c6d5ec4a8c7667_cgraph">
 <area shape="rect" title="Unit test for createModel." alt="" coords="5,31,168,57"/>
-<area shape="rect" href="class_model.html#a97f352b56351b15cea6d989f82ebd19a" title="Creates a Model object from the class model." alt="" coords="216,5,351,32"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="216,5,351,32"/>
 <area shape="poly" title=" " alt="" coords="168,31,200,27,201,32,168,36"/>
 <area shape="rect" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2" title="Return the number of items in models&#39; container." alt="" coords="217,56,350,83"/>
 <area shape="poly" title=" " alt="" coords="168,52,202,56,202,62,168,57"/>
@@ -726,6 +683,69 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="unit__model_8h_abb49fbd77462625039c6d5ec4a8c7667_icgraph.png" border="0" usemap="#aunit__model_8h_abb49fbd77462625039c6d5ec4a8c7667_icgraph" alt=""/></div>
 <map name="aunit__model_8h_abb49fbd77462625039c6d5ec4a8c7667_icgraph" id="aunit__model_8h_abb49fbd77462625039c6d5ec4a8c7667_icgraph">
 <area shape="rect" title="Unit test for createModel." alt="" coords="433,5,596,32"/>
+<area shape="rect" href="unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,5,385,32"/>
+<area shape="poly" title=" " alt="" coords="418,21,386,21,386,16,418,16"/>
+<area shape="rect" href="unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,5,199,32"/>
+<area shape="poly" title=" " alt="" coords="232,21,199,21,199,16,232,16"/>
+<area shape="rect" href="unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af1860c0004f2ef09cbc14cf1e904fe0d" name="af1860c0004f2ef09cbc14cf1e904fe0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1860c0004f2ef09cbc14cf1e904fe0d">&#9670;&#160;</a></span>unit_Model_createSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unit_Model_createSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unit test to check if a system was successfully created and added into the container of systems. </p>
+<div class="fragment"><div class="line"><span class="lineno">  182</span>                              {</div>
+<div class="line"><span class="lineno">  183</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">  184</span>    <a class="code hl_class" href="class_system.html">System</a> &amp;pop1 = model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
+<div class="line"><span class="lineno">  185</span>    <a class="code hl_class" href="class_system.html">System</a> &amp;pop2 = model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>    <a class="code hl_typedef" href="class_model.html#ae2987d24c6adff4b124fb758dcc6bb83">Model::systemsIterator</a> it = model.<a class="code hl_function" href="class_model.html#af929bf04a3a2780a6d82e901cf763f52">systemBegin</a>();</div>
+<div class="line"><span class="lineno">  188</span>    assert(*it == &amp;pop1);</div>
+<div class="line"><span class="lineno">  189</span>    it++;</div>
+<div class="line"><span class="lineno">  190</span>    assert(*it == &amp;pop2);</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">  193</span>}</div>
+<div class="ttc" id="aclass_model_html_a352f28607d2a8001b56ac9349a085bc2"><div class="ttname"><a href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">Model::createSystem</a></div><div class="ttdeci">virtual System &amp; createSystem(string name=&quot;&quot;, double value=0.0)=0</div><div class="ttdoc">Creates a systems and add it to the system container.</div></div>
+<div class="ttc" id="aclass_model_html_ae2987d24c6adff4b124fb758dcc6bb83"><div class="ttname"><a href="class_model.html#ae2987d24c6adff4b124fb758dcc6bb83">Model::systemsIterator</a></div><div class="ttdeci">vector&lt; System * &gt;::iterator systemsIterator</div><div class="ttdoc">Defining a name for the system vector.</div><div class="ttdef"><b>Definition</b> Model.h:38</div></div>
+<div class="ttc" id="aclass_model_html_af929bf04a3a2780a6d82e901cf763f52"><div class="ttname"><a href="class_model.html#af929bf04a3a2780a6d82e901cf763f52">Model::systemBegin</a></div><div class="ttdeci">virtual systemsIterator systemBegin()=0</div><div class="ttdoc">Get the iterator pointing for the first item in the container.</div></div>
+<div class="ttc" id="aclass_system_html"><div class="ttname"><a href="class_system.html">System</a></div><div class="ttdoc">Definition of class System, which represents the current value of the system.</div><div class="ttdef"><b>Definition</b> System.h:13</div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unit__model_8h_af1860c0004f2ef09cbc14cf1e904fe0d_cgraph.png" border="0" usemap="#aunit__model_8h_af1860c0004f2ef09cbc14cf1e904fe0d_cgraph" alt=""/></div>
+<map name="aunit__model_8h_af1860c0004f2ef09cbc14cf1e904fe0d_cgraph" id="aunit__model_8h_af1860c0004f2ef09cbc14cf1e904fe0d_cgraph">
+<area shape="rect" title="Unit test to check if a system was successfully created and added into the container of systems." alt="" coords="5,56,178,83"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="231,5,366,32"/>
+<area shape="poly" title=" " alt="" coords="149,53,225,34,227,39,150,58"/>
+<area shape="rect" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="226,56,371,83"/>
+<area shape="poly" title=" " alt="" coords="178,67,210,67,210,72,178,72"/>
+<area shape="rect" href="class_model.html#af929bf04a3a2780a6d82e901cf763f52" title="Get the iterator pointing for the first item in the container." alt="" coords="228,107,369,133"/>
+<area shape="poly" title=" " alt="" coords="150,81,227,100,225,105,149,86"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="unit__model_8h_af1860c0004f2ef09cbc14cf1e904fe0d_icgraph.png" border="0" usemap="#aunit__model_8h_af1860c0004f2ef09cbc14cf1e904fe0d_icgraph" alt=""/></div>
+<map name="aunit__model_8h_af1860c0004f2ef09cbc14cf1e904fe0d_icgraph" id="aunit__model_8h_af1860c0004f2ef09cbc14cf1e904fe0d_icgraph">
+<area shape="rect" title="Unit test to check if a system was successfully created and added into the container of systems." alt="" coords="433,5,606,32"/>
 <area shape="rect" href="unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,5,385,32"/>
 <area shape="poly" title=" " alt="" coords="418,21,386,21,386,16,418,16"/>
 <area shape="rect" href="unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,5,199,32"/>
@@ -787,42 +807,44 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test to check if the begin is the first element of the flows container. </p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                            {</div>
-<div class="line"><span class="lineno">  102</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * f = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;f&quot;</span>);</div>
-<div class="line"><span class="lineno">  103</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * g = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;g&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * r = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><span class="lineno">  105</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * t = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;t&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * u = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;u&quot;</span>);</div>
-<div class="line"><span class="lineno">  107</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * v = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;v&quot;</span>);</div>
-<div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>    <a class="code hl_class" href="class_model_impl.html">ModelImpl</a> model;</div>
-<div class="line"><span class="lineno">  110</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(f);</div>
-<div class="line"><span class="lineno">  111</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(g);</div>
-<div class="line"><span class="lineno">  112</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(r);</div>
-<div class="line"><span class="lineno">  113</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(t);</div>
-<div class="line"><span class="lineno">  114</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(u);</div>
-<div class="line"><span class="lineno">  115</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(v);</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>    assert(*(model.<a class="code hl_function" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492">flowsBegin</a>()) == f);</div>
-<div class="line"><span class="lineno">  118</span>    assert(*(model.<a class="code hl_function" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492">flowsBegin</a>()) != g);</div>
-<div class="line"><span class="lineno">  119</span>    assert(*(model.<a class="code hl_function" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492">flowsBegin</a>()) != r);</div>
-<div class="line"><span class="lineno">  120</span>    assert(*(model.<a class="code hl_function" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492">flowsBegin</a>()) != t);</div>
-<div class="line"><span class="lineno">  121</span>    assert(*(model.<a class="code hl_function" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492">flowsBegin</a>()) != u);</div>
-<div class="line"><span class="lineno">  122</span>    assert(*(model.<a class="code hl_function" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492">flowsBegin</a>()) != v);</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>}</div>
-<div class="ttc" id="aclass_model_impl_html_a35c5bb8e0ff89778a1d3621102990492"><div class="ttname"><a href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492">ModelImpl::flowsBegin</a></div><div class="ttdeci">flowsIterator flowsBegin()</div><div class="ttdoc">Get the iterator pointing for the first item in the container.</div><div class="ttdef"><b>Definition</b> ModelImpl.cpp:60</div></div>
-<div class="ttc" id="aclass_model_impl_html_a3f2700dfd1dae6e448060147b2d181c7"><div class="ttname"><a href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">ModelImpl::add</a></div><div class="ttdeci">bool add(Flow *flow)</div><div class="ttdoc">Add a flow to the model's container of flows.</div><div class="ttdef"><b>Definition</b> ModelImpl.cpp:88</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                            {</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>    <a class="code hl_class" href="class_flow.html">Flow</a> &amp; f = model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;f&quot;</span>);</div>
+<div class="line"><span class="lineno">  104</span>    <a class="code hl_class" href="class_flow.html">Flow</a> &amp; g = model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;g&quot;</span>);</div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_class" href="class_flow.html">Flow</a> &amp; r = model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  106</span>    <a class="code hl_class" href="class_flow.html">Flow</a> &amp; t = model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;t&quot;</span>);</div>
+<div class="line"><span class="lineno">  107</span>    <a class="code hl_class" href="class_flow.html">Flow</a> &amp; u = model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;u&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span>    <a class="code hl_class" href="class_flow.html">Flow</a> &amp; v = model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;v&quot;</span>);</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>    assert(*(model.<a class="code hl_function" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1">flowsBegin</a>()) == &amp;f);</div>
+<div class="line"><span class="lineno">  112</span>    assert(*(model.<a class="code hl_function" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1">flowsBegin</a>()) != &amp;g);</div>
+<div class="line"><span class="lineno">  113</span>    assert(*(model.<a class="code hl_function" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1">flowsBegin</a>()) != &amp;r);</div>
+<div class="line"><span class="lineno">  114</span>    assert(*(model.<a class="code hl_function" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1">flowsBegin</a>()) != &amp;t);</div>
+<div class="line"><span class="lineno">  115</span>    assert(*(model.<a class="code hl_function" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1">flowsBegin</a>()) != &amp;u);</div>
+<div class="line"><span class="lineno">  116</span>    assert(*(model.<a class="code hl_function" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1">flowsBegin</a>()) != &amp;v);</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>}</div>
+<div class="ttc" id="aclass_flow_html"><div class="ttname"><a href="class_flow.html">Flow</a></div><div class="ttdoc">Definition of class Flow, which represents a conection between two systems.</div><div class="ttdef"><b>Definition</b> Flow.h:13</div></div>
+<div class="ttc" id="aclass_model_html_a12d4767f5fe89090a58c1d1091dfa1f1"><div class="ttname"><a href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1">Model::flowsBegin</a></div><div class="ttdeci">virtual flowsIterator flowsBegin()=0</div><div class="ttdoc">Get the iterator pointing for the first item in the container.</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_a70115dcd7577152e073793033f6426a1_cgraph.png" border="0" usemap="#aunit__model_8h_a70115dcd7577152e073793033f6426a1_cgraph" alt=""/></div>
 <map name="aunit__model_8h_a70115dcd7577152e073793033f6426a1_cgraph" id="aunit__model_8h_a70115dcd7577152e073793033f6426a1_cgraph">
-<area shape="rect" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="5,31,159,57"/>
-<area shape="rect" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="227,5,337,32"/>
-<area shape="poly" title=" " alt="" coords="159,32,211,25,212,30,159,37"/>
-<area shape="rect" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492" title="Get the iterator pointing for the first item in the container." alt="" coords="207,56,357,83"/>
-<area shape="poly" title=" " alt="" coords="159,51,191,55,191,60,159,56"/>
+<area shape="rect" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="5,56,159,83"/>
+<area shape="rect" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="211,5,338,32"/>
+<area shape="poly" title=" " alt="" coords="135,53,205,34,207,39,136,58"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="207,56,342,83"/>
+<area shape="poly" title=" " alt="" coords="159,67,191,67,191,72,159,72"/>
+<area shape="rect" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1" title="Get the iterator pointing for the first item in the container." alt="" coords="211,107,338,133"/>
+<area shape="poly" title=" " alt="" coords="136,81,207,100,205,105,135,86"/>
+<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="390,5,475,32"/>
+<area shape="poly" title=" " alt="" coords="339,16,375,16,375,21,339,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -858,54 +880,52 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test to check if the end is the element after the last one in flows container. </p>
-<div class="fragment"><div class="line"><span class="lineno">  125</span>                          {</div>
-<div class="line"><span class="lineno">  126</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * f = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;f&quot;</span>);</div>
-<div class="line"><span class="lineno">  127</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * g = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;g&quot;</span>);</div>
-<div class="line"><span class="lineno">  128</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * r = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><span class="lineno">  129</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * t = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;t&quot;</span>);</div>
-<div class="line"><span class="lineno">  130</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * u = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;u&quot;</span>);</div>
-<div class="line"><span class="lineno">  131</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * v = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;v&quot;</span>);</div>
-<div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>    <a class="code hl_class" href="class_model_impl.html">ModelImpl</a> model;</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(f);</div>
-<div class="line"><span class="lineno">  136</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(g);</div>
-<div class="line"><span class="lineno">  137</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(r);</div>
-<div class="line"><span class="lineno">  138</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(t);</div>
-<div class="line"><span class="lineno">  139</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(u);</div>
-<div class="line"><span class="lineno">  140</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(v);</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>    <span class="comment">//The end method from a container gives the position after the last one</span></div>
-<div class="line"><span class="lineno">  143</span>    <span class="comment">//So if I can count until the size of the container, everything is correct</span></div>
-<div class="line"><span class="lineno">  144</span>    <a class="code hl_typedef" href="class_model.html#ac2413a62cd7cbbed3103667f4459a035">Model::flowsIterator</a> end = model.<a class="code hl_function" href="class_model_impl.html#a085f4eda6b6a6e1a63a35b779f6b3601">flowsEnd</a>();</div>
-<div class="line"><span class="lineno">  145</span>    <a class="code hl_typedef" href="class_model.html#ac2413a62cd7cbbed3103667f4459a035">Model::flowsIterator</a> it = model.<a class="code hl_function" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492">flowsBegin</a>();</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordtype">int</span> counter = 0;</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">while</span>(it != end){</div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span>(it != end) counter ++;</div>
-<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  151</span>        it++;</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-<div class="line"><span class="lineno">  153</span> </div>
-<div class="line"><span class="lineno">  154</span>    assert(counter == model.<a class="code hl_function" href="class_model_impl.html#aa4e0c943fef808771f0800f03ae84386">flowsSize</a>());</div>
-<div class="line"><span class="lineno">  155</span>}</div>
-<div class="ttc" id="aclass_model_html_ac2413a62cd7cbbed3103667f4459a035"><div class="ttname"><a href="class_model.html#ac2413a62cd7cbbed3103667f4459a035">Model::flowsIterator</a></div><div class="ttdeci">vector&lt; Flow * &gt;::iterator flowsIterator</div><div class="ttdoc">Defining a name for the flow vector.</div><div class="ttdef"><b>Definition</b> Model.h:23</div></div>
-<div class="ttc" id="aclass_model_impl_html_a085f4eda6b6a6e1a63a35b779f6b3601"><div class="ttname"><a href="class_model_impl.html#a085f4eda6b6a6e1a63a35b779f6b3601">ModelImpl::flowsEnd</a></div><div class="ttdeci">flowsIterator flowsEnd()</div><div class="ttdoc">Get the iterator pointing for the last item in the container.</div><div class="ttdef"><b>Definition</b> ModelImpl.cpp:63</div></div>
-<div class="ttc" id="aclass_model_impl_html_aa4e0c943fef808771f0800f03ae84386"><div class="ttname"><a href="class_model_impl.html#aa4e0c943fef808771f0800f03ae84386">ModelImpl::flowsSize</a></div><div class="ttdeci">int flowsSize()</div><div class="ttdoc">Return the number of items in flows' container.</div><div class="ttdef"><b>Definition</b> ModelImpl.cpp:74</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                          {</div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;f&quot;</span>);</div>
+<div class="line"><span class="lineno">  125</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;g&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  127</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;t&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;u&quot;</span>);</div>
+<div class="line"><span class="lineno">  129</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;v&quot;</span>);</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <span class="comment">//The end method from a container gives the position after the last one</span></div>
+<div class="line"><span class="lineno">  132</span>    <span class="comment">//So if I can count until the size of the container, everything is correct</span></div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_typedef" href="class_model.html#ac2413a62cd7cbbed3103667f4459a035">Model::flowsIterator</a> end = model.<a class="code hl_function" href="class_model.html#a865a19570378a396e1751c8ce4e6590b">flowsEnd</a>();</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_typedef" href="class_model.html#ac2413a62cd7cbbed3103667f4459a035">Model::flowsIterator</a> it = model.<a class="code hl_function" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1">flowsBegin</a>();</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordtype">int</span> counter = 0;</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">while</span>(it != end){</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span>(it != end) counter ++;</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  140</span>        it++;</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    assert(counter == model.<a class="code hl_function" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a">flowsSize</a>());</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">  146</span>}</div>
+<div class="ttc" id="aclass_model_html_a865a19570378a396e1751c8ce4e6590b"><div class="ttname"><a href="class_model.html#a865a19570378a396e1751c8ce4e6590b">Model::flowsEnd</a></div><div class="ttdeci">virtual flowsIterator flowsEnd()=0</div><div class="ttdoc">Get the iterator pointing for the last item in the container.</div></div>
+<div class="ttc" id="aclass_model_html_ac2413a62cd7cbbed3103667f4459a035"><div class="ttname"><a href="class_model.html#ac2413a62cd7cbbed3103667f4459a035">Model::flowsIterator</a></div><div class="ttdeci">vector&lt; Flow * &gt;::iterator flowsIterator</div><div class="ttdoc">Defining a name for the flow vector.</div><div class="ttdef"><b>Definition</b> Model.h:42</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_afc1883011bf49c69a5b0e14b2e64b1c7_cgraph.png" border="0" usemap="#aunit__model_8h_afc1883011bf49c69a5b0e14b2e64b1c7_cgraph" alt=""/></div>
 <map name="aunit__model_8h_afc1883011bf49c69a5b0e14b2e64b1c7_cgraph" id="aunit__model_8h_afc1883011bf49c69a5b0e14b2e64b1c7_cgraph">
-<area shape="rect" title="Unit test to check if the end is the element after the last one in flows container." alt="" coords="5,81,149,108"/>
-<area shape="rect" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="217,5,327,32"/>
-<area shape="poly" title=" " alt="" coords="108,78,196,42,213,35,215,40,198,46,110,83"/>
-<area shape="rect" href="class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492" title="Get the iterator pointing for the first item in the container." alt="" coords="197,56,347,83"/>
-<area shape="poly" title=" " alt="" coords="148,83,181,78,181,84,149,88"/>
-<area shape="rect" href="class_model_impl.html#a085f4eda6b6a6e1a63a35b779f6b3601" title="Get the iterator pointing for the last item in the container." alt="" coords="202,107,342,133"/>
-<area shape="poly" title=" " alt="" coords="149,101,187,106,186,112,148,107"/>
-<area shape="rect" href="class_model_impl.html#aa4e0c943fef808771f0800f03ae84386" title="Return the number of items in flows&#39; container." alt="" coords="200,157,344,184"/>
-<area shape="poly" title=" " alt="" coords="110,106,198,143,215,149,213,154,196,148,108,111"/>
+<area shape="rect" title="Unit test to check if the end is the element after the last one in flows container." alt="" coords="5,107,149,133"/>
+<area shape="rect" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="201,5,328,32"/>
+<area shape="poly" title=" " alt="" coords="96,104,140,74,195,42,207,36,210,41,198,46,143,78,99,108"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="197,56,332,83"/>
+<area shape="poly" title=" " alt="" coords="129,103,197,85,199,90,130,109"/>
+<area shape="rect" href="class_model.html#a12d4767f5fe89090a58c1d1091dfa1f1" title="Get the iterator pointing for the first item in the container." alt="" coords="201,107,328,133"/>
+<area shape="poly" title=" " alt="" coords="149,117,186,117,186,123,149,123"/>
+<area shape="rect" href="class_model.html#a865a19570378a396e1751c8ce4e6590b" title="Get the iterator pointing for the last item in the container." alt="" coords="206,157,323,184"/>
+<area shape="poly" title=" " alt="" coords="130,131,199,150,197,155,129,137"/>
+<area shape="rect" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="205,208,324,235"/>
+<area shape="poly" title=" " alt="" coords="99,132,143,162,198,194,210,199,207,204,195,198,140,166,96,136"/>
+<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="380,5,465,32"/>
+<area shape="poly" title=" " alt="" coords="329,16,365,16,365,21,329,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -941,34 +961,34 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test to check if the return value is the correct number of elements in the container. </p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                           {</div>
-<div class="line"><span class="lineno">  158</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * f = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;f&quot;</span>);</div>
-<div class="line"><span class="lineno">  159</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * g = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;g&quot;</span>);</div>
-<div class="line"><span class="lineno">  160</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * r = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><span class="lineno">  161</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * t = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;t&quot;</span>);</div>
-<div class="line"><span class="lineno">  162</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * u = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;u&quot;</span>);</div>
-<div class="line"><span class="lineno">  163</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * v = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;v&quot;</span>);</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>    <a class="code hl_class" href="class_model_impl.html">ModelImpl</a> model;</div>
-<div class="line"><span class="lineno">  166</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(f);</div>
-<div class="line"><span class="lineno">  167</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(g);</div>
-<div class="line"><span class="lineno">  168</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(r);</div>
-<div class="line"><span class="lineno">  169</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(t);</div>
-<div class="line"><span class="lineno">  170</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(u);</div>
-<div class="line"><span class="lineno">  171</span>    model.<a class="code hl_function" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7">add</a>(v);</div>
-<div class="line"><span class="lineno">  172</span> </div>
-<div class="line"><span class="lineno">  173</span>    assert(model.<a class="code hl_function" href="class_model_impl.html#aa4e0c943fef808771f0800f03ae84386">flowsSize</a>() == 6);</div>
-<div class="line"><span class="lineno">  174</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>                           {</div>
+<div class="line"><span class="lineno">  149</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;f&quot;</span>);</div>
+<div class="line"><span class="lineno">  152</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;g&quot;</span>);</div>
+<div class="line"><span class="lineno">  153</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  154</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;t&quot;</span>);</div>
+<div class="line"><span class="lineno">  155</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;u&quot;</span>);</div>
+<div class="line"><span class="lineno">  156</span>    model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;v&quot;</span>);</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>    assert(model.<a class="code hl_function" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a">flowsSize</a>() == 6);</div>
+<div class="line"><span class="lineno">  159</span> </div>
+<div class="line"><span class="lineno">  160</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">  161</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_ae43b096254503bcf0321b700f09d1c7c_cgraph.png" border="0" usemap="#aunit__model_8h_ae43b096254503bcf0321b700f09d1c7c_cgraph" alt=""/></div>
 <map name="aunit__model_8h_ae43b096254503bcf0321b700f09d1c7c_cgraph" id="aunit__model_8h_ae43b096254503bcf0321b700f09d1c7c_cgraph">
-<area shape="rect" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="5,31,152,57"/>
-<area shape="rect" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="217,5,326,32"/>
-<area shape="poly" title=" " alt="" coords="152,32,201,25,202,30,153,37"/>
-<area shape="rect" href="class_model_impl.html#aa4e0c943fef808771f0800f03ae84386" title="Return the number of items in flows&#39; container." alt="" coords="200,56,343,83"/>
-<area shape="poly" title=" " alt="" coords="153,51,184,55,184,61,152,56"/>
+<area shape="rect" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="5,56,152,83"/>
+<area shape="rect" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="204,5,331,32"/>
+<area shape="poly" title=" " alt="" coords="130,53,200,34,201,39,132,58"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="200,56,335,83"/>
+<area shape="poly" title=" " alt="" coords="152,67,184,67,184,72,152,72"/>
+<area shape="rect" href="class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="208,107,327,133"/>
+<area shape="poly" title=" " alt="" coords="132,81,201,100,200,105,130,86"/>
+<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="383,5,468,32"/>
+<area shape="poly" title=" " alt="" coords="332,16,368,16,368,21,332,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1004,33 +1024,34 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test to check if a flow was successfully removed from the flow's container. </p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>                             {</div>
-<div class="line"><span class="lineno">  210</span>    <a class="code hl_class" href="class_model.html">Model</a> * modelo = <span class="keyword">new</span> <a class="code hl_class" href="class_model_impl.html">ModelImpl</a>();</div>
-<div class="line"><span class="lineno">  211</span> </div>
-<div class="line"><span class="lineno">  212</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * f = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;f&quot;</span>);</div>
-<div class="line"><span class="lineno">  213</span>    <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a> * g = <span class="keyword">new</span> <a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>(<span class="stringliteral">&quot;g&quot;</span>);</div>
-<div class="line"><span class="lineno">  214</span> </div>
-<div class="line"><span class="lineno">  215</span>    modelo-&gt;<a class="code hl_function" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20">add</a>(f);</div>
-<div class="line"><span class="lineno">  216</span>    modelo-&gt;<a class="code hl_function" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20">add</a>(g);</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>    assert(modelo-&gt;<a class="code hl_function" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">remove</a>(f));</div>
-<div class="line"><span class="lineno">  219</span>    assert(modelo-&gt;<a class="code hl_function" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">remove</a>(g));</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>    <span class="keyword">delete</span> f;</div>
-<div class="line"><span class="lineno">  222</span>    <span class="keyword">delete</span> g;</div>
-<div class="line"><span class="lineno">  223</span>    <span class="keyword">delete</span> modelo;</div>
-<div class="line"><span class="lineno">  224</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>                             {</div>
+<div class="line"><span class="lineno">  196</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>    <a class="code hl_class" href="class_flow.html">Flow</a> &amp;f = model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;f&quot;</span>);</div>
+<div class="line"><span class="lineno">  199</span>    <a class="code hl_class" href="class_flow.html">Flow</a> &amp;g = model.<a class="code hl_function" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c">createFlow</a>&lt;<a class="code hl_class" href="class_flow_complexo.html">FlowComplexo</a>&gt;(<span class="stringliteral">&quot;g&quot;</span>);</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    assert(model.<a class="code hl_function" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">remove</a>(&amp;f));</div>
+<div class="line"><span class="lineno">  202</span>    assert(model.<a class="code hl_function" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">remove</a>(&amp;g));</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>    <span class="keyword">delete</span> &amp;f;</div>
+<div class="line"><span class="lineno">  205</span>    <span class="keyword">delete</span> &amp;g;</div>
+<div class="line"><span class="lineno">  206</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">  207</span>}</div>
 <div class="ttc" id="aclass_model_html_a557c5d21498fef17011904a4dc1aeafb"><div class="ttname"><a href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">Model::remove</a></div><div class="ttdeci">virtual bool remove(Flow *flow)=0</div><div class="ttdoc">Remove a flow from the model's container of flows.</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_a88d0b5198399c11b8634906fb753d72c_cgraph.png" border="0" usemap="#aunit__model_8h_a88d0b5198399c11b8634906fb753d72c_cgraph" alt=""/></div>
 <map name="aunit__model_8h_a88d0b5198399c11b8634906fb753d72c_cgraph" id="aunit__model_8h_a88d0b5198399c11b8634906fb753d72c_cgraph">
-<area shape="rect" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="5,31,167,57"/>
-<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="225,5,310,32"/>
-<area shape="poly" title=" " alt="" coords="167,30,209,24,210,29,168,35"/>
-<area shape="rect" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows." alt="" coords="215,56,320,83"/>
-<area shape="poly" title=" " alt="" coords="168,53,200,57,199,63,167,58"/>
+<area shape="rect" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="5,56,167,83"/>
+<area shape="rect" href="class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="219,5,346,32"/>
+<area shape="poly" title=" " alt="" coords="140,53,212,34,214,39,141,58"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="215,56,350,83"/>
+<area shape="poly" title=" " alt="" coords="167,67,199,67,199,72,167,72"/>
+<area shape="rect" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows." alt="" coords="230,107,335,133"/>
+<area shape="poly" title=" " alt="" coords="141,81,215,100,214,105,140,86"/>
+<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="398,5,483,32"/>
+<area shape="poly" title=" " alt="" coords="347,16,383,16,383,21,347,21"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1066,32 +1087,30 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test to check if a flow was successfully removed from the system's container. </p>
-<div class="fragment"><div class="line"><span class="lineno">  225</span>                               {</div>
-<div class="line"><span class="lineno">  226</span>    <a class="code hl_class" href="class_model.html">Model</a> * model = <span class="keyword">new</span> <a class="code hl_class" href="class_model_impl.html">ModelImpl</a>(<span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">  227</span>    </div>
-<div class="line"><span class="lineno">  228</span>    <a class="code hl_class" href="class_system.html">System</a> * pop1 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
-<div class="line"><span class="lineno">  229</span>    <a class="code hl_class" href="class_system.html">System</a> * pop2 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
-<div class="line"><span class="lineno">  230</span> </div>
-<div class="line"><span class="lineno">  231</span>    model-&gt;<a class="code hl_function" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20">add</a>(pop1);</div>
-<div class="line"><span class="lineno">  232</span>    model-&gt;<a class="code hl_function" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20">add</a>(pop2);</div>
-<div class="line"><span class="lineno">  233</span> </div>
-<div class="line"><span class="lineno">  234</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">remove</a>(pop1));</div>
-<div class="line"><span class="lineno">  235</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">remove</a>(pop2));</div>
-<div class="line"><span class="lineno">  236</span> </div>
-<div class="line"><span class="lineno">  237</span>    <span class="keyword">delete</span> pop1;</div>
-<div class="line"><span class="lineno">  238</span>    <span class="keyword">delete</span> pop2;</div>
-<div class="line"><span class="lineno">  239</span>    <span class="keyword">delete</span> model;</div>
-<div class="line"><span class="lineno">  240</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>                               {</div>
+<div class="line"><span class="lineno">  209</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">  210</span>    <a class="code hl_class" href="class_system.html">System</a> &amp;pop1 = model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
+<div class="line"><span class="lineno">  211</span>    <a class="code hl_class" href="class_system.html">System</a> &amp;pop2 = model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>    assert(model.<a class="code hl_function" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">remove</a>(&amp;pop1));</div>
+<div class="line"><span class="lineno">  214</span>    assert(model.<a class="code hl_function" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">remove</a>(&amp;pop2));</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>    <span class="keyword">delete</span> &amp;pop1;</div>
+<div class="line"><span class="lineno">  217</span>    <span class="keyword">delete</span> &amp;pop2;</div>
+<div class="line"><span class="lineno">  218</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">  219</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_ad658cd033e2e5f340c2cea57614b5566_cgraph.png" border="0" usemap="#aunit__model_8h_ad658cd033e2e5f340c2cea57614b5566_cgraph" alt=""/></div>
 <map name="aunit__model_8h_ad658cd033e2e5f340c2cea57614b5566_cgraph" id="aunit__model_8h_ad658cd033e2e5f340c2cea57614b5566_cgraph">
-<area shape="rect" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="5,31,188,57"/>
-<area shape="rect" href="class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="246,5,331,32"/>
-<area shape="poly" title=" " alt="" coords="188,29,230,24,231,29,188,35"/>
-<area shape="rect" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows." alt="" coords="236,56,341,83"/>
-<area shape="poly" title=" " alt="" coords="188,53,221,58,220,63,188,59"/>
+<area shape="rect" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="5,56,188,83"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="241,5,376,32"/>
+<area shape="poly" title=" " alt="" coords="155,53,234,34,235,39,156,58"/>
+<area shape="rect" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="236,56,381,83"/>
+<area shape="poly" title=" " alt="" coords="188,67,220,67,220,72,188,72"/>
+<area shape="rect" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows." alt="" coords="256,107,361,133"/>
+<area shape="poly" title=" " alt="" coords="156,81,241,101,240,106,155,86"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1127,27 +1146,27 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test to check if the system is running correctly and if the times are correct. </p>
-<div class="fragment"><div class="line"><span class="lineno">  242</span>                     {</div>
-<div class="line"><span class="lineno">  243</span>    <a class="code hl_class" href="class_model_impl.html">ModelImpl</a> model (<span class="stringliteral">&quot;Sistema Exponencial&quot;</span>);</div>
-<div class="line"><span class="lineno">  244</span> </div>
-<div class="line"><span class="lineno">  245</span>    assert(model.run(0, 100));</div>
-<div class="line"><span class="lineno">  246</span>    assert(!model.run(101, 100));</div>
-<div class="line"><span class="lineno">  247</span>    assert(!model.run(-20, 100));</div>
-<div class="line"><span class="lineno">  248</span>    assert(!model.run(-200, -100));</div>
-<div class="line"><span class="lineno">  249</span>    </div>
-<div class="line"><span class="lineno">  250</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  221</span>                     {</div>
+<div class="line"><span class="lineno">  222</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">  223</span> </div>
+<div class="line"><span class="lineno">  224</span>    assert(model.<a class="code hl_function" href="class_model.html#a2328056dbe721d55cbdbc55e86a777e3">run</a>(0, 100));</div>
+<div class="line"><span class="lineno">  225</span>    assert(!model.<a class="code hl_function" href="class_model.html#a2328056dbe721d55cbdbc55e86a777e3">run</a>(101, 100));</div>
+<div class="line"><span class="lineno">  226</span>    assert(!model.<a class="code hl_function" href="class_model.html#a2328056dbe721d55cbdbc55e86a777e3">run</a>(-20, 100));</div>
+<div class="line"><span class="lineno">  227</span>    assert(!model.<a class="code hl_function" href="class_model.html#a2328056dbe721d55cbdbc55e86a777e3">run</a>(-200, -100));</div>
+<div class="line"><span class="lineno">  228</span> </div>
+<div class="line"><span class="lineno">  229</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">  230</span>}</div>
+<div class="ttc" id="aclass_model_html_a2328056dbe721d55cbdbc55e86a777e3"><div class="ttname"><a href="class_model.html#a2328056dbe721d55cbdbc55e86a777e3">Model::run</a></div><div class="ttdeci">virtual bool run(int tempo_inicial, int tempo_final)=0</div><div class="ttdoc">Run the model for a specified time range executing the function of the flows.</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_a37286918320acd70d56642498fa32c18_cgraph.png" border="0" usemap="#aunit__model_8h_a37286918320acd70d56642498fa32c18_cgraph" alt=""/></div>
 <map name="aunit__model_8h_a37286918320acd70d56642498fa32c18_cgraph" id="aunit__model_8h_a37286918320acd70d56642498fa32c18_cgraph">
 <area shape="rect" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="5,31,115,57"/>
-<area shape="rect" href="class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7" title="Run the model for a specified time range executing the function of the flows." alt="" coords="163,31,269,57"/>
-<area shape="poly" title=" " alt="" coords="115,41,147,41,147,47,115,47"/>
-<area shape="rect" href="class_system.html#a41b673faa6c199eb8e4f204639fab4f2" title="Get the value of the system." alt="" coords="317,5,442,32"/>
-<area shape="poly" title=" " alt="" coords="269,33,301,28,302,33,270,38"/>
-<area shape="rect" href="class_system.html#afc591b66c17ddcd2d0a5421f66750d2c" title="Set the value of the flow." alt="" coords="317,56,442,83"/>
-<area shape="poly" title=" " alt="" coords="270,50,302,55,301,60,269,55"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="163,5,298,32"/>
+<area shape="poly" title=" " alt="" coords="115,33,147,28,147,34,116,38"/>
+<area shape="rect" href="class_model.html#a2328056dbe721d55cbdbc55e86a777e3" title="Run the model for a specified time range executing the function of the flows." alt="" coords="189,56,272,83"/>
+<area shape="poly" title=" " alt="" coords="116,50,174,58,173,64,115,55"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1183,17 +1202,15 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test to check if the begin is the first element of the system container. </p>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                             {</div>
-<div class="line"><span class="lineno">   64</span>    <a class="code hl_class" href="class_model_impl.html">ModelImpl</a> model (<span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">   65</span>    </div>
-<div class="line"><span class="lineno">   66</span>    <a class="code hl_class" href="class_system.html">System</a> * pop1 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
-<div class="line"><span class="lineno">   67</span>    <a class="code hl_class" href="class_system.html">System</a> * pop2 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>    model.add(pop1);</div>
-<div class="line"><span class="lineno">   70</span>    model.add(pop2);</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    assert(*(model.systemBegin()) == pop1);</div>
-<div class="line"><span class="lineno">   73</span>    assert(*(model.systemBegin()) != pop2);</div>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                             {</div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_class" href="class_system.html">System</a> &amp; pop1 = model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
+<div class="line"><span class="lineno">   68</span>    <a class="code hl_class" href="class_system.html">System</a> &amp; pop2 = model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    assert(*(model.<a class="code hl_function" href="class_model.html#af929bf04a3a2780a6d82e901cf763f52">systemBegin</a>()) == &amp;pop1);</div>
+<div class="line"><span class="lineno">   71</span>    assert(*(model.<a class="code hl_function" href="class_model.html#af929bf04a3a2780a6d82e901cf763f52">systemBegin</a>()) != &amp;pop2);</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <span class="keyword">delete</span> &amp;model;</div>
 <div class="line"><span class="lineno">   74</span> </div>
 <div class="line"><span class="lineno">   75</span>}</div>
 </div><!-- fragment --><div class="dynheader">
@@ -1201,11 +1218,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_a362f790b925558b01c9512d28c684f4d_cgraph.png" border="0" usemap="#aunit__model_8h_a362f790b925558b01c9512d28c684f4d_cgraph" alt=""/></div>
 <map name="aunit__model_8h_a362f790b925558b01c9512d28c684f4d_cgraph" id="aunit__model_8h_a362f790b925558b01c9512d28c684f4d_cgraph">
-<area shape="rect" title="Unit test to check if the begin is the first element of the system container." alt="" coords="5,31,173,57"/>
-<area shape="rect" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="248,5,358,32"/>
-<area shape="poly" title=" " alt="" coords="173,31,233,24,234,30,174,37"/>
-<area shape="rect" href="class_model_impl.html#a9ac06e337a6f2b114a334112b1aa5818" title="Get the iterator pointing for the first item in the container." alt="" coords="221,56,385,83"/>
-<area shape="poly" title=" " alt="" coords="174,51,206,55,205,60,173,57"/>
+<area shape="rect" title="Unit test to check if the begin is the first element of the system container." alt="" coords="5,56,173,83"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="226,5,361,32"/>
+<area shape="poly" title=" " alt="" coords="145,53,221,34,223,39,147,58"/>
+<area shape="rect" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="221,56,366,83"/>
+<area shape="poly" title=" " alt="" coords="173,67,205,67,205,72,173,72"/>
+<area shape="rect" href="class_model.html#af929bf04a3a2780a6d82e901cf763f52" title="Get the iterator pointing for the first item in the container." alt="" coords="223,107,364,133"/>
+<area shape="poly" title=" " alt="" coords="147,81,223,100,221,105,145,86"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1242,43 +1261,43 @@ Here is the caller graph for this function:</div>
 
 <p>Unit test to check if the end is the element after the last one in system container. </p>
 <div class="fragment"><div class="line"><span class="lineno">   76</span>                           {</div>
-<div class="line"><span class="lineno">   77</span>    <a class="code hl_class" href="class_model_impl.html">ModelImpl</a> model (<span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">   78</span>    </div>
-<div class="line"><span class="lineno">   79</span>    <a class="code hl_class" href="class_system.html">System</a> * pop1 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
-<div class="line"><span class="lineno">   80</span>    <a class="code hl_class" href="class_system.html">System</a> * pop2 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>    model.add(pop1);</div>
-<div class="line"><span class="lineno">   83</span>    model.add(pop2);</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>    <span class="comment">//The end method from a container gives the position after the last one</span></div>
-<div class="line"><span class="lineno">   86</span>    <span class="comment">//So if I can count until the size of the container, everything is correct</span></div>
-<div class="line"><span class="lineno">   87</span>    <a class="code hl_typedef" href="class_model.html#ae2987d24c6adff4b124fb758dcc6bb83">Model::systemsIterator</a> end = model.systemEnd();</div>
-<div class="line"><span class="lineno">   88</span>    <a class="code hl_typedef" href="class_model.html#ae2987d24c6adff4b124fb758dcc6bb83">Model::systemsIterator</a> it = model.systemBegin();</div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordtype">int</span> counter = 0;</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">while</span>(it != end){</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span>(it != end) counter ++;</div>
-<div class="line"><span class="lineno">   93</span>        <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   94</span>        it++;</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>    assert(counter == model.systemsSize());</div>
-<div class="line"><span class="lineno">   98</span>}</div>
-<div class="ttc" id="aclass_model_html_ae2987d24c6adff4b124fb758dcc6bb83"><div class="ttname"><a href="class_model.html#ae2987d24c6adff4b124fb758dcc6bb83">Model::systemsIterator</a></div><div class="ttdeci">vector&lt; System * &gt;::iterator systemsIterator</div><div class="ttdoc">Defining a name for the system vector.</div><div class="ttdef"><b>Definition</b> Model.h:19</div></div>
+<div class="line"><span class="lineno">   77</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">   78</span>    model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
+<div class="line"><span class="lineno">   79</span>    model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    <span class="comment">//The end method from a container gives the position after the last one</span></div>
+<div class="line"><span class="lineno">   82</span>    <span class="comment">//So if I can count until the size of the container, everything is correct</span></div>
+<div class="line"><span class="lineno">   83</span>    <a class="code hl_typedef" href="class_model.html#ae2987d24c6adff4b124fb758dcc6bb83">Model::systemsIterator</a> end = model.<a class="code hl_function" href="class_model.html#a931d4a69527930401a1599e38b43b505">systemEnd</a>();</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_typedef" href="class_model.html#ae2987d24c6adff4b124fb758dcc6bb83">Model::systemsIterator</a> it = model.<a class="code hl_function" href="class_model.html#af929bf04a3a2780a6d82e901cf763f52">systemBegin</a>();</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordtype">int</span> counter = 0;</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">while</span>(it != end){</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span>(it != end) counter ++;</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">else</span> <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   90</span>        it++;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    assert(counter == model.<a class="code hl_function" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257">systemsSize</a>());</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">   96</span>}</div>
+<div class="ttc" id="aclass_model_html_a931d4a69527930401a1599e38b43b505"><div class="ttname"><a href="class_model.html#a931d4a69527930401a1599e38b43b505">Model::systemEnd</a></div><div class="ttdeci">virtual systemsIterator systemEnd()=0</div><div class="ttdoc">Get the iterator pointing for the last item in the container.</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_a1d1a3f8675bb484cc31163d2594c0795_cgraph.png" border="0" usemap="#aunit__model_8h_a1d1a3f8675bb484cc31163d2594c0795_cgraph" alt=""/></div>
 <map name="aunit__model_8h_a1d1a3f8675bb484cc31163d2594c0795_cgraph" id="aunit__model_8h_a1d1a3f8675bb484cc31163d2594c0795_cgraph">
-<area shape="rect" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="5,81,163,108"/>
-<area shape="rect" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="238,5,348,32"/>
-<area shape="poly" title=" " alt="" coords="117,78,210,41,229,35,231,40,212,47,118,83"/>
-<area shape="rect" href="class_model_impl.html#a9ac06e337a6f2b114a334112b1aa5818" title="Get the iterator pointing for the first item in the container." alt="" coords="211,56,375,83"/>
-<area shape="poly" title=" " alt="" coords="163,82,195,79,195,84,164,88"/>
-<area shape="rect" href="class_model_impl.html#af633f7f0976a01150ada93977963e539" title="Get the iterator pointing for the last item in the container." alt="" coords="216,107,370,133"/>
-<area shape="poly" title=" " alt="" coords="164,102,201,106,200,111,163,107"/>
-<area shape="rect" href="class_model_impl.html#ad95b31c43021dec4c4b67cb74a2dc138" title="Return the number of items in systems&#39; container." alt="" coords="211,157,375,184"/>
-<area shape="poly" title=" " alt="" coords="118,106,212,143,231,150,229,155,210,148,117,111"/>
+<area shape="rect" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="5,107,163,133"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="216,5,351,32"/>
+<area shape="poly" title=" " alt="" coords="104,104,151,73,209,42,223,36,225,40,212,46,154,78,107,108"/>
+<area shape="rect" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="211,56,356,83"/>
+<area shape="poly" title=" " alt="" coords="139,103,213,84,214,90,140,109"/>
+<area shape="rect" href="class_model.html#af929bf04a3a2780a6d82e901cf763f52" title="Get the iterator pointing for the first item in the container." alt="" coords="213,107,354,133"/>
+<area shape="poly" title=" " alt="" coords="163,117,198,117,198,123,163,123"/>
+<area shape="rect" href="class_model.html#a931d4a69527930401a1599e38b43b505" title="Get the iterator pointing for the last item in the container." alt="" coords="218,157,349,184"/>
+<area shape="poly" title=" " alt="" coords="140,131,214,150,213,156,139,137"/>
+<area shape="rect" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="213,208,354,235"/>
+<area shape="poly" title=" " alt="" coords="107,132,154,162,212,194,225,200,223,204,209,198,151,167,104,136"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1314,28 +1333,27 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test to check if the return value is the correct number of elements in the container. </p>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                            {</div>
-<div class="line"><span class="lineno">  176</span>    <a class="code hl_class" href="class_model_impl.html">ModelImpl</a> model (<span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">  177</span>    </div>
-<div class="line"><span class="lineno">  178</span>    <a class="code hl_class" href="class_system.html">System</a> * pop1 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
-<div class="line"><span class="lineno">  179</span>    <a class="code hl_class" href="class_system.html">System</a> * pop2 = <span class="keyword">new</span> <a class="code hl_class" href="class_system_impl.html">SystemImpl</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
-<div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>    model.add(pop1);</div>
-<div class="line"><span class="lineno">  182</span>    model.add(pop2);</div>
-<div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>    assert(model.systemsSize() == 2);</div>
-<div class="line"><span class="lineno">  185</span> </div>
-<div class="line"><span class="lineno">  186</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>                            {</div>
+<div class="line"><span class="lineno">  163</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">  164</span>    model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop1&quot;</span>, 100.0);</div>
+<div class="line"><span class="lineno">  165</span>    model.<a class="code hl_function" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2">createSystem</a>(<span class="stringliteral">&quot;pop2&quot;</span>, 0.0);</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>    assert(model.<a class="code hl_function" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257">systemsSize</a>() == 2);</div>
+<div class="line"><span class="lineno">  168</span> </div>
+<div class="line"><span class="lineno">  169</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">  170</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_a650be75cfe00d74ba2d81ec8229a47e5_cgraph.png" border="0" usemap="#aunit__model_8h_a650be75cfe00d74ba2d81ec8229a47e5_cgraph" alt=""/></div>
 <map name="aunit__model_8h_a650be75cfe00d74ba2d81ec8229a47e5_cgraph" id="aunit__model_8h_a650be75cfe00d74ba2d81ec8229a47e5_cgraph">
-<area shape="rect" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="5,31,166,57"/>
-<area shape="rect" href="class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="241,5,351,32"/>
-<area shape="poly" title=" " alt="" coords="166,32,225,24,226,30,166,37"/>
-<area shape="rect" href="class_model_impl.html#ad95b31c43021dec4c4b67cb74a2dc138" title="Return the number of items in systems&#39; container." alt="" coords="214,56,378,83"/>
-<area shape="poly" title=" " alt="" coords="166,51,198,55,198,60,166,56"/>
+<area shape="rect" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="5,56,166,83"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="219,5,354,32"/>
+<area shape="poly" title=" " alt="" coords="141,53,215,34,216,39,142,58"/>
+<area shape="rect" href="class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="214,56,359,83"/>
+<area shape="poly" title=" " alt="" coords="166,67,198,67,198,72,166,72"/>
+<area shape="rect" href="class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="216,107,357,133"/>
+<area shape="poly" title=" " alt="" coords="142,81,216,100,215,105,141,86"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1371,25 +1389,27 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Unit test formethod setName. </p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                   {</div>
-<div class="line"><span class="lineno">   55</span>    <a class="code hl_class" href="class_model.html">Model</a> * model = <span class="keyword">new</span> <a class="code hl_class" href="class_model_impl.html">ModelImpl</a>();</div>
-<div class="line"><span class="lineno">   56</span>    model-&gt;<a class="code hl_function" href="class_model.html#aa17012307c37e6527ae6b1d3fff540e0">setName</a>(<span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">   57</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() == <span class="stringliteral">&quot;Model&quot;</span>);</div>
-<div class="line"><span class="lineno">   58</span>    assert(model-&gt;<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() != <span class="stringliteral">&quot;Modelo&quot;</span>);</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>    <span class="keyword">delete</span> model;</div>
-<div class="line"><span class="lineno">   61</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>                   {</div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_class" href="class_model.html">Model</a>&amp; model = <a class="code hl_function" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8">Model::createModel</a>();</div>
+<div class="line"><span class="lineno">   58</span>    model.<a class="code hl_function" href="class_model.html#aa17012307c37e6527ae6b1d3fff540e0">setName</a>(<span class="stringliteral">&quot;Model&quot;</span>);</div>
+<div class="line"><span class="lineno">   59</span>    assert(model.<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() == <span class="stringliteral">&quot;Model&quot;</span>);</div>
+<div class="line"><span class="lineno">   60</span>    assert(model.<a class="code hl_function" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8">getName</a>() != <span class="stringliteral">&quot;Modelo&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    <span class="keyword">delete</span> &amp;model;</div>
+<div class="line"><span class="lineno">   63</span>}</div>
 <div class="ttc" id="aclass_model_html_aa17012307c37e6527ae6b1d3fff540e0"><div class="ttname"><a href="class_model.html#aa17012307c37e6527ae6b1d3fff540e0">Model::setName</a></div><div class="ttdeci">virtual void setName(const string &amp;name)=0</div><div class="ttdoc">Set the name of the model.</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit__model_8h_a9c446da28d0edbe87f0850d93c57649b_cgraph.png" border="0" usemap="#aunit__model_8h_a9c446da28d0edbe87f0850d93c57649b_cgraph" alt=""/></div>
 <map name="aunit__model_8h_a9c446da28d0edbe87f0850d93c57649b_cgraph" id="aunit__model_8h_a9c446da28d0edbe87f0850d93c57649b_cgraph">
-<area shape="rect" title="Unit test formethod setName." alt="" coords="5,31,107,57"/>
-<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="155,5,271,32"/>
-<area shape="poly" title=" " alt="" coords="107,33,139,28,140,33,107,38"/>
-<area shape="rect" href="class_model.html#aa17012307c37e6527ae6b1d3fff540e0" title="Set the name of the model." alt="" coords="155,56,271,83"/>
-<area shape="poly" title=" " alt="" coords="107,50,140,55,139,60,107,55"/>
+<area shape="rect" title="Unit test formethod setName." alt="" coords="5,56,107,83"/>
+<area shape="rect" href="class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="155,5,290,32"/>
+<area shape="poly" title=" " alt="" coords="102,53,161,35,162,40,103,58"/>
+<area shape="rect" href="class_model.html#aa5365ab557ae47efffdf14ba7a46dac8" title="Get the name of the model." alt="" coords="164,56,281,83"/>
+<area shape="poly" title=" " alt="" coords="107,67,149,67,149,72,107,72"/>
+<area shape="rect" href="class_model.html#aa17012307c37e6527ae6b1d3fff540e0" title="Set the name of the model." alt="" coords="164,107,281,133"/>
+<area shape="poly" title=" " alt="" coords="103,81,162,99,161,104,102,86"/>
 </map>
 </div>
 <div class="dynheader">

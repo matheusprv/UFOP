@@ -1,0 +1,11 @@
+<map id="unit_Model_createFlow" name="unit_Model_createFlow">
+<area shape="rect" id="Node000001" title="Unit test to check if a flow was successfully created and added into the container of flows." alt="" coords="5,56,160,83"/>
+<area shape="rect" id="Node000002" href="$class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="212,5,339,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,53,206,34,208,39,137,58"/>
+<area shape="rect" id="Node000004" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="208,56,343,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,67,193,67,193,72,160,72"/>
+<area shape="rect" id="Node000005" href="$class_model.html#a2bbba88aae97908b686af0724aeeb59a" title="Return the number of items in flows&#39; container." alt="" coords="216,107,335,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="137,81,208,100,206,105,136,86"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a7cfac518d3f6ec84e858568175a28f20" title="Add a flow to the model&#39;s container of flows." alt="" coords="391,5,476,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="340,16,376,16,376,21,340,21"/>
+</map>

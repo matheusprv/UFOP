@@ -4,8 +4,8 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,1183,214,433,219,434,60,1184"/>
 <area shape="rect" id="Node000025" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="155,1184,293,1211"/>
 <area shape="poly" id="edge34_Node000001_Node000025" title=" " alt="" coords="102,1195,139,1195,139,1200,102,1200"/>
-<area shape="rect" id="Node000062" href="$unit__system_8cpp.html#a508d8501edd77719732fca2f7985d316" title="Execute all the unit tests." alt="" coords="150,1949,298,1976"/>
-<area shape="poly" id="edge52_Node000001_Node000062" title=" " alt="" coords="60,1211,219,1934,214,1935,55,1212"/>
+<area shape="rect" id="Node000059" href="$unit__system_8cpp.html#a508d8501edd77719732fca2f7985d316" title="Execute all the unit tests." alt="" coords="150,1949,298,1976"/>
+<area shape="poly" id="edge52_Node000001_Node000059" title=" " alt="" coords="60,1211,219,1934,214,1935,55,1212"/>
 <area shape="rect" id="Node000003" href="$unit__flow_8cpp.html#a733bfc9324c6b3a9f5c20192074b4c12" title="Unit test for Flow&#39;s constructor." alt="" coords="371,443,519,485"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="278,417,357,438,355,443,276,422"/>
 <area shape="rect" id="Node000007" href="$unit__flow_8cpp.html#a56759ab080c0d70bdff781ee084bd7bc" title="Unit test for Flow&#39;s copy constructor." alt="" coords="354,728,537,755"/>
@@ -57,60 +57,60 @@
 <area shape="poly" id="edge33_Node000023_Node000006" title=" " alt="" coords="513,676,543,663,568,646,591,625,628,584,632,588,595,629,571,650,546,668,515,681"/>
 <area shape="rect" id="Node000026" href="$unit__model_8cpp.html#adc98c33e4754d8fbc7ac6f4c304fc1ca" title="Unit test for the method getName." alt="" coords="395,1285,496,1312"/>
 <area shape="poly" id="edge35_Node000025_Node000026" title=" " alt="" coords="245,1209,290,1240,347,1271,380,1282,379,1288,345,1276,287,1244,242,1213"/>
-<area shape="rect" id="Node000028" href="$unit__model_8cpp.html#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a" title="Unit test to check if a flow was successfully added into the container of flows." alt="" coords="375,1336,516,1363"/>
-<area shape="poly" id="edge36_Node000025_Node000028" title=" " alt="" coords="236,1210,280,1264,311,1295,347,1322,361,1329,359,1333,345,1326,308,1300,276,1268,232,1213"/>
-<area shape="rect" id="Node000031" href="$unit__model_8cpp.html#ab3a10b6e696b6a91d6c33dcbb18aceb4" title="Unit test to check if a flow was successfully added into the container of systems." alt="" coords="364,1387,526,1413"/>
-<area shape="poly" id="edge37_Node000025_Node000031" title=" " alt="" coords="233,1210,248,1243,272,1287,306,1334,348,1373,355,1377,353,1382,344,1377,302,1337,268,1290,243,1246,228,1212"/>
-<area shape="rect" id="Node000033" href="$unit__model_8cpp.html#aef9d3af61dfc50dcbd295ee49b77e704" title="Unit test for an empty constructor of model." alt="" coords="367,1437,523,1480"/>
-<area shape="poly" id="edge38_Node000025_Node000033" title=" " alt="" coords="231,1210,244,1251,267,1309,301,1370,323,1398,348,1423,355,1429,352,1433,344,1427,319,1402,297,1373,262,1311,239,1253,226,1212"/>
-<area shape="rect" id="Node000036" href="$unit__model_8cpp.html#a73a3b2f94a5ddae65bdb3761c8e2cb91" title="Unit test for a constructor with name of the model." alt="" coords="348,1504,543,1531"/>
+<area shape="rect" id="Node000029" href="$unit__model_8cpp.html#aef9d3af61dfc50dcbd295ee49b77e704" title="Unit test for an empty constructor of model." alt="" coords="367,1336,523,1379"/>
+<area shape="poly" id="edge36_Node000025_Node000029" title=" " alt="" coords="237,1210,281,1264,312,1295,347,1322,355,1326,352,1331,345,1326,309,1299,277,1267,233,1213"/>
+<area shape="rect" id="Node000032" href="$unit__model_8cpp.html#a73a3b2f94a5ddae65bdb3761c8e2cb91" title="Unit test for a constructor with name of the model." alt="" coords="348,1403,543,1429"/>
+<area shape="poly" id="edge37_Node000025_Node000032" title=" " alt="" coords="232,1210,246,1246,270,1295,304,1346,325,1369,348,1389,355,1393,352,1398,344,1393,321,1372,300,1349,266,1297,241,1248,227,1212"/>
+<area shape="rect" id="Node000033" href="$unit__model_8cpp.html#ac044ab223c8b3b6df04969f1f254ae01" title="Unit test to check if a flow was successfully created and added into the container of flows." alt="" coords="368,1453,522,1480"/>
+<area shape="poly" id="edge38_Node000025_Node000033" title=" " alt="" coords="230,1210,241,1255,263,1317,298,1383,321,1413,348,1439,356,1445,353,1449,344,1443,317,1417,294,1386,259,1319,236,1256,225,1212"/>
+<area shape="rect" id="Node000036" href="$unit__model_8cpp.html#abb49fbd77462625039c6d5ec4a8c7667" title="Unit test for createModel." alt="" coords="364,1504,526,1531"/>
 <area shape="poly" id="edge39_Node000025_Node000036" title=" " alt="" coords="229,1211,237,1263,257,1339,273,1380,293,1420,317,1458,348,1490,352,1494,349,1498,344,1494,313,1461,288,1423,268,1382,252,1341,232,1265,224,1212"/>
-<area shape="rect" id="Node000037" href="$unit__model_8cpp.html#abb49fbd77462625039c6d5ec4a8c7667" title="Unit test for createModel." alt="" coords="364,1555,526,1581"/>
-<area shape="poly" id="edge40_Node000025_Node000037" title=" " alt="" coords="228,1211,234,1271,251,1360,266,1409,287,1457,314,1502,348,1541,352,1544,349,1549,344,1545,309,1505,282,1460,261,1411,246,1362,228,1272,223,1211"/>
-<area shape="rect" id="Node000040" href="$unit__model_8cpp.html#adc00b5a0ad5085f85564b39319ae6662" title="Unit test for the destrcutor." alt="" coords="371,1605,520,1632"/>
-<area shape="poly" id="edge41_Node000025_Node000040" title=" " alt="" coords="228,1211,230,1279,245,1381,260,1438,281,1494,310,1546,348,1591,358,1599,355,1604,344,1595,306,1549,276,1496,255,1440,240,1382,225,1279,222,1211"/>
-<area shape="rect" id="Node000041" href="$unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="369,779,522,805"/>
-<area shape="poly" id="edge42_Node000025_Node000041" title=" " alt="" coords="222,1183,226,1118,242,1019,257,964,278,910,307,859,344,815,353,808,356,813,348,819,311,862,283,912,262,966,247,1020,231,1118,228,1184"/>
-<area shape="rect" id="Node000043" href="$unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7" title="Unit test to check if the end is the element after the last one in flows container." alt="" coords="374,829,517,856"/>
-<area shape="poly" id="edge43_Node000025_Node000043" title=" " alt="" coords="223,1183,230,1125,248,1040,263,993,284,947,311,903,344,866,358,856,361,860,348,870,315,907,289,949,268,995,253,1041,235,1126,229,1184"/>
-<area shape="rect" id="Node000046" href="$unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="372,880,518,907"/>
-<area shape="poly" id="edge44_Node000025_Node000046" title=" " alt="" coords="224,1183,233,1133,254,1061,270,1022,290,983,314,948,344,917,357,908,360,912,348,921,318,951,294,986,275,1024,259,1063,239,1134,229,1184"/>
-<area shape="rect" id="Node000047" href="$unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="365,931,526,957"/>
-<area shape="poly" id="edge45_Node000025_Node000047" title=" " alt="" coords="226,1183,238,1141,261,1082,296,1020,318,992,344,967,351,963,354,967,348,971,322,995,300,1023,266,1085,243,1142,231,1184"/>
-<area shape="rect" id="Node000049" href="$unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="354,981,536,1008"/>
-<area shape="poly" id="edge46_Node000025_Node000049" title=" " alt="" coords="228,1183,243,1149,268,1104,302,1058,344,1018,353,1013,355,1017,348,1022,306,1061,272,1107,248,1151,233,1185"/>
-<area shape="rect" id="Node000050" href="$unit__model_8cpp.html#a37286918320acd70d56642498fa32c18" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="391,1032,500,1059"/>
-<area shape="poly" id="edge47_Node000025_Node000050" title=" " alt="" coords="232,1182,276,1127,308,1095,345,1068,374,1055,377,1060,347,1073,311,1099,280,1130,236,1185"/>
-<area shape="rect" id="Node000054" href="$unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d" title="Unit test to check if the begin is the first element of the system container." alt="" coords="362,1083,529,1109"/>
-<area shape="poly" id="edge48_Node000025_Node000054" title=" " alt="" coords="242,1181,287,1150,345,1119,363,1112,365,1117,347,1124,290,1155,245,1186"/>
-<area shape="rect" id="Node000056" href="$unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="367,1133,524,1160"/>
-<area shape="poly" id="edge49_Node000025_Node000056" title=" " alt="" coords="285,1181,368,1161,370,1167,286,1186"/>
-<area shape="rect" id="Node000059" href="$unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="365,1184,525,1211"/>
-<area shape="poly" id="edge50_Node000025_Node000059" title=" " alt="" coords="293,1195,349,1195,349,1200,293,1200"/>
-<area shape="rect" id="Node000060" href="$unit__model_8cpp.html#a9c446da28d0edbe87f0850d93c57649b" title="Unit test formethod setName." alt="" coords="395,1235,496,1261"/>
-<area shape="poly" id="edge51_Node000025_Node000060" title=" " alt="" coords="286,1209,380,1230,378,1236,285,1214"/>
-<area shape="rect" id="Node000063" href="$unit__system_8cpp.html#a119239607b00029c8eb7cc7b71313fec" title="Make a unit test for the default constructor." alt="" coords="362,2176,528,2219"/>
-<area shape="poly" id="edge53_Node000062_Node000063" title=" " alt="" coords="232,1975,246,2012,270,2062,304,2116,325,2140,348,2162,353,2166,350,2170,344,2166,321,2144,300,2119,265,2065,241,2014,227,1977"/>
-<area shape="rect" id="Node000065" href="$unit__system_8cpp.html#a95034d7e2e60166366a6193e8c386246" title="Make a unit test for the copy constructor." alt="" coords="348,2243,542,2269"/>
-<area shape="poly" id="edge54_Node000062_Node000065" title=" " alt="" coords="230,1976,240,2024,260,2093,276,2130,295,2166,319,2200,348,2229,353,2233,350,2237,344,2233,315,2203,291,2169,271,2132,255,2094,234,2025,224,1977"/>
-<area shape="rect" id="Node000066" href="$unit__system_8cpp.html#a38d58772ba0448f93ae3cf4f644dae18" title="Make a unit test for the constructor with only the name." alt="" coords="346,2293,544,2320"/>
-<area shape="poly" id="edge55_Node000062_Node000066" title=" " alt="" coords="229,1976,236,2033,254,2115,270,2159,290,2203,316,2244,348,2279,352,2283,349,2287,344,2283,311,2247,285,2206,265,2161,249,2116,230,2034,223,1977"/>
-<area shape="rect" id="Node000067" href="$unit__system_8cpp.html#a4a978e9715b8d162af938d3338e2f781" title="Make a unit test for the constructor with only the value." alt="" coords="366,1656,525,1699"/>
-<area shape="poly" id="edge56_Node000062_Node000067" title=" " alt="" coords="225,1948,237,1903,259,1839,294,1769,317,1737,344,1709,350,1704,354,1708,348,1713,321,1740,299,1772,264,1841,242,1904,230,1950"/>
-<area shape="rect" id="Node000068" href="$unit__system_8cpp.html#ad5119187894c5bc804338730dbe2b312" title="Make a unit test for the constructor with all atributes." alt="" coords="366,1723,525,1765"/>
-<area shape="poly" id="edge57_Node000062_Node000068" title=" " alt="" coords="228,1948,243,1913,268,1867,302,1818,344,1775,351,1771,354,1775,348,1779,306,1821,272,1870,248,1915,233,1950"/>
-<area shape="rect" id="Node000069" href="$unit__system_8cpp.html#a4b2d0613e5a0efdc0e68f4d80f104966" title="make a unit test for the destructor" alt="" coords="369,1789,521,1816"/>
-<area shape="poly" id="edge58_Node000062_Node000069" title=" " alt="" coords="231,1947,275,1888,307,1854,345,1826,355,1820,358,1825,347,1830,311,1858,279,1892,236,1950"/>
-<area shape="rect" id="Node000070" href="$unit__system_8cpp.html#a672a51794472bbde676a33115e003b15" title="Make a unit test for the method getName()" alt="" coords="369,1840,522,1867"/>
-<area shape="poly" id="edge59_Node000062_Node000070" title=" " alt="" coords="240,1947,285,1912,345,1876,362,1869,364,1874,347,1881,288,1916,243,1951"/>
-<area shape="rect" id="Node000071" href="$unit__system_8cpp.html#ab320622db511f54344c510a9cfdbff94" title="Make a unit test for the method etValue()" alt="" coords="369,1891,521,1917"/>
-<area shape="poly" id="edge60_Node000062_Node000071" title=" " alt="" coords="274,1946,345,1927,374,1919,376,1924,347,1932,276,1951"/>
-<area shape="rect" id="Node000072" href="$unit__system_8cpp.html#a8303bcdc85c2a0ee962ee48db56b1753" title="Make a unit test for the == operator." alt="" coords="371,1941,519,1984"/>
-<area shape="poly" id="edge61_Node000062_Node000072" title=" " alt="" coords="299,1960,356,1960,356,1965,299,1965"/>
-<area shape="rect" id="Node000073" href="$unit__system_8cpp.html#ae8a0f5b778e76904b8ef05962a9c50c8" title="Make a unit test for the = operator." alt="" coords="371,2008,519,2051"/>
-<area shape="poly" id="edge62_Node000062_Node000073" title=" " alt="" coords="272,1974,358,2000,356,2005,270,1979"/>
-<area shape="rect" id="Node000074" href="$unit__system_8cpp.html#a470f565c55f643e387d5cc7005cab1ea" title="Make a unit test for the method setName()" alt="" coords="369,2075,522,2101"/>
-<area shape="poly" id="edge63_Node000062_Node000074" title=" " alt="" coords="240,1975,285,2017,315,2040,347,2060,361,2067,359,2072,345,2065,312,2045,281,2021,236,1978"/>
-<area shape="rect" id="Node000076" href="$unit__system_8cpp.html#ac322ab5fd0cd1051b54ffab7177032e6" title="Make a unit test for the method etValue()" alt="" coords="369,2125,521,2152"/>
-<area shape="poly" id="edge64_Node000062_Node000076" title=" " alt="" coords="234,1975,276,2041,309,2079,348,2111,357,2116,354,2121,344,2116,305,2083,272,2044,230,1978"/>
+<area shape="rect" id="Node000039" href="$unit__model_8cpp.html#af1860c0004f2ef09cbc14cf1e904fe0d" title="Unit test to check if a system was successfully created and added into the container of systems." alt="" coords="359,1555,531,1581"/>
+<area shape="poly" id="edge40_Node000025_Node000039" title=" " alt="" coords="228,1211,234,1271,251,1360,266,1409,287,1457,314,1502,348,1541,352,1544,349,1548,344,1545,309,1505,282,1460,261,1411,246,1362,228,1272,223,1211"/>
+<area shape="rect" id="Node000042" href="$unit__model_8cpp.html#adc00b5a0ad5085f85564b39319ae6662" title="Unit test for the destrcutor." alt="" coords="371,1605,520,1632"/>
+<area shape="poly" id="edge41_Node000025_Node000042" title=" " alt="" coords="228,1211,230,1279,245,1381,260,1438,281,1494,310,1546,348,1591,358,1599,355,1604,344,1595,306,1549,276,1496,255,1440,240,1382,225,1279,222,1211"/>
+<area shape="rect" id="Node000043" href="$unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="369,779,522,805"/>
+<area shape="poly" id="edge42_Node000025_Node000043" title=" " alt="" coords="222,1183,226,1118,242,1019,257,964,278,910,307,859,344,815,353,808,356,813,348,819,311,862,283,912,262,966,247,1020,231,1118,228,1184"/>
+<area shape="rect" id="Node000045" href="$unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7" title="Unit test to check if the end is the element after the last one in flows container." alt="" coords="374,829,517,856"/>
+<area shape="poly" id="edge43_Node000025_Node000045" title=" " alt="" coords="223,1183,230,1125,248,1040,263,993,284,947,311,903,344,866,358,856,361,860,348,870,315,907,289,949,268,995,253,1041,235,1126,229,1184"/>
+<area shape="rect" id="Node000047" href="$unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="372,880,518,907"/>
+<area shape="poly" id="edge44_Node000025_Node000047" title=" " alt="" coords="224,1183,233,1133,254,1061,270,1022,290,983,314,948,344,917,357,908,360,912,348,921,318,951,294,986,275,1024,259,1063,239,1134,229,1184"/>
+<area shape="rect" id="Node000048" href="$unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="365,931,526,957"/>
+<area shape="poly" id="edge45_Node000025_Node000048" title=" " alt="" coords="226,1183,238,1141,261,1082,296,1020,318,992,344,967,351,963,354,967,348,971,322,995,300,1023,266,1085,243,1142,231,1184"/>
+<area shape="rect" id="Node000050" href="$unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="354,981,536,1008"/>
+<area shape="poly" id="edge46_Node000025_Node000050" title=" " alt="" coords="228,1183,243,1149,268,1104,302,1058,344,1018,353,1013,355,1017,348,1022,306,1061,272,1107,248,1151,233,1185"/>
+<area shape="rect" id="Node000051" href="$unit__model_8cpp.html#a37286918320acd70d56642498fa32c18" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="391,1032,500,1059"/>
+<area shape="poly" id="edge47_Node000025_Node000051" title=" " alt="" coords="232,1182,276,1127,308,1095,345,1068,374,1055,377,1060,347,1073,311,1099,280,1130,236,1185"/>
+<area shape="rect" id="Node000053" href="$unit__model_8cpp.html#a362f790b925558b01c9512d28c684f4d" title="Unit test to check if the begin is the first element of the system container." alt="" coords="362,1083,529,1109"/>
+<area shape="poly" id="edge48_Node000025_Node000053" title=" " alt="" coords="242,1181,287,1150,345,1119,363,1112,365,1117,347,1124,290,1155,245,1186"/>
+<area shape="rect" id="Node000054" href="$unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="367,1133,524,1160"/>
+<area shape="poly" id="edge49_Node000025_Node000054" title=" " alt="" coords="285,1181,368,1161,370,1167,286,1186"/>
+<area shape="rect" id="Node000056" href="$unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="365,1184,525,1211"/>
+<area shape="poly" id="edge50_Node000025_Node000056" title=" " alt="" coords="293,1195,349,1195,349,1200,293,1200"/>
+<area shape="rect" id="Node000057" href="$unit__model_8cpp.html#a9c446da28d0edbe87f0850d93c57649b" title="Unit test formethod setName." alt="" coords="395,1235,496,1261"/>
+<area shape="poly" id="edge51_Node000025_Node000057" title=" " alt="" coords="286,1209,380,1230,378,1236,285,1214"/>
+<area shape="rect" id="Node000060" href="$unit__system_8cpp.html#a119239607b00029c8eb7cc7b71313fec" title="Make a unit test for the default constructor." alt="" coords="362,2176,528,2219"/>
+<area shape="poly" id="edge53_Node000059_Node000060" title=" " alt="" coords="232,1975,246,2012,270,2062,304,2116,325,2140,348,2162,353,2166,350,2170,344,2166,321,2144,300,2119,265,2065,241,2014,227,1977"/>
+<area shape="rect" id="Node000063" href="$unit__system_8cpp.html#a95034d7e2e60166366a6193e8c386246" title="Make a unit test for the copy constructor." alt="" coords="348,2243,542,2269"/>
+<area shape="poly" id="edge54_Node000059_Node000063" title=" " alt="" coords="230,1976,240,2024,260,2093,276,2130,295,2166,319,2200,348,2229,353,2233,350,2237,344,2233,315,2203,291,2169,271,2132,255,2094,234,2025,224,1977"/>
+<area shape="rect" id="Node000064" href="$unit__system_8cpp.html#a38d58772ba0448f93ae3cf4f644dae18" title="Make a unit test for the constructor with only the name." alt="" coords="346,2293,544,2320"/>
+<area shape="poly" id="edge55_Node000059_Node000064" title=" " alt="" coords="229,1976,236,2033,254,2115,270,2159,290,2203,316,2244,348,2279,352,2283,349,2287,344,2283,311,2247,285,2206,265,2161,249,2116,230,2034,223,1977"/>
+<area shape="rect" id="Node000065" href="$unit__system_8cpp.html#a4a978e9715b8d162af938d3338e2f781" title="Make a unit test for the constructor with only the value." alt="" coords="366,1656,525,1699"/>
+<area shape="poly" id="edge56_Node000059_Node000065" title=" " alt="" coords="225,1948,237,1903,259,1839,294,1769,317,1737,344,1709,350,1704,354,1708,348,1713,321,1740,299,1772,264,1841,242,1904,230,1950"/>
+<area shape="rect" id="Node000066" href="$unit__system_8cpp.html#ad5119187894c5bc804338730dbe2b312" title="Make a unit test for the constructor with all atributes." alt="" coords="366,1723,525,1765"/>
+<area shape="poly" id="edge57_Node000059_Node000066" title=" " alt="" coords="228,1948,243,1913,268,1867,302,1818,344,1775,351,1771,354,1775,348,1779,306,1821,272,1870,248,1915,233,1950"/>
+<area shape="rect" id="Node000067" href="$unit__system_8cpp.html#a4b2d0613e5a0efdc0e68f4d80f104966" title="make a unit test for the destructor" alt="" coords="369,1789,521,1816"/>
+<area shape="poly" id="edge58_Node000059_Node000067" title=" " alt="" coords="231,1947,275,1888,307,1854,345,1826,355,1820,358,1825,347,1830,311,1858,279,1892,236,1950"/>
+<area shape="rect" id="Node000068" href="$unit__system_8cpp.html#a672a51794472bbde676a33115e003b15" title="Make a unit test for the method getName()" alt="" coords="369,1840,522,1867"/>
+<area shape="poly" id="edge59_Node000059_Node000068" title=" " alt="" coords="240,1947,285,1912,345,1876,362,1869,364,1874,347,1881,288,1916,243,1951"/>
+<area shape="rect" id="Node000069" href="$unit__system_8cpp.html#ab320622db511f54344c510a9cfdbff94" title="Make a unit test for the method etValue()" alt="" coords="369,1891,521,1917"/>
+<area shape="poly" id="edge60_Node000059_Node000069" title=" " alt="" coords="274,1946,345,1927,374,1919,376,1924,347,1932,276,1951"/>
+<area shape="rect" id="Node000070" href="$unit__system_8cpp.html#a8303bcdc85c2a0ee962ee48db56b1753" title="Make a unit test for the == operator." alt="" coords="371,1941,519,1984"/>
+<area shape="poly" id="edge61_Node000059_Node000070" title=" " alt="" coords="299,1960,356,1960,356,1965,299,1965"/>
+<area shape="rect" id="Node000071" href="$unit__system_8cpp.html#ae8a0f5b778e76904b8ef05962a9c50c8" title="Make a unit test for the = operator." alt="" coords="371,2008,519,2051"/>
+<area shape="poly" id="edge62_Node000059_Node000071" title=" " alt="" coords="272,1974,358,2000,356,2005,270,1979"/>
+<area shape="rect" id="Node000072" href="$unit__system_8cpp.html#a470f565c55f643e387d5cc7005cab1ea" title="Make a unit test for the method setName()" alt="" coords="369,2075,522,2101"/>
+<area shape="poly" id="edge63_Node000059_Node000072" title=" " alt="" coords="240,1975,285,2017,315,2040,347,2060,361,2067,359,2072,345,2065,312,2045,281,2021,236,1978"/>
+<area shape="rect" id="Node000074" href="$unit__system_8cpp.html#ac322ab5fd0cd1051b54ffab7177032e6" title="Make a unit test for the method etValue()" alt="" coords="369,2125,521,2152"/>
+<area shape="poly" id="edge64_Node000059_Node000074" title=" " alt="" coords="234,1975,276,2041,309,2079,348,2111,357,2116,354,2121,344,2116,305,2083,272,2044,230,1978"/>
 </map>

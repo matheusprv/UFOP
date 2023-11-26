@@ -1,0 +1,9 @@
+<map id="unit_Model_createSystem" name="unit_Model_createSystem">
+<area shape="rect" id="Node000001" title="Unit test to check if a system was successfully created and added into the container of systems." alt="" coords="5,56,178,83"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="231,5,366,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,53,225,34,227,39,150,58"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="226,56,371,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,67,210,67,210,72,178,72"/>
+<area shape="rect" id="Node000004" href="$class_model.html#af929bf04a3a2780a6d82e901cf763f52" title="Get the iterator pointing for the first item in the container." alt="" coords="228,107,369,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,81,227,100,225,105,149,86"/>
+</map>

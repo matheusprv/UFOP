@@ -2,9 +2,6 @@
 #define UNIT_MODEL_H
 
 #include "../../src/Model.h"
-#include "../../src/ModelImpl.h"
-#include "../../src/FlowImpl.h"
-#include "../../src/SystemImpl.h"
 #include "../Flows/FlowComplexo.h"
 #include "../Flows/FlowExponencial.h"
 
@@ -59,13 +56,13 @@ void unit_Model_flowsSize();
 */
 void unit_Model_systemSize();
 /**
- * @brief Unit test to check if a flow was successfully added into the container of flows
+ * @brief Unit test to check if a flow was successfully created and added into the container of flows
 */
-void unit_Model_add_flow();
+void unit_Model_createFlow();
 /**
- * @brief Unit test to check if a flow was successfully added into the container of systems
+ * @brief Unit test to check if a system was successfully created and added into the container of systems
 */
-void unit_Model_add_system();
+void unit_Model_createSystem();
 /**
  * @brief Unit test to check if a flow was successfully removed from the flow's container
 */

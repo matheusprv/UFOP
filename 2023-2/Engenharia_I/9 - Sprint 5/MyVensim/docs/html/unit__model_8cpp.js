@@ -2,11 +2,11 @@ var unit__model_8cpp =
 [
     [ "run_unit_test_Model", "unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39", null ],
     [ "unit_getName", "unit__model_8cpp.html#adc98c33e4754d8fbc7ac6f4c304fc1ca", null ],
-    [ "unit_Model_add_flow", "unit__model_8cpp.html#aa4f8c7bb8b3cb64a0b1959bb0eb01b9a", null ],
-    [ "unit_Model_add_system", "unit__model_8cpp.html#ab3a10b6e696b6a91d6c33dcbb18aceb4", null ],
     [ "unit_Model_constructor_default", "unit__model_8cpp.html#aef9d3af61dfc50dcbd295ee49b77e704", null ],
     [ "unit_Model_constructor_name", "unit__model_8cpp.html#a73a3b2f94a5ddae65bdb3761c8e2cb91", null ],
+    [ "unit_Model_createFlow", "unit__model_8cpp.html#ac044ab223c8b3b6df04969f1f254ae01", null ],
     [ "unit_Model_createModel", "unit__model_8cpp.html#abb49fbd77462625039c6d5ec4a8c7667", null ],
+    [ "unit_Model_createSystem", "unit__model_8cpp.html#af1860c0004f2ef09cbc14cf1e904fe0d", null ],
     [ "unit_Model_destructor", "unit__model_8cpp.html#adc00b5a0ad5085f85564b39319ae6662", null ],
     [ "unit_Model_flowsBegin", "unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1", null ],
     [ "unit_Model_flowsEnd", "unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7", null ],

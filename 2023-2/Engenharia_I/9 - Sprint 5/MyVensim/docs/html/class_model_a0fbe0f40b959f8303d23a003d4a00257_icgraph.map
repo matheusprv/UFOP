@@ -1,14 +1,20 @@
 <map id="Model::systemsSize" name="Model::systemsSize">
-<area shape="rect" id="Node000001" title="Return the number of items in systems&#39; container." alt="" coords="677,43,817,69"/>
+<area shape="rect" id="Node000001" title="Return the number of items in systems&#39; container." alt="" coords="677,97,817,124"/>
 <area shape="rect" id="Node000002" href="$unit__model_8cpp.html#aef9d3af61dfc50dcbd295ee49b77e704" title="Unit test for an empty constructor of model." alt="" coords="453,5,609,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="661,47,609,40,610,35,662,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="700,93,628,62,597,51,599,46,630,58,703,88"/>
 <area shape="rect" id="Node000006" href="$unit__model_8cpp.html#a73a3b2f94a5ddae65bdb3761c8e2cb91" title="Unit test for a constructor with name of the model." alt="" coords="433,72,629,99"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="661,70,629,75,629,69,661,65"/>
-<area shape="rect" id="Node000003" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,43,385,69"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="438,42,386,49,385,44,437,37"/>
-<area shape="rect" id="Node000004" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,43,199,69"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,59,199,59,199,53,232,53"/>
-<area shape="rect" id="Node000005" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,43,55,69"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,59,55,59,55,53,87,53"/>
-<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="418,73,385,68,386,63,418,67"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="661,103,629,99,629,94,661,98"/>
+<area shape="rect" id="Node000007" href="$unit__model_8cpp.html#a1d1a3f8675bb484cc31163d2594c0795" title="Unit test to check if the end is the element after the last one in system container." alt="" coords="452,123,610,149"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="661,123,610,129,610,124,661,118"/>
+<area shape="rect" id="Node000008" href="$unit__model_8cpp.html#a650be75cfe00d74ba2d81ec8229a47e5" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="451,173,611,200"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="704,133,630,164,592,175,591,170,628,159,702,128"/>
+<area shape="rect" id="Node000003" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,97,385,124"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="451,56,434,62,349,99,347,94,432,58,449,51"/>
+<area shape="rect" id="Node000004" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,97,199,124"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,113,199,113,199,108,232,108"/>
+<area shape="rect" id="Node000005" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,97,55,124"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,113,55,113,55,108,87,108"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="418,101,386,105,385,100,418,96"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="437,128,386,121,386,116,437,122"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="455,171,432,164,345,127,347,122,434,159,457,166"/>
 </map>

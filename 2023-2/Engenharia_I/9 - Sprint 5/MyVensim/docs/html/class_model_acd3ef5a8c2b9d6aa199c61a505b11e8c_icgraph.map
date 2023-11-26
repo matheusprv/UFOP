@@ -1,0 +1,33 @@
+<map id="Model::createFlow" name="Model::createFlow">
+<area shape="rect" id="Node000001" title="Template to include a Flow into the container of flow." alt="" coords="650,183,777,209"/>
+<area shape="rect" id="Node000002" href="$funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="442,5,593,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="697,170,659,108,632,74,600,46,579,35,582,30,603,42,636,71,663,104,702,168"/>
+<area shape="rect" id="Node000004" href="$funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27" title="Given a model with exponential equation and two systems, pop1 with value 100 and pop2 with value 0 Wh..." alt="" coords="433,56,602,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="689,172,650,134,600,97,575,86,577,81,603,92,653,130,692,169"/>
+<area shape="rect" id="Node000005" href="$funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29" title="Given a model with logistical equation and two systems, p1 with value 100 and p2 with value 10 When t..." alt="" coords="441,107,594,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="670,178,601,148,567,136,569,131,603,143,672,173"/>
+<area shape="rect" id="Node000006" href="$unit__model_8cpp.html#ac044ab223c8b3b6df04969f1f254ae01" title="Unit test to check if a flow was successfully created and added into the container of flows." alt="" coords="440,157,595,184"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="634,188,595,183,595,178,635,183"/>
+<area shape="rect" id="Node000010" href="$unit__model_8cpp.html#a70115dcd7577152e073793033f6426a1" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="441,208,594,235"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="635,209,595,214,594,209,634,204"/>
+<area shape="rect" id="Node000011" href="$unit__model_8cpp.html#afc1883011bf49c69a5b0e14b2e64b1c7" title="Unit test to check if the end is the element after the last one in flows container." alt="" coords="446,259,589,285"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="672,219,603,249,569,261,567,256,601,244,670,214"/>
+<area shape="rect" id="Node000012" href="$unit__model_8cpp.html#ae43b096254503bcf0321b700f09d1c7c" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="444,309,591,336"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="692,223,653,262,603,300,577,311,575,306,600,295,650,258,689,220"/>
+<area shape="rect" id="Node000013" href="$unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="437,360,598,387"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="702,224,663,288,636,321,603,350,582,362,579,357,600,346,632,318,659,284,697,222"/>
+<area shape="rect" id="Node000003" href="$funcional_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="292,56,341,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="447,39,342,66,340,61,446,34"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="418,72,341,72,341,67,418,67"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="446,105,340,78,342,73,447,100"/>
+<area shape="rect" id="Node000007" href="$unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,259,385,285"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="450,192,435,198,380,230,337,260,333,256,377,225,432,194,448,187"/>
+<area shape="rect" id="Node000008" href="$unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,259,199,285"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="232,275,199,275,199,269,232,269"/>
+<area shape="rect" id="Node000009" href="$unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,259,55,285"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="87,275,55,275,55,269,87,269"/>
+<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="447,242,373,261,371,255,446,237"/>
+<area shape="poly" id="edge14_Node000011_Node000007" title=" " alt="" coords="430,275,386,275,386,269,430,269"/>
+<area shape="poly" id="edge16_Node000012_Node000007" title=" " alt="" coords="446,307,371,289,373,283,447,302"/>
+<area shape="poly" id="edge18_Node000013_Node000007" title=" " alt="" coords="448,357,432,350,377,319,333,288,337,284,380,314,435,346,450,352"/>
+</map>

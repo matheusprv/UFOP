@@ -1,7 +1,9 @@
 <map id="unit_Model_systemBegin" name="unit_Model_systemBegin">
-<area shape="rect" id="Node000001" title="Unit test to check if the begin is the first element of the system container." alt="" coords="5,31,173,57"/>
-<area shape="rect" id="Node000002" href="$class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="248,5,358,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,31,233,24,234,30,174,37"/>
-<area shape="rect" id="Node000003" href="$class_model_impl.html#a9ac06e337a6f2b114a334112b1aa5818" title="Get the iterator pointing for the first item in the container." alt="" coords="221,56,385,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,51,206,55,205,60,173,57"/>
+<area shape="rect" id="Node000001" title="Unit test to check if the begin is the first element of the system container." alt="" coords="5,56,173,83"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="226,5,361,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,53,221,34,223,39,147,58"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="221,56,366,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,67,205,67,205,72,173,72"/>
+<area shape="rect" id="Node000004" href="$class_model.html#af929bf04a3a2780a6d82e901cf763f52" title="Get the iterator pointing for the first item in the container." alt="" coords="223,107,364,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,81,223,100,221,105,145,86"/>
 </map>

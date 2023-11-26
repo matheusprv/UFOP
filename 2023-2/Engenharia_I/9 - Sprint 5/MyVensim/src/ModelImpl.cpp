@@ -194,18 +194,18 @@ ModelImpl& ModelImpl :: operator=(const ModelImpl& model){
     return *this;
 }
 
-Model* ModelImpl :: createModel(string name){
+Model& ModelImpl :: createModel(string name){
     Model * model = new ModelImpl(name);
     add(model);
-    return model;
+    return *model;
 }
 
-Model* Model :: createModel(string name){
+Model& Model :: createModel(string name){
     return ModelImpl :: createModel(name);
 }
 
-System* ModelImpl :: createSystem(string name, double value){
+System& ModelImpl :: createSystem(string name, double value){
     System * system = new SystemImpl(name, value);
     add(system);
-    return system;
+    return *system;
 }

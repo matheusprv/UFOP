@@ -1,7 +1,9 @@
 <map id="unit_Model_systemSize" name="unit_Model_systemSize">
-<area shape="rect" id="Node000001" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="5,31,166,57"/>
-<area shape="rect" id="Node000002" href="$class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7" title="Add a flow to the model&#39;s container of flows." alt="" coords="241,5,351,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,32,225,24,226,30,166,37"/>
-<area shape="rect" id="Node000003" href="$class_model_impl.html#ad95b31c43021dec4c4b67cb74a2dc138" title="Return the number of items in systems&#39; container." alt="" coords="214,56,378,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,51,198,55,198,60,166,56"/>
+<area shape="rect" id="Node000001" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="5,56,166,83"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="219,5,354,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,53,215,34,216,39,142,58"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a352f28607d2a8001b56ac9349a085bc2" title="Creates a systems and add it to the system container." alt="" coords="214,56,359,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,67,198,67,198,72,166,72"/>
+<area shape="rect" id="Node000004" href="$class_model.html#a0fbe0f40b959f8303d23a003d4a00257" title="Return the number of items in systems&#39; container." alt="" coords="216,107,357,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="142,81,216,100,215,105,141,86"/>
 </map>
