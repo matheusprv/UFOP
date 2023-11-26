@@ -1,0 +1,7 @@
+<map id="unit_Model_modelsBegin" name="unit_Model_modelsBegin">
+<area shape="rect" id="Node000001" title="Unit test to check if the begin is the first element of the model container." alt="" coords="5,31,172,57"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="222,5,357,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,31,206,26,207,32,172,36"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a214e492d02b844dfa8899cc9e8d659bf" title="Get the iterator pointing for the first item in the container." alt="" coords="220,56,359,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,52,205,56,204,61,172,57"/>
+</map>

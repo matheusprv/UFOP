@@ -95,7 +95,6 @@ void unit_Model_systemEnd(){
     delete &model;
 }
 
-
 void unit_Model_flowsBegin(){
 
     Model& model = Model::createModel();
@@ -145,6 +144,37 @@ void unit_Model_flowsEnd(){
     delete &model;
 }
 
+void unit_Model_modelsBegin(){
+    Model & model1 = Model::createModel("Modelo1");
+    Model & model2 = Model::createModel("Modelo2");
+
+    assert(*(model1.modelsBegin()) == &model1);
+    assert(*(model1.modelsBegin()) != &model2);
+
+    delete &model1;
+    delete &model2;
+}
+void unit_Model_modelsEnd(){
+    Model & model1 = Model::createModel("Modelo1");
+    Model & model2 = Model::createModel("Modelo2");
+    //The end method from a container gives the position after the last one
+    //So if I can count until the size of the container, everything is correct
+    Model::modelsIterator end = model1.modelsEnd();
+    Model::modelsIterator it = model1.modelsBegin();
+    int counter = 0;
+
+    while(it != end){
+        if(it != end) counter ++;
+        else break;
+        it++;
+    }
+
+    assert(counter == model1.modelsSize());
+
+    delete &model1;
+    delete &model2;
+}
+
 void unit_Model_flowsSize(){
     Model& model = Model::createModel();
 
@@ -167,6 +197,15 @@ void unit_Model_systemSize(){
     assert(model.systemsSize() == 2);
 
     delete &model;
+}
+void unit_Model_modelsSize(){
+    Model & model1 = Model::createModel("Modelo1");
+    Model & model2 = Model::createModel("Modelo2");
+
+    assert(Model::modelsSize() == 2);
+
+    delete &model1;
+    delete &model2;
 }
 
 void unit_Model_createFlow(){
@@ -242,8 +281,11 @@ void run_unit_test_Model(){
     unit_Model_systemEnd();
     unit_Model_flowsBegin();
     unit_Model_flowsEnd();
+    unit_Model_modelsBegin();
+    unit_Model_modelsEnd();
     unit_Model_flowsSize();
     unit_Model_systemSize();
+    unit_Model_modelsSize();
     unit_Model_remove_flow();
     unit_Model_remove_system();
     unit_Model_run();

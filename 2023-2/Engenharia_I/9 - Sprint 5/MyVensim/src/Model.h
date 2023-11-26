@@ -30,18 +30,13 @@ protected:
     static bool add(Model* model);
 
 public:
-
-    //typedefs
-    /**
-     * @brief Defining a name for the system vector
-    */
+    /// @brief Defining a name for the system vector
     typedef vector<System*> :: iterator systemsIterator;
-    /**
-     * @brief Defining a name for the flow vector
-    */
+    /// @brief Defining a name for the flow vector
     typedef vector<Flow*> :: iterator flowsIterator;
+    /// @brief Defining a name for the model vector
+    typedef vector<Model*> :: iterator modelsIterator;
 
-    
     /**
     * @brief   Virtual destructor for the Model class.
     */
@@ -85,6 +80,20 @@ public:
     * @return Iterator pointing to the last item of the flows container.
     */
     virtual flowsIterator flowsEnd() = 0;
+
+    /**
+    * @brief Get the iterator pointing for the first item in the container.
+    * @param No parameters.
+    * @return Iterator pointing to the first item of the model container.
+    */
+    virtual modelsIterator modelsBegin() = 0;
+    /**
+    * @brief Get the iterator pointing for the last item in the container.
+    * @param No parameters.
+    * @return Iterator pointing to the last item of the model container.
+    */
+    virtual modelsIterator modelsEnd() = 0;
+
 
     /**
     * @brief Return the number of items in flows' container

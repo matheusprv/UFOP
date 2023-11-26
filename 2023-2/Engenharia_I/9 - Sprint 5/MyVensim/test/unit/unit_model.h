@@ -47,6 +47,15 @@ void unit_Model_flowsBegin();
  * @brief Unit test to check if the end is the element after the last one in flows container
 */
 void unit_Model_flowsEnd();
+
+/**
+ * @brief Unit test to check if the begin is the first element of the model container
+*/
+void unit_Model_modelsBegin();
+/**
+ * @brief Unit test to check if the end is the element after the last one in model container
+*/
+void unit_Model_modelsEnd();
 /**
  * @brief Unit test to check if the return value is the correct number of elements in the container
 */
@@ -55,6 +64,11 @@ void unit_Model_flowsSize();
  * @brief Unit test to check if the return value is the correct number of elements in the container
 */
 void unit_Model_systemSize();
+
+/**
+ * @brief Unit test to check if the return value is the correct number of elements in the container
+*/
+void unit_Model_modelsSize();
 /**
  * @brief Unit test to check if a flow was successfully created and added into the container of flows
 */

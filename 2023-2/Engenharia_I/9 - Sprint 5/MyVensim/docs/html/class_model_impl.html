@@ -110,9 +110,9 @@ Inheritance diagram for ModelImpl:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_impl__inherit__graph.png" border="0" usemap="#a_model_impl_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_model_impl_inherit__map" id="a_model_impl_inherit__map">
-<area shape="rect" title="Definition of class ModelImpl, which represents the model to be executed." alt="" coords="23,837,225,1611"/>
-<area shape="rect" href="class_model.html" title="Definition of class Model, which represents the model to be executed." alt="" coords="5,5,243,789"/>
-<area shape="poly" title=" " alt="" coords="127,804,127,838,121,838,121,804"/>
+<area shape="rect" title="Definition of class ModelImpl, which represents the model to be executed." alt="" coords="23,912,225,1685"/>
+<area shape="rect" href="class_model.html" title="Definition of class Model, which represents the model to be executed." alt="" coords="5,5,243,864"/>
+<area shape="poly" title=" " alt="" coords="127,879,127,912,121,912,121,879"/>
 </map>
 </div>
 <div class="dynheader">
@@ -120,9 +120,9 @@ Collaboration diagram for ModelImpl:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_impl__coll__graph.png" border="0" usemap="#a_model_impl_coll__map" alt="Collaboration graph"/></div>
 <map name="a_model_impl_coll__map" id="a_model_impl_coll__map">
-<area shape="rect" title="Definition of class ModelImpl, which represents the model to be executed." alt="" coords="23,837,225,1611"/>
-<area shape="rect" href="class_model.html" title="Definition of class Model, which represents the model to be executed." alt="" coords="5,5,243,789"/>
-<area shape="poly" title=" " alt="" coords="127,804,127,838,121,838,121,804"/>
+<area shape="rect" title="Definition of class ModelImpl, which represents the model to be executed." alt="" coords="23,912,225,1685"/>
+<area shape="rect" href="class_model.html" title="Definition of class Model, which represents the model to be executed." alt="" coords="5,5,243,864"/>
+<area shape="poly" title=" " alt="" coords="127,879,127,912,121,912,121,879"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -144,6 +144,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:ac2413a62cd7cbbed3103667f4459a035 inherit pub_types_class_model" id="r_ac2413a62cd7cbbed3103667f4459a035"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; <a class="el" href="class_flow.html">Flow</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ac2413a62cd7cbbed3103667f4459a035">flowsIterator</a></td></tr>
 <tr class="memdesc:ac2413a62cd7cbbed3103667f4459a035 inherit pub_types_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defining a name for the flow vector.  <br /></td></tr>
 <tr class="separator:ac2413a62cd7cbbed3103667f4459a035 inherit pub_types_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b506dad53e16fb95fc57592cc530c0d inherit pub_types_class_model" id="r_a0b506dad53e16fb95fc57592cc530c0d"><td class="memItemLeft" align="right" valign="top">typedef vector&lt; <a class="el" href="class_model.html">Model</a> * &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a0b506dad53e16fb95fc57592cc530c0d">modelsIterator</a></td></tr>
+<tr class="memdesc:a0b506dad53e16fb95fc57592cc530c0d inherit pub_types_class_model"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defining a name for the model vector.  <br /></td></tr>
+<tr class="separator:a0b506dad53e16fb95fc57592cc530c0d inherit pub_types_class_model"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -705,6 +708,9 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_model_impl.html#a2006163f2e4c28eab9b1293ae6286817">ModelImpl::modelsIterator</a> ModelImpl::modelsBegin </td>
@@ -713,6 +719,11 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the iterator pointing for the first item in the container. </p>
@@ -723,6 +734,8 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Iterator pointing to the first item of the model container. </dd></dl>
+
+<p>Implements <a class="el" href="class_model.html#a214e492d02b844dfa8899cc9e8d659bf">Model</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   67</span>                                                  {</div>
 <div class="line"><span class="lineno">   68</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_model_impl.html#a9c39b73552a3d681f5148d40e1746b8e">models</a>.begin();</div>
 <div class="line"><span class="lineno">   69</span>}</div>
@@ -734,6 +747,9 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_model_impl.html#a2006163f2e4c28eab9b1293ae6286817">ModelImpl::modelsIterator</a> ModelImpl::modelsEnd </td>
@@ -742,6 +758,11 @@ Additional Inherited Members</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the iterator pointing for the last item in the container. </p>
@@ -752,6 +773,8 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Iterator pointing to the last item of the model container. </dd></dl>
+
+<p>Implements <a class="el" href="class_model.html#ac8d7fdf01d3f62864800882d11e7dfdf">Model</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   70</span>                                                {</div>
 <div class="line"><span class="lineno">   71</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_model_impl.html#a9c39b73552a3d681f5148d40e1746b8e">models</a>.end();</div>
 <div class="line"><span class="lineno">   72</span>}</div>
@@ -797,17 +820,23 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_impl_abdf1b89a2852f366c5dd6a07506b8067_icgraph.png" border="0" usemap="#aclass_model_impl_abdf1b89a2852f366c5dd6a07506b8067_icgraph" alt=""/></div>
 <map name="aclass_model_impl_abdf1b89a2852f366c5dd6a07506b8067_icgraph" id="aclass_model_impl_abdf1b89a2852f366c5dd6a07506b8067_icgraph">
-<area shape="rect" title="Return the number of items in models&#39; container." alt="" coords="824,5,980,32"/>
-<area shape="rect" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2" title="Return the number of items in models&#39; container." alt="" coords="644,5,776,32"/>
-<area shape="poly" title=" " alt="" coords="808,21,776,21,776,16,808,16"/>
+<area shape="rect" title="Return the number of items in models&#39; container." alt="" coords="824,56,980,83"/>
+<area shape="rect" href="class_model.html#a0a50b4f964386d6ce3b5cb462be066a2" title="Return the number of items in models&#39; container." alt="" coords="644,56,776,83"/>
+<area shape="poly" title=" " alt="" coords="808,72,776,72,776,67,808,67"/>
 <area shape="rect" href="unit__model_8cpp.html#abb49fbd77462625039c6d5ec4a8c7667" title="Unit test for createModel." alt="" coords="433,5,596,32"/>
-<area shape="poly" title=" " alt="" coords="628,21,596,21,596,16,628,16"/>
-<area shape="rect" href="unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,5,385,32"/>
-<area shape="poly" title=" " alt="" coords="418,21,386,21,386,16,418,16"/>
-<area shape="rect" href="unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,5,199,32"/>
-<area shape="poly" title=" " alt="" coords="232,21,199,21,199,16,232,16"/>
-<area shape="rect" href="unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+<area shape="poly" title=" " alt="" coords="640,54,568,35,569,30,641,49"/>
+<area shape="rect" href="unit__model_8cpp.html#a16eb9b9c2196c14e47248c5148f3f41e" title="Unit test to check if the end is the element after the last one in model container." alt="" coords="436,56,593,83"/>
+<area shape="poly" title=" " alt="" coords="628,72,593,72,593,67,628,67"/>
+<area shape="rect" href="unit__model_8cpp.html#a6910baf09f6b38c40615352df69be0db" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="435,107,594,133"/>
+<area shape="poly" title=" " alt="" coords="641,90,569,109,568,103,640,85"/>
+<area shape="rect" href="unit__model_8cpp.html#a2114674c26fbc871eec94221b3252a39" title="Execute the unit tests from the methods implemented on the class Model." alt="" coords="247,56,385,83"/>
+<area shape="poly" title=" " alt="" coords="445,39,372,58,371,53,444,34"/>
+<area shape="rect" href="unit__test_8cpp.html#a684733851b2e5a23ce4fa91f4157bc23" title=" " alt="" coords="103,56,199,83"/>
+<area shape="poly" title=" " alt="" coords="232,72,199,72,199,67,232,67"/>
+<area shape="rect" href="unit_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,55,83"/>
+<area shape="poly" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="poly" title=" " alt="" coords="421,72,385,72,385,67,421,67"/>
+<area shape="poly" title=" " alt="" coords="444,105,371,86,372,81,445,100"/>
 </map>
 </div>
 

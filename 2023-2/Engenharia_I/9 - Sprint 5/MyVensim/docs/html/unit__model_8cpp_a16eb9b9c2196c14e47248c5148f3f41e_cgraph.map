@@ -1,0 +1,13 @@
+<map id="unit_Model_modelsEnd" name="unit_Model_modelsEnd">
+<area shape="rect" id="Node000001" title="Unit test to check if the end is the element after the last one in model container." alt="" coords="5,81,162,108"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="212,5,347,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,78,209,42,225,35,226,40,211,46,119,83"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a214e492d02b844dfa8899cc9e8d659bf" title="Get the iterator pointing for the first item in the container." alt="" coords="210,56,349,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,82,194,78,195,83,163,87"/>
+<area shape="rect" id="Node000004" href="$class_model.html#ac8d7fdf01d3f62864800882d11e7dfdf" title="Get the iterator pointing for the last item in the container." alt="" coords="215,107,344,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,102,199,107,199,112,162,107"/>
+<area shape="rect" id="Node000005" href="$class_model.html#a0a50b4f964386d6ce3b5cb462be066a2" title="Return the number of items in models&#39; container." alt="" coords="213,157,346,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="119,106,211,143,226,149,225,154,209,148,117,111"/>
+<area shape="rect" id="Node000006" href="$class_model_impl.html#abdf1b89a2852f366c5dd6a07506b8067" title="Return the number of items in models&#39; container." alt="" coords="397,157,553,184"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="346,168,381,168,381,173,346,173"/>
+</map>
