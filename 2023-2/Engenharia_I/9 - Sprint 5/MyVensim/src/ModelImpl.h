@@ -140,13 +140,13 @@ public:
     static int modelsSize();
 
     /**
-    * @brief  Remove a flow from the model's container of flows.
+    * @brief  Remove a flow from the model's container of flows and delete it from the memory.
     * @param  flow Pointer to the flow to be removed.
     * @return True if the removal is successful, false otherwise.
     */
     bool remove(Flow * flow);
     /**
-    * @brief  Remove a system from the model's container of systems.
+    * @brief  Remove a system from the model's container of systems and delete it from the memory.
     * @param  system Pointer to the system to be removed.
     * @return True if the removal is successful, false otherwise.
     */
@@ -162,10 +162,10 @@ public:
     * @brief  Run the model for a specified time range executing the function of the flows.
     * @param  initial_time Initial time for the model run.
     * @param  final_time Final time for the model run.
-    * @return True if the model run is successful.
-    * @return False if initial_time or final_time are negative or if initial_time is bigger than initial_time.
+    * @return The upper bound time if the model run is successful.
+    * @return -1 if initial_time or final_time are negative or if initial_time is bigger than initial_time.
     */
-    bool run(int tempo_inicial, int tempo_final);
+    int run(int tempo_inicial, int tempo_final);
 
     /**
     * @brief  Display the current status of the model, including systems and flows.

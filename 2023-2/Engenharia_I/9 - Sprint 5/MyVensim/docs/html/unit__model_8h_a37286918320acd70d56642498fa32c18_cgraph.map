@@ -2,6 +2,6 @@
 <area shape="rect" id="Node000001" title="Unit test to check if the system is running correctly and if the times are correct." alt="" coords="5,31,115,57"/>
 <area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="163,5,298,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,33,147,28,147,34,116,38"/>
-<area shape="rect" id="Node000003" href="$class_model.html#a2328056dbe721d55cbdbc55e86a777e3" title="Run the model for a specified time range executing the function of the flows." alt="" coords="189,56,272,83"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a5f55db19457ccc6394a0202cfc183884" title="Run the model for a specified time range executing the function of the flows." alt="" coords="189,56,272,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,50,174,58,173,64,115,55"/>
 </map>

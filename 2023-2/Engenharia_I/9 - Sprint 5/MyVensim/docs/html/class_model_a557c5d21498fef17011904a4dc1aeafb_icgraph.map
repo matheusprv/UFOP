@@ -1,5 +1,5 @@
 <map id="Model::remove" name="Model::remove">
-<area shape="rect" id="Node000001" title="Remove a flow from the model&#39;s container of flows." alt="" coords="664,31,769,57"/>
+<area shape="rect" id="Node000001" title="Remove a flow from the model&#39;s container of flows and delete it from the memory." alt="" coords="664,31,769,57"/>
 <area shape="rect" id="Node000002" href="$unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="444,5,605,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="648,38,605,32,606,27,649,32"/>
 <area shape="rect" id="Node000006" href="$unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="433,56,616,83"/>

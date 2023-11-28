@@ -95,13 +95,13 @@
 <area shape="poly" id="edge52_Node000028_Node000013" title=" " alt="" coords="351,553,433,572,431,577,350,558"/>
 <area shape="poly" id="edge55_Node000029_Node000003" title=" " alt="" coords="351,451,433,471,431,476,350,457"/>
 <area shape="poly" id="edge54_Node000029_Node000010" title=" " alt="" coords="354,424,386,412,434,387,475,359,478,363,437,391,388,417,356,429"/>
-<area shape="rect" id="Node000030" href="$class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows." alt="" coords="455,528,560,555"/>
+<area shape="rect" id="Node000030" href="$class_model.html#a557c5d21498fef17011904a4dc1aeafb" title="Remove a flow from the model&#39;s container of flows and delete it from the memory." alt="" coords="455,528,560,555"/>
 <area shape="poly" id="edge56_Node000029_Node000030" title=" " alt="" coords="363,451,388,463,404,476,413,489,422,501,437,514,445,519,442,523,433,518,418,505,409,492,400,479,386,468,361,456"/>
 <area shape="poly" id="edge58_Node000031_Node000003" title=" " alt="" coords="369,677,385,666,399,648,407,630,409,593,411,554,419,534,433,514,436,511,440,515,437,518,423,536,417,555,414,593,412,631,404,651,389,670,372,682"/>
 <area shape="poly" id="edge59_Node000031_Node000016" title=" " alt="" coords="359,705,388,716,403,726,413,736,436,755,447,761,445,765,434,760,409,740,400,730,386,721,357,710"/>
 <area shape="poly" id="edge60_Node000031_Node000030" title=" " alt="" coords="367,677,385,666,396,654,403,642,409,617,415,591,422,578,433,565,440,560,443,564,437,569,426,581,420,593,414,619,408,644,401,657,389,670,370,682"/>
 <area shape="poly" id="edge62_Node000032_Node000003" title=" " alt="" coords="343,941,366,934,385,919,404,894,416,869,423,845,426,820,422,771,411,721,399,671,394,620,396,594,403,568,415,541,433,514,435,512,439,516,437,518,419,544,408,569,401,595,399,620,404,670,416,720,427,770,431,820,429,846,421,871,408,897,389,923,369,938,345,946"/>
-<area shape="rect" id="Node000033" href="$class_model.html#a2328056dbe721d55cbdbc55e86a777e3" title="Run the model for a specified time range executing the function of the flows." alt="" coords="467,933,549,960"/>
+<area shape="rect" id="Node000033" href="$class_model.html#a5f55db19457ccc6394a0202cfc183884" title="Run the model for a specified time range executing the function of the flows." alt="" coords="467,933,549,960"/>
 <area shape="poly" id="edge63_Node000032_Node000033" title=" " alt="" coords="345,944,451,944,451,949,345,949"/>
 <area shape="poly" id="edge65_Node000034_Node000003" title=" " alt="" coords="371,880,385,869,402,847,413,825,419,804,422,782,419,739,410,696,401,651,397,607,406,561,417,538,433,514,435,512,439,516,437,518,421,540,411,563,403,607,406,651,416,694,425,738,428,782,425,805,418,827,406,850,389,873,375,884"/>
 <area shape="poly" id="edge66_Node000034_Node000016" title=" " alt="" coords="363,880,385,868,401,854,409,839,417,822,433,806,441,801,444,805,437,810,422,825,414,841,405,857,389,873,366,884"/>

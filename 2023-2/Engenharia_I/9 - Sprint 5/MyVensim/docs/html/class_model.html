@@ -111,7 +111,7 @@ Inheritance diagram for Model:</div>
 <div class="center"><img src="class_model__inherit__graph.png" border="0" usemap="#a_model_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_model_inherit__map" id="a_model_inherit__map">
 <area shape="rect" title="Definition of class Model, which represents the model to be executed." alt="" coords="5,5,243,864"/>
-<area shape="rect" href="class_model_impl.html" title="Definition of class ModelImpl, which represents the model to be executed." alt="" coords="23,912,225,1685"/>
+<area shape="rect" href="class_model_impl.html" title="Definition of class ModelImpl, which represents the model to be executed." alt="" coords="23,912,225,1669"/>
 <area shape="poly" title=" " alt="" coords="127,879,127,912,121,912,121,879"/>
 </map>
 </div>
@@ -172,14 +172,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0fbe0f40b959f8303d23a003d4a00257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of items in systems' container.  <br /></td></tr>
 <tr class="separator:a0fbe0f40b959f8303d23a003d4a00257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a557c5d21498fef17011904a4dc1aeafb" id="r_a557c5d21498fef17011904a4dc1aeafb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a557c5d21498fef17011904a4dc1aeafb">remove</a> (<a class="el" href="class_flow.html">Flow</a> *flow)=0</td></tr>
-<tr class="memdesc:a557c5d21498fef17011904a4dc1aeafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a flow from the model's container of flows.  <br /></td></tr>
+<tr class="memdesc:a557c5d21498fef17011904a4dc1aeafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a flow from the model's container of flows and delete it from the memory.  <br /></td></tr>
 <tr class="separator:a557c5d21498fef17011904a4dc1aeafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a731ced071d257b3c469337dec4c37656" id="r_a731ced071d257b3c469337dec4c37656"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a731ced071d257b3c469337dec4c37656">remove</a> (<a class="el" href="class_system.html">System</a> *system)=0</td></tr>
-<tr class="memdesc:a731ced071d257b3c469337dec4c37656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a system from the model's container of systems.  <br /></td></tr>
+<tr class="memdesc:a731ced071d257b3c469337dec4c37656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a system from the model's container of systems and delete it from the memory.  <br /></td></tr>
 <tr class="separator:a731ced071d257b3c469337dec4c37656"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2328056dbe721d55cbdbc55e86a777e3" id="r_a2328056dbe721d55cbdbc55e86a777e3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a2328056dbe721d55cbdbc55e86a777e3">run</a> (int tempo_inicial, int tempo_final)=0</td></tr>
-<tr class="memdesc:a2328056dbe721d55cbdbc55e86a777e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the model for a specified time range executing the function of the flows.  <br /></td></tr>
-<tr class="separator:a2328056dbe721d55cbdbc55e86a777e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f55db19457ccc6394a0202cfc183884" id="r_a5f55db19457ccc6394a0202cfc183884"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a5f55db19457ccc6394a0202cfc183884">run</a> (int tempo_inicial, int tempo_final)=0</td></tr>
+<tr class="memdesc:a5f55db19457ccc6394a0202cfc183884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the model for a specified time range executing the function of the flows.  <br /></td></tr>
+<tr class="separator:a5f55db19457ccc6394a0202cfc183884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09a78aaba00ece3f9877f8b4079797a9" id="r_a09a78aaba00ece3f9877f8b4079797a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a09a78aaba00ece3f9877f8b4079797a9">show</a> ()=0</td></tr>
 <tr class="memdesc:a09a78aaba00ece3f9877f8b4079797a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the current status of the model, including systems and flows.  <br /></td></tr>
 <tr class="separator:a09a78aaba00ece3f9877f8b4079797a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -589,9 +589,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to <a class="el" href="class_model.html" title="Definition of class Model, which represents the model to be executed.">Model</a> object. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>                                      {</div>
-<div class="line"><span class="lineno">  204</span>    <span class="keywordflow">return</span> ModelImpl :: createModel(name);</div>
-<div class="line"><span class="lineno">  205</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>                                      {</div>
+<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">return</span> ModelImpl :: createModel(name);</div>
+<div class="line"><span class="lineno">  207</span>}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1178,7 +1178,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Remove a flow from the model's container of flows. </p>
+<p>Remove a flow from the model's container of flows and delete it from the memory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">flow</td><td>Pointer to the flow to be removed. </td></tr>
@@ -1193,7 +1193,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_a557c5d21498fef17011904a4dc1aeafb_icgraph.png" border="0" usemap="#aclass_model_a557c5d21498fef17011904a4dc1aeafb_icgraph" alt=""/></div>
 <map name="aclass_model_a557c5d21498fef17011904a4dc1aeafb_icgraph" id="aclass_model_a557c5d21498fef17011904a4dc1aeafb_icgraph">
-<area shape="rect" title="Remove a flow from the model&#39;s container of flows." alt="" coords="664,31,769,57"/>
+<area shape="rect" title="Remove a flow from the model&#39;s container of flows and delete it from the memory." alt="" coords="664,31,769,57"/>
 <area shape="rect" href="unit__model_8cpp.html#a88d0b5198399c11b8634906fb753d72c" title="Unit test to check if a flow was successfully removed from the flow&#39;s container." alt="" coords="444,5,605,32"/>
 <area shape="poly" title=" " alt="" coords="648,38,605,32,606,27,649,32"/>
 <area shape="rect" href="unit__model_8cpp.html#ad658cd033e2e5f340c2cea57614b5566" title="Unit test to check if a flow was successfully removed from the system&#39;s container." alt="" coords="433,56,616,83"/>
@@ -1269,7 +1269,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Remove a system from the model's container of systems. </p>
+<p>Remove a system from the model's container of systems and delete it from the memory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">system</td><td>Pointer to the system to be removed. </td></tr>
@@ -1282,8 +1282,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a2328056dbe721d55cbdbc55e86a777e3" name="a2328056dbe721d55cbdbc55e86a777e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2328056dbe721d55cbdbc55e86a777e3">&#9670;&#160;</a></span>run()</h2>
+<a id="a5f55db19457ccc6394a0202cfc183884" name="a5f55db19457ccc6394a0202cfc183884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f55db19457ccc6394a0202cfc183884">&#9670;&#160;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1292,7 +1292,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool Model::run </td>
+          <td class="memname">virtual int Model::run </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>tempo_inicial</em>, </td>
@@ -1324,16 +1324,16 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the model run is successful. </dd>
+<dl class="section return"><dt>Returns</dt><dd>The upper bound time if the model run is successful. </dd>
 <dd>
-False if initial_time or final_time are negative or if initial_time is bigger than initial_time. </dd></dl>
+-1 if initial_time or final_time are negative or if initial_time is bigger than initial_time. </dd></dl>
 
-<p>Implemented in <a class="el" href="class_model_impl.html#a0702b54772b96db4d0bd037bfa6bfce7">ModelImpl</a>.</p>
+<p>Implemented in <a class="el" href="class_model_impl.html#a84503a9849360de48e705b3a903f392b">ModelImpl</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_a2328056dbe721d55cbdbc55e86a777e3_icgraph.png" border="0" usemap="#aclass_model_a2328056dbe721d55cbdbc55e86a777e3_icgraph" alt=""/></div>
-<map name="aclass_model_a2328056dbe721d55cbdbc55e86a777e3_icgraph" id="aclass_model_a2328056dbe721d55cbdbc55e86a777e3_icgraph">
+<div class="center"><img src="class_model_a5f55db19457ccc6394a0202cfc183884_icgraph.png" border="0" usemap="#aclass_model_a5f55db19457ccc6394a0202cfc183884_icgraph" alt=""/></div>
+<map name="aclass_model_a5f55db19457ccc6394a0202cfc183884_icgraph" id="aclass_model_a5f55db19457ccc6394a0202cfc183884_icgraph">
 <area shape="rect" title="Run the model for a specified time range executing the function of the flows." alt="" coords="650,81,732,108"/>
 <area shape="rect" href="funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527" title="Given a model with complex equation and two systems, q1 and q3 with value 100 and q2,..." alt="" coords="442,5,593,32"/>
 <area shape="poly" title=" " alt="" coords="654,75,601,46,570,35,572,30,603,42,657,70"/>

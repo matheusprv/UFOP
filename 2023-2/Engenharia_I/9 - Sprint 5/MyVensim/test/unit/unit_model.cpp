@@ -240,8 +240,6 @@ void unit_Model_remove_flow(){
     assert(model.remove(&f));
     assert(model.remove(&g));
 
-    delete &f;
-    delete &g;
     delete &model;
 }
 void unit_Model_remove_system(){
@@ -252,18 +250,16 @@ void unit_Model_remove_system(){
     assert(model.remove(&pop1));
     assert(model.remove(&pop2));
 
-    delete &pop1;
-    delete &pop2;
     delete &model;
 }
 
 void unit_Model_run(){
     Model& model = Model::createModel();
 
-    assert(model.run(0, 100));
-    assert(!model.run(101, 100));
-    assert(!model.run(-20, 100));
-    assert(!model.run(-200, -100));
+    assert(model.run(0, 100) == 100);
+    assert(model.run(101, 100) == -1);
+    assert(model.run(-20, 100) == -1);
+    assert(model.run(-200, -100) == -1);
 
     delete &model;
 }

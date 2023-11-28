@@ -25,20 +25,20 @@ ModelImpl :: ModelImpl(ModelImpl & model){
 
 // Destrutor
 ModelImpl :: ~ModelImpl(){
-    for(auto system : systems)
-            delete system;
+    for(systemsIterator system = systemBegin(); system != systemEnd();system++)
+            delete *system;
     
-    for(auto flow : flows)
-            delete flow;
+    
+    for(flowsIterator flow = flowsBegin(); flow != flowsEnd();flow++)
+            delete *flow;
 
 
-    for(modelsIterator it = modelsBegin(); it < modelsEnd(); it++){
+    for(modelsIterator it = modelsBegin(); it < modelsEnd(); it++)
         if((*it) == this){
             models.erase(it);
             break;
         }
-    }
-
+    
 }
 
 // Getters e setters
@@ -108,6 +108,7 @@ bool ModelImpl :: remove(System* system){
     for(systemsIterator it = systems.begin(); it < systems.end(); it++){
         if(*it == system){
             systems.erase(it);
+            delete system;
             return true;
         }
     }
@@ -117,6 +118,7 @@ bool ModelImpl :: remove(Flow* flow){
     for(flowsIterator it = flows.begin(); it < flows.end(); it++){
         if(*it == flow){
             flows.erase(it);
+            delete flow;
             return true;
         }
     }
@@ -132,10 +134,10 @@ bool ModelImpl :: remove(Model* model){
     return false;
 }
 
-bool ModelImpl :: run(int initial_time, int final_time){
+int ModelImpl :: run(int initial_time, int final_time){
 
     // Verificando se os tempos são validos
-    if(initial_time > final_time || initial_time < 0 || final_time < 0) return false;
+    if(initial_time > final_time || initial_time < 0 || final_time < 0) return -1;
 
     System *source, *target;
     int flows_size = flowsSize();
@@ -169,7 +171,7 @@ bool ModelImpl :: run(int initial_time, int final_time){
 
     }
 
-    return time == final_time;
+    return time;
 }
 
 void ModelImpl :: show(){
