@@ -16,11 +16,9 @@ MyVensim: Flow.o Model.o System.o
 
 teste_funcional_dll: MyVensim Functional_test.o FlowComplexo.o FlowExponencial.o FlowLogistico.o ../test/funcional/main.cpp 
 	g++ Functional_test.o FlowComplexo.o FlowExponencial.o FlowLogistico.o ../test/funcional/main.cpp -L. -l_MyVensim -o teste_funcional -g -Wall
-	export LD_LIBRARY_PATH=:'/home/matheus/UFOP/2023-2/Engenharia_I/9 - Sprint 5/MyVensim/bin'
 
 teste_unitario_dll: MyVensim FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp
 	g++ FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp -L. -l_MyVensim -o teste_unitario -Wall -g
-	export LD_LIBRARY_PATH=:'/home/matheus/UFOP/2023-2/Engenharia_I/9 - Sprint 5/MyVensim/bin'
 
 #===============================================================================================================================================================================
 
