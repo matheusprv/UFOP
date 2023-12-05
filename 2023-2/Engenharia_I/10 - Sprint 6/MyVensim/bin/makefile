@@ -1,15 +1,3 @@
-teste_funcional: Flow.o Model.o System.o FlowComplexo.o FlowExponencial.o FlowLogistico.o  Functional_test.o ../test/funcional/main.cpp
-	g++ Flow.o FlowComplexo.o FlowExponencial.o FlowLogistico.o Model.o System.o ../test/funcional/funcional_tests.cpp  ../test/funcional/main.cpp -o teste_funcional -Wall -g
-
-teste_funcional_executar: Flow.o Model.o System.o FlowComplexo.o FlowExponencial.o FlowLogistico.o  Functional_test.o ../test/funcional/main.cpp
-	g++ Flow.o FlowComplexo.o FlowExponencial.o FlowLogistico.o Model.o System.o ../test/funcional/funcional_tests.cpp  ../test/funcional/main.cpp -o teste_funcional -Wall -g
-	valgrind --leak-check=yes ./teste_funcional
-
-teste_unitario: Flow.o Model.o System.o FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp
-	g++ Flow.o FlowComplexo.o FlowExponencial.o FlowLogistico.o Model.o System.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp  -o teste_unitario -Wall -g
-
-#===============================================================================================================================================================================
-
 MyVensim: Flow.o Model.o System.o
 	g++ -c ../src/FlowImpl.cpp ../src/ModelImpl.cpp ../src/SystemImpl.cpp -fpic -g -Wall
 	g++ FlowImpl.o ModelImpl.o SystemImpl.o -shared -o lib_MyVensim.so -g -Wall
@@ -63,3 +51,8 @@ Unit_model.o: ../test/unit/unit_model.cpp ../test/unit/unit_model.h Model.o
 export_dll_path:
 	pwd
 	export LD_LIBRARY_PATH=:'/home/matheus/UFOP/2023-2/Engenharia_I/9 - Sprint 5/MyVensim/bin'
+
+#===============================================================================================================================================================================
+clear_o_so:
+	rm *.so
+	rm *.o
