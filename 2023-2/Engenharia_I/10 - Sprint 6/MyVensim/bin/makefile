@@ -5,8 +5,8 @@ MyVensim: Flow.o Model.o System.o
 teste_funcional_dll: MyVensim Functional_test.o FlowComplexo.o FlowExponencial.o FlowLogistico.o ../test/funcional/main.cpp 
 	g++ Functional_test.o FlowComplexo.o FlowExponencial.o FlowLogistico.o ../test/funcional/main.cpp -L. -l_MyVensim -o teste_funcional -g -Wall
 
-teste_unitario_dll: MyVensim FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp
-	g++ FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o ../test/unit/main.cpp -L. -l_MyVensim -o teste_unitario -Wall -g
+teste_unitario_dll: MyVensim FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o Unit_handle_body.o ../test/unit/main.cpp
+	g++ FlowComplexo.o FlowExponencial.o FlowLogistico.o Unit_test.o Unit_flow.o Unit_system.o Unit_model.o Unit_handle_body.o ../test/unit/main.cpp -L. -l_MyVensim -o teste_unitario -Wall -g
 
 #===============================================================================================================================================================================
 
@@ -47,12 +47,16 @@ Unit_system.o: ../test/unit/unit_system.cpp ../test/unit/unit_system.h System.o
 Unit_model.o: ../test/unit/unit_model.cpp ../test/unit/unit_model.h Model.o
 	g++ -c ../test/unit/unit_model.cpp -o Unit_model.o -Wall -g
 
+Unit_handle_body.o: ../test/unit/unit_handle_body.cpp ../test/unit/unit_handle_body.h 
+	g++ -c ../test/unit/unit_handle_body.cpp -o Unit_handle_body.o -Wall -g
+
 #===============================================================================================================================================================================
 export_dll_path:
 	pwd
 	export LD_LIBRARY_PATH=:'/home/matheus/UFOP/2023-2/Engenharia_I/9 - Sprint 5/MyVensim/bin'
 
 #===============================================================================================================================================================================
-clear_o_so:
+clear:
 	rm *.so
 	rm *.o
+	clear
