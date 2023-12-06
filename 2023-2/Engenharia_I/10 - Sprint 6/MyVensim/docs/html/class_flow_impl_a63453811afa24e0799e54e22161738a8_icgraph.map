@@ -1,0 +1,5 @@
+<map id="FlowImpl::getName" name="FlowImpl::getName">
+<area shape="rect" id="Node000001" title="Get the name of the flow." alt="" coords="189,5,321,32"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html#a856d066683cf70a957004c507c08b4fd" title="Overload of operator equals to copy a Flow." alt="" coords="5,5,141,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,21,141,21,141,16,173,16"/>
+</map>

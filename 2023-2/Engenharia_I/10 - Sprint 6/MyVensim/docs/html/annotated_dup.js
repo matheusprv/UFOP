@@ -4,7 +4,7 @@ var annotated_dup =
     [ "Flow", "class_flow.html", "class_flow" ],
     [ "FlowComplexo", "class_flow_complexo.html", "class_flow_complexo" ],
     [ "FlowExponencial", "class_flow_exponencial.html", "class_flow_exponencial" ],
-    [ "FlowHandle", "class_flow_handle.html", null ],
+    [ "FlowHandle", "class_flow_handle.html", "class_flow_handle" ],
     [ "FlowImpl", "class_flow_impl.html", "class_flow_impl" ],
     [ "FlowLogistico", "class_flow_logistico.html", "class_flow_logistico" ],
     [ "Handle", "class_handle.html", "class_handle" ],

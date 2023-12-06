@@ -144,6 +144,12 @@ public:
     static bool remove(Model * model);
 
     /**
+     *@brief Delete a model from the array of model
+     *@param A model iterator to delete 
+    */
+    void eraseModel(Model::modelsIterator model);
+
+    /**
     * @brief  Run the model for a specified time range executing the function of the flows.
     * @param  initial_time Initial time for the model run.
     * @param  final_time Final time for the model run.
@@ -199,7 +205,13 @@ public:
     
     ModelHandle(const string & name = ""){pImpl_->setName(name);}
 
-    ~ModelHandle(){};
+    ~ModelHandle(){
+        for(Model::modelsIterator it = modelsBegin(); it < modelsEnd(); it++)
+            if(*it == this){
+                pImpl_->eraseModel(it);
+                break;
+            }     
+    };
 
     string getName() const{return pImpl_->getName();}
     void setName(const string & name){pImpl_->setName(name);}

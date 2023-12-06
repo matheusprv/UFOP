@@ -43,11 +43,11 @@ void unit_test_handle_body(){
     *s1 = *s2;
     cout << "s1: " << s1->getName() << ", s2: " <<  s2->getName() << endl;    
     cout << "s1: " << s1 << ", s2: " <<  s2 << endl;    
-    
-    assert(numHandleCreated == 71);
-    assert(numHandleDeleted == 68);
-    assert(numBodyCreated == 71);
-    assert(numBodyDeleted == 68);
+
+    assert(numHandleCreated == 135);
+    assert(numHandleDeleted == 131);
+    assert(numBodyCreated == 141);
+    assert(numBodyDeleted == 137);
 
     // Fa�a o teste COM e SEM as chaves abaixo
     {
@@ -59,13 +59,16 @@ void unit_test_handle_body(){
         s3 = s3;
         cout << "s3: " << s4.getName() << ", s2: " <<  s4.getName() << endl;  
 
-        assert(numBodyCreated == 73);
-        assert(numHandleCreated == 73);
-        assert(numBodyDeleted == 69);
-        assert(numHandleDeleted == 68);
+        assert(numHandleCreated == 137);
+        assert(numHandleDeleted == 131);
+        assert(numBodyCreated == 143);
+        assert(numBodyDeleted == 138);
     }   
-    assert(numBodyDeleted == 70);
-    assert(numHandleDeleted == 70);
+
+    assert(numHandleCreated == 137);
+    assert(numHandleDeleted == 133);
+    assert(numBodyCreated == 143);
+    assert(numBodyDeleted == 139);
 
     
     // Monta Modelo
@@ -85,10 +88,10 @@ void unit_test_handle_body(){
     cout << "Created bodies: "  << numBodyCreated << endl;
     cout << "Deleted bodies: "  << numBodyDeleted << endl;
 
-    assert(numHandleCreated == 73);
-    assert(numHandleDeleted == 73);
-    assert(numBodyCreated == 73);
-    assert(numBodyDeleted == 73);
+    assert(numHandleCreated == 137);
+    assert(numHandleDeleted == 137);
+    assert(numBodyCreated == 143);
+    assert(numBodyDeleted == 143);
 
     
 }

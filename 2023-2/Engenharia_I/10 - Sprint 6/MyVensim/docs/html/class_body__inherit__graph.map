@@ -1,7 +1,15 @@
 <map id="Body" name="Body">
-<area shape="rect" id="Node000001" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="165,5,271,160"/>
-<area shape="rect" id="Node000002" href="$class_model_impl.html" title="Definition of class ModelImpl, which represents the model to be executed." alt="" coords="5,208,207,1008"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,175,194,209,189,208,196,174"/>
-<area shape="rect" id="Node000003" href="$class_system_impl.html" title="Definition of class SystemImpl, which represents the current value of the system." alt="" coords="231,381,431,835"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,174,285,381,280,382,235,175"/>
+<area shape="rect" id="Node000001" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="524,5,631,160"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Definition of class Flow, which represents a conection between two systems." alt="" coords="230,333,453,920"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="516,145,490,176,468,209,438,270,412,334,407,332,433,268,463,207,486,173,512,142"/>
+<area shape="rect" id="Node000006" href="$class_model_impl.html" title="Definition of class ModelImpl, which represents the model to be executed." alt="" coords="477,208,678,1045"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="580,175,580,208,575,208,575,175"/>
+<area shape="rect" id="Node000007" href="$class_system_impl.html" title="Definition of class SystemImpl, which represents the current value of the system." alt="" coords="703,400,903,853"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="642,140,670,171,693,207,716,253,735,301,766,399,761,401,730,303,711,255,688,209,665,175,638,143"/>
+<area shape="rect" id="Node000003" href="$class_flow_complexo.html" title="Definition of class FlowComplexo, which extends the class Flow and implements the executeEquation." alt="" coords="5,1093,213,1349"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,927,161,1095,156,1093,222,925"/>
+<area shape="rect" id="Node000004" href="$class_flow_exponencial.html" title="Definition of class FlowExponencial, which extends the class Flow and implements the executeEquation." alt="" coords="237,1093,445,1349"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="344,935,344,1093,339,1093,339,935"/>
+<area shape="rect" id="Node000005" href="$class_flow_logistico.html" title="Definition of class FlowLogistico, which extends the class Flow and implements the executeEquation." alt="" coords="469,1093,677,1349"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="424,933,468,1044,492,1092,487,1095,463,1046,419,935"/>
 </map>

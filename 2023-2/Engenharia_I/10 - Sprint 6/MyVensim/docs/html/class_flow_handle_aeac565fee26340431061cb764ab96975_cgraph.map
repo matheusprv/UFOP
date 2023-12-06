@@ -1,0 +1,9 @@
+<map id="FlowHandle::FlowHandle" name="FlowHandle::FlowHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,169,83"/>
+<area shape="rect" id="Node000002" href="$class_flow.html#aa91a8025b6dbb27ee5137c7c9ad0c564" title="Get the name of the flow." alt="" coords="220,5,329,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,53,207,34,209,39,140,58"/>
+<area shape="rect" id="Node000003" href="$class_flow.html#abf0f3dbb285fe82e5ba6449de06b97c8" title="Get the source system of the flow." alt="" coords="217,56,332,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,67,201,67,201,72,169,72"/>
+<area shape="rect" id="Node000004" href="$class_flow.html#afb9b8d93ea0fc81868b8e02dd382a787" title="Get the target system of the flow." alt="" coords="219,107,330,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="140,81,209,100,207,105,139,86"/>
+</map>

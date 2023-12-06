@@ -55,21 +55,6 @@ public:
     */
     virtual void setName(const string name) = 0;
 
-
-    /**
-     * @brief   Overload of operator equals to copy a Flow.
-     * @param   flow Object to be copied.
-     * @return  Reference to the copied Flow.
-    */
-    virtual Flow& operator=(const Flow& flow) = 0;
-
-    /**
-     * @brief   Overload of operator == to compare two Flow
-     * @param   flow Object to be compared.
-     * @return  True if they are equals. False otherwise
-    */
-   virtual bool operator==(const Flow& flow) const = 0;
-
     /**
      * @brief   Pure virtual function to execute the flow equation.
      * @return  Result of the equation.

@@ -1,5 +1,13 @@
 #include "funcional_tests.h"
 
+#define DEBUGING
+#ifdef DEBUGING
+    int numHandleCreated = 0;
+	int numHandleDeleted = 0;
+	int numBodyCreated = 0;
+	int numBodyDeleted = 0;
+#endif
+
 bool floatingPointComparison(double n1, double n2){   
     return round(fabs(n1 * 1e4 - n2 * 1e4)) < 1;
 }

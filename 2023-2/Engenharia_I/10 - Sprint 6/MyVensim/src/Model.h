@@ -1,8 +1,7 @@
 #ifndef MODEL_H
 #define MODEL_H
 
-#include "System.h"
-#include "Flow.h"
+#include "FlowImpl.h"
 #include <vector>
 
 /**
@@ -172,7 +171,7 @@ public:
     */
     template<typename T>
     Flow & createFlow(string name = "", System * source = NULL, System * target = NULL){
-        Flow * flow = new T(name, source, target);
+        Flow * flow = new FlowHandle<T>(name, source, target);
         add(flow);
         return *flow;
     }

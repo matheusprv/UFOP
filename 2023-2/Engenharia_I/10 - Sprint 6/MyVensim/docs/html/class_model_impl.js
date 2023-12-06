@@ -9,6 +9,7 @@ var class_model_impl =
     [ "add", "class_model_impl.html#a3f2700dfd1dae6e448060147b2d181c7", null ],
     [ "add", "class_model_impl.html#a81a62a3fcac9c222c6782adb0b4f753a", null ],
     [ "createSystem", "class_model_impl.html#a9318a468b4abed4260b02d5bd15bbee2", null ],
+    [ "eraseModel", "class_model_impl.html#ab1e8cfc2c1821ae722c723da7fb10661", null ],
     [ "flowsBegin", "class_model_impl.html#a35c5bb8e0ff89778a1d3621102990492", null ],
     [ "flowsEnd", "class_model_impl.html#a085f4eda6b6a6e1a63a35b779f6b3601", null ],
     [ "flowsSize", "class_model_impl.html#aa4e0c943fef808771f0800f03ae84386", null ],

@@ -1,0 +1,13 @@
+<map id="ModelHandle::~ModelHandle" name="ModelHandle::~ModelHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,193,83"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#ab1e8cfc2c1821ae722c723da7fb10661" title="Delete a model from the array of model." alt="" coords="253,5,408,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,53,251,33,252,38,164,58"/>
+<area shape="rect" id="Node000003" href="$class_model_handle.html#abdb92fcb0f581d7d469944d8c760c857" title="Get the iterator pointing for the first item in the container." alt="" coords="241,56,420,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,67,225,67,225,72,193,72"/>
+<area shape="rect" id="Node000005" href="$class_model_handle.html#a8c8808abe5e2f18b3e4da2fc983d51d5" title="Get the iterator pointing for the last item in the container." alt="" coords="246,107,415,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="164,81,252,100,251,105,163,86"/>
+<area shape="rect" id="Node000004" href="$class_model_impl.html#a09c53cd1e079bf552895633ba1e5a578" title="Get the iterator pointing for the first item in the container." alt="" coords="468,56,631,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="420,67,452,67,452,72,420,72"/>
+<area shape="rect" id="Node000006" href="$class_model_impl.html#abfc37cb0b560d02d692b2c009ea94c07" title="Get the iterator pointing for the last item in the container." alt="" coords="473,107,626,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="415,117,458,117,458,123,415,123"/>
+</map>

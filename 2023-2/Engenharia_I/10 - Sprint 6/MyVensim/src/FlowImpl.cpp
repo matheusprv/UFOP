@@ -53,7 +53,7 @@ void FlowImpl :: setName(const string name){
 }
 
 // Sobrecarga de operadores
-Flow& FlowImpl :: operator=(const Flow& flow){
+FlowImpl& FlowImpl :: operator=(const FlowImpl& flow){
     if(this == &flow) return *this;
 
     this->name = flow.getName();

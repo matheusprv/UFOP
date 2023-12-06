@@ -8,7 +8,7 @@
 /**
 * @brief   Definition of class Flow, which represents a conection between two systems.
 */
-class FlowImpl : public Flow{
+class FlowImpl : public Body{
 protected:
     /** @brief Name of the Flow */
     string name;
@@ -98,7 +98,7 @@ public:
      * @param   flow Object to be copied.
      * @return  Reference to the copied Flow.
     */
-    Flow& operator=(const Flow& flow);
+    FlowImpl& operator=(const FlowImpl& flow);
 
     /**
      * @brief   Overload of operator == to compare two Flow
@@ -117,11 +117,31 @@ public:
 
 template <typename T>
 class FlowHandle : public Flow, public Handle<T>{
-    
-    FlowHandle(const string& name = "", System* source = NULL, System* target = NULL){
+public:
+    FlowHandle(){
+        Handle<T>::pImpl_->setName("");
+        Handle<T>::pImpl_->setSource(NULL);
+        Handle<T>::pImpl_->setTarget(NULL);
+    }
+    FlowHandle(const string& name, System* source, System* target){
         Handle<T>::pImpl_->setName(name);
         Handle<T>::pImpl_->setSource(source);
         Handle<T>::pImpl_->setTarget(target);
+    }
+    FlowHandle(System* source, System* target){
+        Handle<T>::pImpl_->setName("");
+        Handle<T>::pImpl_->setSource(source);
+        Handle<T>::pImpl_->setTarget(target);
+    }
+    FlowHandle(const string& name){
+        Handle<T>::pImpl_->setName(name);
+        Handle<T>::pImpl_->setSource(NULL);
+        Handle<T>::pImpl_->setTarget(NULL);
+    }
+    FlowHandle(Flow &flow){
+        Handle<T>::pImpl_->setName(flow.getName());
+        Handle<T>::pImpl_->setSource(flow.getSource());
+        Handle<T>::pImpl_->setTarget(flow.getTarget());
     }
 
     virtual ~FlowHandle(){}
@@ -134,6 +154,8 @@ class FlowHandle : public Flow, public Handle<T>{
     
     string getName() const{return Handle<T>::pImpl_->getName();}
     void setName(const string name){Handle<T>::pImpl_->setName(name);}
+
+    double executeEquation(){return Handle<T>::pImpl_->executeEquation();}
 };
 
 

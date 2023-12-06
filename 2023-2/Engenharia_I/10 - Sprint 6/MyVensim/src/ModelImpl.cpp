@@ -32,8 +32,6 @@ ModelImpl :: ~ModelImpl(){
     for(flowsIterator flow = flowsBegin(); flow != flowsEnd();flow++)
             delete *flow;
 
-
-    models.clear();
 }
 
 // Getters e setters
@@ -127,6 +125,10 @@ bool ModelImpl :: remove(Model* model){
         }
     }
     return false;
+}
+
+void ModelImpl::eraseModel(Model::modelsIterator model){
+    models.erase(model);
 }
 
 int ModelImpl :: run(int initial_time, int final_time){
