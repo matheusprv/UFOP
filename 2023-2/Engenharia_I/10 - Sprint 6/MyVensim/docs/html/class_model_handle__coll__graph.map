@@ -1,0 +1,11 @@
+<map id="ModelHandle" name="ModelHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="39,1981,241,2632"/>
+<area shape="rect" id="Node000002" href="$class_model.html" title="Definition of class Model, which represents the model to be executed." alt="" coords="5,1073,243,1932"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,1947,136,1982,131,1982,130,1947"/>
+<area shape="rect" id="Node000003" href="$class_handle.html" title=" " alt="" coords="267,1428,474,1577"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="350,1593,257,1933,243,1983,238,1981,252,1931,345,1591"/>
+<area shape="rect" id="Node000004" href="$class_model_impl.html" title="Definition of class ModelImpl, which represents the model to be executed." alt="" coords="270,209,471,1009"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="373,1009,373,1411,368,1411,368,1009"/>
+<area shape="rect" id="Node000005" href="$class_body.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="317,5,424,160"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="373,175,373,210,368,210,368,175"/>
+</map>

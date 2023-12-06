@@ -1,0 +1,11 @@
+<map id="test/unit/unit_handle_body.h" name="test/unit/unit_handle_body.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="85,5,224,48"/>
+<area shape="rect" id="Node000002" href="$unit__handle__body_8cpp.html" title=" " alt="" coords="5,96,144,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,61,95,97,91,94,124,58"/>
+<area shape="rect" id="Node000003" href="$unit__test_8h.html" title=" " alt="" coords="168,104,301,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,58,225,102,221,105,181,61"/>
+<area shape="rect" id="Node000004" href="$unit_2main_8cpp.html" title=" " alt="" coords="92,187,217,213"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,144,169,188,165,185,209,140"/>
+<area shape="rect" id="Node000005" href="$unit__test_8cpp.html" title=" " alt="" coords="241,187,388,213"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="260,140,304,185,300,188,256,144"/>
+</map>

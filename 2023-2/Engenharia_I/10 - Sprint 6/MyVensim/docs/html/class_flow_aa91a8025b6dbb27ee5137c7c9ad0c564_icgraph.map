@@ -1,0 +1,9 @@
+<map id="Flow::getName" name="Flow::getName">
+<area shape="rect" id="Node000001" title="Get the name of the flow." alt="" coords="197,56,305,83"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html#a3807343f98bf7bb221fccb0175a57b09" title="Copy constructor for the Flow class." alt="" coords="11,5,143,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,54,125,35,126,30,188,48"/>
+<area shape="rect" id="Node000003" href="$class_flow_impl.html#a8cd91ac0d70cc7295952e0ca2ac0473c" title="Overload of operator equals to copy a Flow." alt="" coords="9,56,145,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,72,145,72,145,67,181,67"/>
+<area shape="rect" id="Node000004" href="$class_flow_impl.html#a3b798c62efc8eabfbc538876f2aaa4f5" title="Overload of operator == to compare two Flow." alt="" coords="5,107,149,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="188,90,126,109,125,104,187,85"/>
+</map>

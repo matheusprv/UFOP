@@ -1,0 +1,9 @@
+<map id="unit_Model_modelsSize" name="unit_Model_modelsSize">
+<area shape="rect" id="Node000001" title="Unit test to check if the return value is the correct number of elements in the container." alt="" coords="5,31,165,57"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="213,5,348,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,31,197,27,197,32,166,36"/>
+<area shape="rect" id="Node000003" href="$class_model.html#a0a50b4f964386d6ce3b5cb462be066a2" title="Return the number of items in models&#39; container." alt="" coords="214,56,347,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,52,199,56,199,61,165,57"/>
+<area shape="rect" id="Node000004" href="$class_model_impl.html#abdf1b89a2852f366c5dd6a07506b8067" title="Return the number of items in models&#39; container." alt="" coords="396,56,552,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="347,67,380,67,380,72,347,72"/>
+</map>

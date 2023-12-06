@@ -1,0 +1,7 @@
+<map id="ModelHandle::show" name="ModelHandle::show">
+<area shape="rect" id="Node000001" title="Display the current status of the model, including systems and flows." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a7fd9eb071619ab8b5e08f45088310f91" title="Display the current status of the model, including systems and flows." alt="" coords="188,5,306,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,16,172,16,172,21,140,21"/>
+<area shape="rect" id="Node000003" href="$class_handle.html#a6a72028918adf79c0ff8d9996e5e4107" title="constructor" alt="" coords="354,5,463,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="307,16,338,16,338,21,307,21"/>
+</map>

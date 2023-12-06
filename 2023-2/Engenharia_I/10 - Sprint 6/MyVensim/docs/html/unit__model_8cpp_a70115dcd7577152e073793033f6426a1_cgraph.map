@@ -1,0 +1,5 @@
+<map id="unit_Model_flowsBegin" name="unit_Model_flowsBegin">
+<area shape="rect" id="Node000001" title="Unit test to check if the begin is the first element of the flows container." alt="" coords="5,5,159,32"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="207,5,342,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,16,191,16,191,21,159,21"/>
+</map>

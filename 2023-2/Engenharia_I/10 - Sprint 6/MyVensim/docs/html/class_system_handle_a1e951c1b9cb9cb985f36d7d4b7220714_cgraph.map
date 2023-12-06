@@ -1,0 +1,7 @@
+<map id="SystemHandle::SystemHandle" name="SystemHandle::SystemHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,205,57"/>
+<area shape="rect" id="Node000002" href="$class_system_impl.html#a6f1abee03e95201f0e2d36cddbeaccad" title="Set the name of the system." alt="" coords="253,5,403,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,30,237,26,238,32,205,35"/>
+<area shape="rect" id="Node000003" href="$class_system_impl.html#a39ac966b98705d96b62152e5ff9442cd" title="Set the value of the flow." alt="" coords="253,56,403,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,53,238,56,237,62,205,58"/>
+</map>

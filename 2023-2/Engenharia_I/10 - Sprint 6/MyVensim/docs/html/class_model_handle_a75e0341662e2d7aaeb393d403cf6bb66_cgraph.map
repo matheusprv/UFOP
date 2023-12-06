@@ -1,0 +1,5 @@
+<map id="ModelHandle::systemEnd" name="ModelHandle::systemEnd">
+<area shape="rect" id="Node000001" title="Get the iterator pointing for the last item in the container." alt="" coords="5,5,176,32"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#af633f7f0976a01150ada93977963e539" title="Get the iterator pointing for the last item in the container." alt="" coords="224,5,378,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,16,208,16,208,21,176,21"/>
+</map>

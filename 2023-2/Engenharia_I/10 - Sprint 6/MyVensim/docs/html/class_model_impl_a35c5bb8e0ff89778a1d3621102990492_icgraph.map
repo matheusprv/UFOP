@@ -1,0 +1,5 @@
+<map id="ModelImpl::flowsBegin" name="ModelImpl::flowsBegin">
+<area shape="rect" id="Node000001" title="Get the iterator pointing for the first item in the container." alt="" coords="220,5,370,32"/>
+<area shape="rect" id="Node000002" href="$class_model_handle.html#ad7fa1fe900b9dcf66fcb366d7f1c02be" title="Get the iterator pointing for the first item in the container." alt="" coords="5,5,172,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,21,172,21,172,16,204,16"/>
+</map>

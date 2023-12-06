@@ -1,0 +1,7 @@
+<map id="ModelHandle::createModel" name="ModelHandle::createModel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,181,32"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a84ad7e8b48ab6c8cd846a6d7e57b9bc9" title="Creates a Model object from the class model." alt="" coords="229,5,388,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,16,213,16,213,21,181,21"/>
+<area shape="rect" id="Node000003" href="$class_handle.html#a6a72028918adf79c0ff8d9996e5e4107" title="constructor" alt="" coords="436,5,545,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="388,16,420,16,420,21,388,21"/>
+</map>

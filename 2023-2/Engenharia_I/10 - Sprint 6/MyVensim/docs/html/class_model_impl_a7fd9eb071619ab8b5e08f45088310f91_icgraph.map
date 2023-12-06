@@ -1,0 +1,5 @@
+<map id="ModelImpl::show" name="ModelImpl::show">
+<area shape="rect" id="Node000001" title="Display the current status of the model, including systems and flows." alt="" coords="188,5,306,32"/>
+<area shape="rect" id="Node000002" href="$class_model_handle.html#a1256ee83fd6714714e150dd960d25430" title="Display the current status of the model, including systems and flows." alt="" coords="5,5,140,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,21,140,21,140,16,172,16"/>
+</map>

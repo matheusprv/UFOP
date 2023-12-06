@@ -1,0 +1,13 @@
+<map id="Flow" name="Flow">
+<area shape="rect" id="Node000001" title="Definition of class Flow, which represents a conection between two systems." alt="" coords="134,5,357,411"/>
+<area shape="rect" id="Node000002" href="$class_flow_handle.html" title=" " alt="" coords="95,717,206,787"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,426,159,718,154,717,205,425"/>
+<area shape="rect" id="Node000003" href="$class_flow_impl.html" title="Definition of class Flow, which represents a conection between two systems." alt="" coords="230,459,453,1045"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="286,425,292,458,287,459,281,426"/>
+<area shape="rect" id="Node000004" href="$class_flow_complexo.html" title="Definition of class FlowComplexo, which extends the class Flow and implements the executeEquation." alt="" coords="5,1093,213,1349"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="226,1037,221,1047,194,1095,189,1092,216,1044,221,1035"/>
+<area shape="rect" id="Node000005" href="$class_flow_exponencial.html" title="Definition of class FlowExponencial, which extends the class Flow and implements the executeEquation." alt="" coords="237,1093,445,1349"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="344,1060,344,1094,339,1094,339,1060"/>
+<area shape="rect" id="Node000006" href="$class_flow_logistico.html" title="Definition of class FlowLogistico, which extends the class Flow and implements the executeEquation." alt="" coords="469,1093,677,1349"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="462,990,513,1092,508,1095,457,992"/>
+</map>

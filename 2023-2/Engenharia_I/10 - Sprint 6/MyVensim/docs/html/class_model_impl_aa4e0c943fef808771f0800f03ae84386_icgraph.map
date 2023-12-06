@@ -1,0 +1,5 @@
+<map id="ModelImpl::flowsSize" name="ModelImpl::flowsSize">
+<area shape="rect" id="Node000001" title="Return the number of items in flows&#39; container." alt="" coords="213,5,356,32"/>
+<area shape="rect" id="Node000002" href="$class_model_handle.html#ab0ec7b8d14b9ce882181dd632b919039" title="Return the number of items in flows&#39; container." alt="" coords="5,5,165,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,21,165,21,165,16,197,16"/>
+</map>

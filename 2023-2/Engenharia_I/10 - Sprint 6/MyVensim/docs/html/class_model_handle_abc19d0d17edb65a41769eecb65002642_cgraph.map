@@ -1,0 +1,7 @@
+<map id="ModelHandle::remove" name="ModelHandle::remove">
+<area shape="rect" id="Node000001" title="Remove a flow from the model&#39;s container of flows and delete it from the memory." alt="" coords="5,5,151,32"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a0a0374c3d7b5f959be3454cdefa39355" title="Remove a flow from the model&#39;s container of flows and delete it from the memory." alt="" coords="199,5,328,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,16,183,16,183,21,151,21"/>
+<area shape="rect" id="Node000003" href="$class_handle.html#a6a72028918adf79c0ff8d9996e5e4107" title="constructor" alt="" coords="376,5,485,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="328,16,360,16,360,21,328,21"/>
+</map>

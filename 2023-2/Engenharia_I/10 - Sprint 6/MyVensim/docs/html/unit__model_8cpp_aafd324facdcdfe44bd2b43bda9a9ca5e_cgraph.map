@@ -1,0 +1,5 @@
+<map id="unit_Model_modelsBegin" name="unit_Model_modelsBegin">
+<area shape="rect" id="Node000001" title="Unit test to check if the begin is the first element of the model container." alt="" coords="5,5,172,32"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="220,5,355,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,16,204,16,204,21,172,21"/>
+</map>

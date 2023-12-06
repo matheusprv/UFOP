@@ -1,0 +1,29 @@
+<map id="Handle::Handle" name="Handle::Handle">
+<area shape="rect" id="Node000001" title="constructor" alt="" coords="456,183,565,209"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a84ad7e8b48ab6c8cd846a6d7e57b9bc9" title="Creates a Model object from the class model." alt="" coords="244,19,403,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="491,171,456,121,432,95,406,72,365,48,367,44,410,67,436,91,460,118,496,168"/>
+<area shape="rect" id="Node000004" href="$class_model_impl.html#a9318a468b4abed4260b02d5bd15bbee2" title="Creates a systems and add it to the system container." alt="" coords="239,81,408,108"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="470,177,348,111,351,106,472,173"/>
+<area shape="rect" id="Node000006" href="$class_model_impl.html#a0a0374c3d7b5f959be3454cdefa39355" title="Remove a flow from the model&#39;s container of flows and delete it from the memory." alt="" coords="259,157,388,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="440,189,388,182,388,177,441,184"/>
+<area shape="rect" id="Node000010" href="$class_model_impl.html#abe75c6925d135fb0a49402f78c07449c" title="Remove a system from the model&#39;s container of systems and delete it from the memory." alt="" coords="259,208,388,235"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="441,208,388,215,388,210,440,203"/>
+<area shape="rect" id="Node000011" href="$class_model_impl.html#a84503a9849360de48e705b3a903f392b" title="Run the model for a specified time range executing the function of the flows." alt="" coords="270,259,377,285"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="472,219,409,249,376,261,374,256,407,244,470,215"/>
+<area shape="rect" id="Node000013" href="$class_model_impl.html#a7fd9eb071619ab8b5e08f45088310f91" title="Display the current status of the model, including systems and flows." alt="" coords="264,309,383,336"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="492,223,456,263,409,300,384,311,382,307,407,295,453,259,488,220"/>
+<area shape="rect" id="Node000003" href="$class_model_handle.html#ae3b98c4bf1e63354746dff98510c5aec" title=" " alt="" coords="10,5,186,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,29,186,27,186,21,229,24"/>
+<area shape="rect" id="Node000005" href="$class_model_handle.html#ae3220d31cebdb9d80f1d7b52af52026d" title="Creates a systems and add it to the system container." alt="" coords="5,56,191,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="223,86,191,82,191,77,224,81"/>
+<area shape="rect" id="Node000007" href="$class_model_handle.html#abc19d0d17edb65a41769eecb65002642" title="Remove a flow from the model&#39;s container of flows and delete it from the memory." alt="" coords="25,107,171,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="245,156,160,137,161,131,247,151"/>
+<area shape="rect" id="Node000008" href="$class_model_handle.html#a7d9926fdb13c154411f4e1c46d5ab059" title=" " alt="" coords="25,157,171,184"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="243,173,171,173,171,168,243,168"/>
+<area shape="rect" id="Node000009" href="$class_model_handle.html#a5d71d342738a6c23b2b2f0e7f2366763" title="Remove a system from the model&#39;s container of systems and delete it from the memory." alt="" coords="25,208,171,235"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="247,191,161,210,160,205,245,185"/>
+<area shape="rect" id="Node000012" href="$class_model_handle.html#a57e8d53384bb7dec5cdf70e81e447a12" title="Run the model for a specified time range executing the function of the flows." alt="" coords="37,259,159,285"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="254,275,159,275,159,269,254,269"/>
+<area shape="rect" id="Node000014" href="$class_model_handle.html#a1256ee83fd6714714e150dd960d25430" title="Display the current status of the model, including systems and flows." alt="" coords="31,309,165,336"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="249,325,166,325,166,320,249,320"/>
+</map>

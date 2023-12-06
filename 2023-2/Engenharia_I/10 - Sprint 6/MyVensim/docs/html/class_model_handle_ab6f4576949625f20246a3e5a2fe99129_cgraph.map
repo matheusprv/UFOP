@@ -1,0 +1,5 @@
+<map id="ModelHandle::add" name="ModelHandle::add">
+<area shape="rect" id="Node000001" title="Add a system to the model&#39;s container of systems." alt="" coords="5,5,131,32"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html#a5e1170740fe40c3317b9acfe840c82fd" title="Add a model to the static container of models." alt="" coords="179,5,288,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,16,163,16,163,21,131,21"/>
+</map>

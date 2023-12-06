@@ -1,0 +1,5 @@
+<map id="ModelImpl::remove" name="ModelImpl::remove">
+<area shape="rect" id="Node000001" title="Remove a system from the model&#39;s container of systems and delete it from the memory." alt="" coords="5,5,135,32"/>
+<area shape="rect" id="Node000002" href="$class_handle.html#a6a72028918adf79c0ff8d9996e5e4107" title="constructor" alt="" coords="183,5,292,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,16,167,16,167,21,135,21"/>
+</map>

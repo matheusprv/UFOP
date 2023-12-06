@@ -1,0 +1,5 @@
+<map id="unit_Model_createFlow" name="unit_Model_createFlow">
+<area shape="rect" id="Node000001" title="Unit test to check if a flow was successfully created and added into the container of flows." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="208,5,343,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,16,193,16,193,21,160,21"/>
+</map>

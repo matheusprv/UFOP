@@ -1,0 +1,5 @@
+<map id="Model::add" name="Model::add">
+<area shape="rect" id="Node000001" title="Add a flow to the model&#39;s container of flows." alt="" coords="181,5,266,32"/>
+<area shape="rect" id="Node000002" href="$class_model.html#acd3ef5a8c2b9d6aa199c61a505b11e8c" title="Template to include a Flow into the container of flow." alt="" coords="5,5,133,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,21,133,21,133,16,165,16"/>
+</map>

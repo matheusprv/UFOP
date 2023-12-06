@@ -1,0 +1,11 @@
+<map id="SystemHandle" name="SystemHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="35,995,197,1368"/>
+<area shape="rect" id="Node000002" href="$class_system.html" title="Definition of class System, which represents the current value of the system." alt="" coords="5,727,195,945"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,960,110,995,105,995,103,961"/>
+<area shape="rect" id="Node000003" href="$class_handle.html" title=" " alt="" coords="219,753,394,919"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,933,199,1037,194,1034,252,931"/>
+<area shape="rect" id="Node000004" href="$class_system_impl.html" title="Definition of class SystemImpl, which represents the current value of the system." alt="" coords="207,209,407,663"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="309,662,309,737,304,737,304,662"/>
+<area shape="rect" id="Node000005" href="$class_body.html" title="The class Implementation was implemented based on the class teCounted writed by Ricardo Cartaxo and G..." alt="" coords="253,5,360,160"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="309,175,309,210,304,210,304,175"/>
+</map>

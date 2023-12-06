@@ -1,0 +1,5 @@
+<map id="unit_Model_createSystem" name="unit_Model_createSystem">
+<area shape="rect" id="Node000001" title="Unit test to check if a system was successfully created and added into the container of systems." alt="" coords="5,5,178,32"/>
+<area shape="rect" id="Node000002" href="$class_model.html#adfb6f5fc757a8d8f417a9da0fa5083f8" title="Creates a Model object from the class model." alt="" coords="226,5,361,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,16,210,16,210,21,178,21"/>
+</map>

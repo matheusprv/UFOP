@@ -1,0 +1,7 @@
+<map id="ModelImpl::setName" name="ModelImpl::setName">
+<area shape="rect" id="Node000001" title="Set the name of the model." alt="" coords="233,31,373,57"/>
+<area shape="rect" id="Node000002" href="$class_model_handle.html#a5c9196e1a1fc30ed56633a1a5ace91f9" title=" " alt="" coords="5,5,185,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,36,185,32,185,27,217,31"/>
+<area shape="rect" id="Node000003" href="$class_model_handle.html#abf7c7378a098cbfe8cc30af279cc6bdd" title="Set the name of the model." alt="" coords="17,56,173,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,57,174,62,173,57,217,52"/>
+</map>
