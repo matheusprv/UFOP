@@ -11,9 +11,8 @@ void linha_separacao() {
 }
 void print_numero_thread(char* nome_thread) {
     pthread_t tid = pthread_self();
-    printf("Nome da thread: %s  |  Thread ID: %lu\n", nome_thread, tid);
+    printf("Nome da thread: %20s  |  Thread ID: %lu\n", nome_thread, tid);
 }
-
 
 #define NUM_THREADS 3
 
@@ -27,50 +26,61 @@ void reset_operacao(){
     operacao = '_';
 }
 
+void obter_mutex(char operacao_desejada, enum tipo_operacoes op){
+    while (operacao != operacao_desejada) {
+        pthread_cond_wait(&cond_operacao[op], &mutex_operacao);
+    }
+}
+
 // Funções para threads
 void* incrementa_saldo() {
     print_numero_thread("Incrementa Saldo");
     
-    while (1) {
-        
-        pthread_mutex_lock(&mutex_operacao);
-        while (operacao != '+') pthread_cond_wait(&(cond_operacao[INCREMENTAR]), &mutex_operacao);
-        
+    while (operacao != '0') {
+        obter_mutex('+', INCREMENTAR);
+
+        if(operacao == '0') break;        
+
         saldo += 1000;
         reset_operacao();
-        
+
         pthread_mutex_unlock(&mutex_operacao);
     }
+    pthread_exit(NULL);
 }
 
 void* decrementa_saldo() {
     print_numero_thread("Decrementa Saldo");
-    while (1) {
-        pthread_mutex_lock(&mutex_operacao);
-        
-        while (operacao != '-') pthread_cond_wait(&(cond_operacao[DECREMENTAR]), &mutex_operacao);
+   
+    while (operacao != '0') {
+        obter_mutex('-', DECREMENTAR);
+
+        if(operacao == '0') break;
         
         saldo -= 1000;
         reset_operacao();
         
         pthread_mutex_unlock(&mutex_operacao);
     }
+    pthread_exit(NULL);
 }
 
 void* imprime_saldo() {
     print_numero_thread("Imprime Saldo");
-    while (1) {
-        //Obtem o mutex e espera a função ser chamada corretamente
-        pthread_mutex_lock(&mutex_operacao);
-        while (operacao != 's') pthread_cond_wait(&(cond_operacao[EXIBIR]), &mutex_operacao);
+
+    while (operacao != '0') {
+        obter_mutex('s', EXIBIR);
+
+        if(operacao == '0') break;
         
         printf("\nSaldo: %d UD\n\n", saldo);
         linha_separacao();
         reset_operacao();
 
-        //Libera o mutex
         pthread_mutex_unlock(&mutex_operacao);
     }
+
+    pthread_exit(NULL);
 }
 
 void iniciar_threads(pthread_t* threads) {
@@ -90,8 +100,8 @@ void menu_opcoes() {
 
 //Le qual ação o usuário deseja realizar
 char ler_opcao_menu() {
-    char entrada_usuario[3];
-    fgets(entrada_usuario, 3, stdin);
+    char entrada_usuario[300];
+    fgets(entrada_usuario, 300, stdin);
     entrada_usuario[strlen(entrada_usuario) - 1] = '\0';
 
     // Valor de entrada maior do que o esperado
@@ -108,7 +118,7 @@ void executar_comandos() {
         
         operacao = ler_opcao_menu();
         linha_separacao();
-        
+
         pthread_mutex_unlock(&mutex_operacao);
 
         //Enviando o sinal para a thread correta
@@ -121,19 +131,15 @@ void executar_comandos() {
                 break;
             case 's':
                 pthread_cond_signal(&cond_operacao[EXIBIR]);
-                sleep(1);
+                sleep(0.5);
                 break;
         }
-        
     }
 }
 
 void finaliza_programa(pthread_t* threads) {
-    for (int i = 0; i < NUM_THREADS; i++) {
-        printf("\tExecutando o join\n");
-        //pthread_join(threads[i], NULL);
+    for (int i = 0; i < NUM_THREADS; i++) 
         pthread_cancel(threads[i]);
-    }
 }
 
 // Main
