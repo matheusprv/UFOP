@@ -27,27 +27,24 @@ void mensagem_e_pid_processo(char * mensagem, pid_t pid){
 
 void incrementa_saldo(int * pipe_pai_filho, int * pipe_filho_pai){
     int saldo = 0;
-    int novo_saldo;
     while(1){
-        if(read(pipe_pai_filho[0], &novo_saldo, sizeof(novo_saldo)) > 0){
-            mensagem_e_pid_processo("Incrementando o saldo", getpid());
-            saldo += VARIACAO_SALDO;
-            write(pipe_filho_pai[1], &saldo, sizeof(saldo));
-
-        }
+        read(pipe_pai_filho[0], &saldo, sizeof(saldo));
+        mensagem_e_pid_processo("Incrementando o saldo", getpid());
+        saldo += VARIACAO_SALDO;
+        write(pipe_filho_pai[1], &saldo, sizeof(saldo));
     }
 }
 void decrementa_saldo(int * pipe_pai_filho, int * pipe_filho_pai){
     int saldo;
-    do{
+    while(1){
         read(pipe_pai_filho[0], &saldo, sizeof(saldo));
         mensagem_e_pid_processo("Decrementando o saldo", getpid());
         saldo -= VARIACAO_SALDO;
         write(pipe_filho_pai[1], &saldo, sizeof(saldo));
-    }while(1);
+    }
 }
 void exibe_saldo(int * pipe_pai_filho, int * pipe_filho_pai){
-    int saldo = 0;
+    int saldo;
     while(1){
         read(pipe_pai_filho[0], &saldo, sizeof(saldo));
 
@@ -115,8 +112,6 @@ int main(){
     processos.processos_pid[0] = pid_incremento;
     if(pid_incremento == 0) incrementa_saldo(processos.pipe_incremento_pai_filho, processos.pipe_incremento_filho_pai);
     else if(pid_incremento == -1)return EXIT_FAILURE;
-
-    printf("Passou por aqui;\n");
 
     //Criando o segundo processo filho e definindo a sua funcao
     pid_t pid_decremento = criar_processo();

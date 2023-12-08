@@ -1,0 +1,8 @@
+Informações para uso:
+fork:
+    compilar com "makefile fork"
+    executar com "./fork"
+
+thread:
+    compilar com "makefile threads"
+    executar com "./thread"
