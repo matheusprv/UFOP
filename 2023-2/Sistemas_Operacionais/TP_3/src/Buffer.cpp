@@ -29,7 +29,7 @@ int Buffer :: bufferLen(){
 
 // Mutex
 void Buffer :: down(){
-    pthread_mutex_lock(&mutex);
+    pthread_mutex_trylock(&mutex);
 }
 void Buffer :: up(){
     pthread_mutex_unlock(&mutex);
@@ -57,19 +57,19 @@ void Buffer :: upConsumidor(){
 
 // Produtor e Consumidor
 void Buffer :: produzir(int item){
-    down();                   // Entra na região crítica
     downProdutor();           // Fica esperando enquanto o buffer não está vazio
+    down();                   // Entra na região crítica
     insertItem(item);         // Insere um item no buffer
-    upConsumidor();           // Envia um sinal para o consumidor de que há itens no buffer
     up();                     // Sai da regiao crítica
+    upConsumidor();           // Envia um sinal para o consumidor de que há itens no buffer
 }
 
 void Buffer :: consumir(int & item){
-    down();                // Entra na região crítica
     downConsumidor();      // Fica esperando o buffer não estar vazio
+    down();                // Entra na região crítica
     item = removeItem();   // Remove um item do buffer
-    upProdutor();          // Envia um sinal para o produtor que o buffer não está lotado
     up();                  // Sai da região crítica
+    upProdutor();          // Envia um sinal para o produtor que o buffer não está lotado
 }
 
 // Contadores

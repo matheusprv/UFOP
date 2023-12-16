@@ -12,12 +12,13 @@ void Consumidor :: run(){
     
     int item;
 
-    double sleepTempo = 1 / consumoPorSegundo;
+    double sleepTempo = 1000.0 / consumoPorSegundo;
+    cout << "Sleep do consumidor: " << sleepTempo << endl;
 
     for(int i = 0; i < qtdItensConsumir; i++){
         buffer->consumir(item); // Remove no buffer
         cout << i+1 << " - Item removido: " << item << endl;
-        sleep(sleepTempo);      // Espera um tempo para remover o proximo
+        usleep(sleepTempo);      // Espera um tempo para remover o proximo
     }
 
 

@@ -12,13 +12,14 @@ void Produtor :: run(){
     
     int item;
 
-    double sleepTempo = 1 / itensPorSegundo;
+    double sleepTempo = 1000.0 / itensPorSegundo;
+    cout << "Sleep do produtor: " << sleepTempo << endl;
 
     for(int i = 0; i < qtdItensProduzir; i++){
         item = rand();          // Gera um novo item
         buffer->produzir(item); // Adiciona no buffer
         cout << i+1 << " - Produzido: " << item << endl;
-        sleep(sleepTempo);      // Espera um tempo para inserir o proximo
+        usleep(sleepTempo);      // Espera um tempo para inserir o proximo
     }
 
 
