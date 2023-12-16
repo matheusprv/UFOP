@@ -1,0 +1,4 @@
+Para compilar o codigo, vápara a pasta bin e ládigite "make main" dessa forma todo o codigo serácompilado e ele podera ser executado a partir do comando "./main"
+
+Para verificar o produtor sendo bloqueado mais vezes, basta digitar "./main < ProdutorBloqueado"
+Para verificar o consumidor sendo bloqueado mais vezes, basta digitar "./main < ConsumidorBloqueado"

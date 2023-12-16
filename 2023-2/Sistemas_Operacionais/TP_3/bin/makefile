@@ -1,5 +1,5 @@
 main: Produtor.o Buffer.o Consumidor.o
-	g++ Produtor.o Buffer.o Consumidor.o -o ProdutorConsumidor ../src/main.cpp -g -Wall
+	g++ Produtor.o Buffer.o Consumidor.o ../src/main.cpp -o main -g -Wall
 
 Produtor.o: ../src/Produtor.h ../src/Produtor.cpp
 	g++ -c ../src/Produtor.cpp -o Produtor.o -g -Wall
