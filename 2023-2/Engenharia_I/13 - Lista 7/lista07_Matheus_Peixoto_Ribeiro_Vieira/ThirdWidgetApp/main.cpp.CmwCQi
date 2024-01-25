@@ -1,0 +1,93 @@
+#include <QApplication>
+
+#define DEMO4
+
+#ifdef DEMO1 // Aplicação com duas janelas? PROBELMAS COM CHAMDAS ASSINCRONAS!
+
+#include "loginWindow.h"
+#include "MyAutoMainWindow.h"
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    LoginWindow w1;
+    w1.show();
+
+    MyAutoMainWindow w2;
+    w2.show();
+
+    return a.exec();
+}
+
+#endif
+
+
+#ifdef DEMO2 // Arquitetura TOSCA!!!! Onde MainWindow é criada?!?!
+
+#include "loginWindow.h"
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    LoginWindow w1;
+    w1.show();
+
+    return a.exec();
+}
+
+#endif // Arquitetura continua TOSCA!!!! Mas você o rei da gambiarra ?!?!
+
+#ifdef DEMO3
+
+#include "loginWindow.h"
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    LoginWindow w1;
+    w1.show();
+
+    return a.exec();
+}
+
+#endif
+
+#ifdef DEMO4
+
+#include "loginDialogBox.h"
+#include "MyAutoMainWindow.h"
+
+#include <QDebug>
+int main(int argc, char *argv[]) // Arquitetura melhorou muito! Não foi preciso fazer gambiarras. Mas, o QT pode ser usando de forma mais inteligente.
+{
+    QApplication a(argc, argv);
+
+    MyAutoMainWindow w;
+    w.show();
+
+
+    LoginDialog d;
+    Qt::WindowFlags flags = d.windowFlags();
+    //unsigned int f = Qt::WindowCloseButtonHint;
+    //unsigned int f = Qt::WindowSystemMenuHint;
+    //unsigned int f = Qt::WindowTitleHint;
+    unsigned int f = Qt::WindowStaysOnTopHint;
+    qDebug( "Tiago: %X" , f);
+    unsigned int noF = ~f;
+    qDebug( "Tiago: %X" , noF);
+    flags = flags & noF;
+    qDebug( "Flags: %X" , flags);
+    //d.setWindowFlags(flags );
+    //d.setWindowFlags(Qt::Dialog | Qt::WindowTitleHint | Qt::WindowStaysOnTopHint );
+    //d.setModal(true);
+    d.exec();
+
+
+    return a.exec();
+}
+
+#endif
+
