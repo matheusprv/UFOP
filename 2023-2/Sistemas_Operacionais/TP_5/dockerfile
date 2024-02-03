@@ -1,0 +1,30 @@
+FROM ubuntu:latest
+
+WORKDIR /MatheusPeixoto
+
+RUN apt-get update && \
+    apt-get install -y vim nano curl make unzip python3.10 python3.10-distutils && \
+    rm -rf /var/lib/apt/lists/*
+
+#Python 3.10
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+RUN update-alternatives --set python3 /usr/bin/python3.10
+
+#pip
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+RUN python3.10 get-pip.py
+
+# Pacotes necessarios para a aplicação
+RUN pip3.10 install blinker==1.7.0 \
+                   click==8.1.7 \
+                   Flask==3.0.1 \
+                   Flask-SQLAlchemy==3.1.1 \
+                   greenlet==3.0.3 \
+                   itsdangerous==2.1.2 \
+                   Jinja2==3.1.3 \
+                   MarkupSafe==2.1.5 \
+                   SQLAlchemy==2.0.25 \
+                   typing_extensions==4.9.0 \
+                   Werkzeug==3.0.1
+
+COPY application.py /MatheusPeixoto
