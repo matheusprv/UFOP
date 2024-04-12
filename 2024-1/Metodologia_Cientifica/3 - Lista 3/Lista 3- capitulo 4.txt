@@ -1,0 +1,38 @@
+1 - 
+Primária: Apresenta um conhecimento novo a paritr de observações e teorias para explicá-los. Feita com experimentos, entrevistas, observações, etc.
+Secundária: Também chamada de bibliográfica, busca conhecimento em trabalhos já publicados. Pode ser feita por mapeamento (aprofundar mais sobre algo) ou por revisão sistemática (responder uma dúvida com base em estudos e dados já feitos)
+Terciária: Revisão sistemática de revisões sitemáticas.
+
+2 - Ajuda o pesquisador a formular boas perguntas e a verificar se sua dúvida já não foi sanada previamente na literatura
+
+3 - 
+Exploratória:  Não possui um objetivo bem definido. Examina-se fenômenos para que se possa fazer uma pesquisa sistemática depois.
+Descritiva: Busca-se obter mais informações sobre o objeto de estudo, a fim de descrever os fatos como eles são ou categorizá-los
+Explicativa: É a pesquisa reconhecida com excelência porque analisa os fatos e busca causas e explicações
+Desgin: Tenta determinar como algo poderia ser e não como é
+
+4 - Estudo de artigos, teses, livros e publicações de editoras indexaas em revistas, anais de congressos, monografias, etc.
+
+5 - O pesquisador tenta alterar variáveis do ambiente de forma controlada e observa outras, tentando chegar a alguma conclusão com seus dados. Porém deve-se seguir regras rigorosas de amostragem e teste de hipóteses para ter resultados bem aceitos.
+
+6 - Também chamada de observacional, o pesquisador irá estudar os fenômenos sem realizar intervenções no objeto de estudo. Agindo observerando o ambiente e tirando conclusões a partir de um conhecimento que já possui.
+
+7 - Os dados são buscados no ambiente por meio de observações, medições, questionários e entrevistas, depois as informações são transformadas em uma forma que se consiga analisar e tirar conclusões. Em geral, o maior desafio que se possui são os viéses, por causa do grupo que está sendo estudado e o ambiente em que ele se encontra
+
+8 - Ocorre quando o pesquisador realiza uma pesquisa profunda sobre os comportamentos e a cultura de um grupo social, buscando entender padrões das pessoas. Pode levar à participação observacional, onde o pesquisador realiza as atividades em conjunto com o grupo de estudo.
+
+9 - Analisa um fenômeno em seu ambiente para verificar as variavéis que o influencia.
+Exploratório: Pesquisa-se em profundidade uma situação, para observar problemas e comportamentos para depois gerar uma hipotese para estudos futuros
+Confirmatório: Feito para mostrar que, de fato, uma teoria é veridica ou falsa, sendo que ao mostrar que é falsa, a teoria deve ser reformulada.
+
+10 - A ciência busca conhecimento e aplicações, já a tecnologia é a aplicação do conheciment nas ativiades práticas;
+
+11 - Necessita-se que o trabalho explique o porquê das coisas funcionam da maneira que funcionam ou como poderiam funcionar melhor.
+
+12 - Deve seguir o método científico, com observações e experimentos obtidos de forma rigorosa e repetível. 
+
+13 - Deve levar o pesquisador a buscar uma contribuição para o conhecimento e não apresentar novas tecnlogias somente
+
+14 - Se estrutura sobre um problema a ser resolvido e uma hipótese que, se confirmada de forma empírica ou formal, deve possuir uma teoria que explique tal fato como uma extensão ou alternativa a uma anterior.
+
+15 - Inicia com uma revisão bilbiográfica adequada para conhecer a área. Depois, com o pesquisador apto a verificar questões não respondidas, pode ser feitos estudos de caso para verificar novos problemas e questões. Depois, formula-se uma hipóstese e indica uma explicação para validar a mesma, podendo recorrer a métodos empíricos para validar sua hipostese de acordo com o método científico.
