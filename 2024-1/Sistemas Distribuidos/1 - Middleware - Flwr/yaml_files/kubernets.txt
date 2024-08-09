@@ -1,0 +1,24 @@
+kubectl apply -f server-deployment.yaml
+kubectl apply -f server-service.yaml
+
+kubectl get service flwr-server-service
+
+kubectl apply -f client-deployment.yaml
+
+kubectl get pods
+kubectl get services
+
+kubectl logs -f <pod-name>
+
+kubectl logs mypod --all-containers
+kubectl logs mypod -c mycontainer
+
+kubectl delete deployment flwr-client-vm2
+kubectl delete deployment flwr-client-vm1
+kubectl delete deployment flwr-server
+kubectl delete service flwr-server-service
+
+
+
+===========================================
+python3 client.py 6 10 34.151.195.251 80

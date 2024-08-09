@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flwr-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flwr-server
+  template:
+    metadata:
+      labels:
+        app: flwr-server
+    spec:
+      containers:
+      - name: flwr-server
+        image: matheuspeixotoribeirovieira/tp_sd_01:0.2
+        command: ["python3"]
+        args: ["src/server.py" ,"0.0.0.0", "8080", "5", "5", "6"]
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,44 @@
+1 - Conectar no kubernets:
+	kubernets Engine -> clusters -> conectar a um cluster
+
+2 - Aplicando os yaml
+    kubectl apply -f server-deployment.yaml
+    kubectl apply -f server-service.yaml
+
+3 - Obter o endereço ip do servidor (external-ip)
+    kubectl get service flwr-server-service
+
+4 - Modificar o yaml do cliente com o numero certo do servidor
+    kubectl apply -f client-deployment.yaml
+
+5 - Verificando se os pods foram criados corretamente
+    kubectl get pods
+    kubectl get services
+
+
+
+
+
+
+6 - Verificar logs
+    kubectl get pods
+    kubectl logs <pod-name>
+
+    verificar logs de todos os containers de um pod
+    kubectl logs mypod --all-containers
+
+
+    verificar log de um container especifico de um pod
+    kubectl logs mypod -c mycontainer
+
+
+    deletar todos os pods
+    kubectl delete pods --all
+
+
+Finalizar tudo
+    kubectl delete deployment flwr-client-vm2
+    kubectl delete deployment flwr-client-vm1
+    kubectl delete deployment flwr-server
+    kubectl delete service flwr-server-service
+    kubectl delete pods --all

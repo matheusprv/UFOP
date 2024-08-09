@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flwr-client-vm1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flwr-client-vm1
+  template:
+    metadata:
+      labels:
+        app: flwr-client-vm1
+    spec:
+      containers:
+      - name: flwr-client-1
+        image: "matheuspeixotoribeirovieira/tp_sd_01:0.2"
+        command: ["python3"]
+        args: ["src/client.py", "1", "10", "34.151.195.251", "80"]
+
+      - name: flwr-client-2
+        image: "matheuspeixotoribeirovieira/tp_sd_01:0.2"
+        command: ["python3"]
+        args: ["src/client.py", "2", "10", "34.151.195.251", "80"]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flwr-client-vm2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flwr-client-vm2
+  template:
+    metadata:
+      labels:
+        app: flwr-client-vm2
+    spec:
+      containers:
+      - name: flwr-client-3
+        image: "matheuspeixotoribeirovieira/tp_sd_01:0.2"
+        command: ["python3"]
+        args: ["src/client.py", "3", "10", "34.151.195.251", "80"]
+
+      - name: flwr-client-4
+        image: "matheuspeixotoribeirovieira/tp_sd_01:0.2"
+        command: ["python3"]
+        args: ["src/client.py", "4", "10", "34.151.195.251", "80"]
+
+      - name: flwr-client-5
+        image: "matheuspeixotoribeirovieira/tp_sd_01:0.2"
+        command: ["python3"]
+        args: ["src/client.py", "5", "10", "34.151.195.251", "80"]

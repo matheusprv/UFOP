@@ -1,0 +1,6 @@
+Usando divisão e conquista forneça algoritmos para os itens a seguir e forneça a ordem de complexidade de tempo de execução:
+  a) Encontrar o maior valor em um vetor.
+
+  b) Encontrar o maior e o menor elemento em um vetor.
+
+  c) Exponenciação.
