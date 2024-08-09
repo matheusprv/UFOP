@@ -89,11 +89,6 @@ void encontrar_maior_valor(){
 */
 
 
-
-
-
-
-
 //!----------------------------------------------------------------
 //!   b) Encontrar o maior e o menor elemento em um vetor.
 
@@ -146,11 +141,6 @@ void encontrarMinMax(){
         Menor valor: -50
     "
 */
-
-
-
-
-
 
 
 //!----------------------------------------------------------------
