@@ -1,0 +1,27 @@
+Exercício:
+
+Mostre, passo a passo, como o algoritmo de Kruskal e Prim constrõem a árvore geradora mínima do grafo a seguir, mostrando os estados da estrutura de dados Conjuntos Disjuntos como árvores e os atributos cost e prev em seus algoritmos correspondentes:
+
+G({a,b,c,d,e,f},{{a,b},{a,c},{a,d},{b,c},{b,e},{c,d},{c,e},{c,f},{d,f},{e,f}},w)
+
+sendo a função w: {i,j}--> N, definida por:
+
+w({a,b})=6
+
+w({a,c})=1
+
+w({a,d})=5
+
+w({b,c})=5
+
+w({b,e})=3
+
+w({c,d})=5
+
+w({c,e})=6
+
+w({c,f})=4
+
+w({d,f})=2
+
+w({e,f})=6 

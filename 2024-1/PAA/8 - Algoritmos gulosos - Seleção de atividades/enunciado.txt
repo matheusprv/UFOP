@@ -1,0 +1,5 @@
+1) Para o problema de seleção de atividades, prove que a atividade que começa por último faz parte de alguma solução ótima do problema.
+
+2) Faça um algoritmo guloso para o problema de seleção de atividades, 
+sendo que a escolha gulosa consiste em escolher primeiro a atividade que começa por último, 
+ou seja, com o maior tempo de início.

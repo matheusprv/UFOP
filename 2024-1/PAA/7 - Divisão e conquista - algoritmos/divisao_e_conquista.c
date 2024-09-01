@@ -77,15 +77,16 @@ int selection(int v[], int k, int inicio, int fim){                        // O(
 }
 
 void encontrar_maior_valor(){
-    srand(time(NULL));
-    int v []= {15, 13, 107, 56, 78, 1, 23, 45, 99, 35};
-    int n = 10;
-    int k = n; // Procurar o k-ésimo maior valor, onde k é igual a n
-    int valor = selection(v, k, 0, n - 1);
-    printf("Maior valor do vetor: %d\n", valor);
+    srand(time(NULL));                                                      // O(1)
+    int v []= {15, 13, 107, 56, 78, 1, 23, 45, 99, 35};                     // O(1)
+    int n = 10;                                                             // O(1)
+    int k = n; // Procurar o k-ésimo maior valor, onde k é igual a n        // O(1)
+    int valor = selection(v, k, 0, n - 1);                                  // O(n) - Chamada de função O(n)
+    printf("Maior valor do vetor: %d\n", valor);                            // O(1)
 }
 /*
     Output: "Maior valor do vetor: 107"
+    Complexidade: O(n)
 */
 
 
@@ -124,22 +125,23 @@ MaiorMenor minMax(int v[], int esq, int dir, MaiorMenor maiorMenor){ // O(n)
 }
 
 void encontrarMinMax(){
-    MaiorMenor maiorMenor;
-    maiorMenor.maior = INT_MIN;
-    maiorMenor.menor = INT_MAX;
+    MaiorMenor maiorMenor;                                  // O(1)
+    maiorMenor.maior = INT_MIN;                             // O(1)         
+    maiorMenor.menor = INT_MAX;                             // O(1)
     
-    int v []= {123456, 15, 13, 107, 56, 78, 1, 23, 45, 99, 35, -50};
-    int n = 12;
+    int v []= {123456, 15, 13, 107, 56, 78, 1, 23, 45, 99, 35, -50}; //O(1)
+    int n = 12;                                             // O(1)
 
-    maiorMenor = minMax(v, 0, n, maiorMenor);
+    maiorMenor = minMax(v, 0, n, maiorMenor);               // O(n) - Chamada de função com custo O(n)
 
-    printf("Maior valor: %d\nMenor valor: %d\n", maiorMenor.maior, maiorMenor.menor);
+    printf("Maior valor: %d\nMenor valor: %d\n", maiorMenor.maior, maiorMenor.menor); // O(1)
 }
 /*
     Output: "
         Maior valor: 123456
         Menor valor: -50
     "
+    Complexidade: O(n)
 */
 
 
@@ -178,9 +180,12 @@ void exponenciacao_divisao_e_conquista(){
     printf("%d ^ %d = %d\n", base, expoente, exp);      // O(1)
 }
 /*
-    Digite o valor da base: 5
-    Digite o valor do expoente: 9
-    5 ^ 9 = 1953125
+    Output: "
+        Digite o valor da base: 5
+        Digite o valor do expoente: 9
+        5 ^ 9 = 1953125
+    "
+    Complexidade: O(log n)
 */
 
 int main(){
