@@ -1,0 +1,5 @@
+1) Usando programação dinâmica, preencha uma tabela para calcular a distância de edição entre as palavras logaritmo e algoritmo.
+
+2) Dado uma tabela preenchida com a distância de edição calculada entre duas cadeias de caracteres, x[1..n] e y[1..m], escreva um algoritmo que informe as operações realizadas para transformar x em y.
+
+function imprimeOperacoes(x[1..n], y[1..m], E[0..n,0..m])
