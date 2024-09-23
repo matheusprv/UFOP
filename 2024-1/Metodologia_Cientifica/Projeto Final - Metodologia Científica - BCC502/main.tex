@@ -1,0 +1,84 @@
+%%% Template para anotações de aula
+%%% Feito por Daniel Campos com base no template de Willian Chamma que fez com base no template de  Mikhail Klassen
+
+
+
+\documentclass[12pt,a4paper, brazil]{article}
+
+%%%%%%% INFORMAÇÕES DO CABEÇALHO
+\newcommand{\workingDate}{\textsc{\selectlanguage{portuguese}\today}}
+\newcommand{\userName}{BCC502}
+\newcommand{\institution}{UFOP}
+\usepackage{researchdiary_png}
+
+
+\begin{document}
+
+\begin{center}
+{\textbf {\huge Detecção de Deepfakes}}\\[5mm]
+{\large Autor: Matheus Peixoto Ribeiro Vieira} \\[2mm]
+{\large Orientador: Pedro Henrique Lopes Silva} \\[5mm]
+\today\\[5mm] %% se quiser colocar data
+\end{center}
+
+
+%\section*{Resumo}
+
+\section{Contextualização e Definição do Problema de Pesquisa}
+    \par O termo Deepfake é uma combinação dos termos 'deep learning' e 'fake', e refere-se a uma tecnologia que utiliza redes neurais profundas para gerar arquivos de mídia altamente convincentes e realistas, sendo principalmente utilizado para a manipulação de rostos e vozes, gerando fotos, vídeos e arquivos de áudio \cite{Mirsky_2021}. Um exemplo de DeepFake pode ser visto em \ref{fig:original_deepfake}, onde o rosto original foi modificado a fim de compor a base de dados Celeb-DF \cite{li2020celebdflargescalechallengingdataset}.
+    
+    \begin{figure}[htbp]
+        \centering
+        \caption{Imagem original à esquerda e DeepFake à direita}
+        \label{fig:original_deepfake}
+        \includegraphics[width=0.25\textwidth]{images/real.jpg}
+        \hspace{0.05\textwidth} 
+        \includegraphics[width=0.25\textwidth]{images/manipulado.jpg}
+
+        \small{Fonte: \cite{li2020celebdflargescalechallengingdataset}.}
+    \end{figure}
+
+    \par Muitas das diferentes formas e técnicas para a criação de DeepFake são \textit{open-source} e estão ficando cada vez mais fáceis de serem acessadas e utilizadas, sem que o usuário tenha um profundo conhecimento em aprendizado de máquina ou processamento de imagens, gerando, portanto, um crescimento muito grande de mídias modificadas com diferentes qualidades (\cite{electronics13030585, Heidari2024}).
+    \par Entre os anos de 2022 e 2023, a presença de vídeos com a presença de deepfakes na internet triplicou, gerando consequências significativas para diferentes indivíduos \cite{Łabuz2024}. Um exemplo notável ocorreu com Muharrem Ince, candidato a presidência da Turquia, que desistiu da corrida presidencial após falsos vídeos sexuais manipulados com a sua face serem compartilhados na internet \cite{kirby_2023, Łabuz2024}.
+    \par Em Hong Kong, uma multinacional do setor financeiro transferiu cerca de 25 milhões de dólares para golpistas depois que um dos funcionários da empresa recebeu um email do chefe financeiro da sede e participou de uma videoconferência com ele e outros colaboradores. No entanto, todos os participantes da reunião pareciam e soavam como as pessoas reais, mas eram deepfakes \cite{chen_magramo_2024}.
+    \par Dessa forma, visando o combate à disseminação de vídeos manipulados com a presença de DeepFake, modelos de redes neurais artificiais se mostram eficazes para detectarem a presença dos mesmos. Sendo a acurácia uma das principais métricas utilizadas, \cite{Hu_Liao_Liang_Zhou_Qin_2022} obteve 90,47\% de acerto nas identificações ao utilizar uma parcela de 20 quadros do vídeo original, o equivalente a cerca de um segundo de vídeo. Já em \cite{Singh2020}, com o uso de 30 quadros, equivalente a um segundo, foi obtida uma acurácia de 97,63\%.
+    \par Melhores resultados foram alcançados em \cite{Hernandez-Ortega2022}, onde foi obtida uma acurácia de 99,24\% em vídeos com cinco segundos, obtendo uma média das acurácias de cada quadro, e indo até 99,47\% de acurácia com sete segundos, utilizando a mesma métrica.
+    \par Dessa forma, é possível identificar uma correlação entre o aumento do número de quadros de um vídeo utilizada no treinamento e validação de um modelo com sua acurácia final obtida. Todavia, essa inclusão de mais imagens aumenta o processamento necessário, gerando um maior custo computacional. A partir disso, surge uma questão relevante: as técnicas atuais de detecção de DeepFake podem ser aprimoradas para identificar com maior precisão manipulações em vídeos mais curtos, onde as alterações faciais tendem a ser menos evidentes?
+
+\section{Objetivos}
+    \par Assim, para este trabalho, tem-se, como objetivo principal, demonstrar a possibilidade da criação de um modelo de redes neurais capaz de detectar DeepFakes em vídeos que possuem uma duração de 24 quadros obtendo uma acurácia superior a 98\% com a base de dados Celeb-DF, a mesma utilizada em \cite{Hernandez-Ortega2022}, sendo este valor uma acurácia competitiva quando comparada a modelos com maior robustez e complexidade.
+
+    \par Dessa forma, para atingir este objetivo, surgem os seguintes objetivos específicos:
+    \begin{itemize}
+        \item Identificar fatores que influenciam a acurácia dos modelos;
+        \item Levantar diferenças entre as formas de pré-processamento de vídeos;
+        \item Avaliar o uso de diferentes modelos convolucionais e convolucionais recorrentes para detectar DeepFake;
+        \item Analisar, entre diferentes modelos, características em comum que induzem a erros.
+    \end{itemize}
+
+\section{Hipótese de Trabalho}
+    \par Redes neurais convolucionais podem atingir uma acurácia superior a 98\% na detecção da base de dados da Celeb-DF, utilizando somente 24 quadros dos vídeos originais. 
+    \par A abordagem da escolha da quantidade de quadros é justificada por ser um valor intermediário entre trabalhos que utilizam menos quadros, como em \cite{Hu_Liao_Liang_Zhou_Qin_2022}, que utiliza 20, \cite{Singh2020}, que utiliza 30 e para trabalhos que se utilizam de um maior número de dados com uma maior duração de vídeo, como em \cite{Hernandez-Ortega2022}. 
+    \par Embora 24 quadros não seja o meio termo exato entre 20 e 30, é uma taxa de quadros universalmente adotada em diferentes mídias digitais \cite{Wilcox2015}, o que a torna um valor prático e eficaz. 
+    \par Ademais, como discutido em \cite{Heidari2024}, há uma demanda por estudos que combinem uma alta acurácia com uma maior eficiência temporal, podendo ser obtida com o uso de 24 quadros para treinar modelos de redes neurais convolucionais, sendo estes os mais comuns entre os trabalhos supracitados.
+    \par Por fim, a acurácia definida se mostra um valor competitivo ao ser comparada com os resultados obtidos por \cite{Hernandez-Ortega2022}, que possui um modelo mais robusto e com mais processamento, enquanto supera resultados de modelos mais rápidos, como o \cite{Singh2020}.
+    
+\section{Procedimento Metodológico}
+    \par Para o desenvolvimento da pesquisa, as seguintes etapas são propostas como procedimento metodológico a fim de alcançar o objetivo geral e os objetivos específicos:
+    \begin{enumerate}
+        \item Mapeamento sistemático da literatura para identificar as principais arquiteturas de redes neurais para detecção de DeepFake e as principais formas de pré-processamento de dados;
+        \item Analisar as características comuns e destoantes dos pré-processamentos de dados da literatura e pré-processar os dados;
+        \item Avaliar o uso de diferentes modelos convolucionais e recorrentes para detectar DeepFake.
+        \item Propor um modelo de Deep Learning para detecção de DeepFake;
+        \item Avaliar os resultados do modelo proposto com os modelos propostos na literatura.
+        
+    \end{enumerate}
+
+    \subsection{Limitações}
+    \par Com o rápido crescimento de modelos geradores de DeepFake a partir do uso de diferentes técnicas e tecnologias \cite{electronics13030585}, torna-se impraticável a criação de um modelo capaz de detectar, para todas as bases, a presença deste tipo de manipulação em todos os tipos de vídeos.
+    \par Assim, considerando tal dificuldade, o estudo proposto se limitará ao uso da base de dados Celeb-DF \cite{li2020celebdflargescalechallengingdataset} para detecção de DeepFake, sendo esta uma base dados altamente utilizada em diferentes estudos, proporcionando um amplo \textit{benchmark} para com diferentes propostas de modelos. O \textit{dataset} é composto por uma ampla variedade de vídeos, sendo 890 sem manipulações e 5639 vídeos com DeepFake, possuindo imagens de celebridades diversas e em alta qualidade.
+
+%%% as referências devem estar em formato bibTeX no arquivo referencias.bib
+\printbibliography
+
+\end{document}
