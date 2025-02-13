@@ -1,0 +1,1 @@
+Apresentar duas funções quaisquer em PL/pgSQL, envolvendo parâmetros e considerando o banco de dados "Empresa".

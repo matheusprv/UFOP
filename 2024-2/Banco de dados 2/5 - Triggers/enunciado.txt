@@ -1,0 +1,1 @@
+Apresentar uma função de gatilho qualquer em PL/pgSQL e o próprio gatilho referente, considerando o banco de dados "Empresa".
