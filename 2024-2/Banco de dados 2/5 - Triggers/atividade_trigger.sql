@@ -4,17 +4,19 @@
 set schema 'Empresa';
 
 CREATE OR REPLACE FUNCTION bonificacao_gerente() RETURNS trigger AS $bonificacao_gerente$
+DECLARE
+	incremento REAL := 500; 
 BEGIN
-	IF (TG_OP = 'DELETE') THEN
-		UPDATE funcionario SET salario = salario - 500 WHERE funcionario.id_func = OLD.id_superv;
-	ELSIF (TG_OP = 'UPDATE') THEN
-		UPDATE funcionario SET salario = salario - 500 WHERE funcionario.id_func = OLD.id_superv;
-		UPDATE funcionario SET salario = salario + 500 WHERE funcionario.id_func = NEW.id_superv;
-	ELSE
-		UPDATE funcionario SET salario = salario + 500 WHERE funcionario.id_func = NEW.id_superv;
-	END IF;
+        IF (TG_OP = 'DELETE') THEN
+                UPDATE funcionario SET salario = salario - incremento WHERE funcionario.id_func = OLD.id_superv;
+        ELSIF (TG_OP = 'UPDATE') THEN
+                UPDATE funcionario SET salario = salario - incremento WHERE funcionario.id_func = OLD.id_superv;
+                UPDATE funcionario SET salario = salario + incremento WHERE funcionario.id_func = NEW.id_superv;
+        ELSE
+                UPDATE funcionario SET salario = salario + incremento WHERE funcionario.id_func = NEW.id_superv;
+        END IF;
 
-	RETURN NEW;
+        RETURN NEW;
 END;
 $bonificacao_gerente$ LANGUAGE plpgsql;
 
