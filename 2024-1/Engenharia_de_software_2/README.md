@@ -1,0 +1,1 @@
+Ao longo de toda a dsiciplina, um único projeto foi desenvolvido e encontra-se no seguinte repositório: [https://github.com/pedroh-leao/Ouro-Pontos](https://github.com/pedroh-leao/Ouro-Pontos)
