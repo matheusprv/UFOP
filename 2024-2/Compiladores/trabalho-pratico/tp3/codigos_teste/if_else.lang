@@ -1,0 +1,41 @@
+-- Codigo para testar o escopo da variavel do if
+teste(x :: Float, y :: Float) : Float, Float{
+    a :: Int = 2;
+    b :: Int = 6;
+
+    print 'o';
+    print y;
+    print 'o';
+
+    x = x + a;
+    y = y + b;
+
+    return x, y;
+}
+
+main(args :: Char []){
+    a :: Float = 5.0;
+    b :: Float;
+    b = teste(a, (4 + 5.3))[1];
+    print(b);
+    
+    teste(a, 5.3)<a, b>;
+    a = a + b;
+    
+    if (a == 16.3) {
+        print 'o';
+        print a;
+    }
+    else if (a == 5){
+        b :: Int = 69;
+    }
+    else if (a == 50){
+        print 15;
+    }
+    else {
+        print 125;
+        print a;
+    }
+    --print b;
+    print a;
+}

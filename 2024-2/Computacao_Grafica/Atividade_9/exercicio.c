@@ -125,7 +125,7 @@ void display() {
 }
 
 // Callback para entrada de teclas normais (para controlar a textura)
-void keyboard(unsigned char key, int x, int y) {
+void keyboard(char key, int x, int y) {
 
     // Offset
     if(key == 'l' || key == 'L')

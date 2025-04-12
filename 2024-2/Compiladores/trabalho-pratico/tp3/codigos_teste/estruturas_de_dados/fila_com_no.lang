@@ -1,0 +1,111 @@
+data No{
+    chave :: Int;
+    prox :: No;
+}
+
+-- Insere no final e remove no inicio
+data Fila{
+    primeiro :: No;
+}
+
+
+
+novaFila() : Fila{
+    fila :: Fila;
+    fila.primeiro = null;
+    return fila;
+}
+
+
+
+contagemDeItensRecursiva(no :: No) : Int{
+    if(no == null){return 0;}
+    return contagemDeItensRecursiva(no.prox)[0] + 1;
+}
+contagemDeItens(fila :: Fila): Int{
+    return contagemDeItensRecursiva(fila.primeiro)[0];
+}
+
+
+
+-- inserção semelhante a da lista encadeada, pois insere no final
+inserirNodo (atual :: No, chave :: Int) : No{
+    if (atual == null){
+        novo :: No;
+        novo.prox = null;
+        novo.chave = chave;
+        return novo;
+    }
+
+    novo :: No;
+    novo = inserirNodo(atual.prox, chave)[0];
+    atual.prox = novo;
+    return atual;
+}
+
+inserirNaFila(fila :: Fila, chave :: Int) : Fila{
+    no :: No = inserirNodo(fila.primeiro, chave)[0];
+
+    fila.primeiro = no;
+
+    return fila;
+}
+
+
+
+removerNaFila(fila :: Fila) : Fila, Int{
+    if(contagemDeItens(fila)[0] == 0){
+        print 'n';
+        return fila, -1;
+    }
+    
+    chave :: Int = fila.primeiro.chave;
+    fila.primeiro = fila.primeiro.prox;
+    return fila, chave;
+}
+
+
+
+pesquisa(fila :: Fila, chave :: Int) : Bool{
+    temp :: No = fila.primeiro;
+    iterate(contagemDeItens(fila)[0]){
+        if (temp.chave == chave){
+            return true;
+        }
+        temp = temp.prox;
+    }
+    return false;
+}
+
+exibirFila(fila :: Fila) {
+    temp :: No = fila.primeiro;
+    iterate(contagemDeItens(fila)[0]){
+        print temp.chave;
+        temp = temp.prox;
+    }
+}
+
+
+
+main(){
+    fila :: Fila;
+    fila = novaFila()[0];
+
+    i :: Int = 1;
+    iterate(10){
+        fila = inserirNaFila(fila, i)[0];
+        i = i + 1;
+    }
+
+    exibirFila(fila);
+    
+    print pesquisa(fila, 3)[0];
+    print pesquisa(fila, 1024)[0];
+
+    removido :: int;
+    removerNaFila(fila)<fila, removido>;
+    removerNaFila(fila)<fila, removido>;
+    exibirFila(fila);
+
+    print contagemDeItens(fila)[0];
+}

@@ -1,0 +1,137 @@
+data No{
+    chave :: Int;
+    prox :: No;
+}
+
+data Lista{
+    primeiro :: No;
+    qtdElementos :: Int;
+}
+
+
+
+novaLista() : Lista{
+    lista :: Lista;
+    lista.primeiro = null;
+    return lista;
+}
+
+
+
+-- A forma comum seria ir iterando sobre atual.prox ate chegar no valor nulo
+-- Porem lang nao possui ponteiro, entao, salvando em uma variavel temporaria o no corrente, ele nao seria alterado
+inserirNodo (atual :: No, chave :: Int) : No, Int{
+    if (atual == null){
+        novo :: No;
+        novo.prox = null;
+        novo.chave = chave;
+        return novo, 1;
+    }
+
+    novo :: No;
+    totalItens :: Int;
+    inserirNodo(atual.prox, chave)<novo, totalItens>;
+    atual.prox = novo;
+    totalItens = totalItens + 1;
+    return atual, totalItens;
+}
+
+inserirNaLista(lista :: Lista, chave :: Int) : Lista{
+    no :: No;
+    totalItens :: Int;
+
+    inserirNodo(lista.primeiro, chave)<no, totalItens>;
+
+    lista.primeiro = no;
+    lista.qtdElementos = totalItens;
+
+    return lista;
+}
+
+
+
+removerNodo (atual :: No, chave :: Int, remover :: Bool) : No, Int{
+    if (atual == null){
+        return atual, 0;
+    }
+
+    if (atual.chave == chave && remover){
+        prox :: No;
+        totalItens :: Int;
+        removerNodo(atual.prox, chave, false)<prox, totalItens>;
+        return prox, totalItens;
+    }
+
+    else{
+        prox :: No;
+        totalItens :: Int;
+        removerNodo(atual.prox, chave, true)<prox, totalItens>;
+        atual.prox = prox;
+        return atual, totalItens + 1;
+    }
+}
+
+removerNaLista(lista :: Lista, chave :: Int) : Lista{
+    no :: No;
+    totalItens :: Int;
+
+    removerNodo(lista.primeiro, chave, true)<no, totalItens>;
+
+    lista.primeiro = no;
+    lista.qtdElementos = totalItens;
+
+    return lista;
+}
+
+
+
+contagemDeItensRecursiva(no :: No) : Int{
+    if(no == null){return 0;}
+    return contagemDeItensRecursiva(no.prox)[0] + 1;
+}
+contagemDeItens(lista :: Lista): Int{
+    return contagemDeItensRecursiva(lista.primeiro)[0];
+}
+
+
+
+pesquisa(lista :: Lista, chave :: Int) : Bool{
+    temp :: No = lista.primeiro;
+    iterate(lista.qtdElementos){
+        if (temp.chave == chave){
+            return true;
+        }
+        temp = temp.prox;
+    }
+    return false;
+}
+
+exibirLista(lista :: Lista) {
+    temp :: No = lista.primeiro;
+    iterate(lista.qtdElementos){
+        print temp.chave;
+        temp = temp.prox;
+    }
+}
+
+
+
+main(){
+    lista :: Lista;
+    lista = novaLista()[0];
+
+    i :: Int = 1;
+    iterate(10){
+        lista = inserirNaLista(lista, i)[0];
+        i = i + 1;
+    }
+
+    exibirLista(lista);
+    
+    print pesquisa(lista, 3)[0];
+    print pesquisa(lista, 1024)[0];
+
+    lista = removerNaLista(lista, 5)[0];
+    exibirLista(lista);
+    print contagemDeItens(lista)[0];
+}

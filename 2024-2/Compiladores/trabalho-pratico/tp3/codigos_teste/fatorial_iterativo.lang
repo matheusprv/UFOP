@@ -1,0 +1,11 @@
+main(args :: Char []){
+    -- fatorial
+    a :: Int = 5;
+    i :: Int = a - 1;
+
+    iterate (a-2){
+        a = a * i;
+        i = i - 1;
+    }
+    print a;
+}

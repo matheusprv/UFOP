@@ -1,0 +1,36 @@
+Vamos apresentar um programa Imp para o cálculo do fatorial de
+um número inteiro.
+
+> {
+
+Primeiro, vamos definir uma variável **n**, de tipo inteiro, e 
+a inicializamos com o valor **0**.
+
+> int n := 0;
+
+Em seguida, realizamos a leitura do valor do fatorial a ser calculado.
+
+> read n;
+
+O próximo passo é definir uma variável inteira para armazenar o resultado
+final. Vamos iniciá-la com o valor **1**.
+
+> int result := 1;
+
+Agora, vamos repetir os próximos passos enquanto o valor **n** for maior que **0**.
+
+> while 0 < n {
+
+Atualizamos o valor da variável **result** para **result * n**. 
+
+>    result := result * n ;
+
+O próximo passo é subtrair **1** do valor atual de **n**.
+>    n := n - 1;
+>  }
+
+Terminamos por imprimir o resultado.
+>  print result;
+> }
+
+Aqui finalizamos o codigo

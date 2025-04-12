@@ -1,0 +1,139 @@
+data No{
+    chave :: Int;
+    esq :: No;
+    dir :: No;
+}
+
+
+novaArvore() : No{
+    return null;
+}
+
+inserir(no :: No, chave :: Int) : No{
+    -- no folha
+    if(no == null){
+        novoNo :: No;
+        novoNo.esq = null;
+        novoNo.dir = null;
+        novoNo.chave = chave;
+        return novoNo;
+    }
+
+    if(chave < no.chave){
+        no.esq = inserir(no.esq, chave)[0];
+        return no;
+    }
+    else{
+        no.dir = inserir(no.dir, chave)[0];
+        return no;
+    }
+}
+
+
+
+menorValor(no :: No) : No{
+    if(no.esq == null){
+        return no;
+    }
+    else{
+        return menorValor(no.esq)[0];
+    }
+}
+
+remover(no :: No, chave :: Int) : No {
+    if(no == null){
+        return null;
+    }
+
+    if(chave < no.chave){
+        no.esq = remover(no.esq, chave)[0]; 
+        return no;
+    }
+    if(chave > no.chave){
+        no.dir = remover(no.dir, chave)[0];
+        return no;
+    }
+    else{
+        -- Caso 1: sem filhos
+        if(no.esq == null && no.dir == null){
+            return null;
+        }
+
+        -- Caso 2: apenas um filho
+        if(no.esq == null){
+            return no.dir;
+        }
+        if(no.dir == null){
+            return no.esq;
+        }
+
+        -- Caso 3: dois filhos. Pega o mais à esquerda
+        sucessor :: No = menorValor(no.dir)[0];
+        no.chave = sucessor.chave;
+        no.dir = remover(no.dir, sucessor.chave)[0];
+        return no;
+    }
+}
+
+
+
+busca(no :: No, chave :: Int) : Bool{
+    if(no == null){
+        return false;
+    }
+    if (chave == no.chave){
+        return true;
+    }
+    if(chave < no.chave){
+        return busca(no.esq, chave)[0];
+    }
+    else{
+        return busca(no.dir, chave)[0];
+    }
+}
+
+
+preOrdem(no :: No){
+    if(no != null){
+        print(no.chave);
+        preOrdem(no.esq);
+        preOrdem(no.dir);
+    }
+}
+
+emOrdem(no :: No){
+    if(no != null){
+        emOrdem(no.esq);
+        print(no.chave);
+        emOrdem(no.dir);
+    }
+}
+
+posOrdem(no :: No){
+    if(no != null){
+        posOrdem(no.esq);
+        posOrdem(no.dir);
+        print(no.chave);
+    }
+}
+
+
+
+main(){
+    raiz :: No = novaArvore()[0];
+    raiz = inserir(raiz, 10)[0];
+    raiz = inserir(raiz, 7)[0];
+    raiz = inserir(raiz, 17)[0];
+    raiz = inserir(raiz, 5)[0];
+    raiz = inserir(raiz, 45)[0];
+
+    emOrdem(raiz);
+
+    print busca(raiz, 45)[0];
+    print busca(raiz, 1024)[0];
+
+    raiz = remover(raiz, 7)[0];
+    emOrdem(raiz);
+
+
+}

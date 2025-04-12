@@ -1,0 +1,63 @@
+data Fila{
+    arr :: Int[];
+    qtdItens :: Int;
+    maximo :: Int;
+}
+
+novaFila(n :: Int) : Fila{
+    fila :: Fila;
+    fila.arr = new Int[n];
+    fila.maximo = n;
+    return fila;
+}
+
+inserirNaFila(fila :: Fila, valor :: Int) : Fila{
+    
+    if (fila.qtdItens == fila.maximo){
+        print 'n';
+        return fila;
+    }
+
+
+    i :: Int = fila.qtdItens;
+
+    iterate(fila.qtdItens){
+        fila.arr[i] = fila.arr[i-1];
+        i = i - 1;
+    }
+
+    fila.arr[0] = valor;
+    fila.qtdItens = fila.qtdItens + 1;
+    return fila;
+}
+
+removerNaFila(fila :: Fila) : Fila{
+    if (fila.qtdItens == 0){
+        return fila; -- Nao ha o que remover
+    }
+    
+    fila.qtdItens = fila.qtdItens - 1;
+    fila.arr[fila.qtdItens] = 0;
+    return fila;
+} 
+
+exibirFila (fila :: Fila) {
+    i :: Int = 0;
+    iterate(fila.qtdItens){
+        print fila.arr[i];
+        i = i + 1;
+    }
+}
+
+main(){
+    fila :: Fila;
+    fila = novaFila(5)[0];
+    fila = inserirNaFila(fila, 1)[0];
+    fila = inserirNaFila(fila, 2)[0];
+    fila = inserirNaFila(fila, 3)[0];
+
+    exibirFila(fila);
+
+    fila = removerNaFila(fila)[0];
+    exibirFila(fila);
+}

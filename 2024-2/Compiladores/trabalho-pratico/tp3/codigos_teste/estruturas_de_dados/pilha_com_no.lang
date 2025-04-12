@@ -1,0 +1,98 @@
+data No{
+    chave :: Int;
+    prox :: No;
+}
+
+-- Inserção e remoção na primeira posição
+data Pilha{
+    primeiro :: No;
+}
+
+
+
+novaPilha() : Pilha{
+    pilha :: Pilha;
+    pilha.primeiro = null;
+    return pilha;
+}
+
+
+
+contagemDeItensRecursiva(no :: No) : Int{
+    if(no == null){return 0;}
+    return contagemDeItensRecursiva(no.prox)[0] + 1;
+}
+contagemDeItens(pilha :: Pilha): Int{
+    return contagemDeItensRecursiva(pilha.primeiro)[0];
+}
+
+
+
+
+inserirNaPilha(pilha :: Pilha, chave :: Int) : Pilha{
+    novoNo :: No;
+    novoNo.chave = chave;
+    novoNo.prox = pilha.primeiro;
+
+    pilha.primeiro = novoNo;
+
+    return pilha;
+}
+
+
+removerNaPilha(pilha :: Pilha) : Pilha, Int{
+    if(contagemDeItens(pilha)[0] == 0){
+        print 'n';
+        return pilha, -1;
+    }
+    
+    chave :: Int = pilha.primeiro.chave;
+    pilha.primeiro = pilha.primeiro.prox;
+    return pilha, chave;
+}
+
+
+
+pesquisa(pilha :: Pilha, chave :: Int) : Bool{
+    temp :: No = pilha.primeiro;
+    iterate(contagemDeItens(pilha)[0]){
+        if (temp.chave == chave){
+            return true;
+        }
+        temp = temp.prox;
+    }
+    return false;
+}
+
+exibirPilha(pilha :: Pilha) {
+    temp :: No = pilha.primeiro;
+    iterate(contagemDeItens(pilha)[0]){
+        print temp.chave;
+        temp = temp.prox;
+    }
+}
+
+
+
+main(){
+    pilha :: Pilha;
+    pilha = novaPilha()[0];
+
+    i :: Int = 1;
+    iterate(10){
+        pilha = inserirNaPilha(pilha, i)[0];
+        i = i + 1;
+    }
+
+    exibirPilha(pilha);
+    
+    print pesquisa(pilha, 3)[0];
+    print pesquisa(pilha, 1024)[0];
+
+    removido :: int;
+    removerNaPilha(pilha)<pilha, removido>;
+    removerNaPilha(pilha)<pilha, removido>;
+    exibirPilha(pilha);
+
+    print contagemDeItens(pilha)[0];
+}

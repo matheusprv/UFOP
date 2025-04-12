@@ -1,0 +1,17 @@
+main(args :: Char []){
+    n :: Int = 7;
+    
+    n1 :: Int = 1;
+    n2 :: Int = 1;
+
+    i :: Int = 2;
+    iterate (n-2){
+        temp :: Int = n2;
+        n2 = n1 + n2;
+        n1 = temp;
+
+        i = i + 1;
+    } 
+
+    print n2;
+}

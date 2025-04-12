@@ -1,0 +1,73 @@
+cabal-version:      3.0
+name:               Lang
+version:            0.2.0.0
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             Matheus Peixoto Ribeiro Vieira, Pedro Henrique Rabelo Leão de Oliveira
+category:           Compiler
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+common lang-settings
+    import: warnings
+    hs-source-dirs: app
+    build-depends:
+        base,
+        array,
+        containers,
+        parsec,
+        mtl,
+        filepath
+    default-language: Haskell2010
+
+common lang-modules
+    other-modules:
+        Syntax.Syntax
+        Frontend.Lexer.Lexer
+        Frontend.Parser.Recursive.SimpleCombinators
+        Frontend.Parser.Recursive.Parser
+        Frontend.Parser.PEG.ParsingExp
+        Frontend.Parser.PEG.Grammar
+        Frontend.Parser.PEG.Parser
+        Frontend.Parser.LALR.Parser
+        Interpreter.LangInterpreter
+
+        Frontend.Semantics.Basics
+        Frontend.Semantics.ExpTypeCheck
+        Frontend.Semantics.StatementTypeChecker
+
+        ConvertingToTree
+
+        Backend.Python.StatementPythonCodegen
+        Backend.Python.ExpPythonCodegen
+        Backend.SVM.ExpCodegen
+        Backend.Python.ExpPythonCodegen
+
+        -- Backend.SVM.ExpCodegen
+        -- Backend.SVM.StatementCodeGen
+
+        SVM.Instr
+
+executable lang
+    import: lang-settings, lang-modules
+    main-is: Main.hs
+
+test-suite teste
+    -- cabal build teste
+    -- cabal test teste
+    import: lang-settings, lang-modules
+    hs-source-dirs: test
+    main-is: MainTeste.hs
+    type: exitcode-stdio-1.0
+    build-depends:
+        tasty,
+        tasty-hunit
+    other-modules:
+        Frontend.Lexer.TestLexer
+        Frontend.Parser.Recursive.TestParser
+        Frontend.Parser.LALR.TestLALR
+        Frontend.Parser.PEG.TestPEG
+        Backend.Python.TestExpPythonCodeGen

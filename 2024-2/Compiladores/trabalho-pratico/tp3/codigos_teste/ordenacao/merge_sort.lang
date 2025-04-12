@@ -1,0 +1,112 @@
+gerar_array_reverso(n :: Int) : Int[]{
+    -- Gera um vetor de N posições na ordem decrescente
+    
+    arr :: Int[] = new Int[n];
+
+    i :: Int = n-1;
+    iterate(n){
+        arr[n-i-1] = i;
+        
+        i = i-1;
+    }
+    return arr;
+}
+
+print_array(arr :: Int[], n :: Int){
+    i :: Int = 0;
+    iterate(n){
+        print arr[i];
+        i = i + 1;
+    }
+}
+
+
+merge(arr :: Int[], esq :: Int, meio :: Int, dir :: Int) : Int[] {
+    i :: Int;
+    j :: Int;
+    k :: Int;
+    n1 :: Int = meio - esq + 1;
+    n2 :: Int = dir - meio;
+
+    -- arrays temporarios
+    l :: Int[] = new Int[n1];
+    r :: Int[] = new Int[n2];
+    
+    i = 0;
+    iterate (n1) {
+        l[i] = arr[esq + i];
+        i = i + 1;
+    }
+    j = 0;
+    iterate (n2) {
+        r[j] = arr[meio + 1 + j];
+        j = j + 1;
+    }
+
+    i = 0;
+    j = 0;
+    k = esq;
+    stop :: Bool = false;
+    iterate (n1){
+        if (!stop){
+            if (i < n1 && j < n2){
+                if(l[i] > r[j]){
+                    arr[k] = r[j];
+                    j = j + 1;
+                }
+                else{
+                    arr[k] = l[i];
+                    i = i + 1;
+                }
+                k = k + 1;
+            }
+            else{
+                stop = true;
+            }
+        }
+    }
+
+    -- copia os elementos restantes de l[], se houver
+    iterate (n1-i) {
+        arr[k] = l[i];
+        i = i + 1;
+        k = k + 1;
+    }
+
+    -- copia os elementos restantes de r[], se houver
+    iterate (n2-j) {
+        arr[k] = r[j];
+        j = j + 1;
+        k = k + 1;
+    }
+
+    return arr;
+ }
+
+ merge_sort(arr :: Int[], esq :: Int, dir :: Int) : Int[] {
+    if (esq < dir) {
+        meio :: Int = esq + (dir - esq) / 2;
+        
+        -- ordena as duas metades
+        arr = merge_sort(arr, esq, meio)[0];
+        arr = merge_sort(arr, meio + 1, dir)[0];
+
+        -- merge nas metades ordenadas
+        arr = merge(arr, esq, meio, dir)[0];
+    }
+
+    return arr;
+ }
+
+main(){
+    n   :: Int = 10;
+    arr :: Int[] = gerar_array_reverso(n)[0];
+
+    print_array(arr, n);
+
+    print 'd';
+    arr = gerar_array_reverso(n)[0];
+    arr = merge_sort(arr, 0, n-1)[0];
+    print_array(arr, n);
+
+}

@@ -1,0 +1,42 @@
+teste() : Int[] {
+    x :: Int[] = new Int [5, 4, 6];
+    x[1][2][3] = 5;
+    x[1][2][4] = 8;
+    return x;
+}
+
+teste2() : Int {
+    return 2;
+}
+
+main() {
+    b :: Int = 5;
+    a :: Int[] = new Int [5, 4, 6];
+    c :: Int[];
+    c = new Int [5, 4, 6];
+    a[b-1][2][0] = 70;
+    print a[4-1][2][0];
+
+    read c[0];
+    read a[4-1][2][0];
+
+
+    read a[0][0][0];
+    print a[0][0][0] + a[b-1][2][0];
+
+
+    c :: Int [] = a;
+    c[b-1][2][0] = 70;
+
+    print a[b-1][2][0];
+    print c[b-1][2][0];
+
+    d :: Int [] = teste()[0];
+    print d[1][2][3];
+
+    e :: Int[] = new Int [5, 4, 6];
+    teste()<e>;
+    teste2()<e[1][2][5]>;
+    print e[1][2][4];
+    print e[1][2][5];
+}

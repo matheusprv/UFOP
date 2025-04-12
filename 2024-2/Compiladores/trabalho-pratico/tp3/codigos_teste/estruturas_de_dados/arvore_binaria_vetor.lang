@@ -1,0 +1,99 @@
+novaArvore() : Int[] {
+    arr :: Int[] = new Int[3];  -- Cada nó terá 3 posições: valor, filho esquerdo, filho direito
+
+    i :: Int = 0;
+    iterate(3) {
+        arr[i] = null;
+        i = i + 1;
+    }
+    return arr;
+}
+
+tamanhoArvore(arvore :: Int[]) : Int {
+    count :: Int = 0;
+    iterate(1000) {
+        if (arvore[count] == null) {
+            return count / 3;  -- Cada nó ocupa 3 posições
+        }
+        count = count + 3;
+    }
+    return count / 3;
+}
+
+expandirArvore(arvore :: Int[], novoTamanho :: Int) : Int[] {
+    novaArvore :: Int[] = new Int[novoTamanho * 3];
+    i :: Int = 0;
+    iterate(novoTamanho * 3) {
+        if (i < tamanhoArvore(arvore)[0] * 3) {
+            novaArvore[i] = arvore[i];
+        } else {
+            novaArvore[i] = null;
+        }
+        i = i + 1;
+    }
+    return novaArvore;
+}
+
+inserirNaArvore(arvore :: Int[], valor :: Int, tamanhoAtual :: Int) : Int[] {
+    arvore = expandirArvore(arvore, tamanhoAtual + 1)[0];
+    i :: Int = 0;
+    iterate(tamanhoAtual + 1) {
+        if (arvore[i] == null) {
+            arvore[i] = valor;
+            return arvore;
+        } else if (valor < arvore[i]) {
+            i = 3 * i + 1;  -- Filho esquerdo
+        } else {
+            i = 3 * i + 2;  -- Filho direito
+        }
+    }
+    return arvore;
+}
+
+pesquisarNaArvore(arvore :: Int[], valor :: Int, maximo :: Int) : Bool {
+    i :: Int = 0;
+    iterate(maximo) {
+        if (arvore[i] == null) {
+            return false;
+        } else if (arvore[i] == valor) {
+            return true;
+        } else if (valor < arvore[i]) {
+            i = 3 * i + 1;  -- Filho esquerdo
+        } else {
+            i = 3 * i + 2;  -- Filho direito
+        }
+    }
+    return false;
+}
+
+removerDaArvore(arvore :: Int[], valor :: Int, maximo :: Int) : Int[] {
+    i :: Int = 0;
+    iterate(maximo) {
+        if (arvore[i] == null) {
+            print 'n';  -- Valor não encontrado
+            return arvore;
+        } else if (arvore[i] == valor) {
+            arvore[i] = null;  -- Apenas remove sem reorganizar
+            return arvore;
+        } else if (valor < arvore[i]) {
+            i = 3 * i + 1;  -- Filho esquerdo
+        } else {
+            i = 3 * i + 2;  -- Filho direito
+        }
+    }
+    return arvore;
+}
+
+main() {
+    arvore :: Int[] = novaArvore()[0];
+
+    arvore = inserirNaArvore(arvore, 50, 1)[0];
+    arvore = inserirNaArvore(arvore, 70, 2)[0];
+    arvore = inserirNaArvore(arvore, 30, 3)[0];
+
+    print pesquisarNaArvore(arvore, 30, 3)[0];
+    print pesquisarNaArvore(arvore, 100, 3)[0];
+
+    arvore = removerDaArvore(arvore, 30, 3)[0];
+    print pesquisarNaArvore(arvore, 30, 3)[0];
+}

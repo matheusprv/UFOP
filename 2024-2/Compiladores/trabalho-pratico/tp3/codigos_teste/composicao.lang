@@ -1,0 +1,40 @@
+data Racional {
+    numerador :: Int;
+    denominador :: Int;
+}
+
+data Teste {
+    nome :: Char;
+    r1 :: Racional;
+    t1 :: Teste;
+}
+
+main(){
+    t :: Teste;
+    t.r1.numerador = 2;
+    print t.t1.r1.numerador;
+    
+    a :: Racional;
+    read a.numerador;
+
+    a.numerador = 10;
+    a.denominador = 2;
+    
+    print a.numerador / a.denominador;
+    
+    teste :: Teste;
+    teste.nome = 'o';
+    print teste.nome;
+    teste.r1.numerador = 4;
+    teste.r1.denominador = 2;
+
+    b :: Int;
+    b = teste.r1.numerador;
+    print b;
+
+    print (teste.r1.numerador / teste.r1.denominador);
+
+
+    read a.numerador;
+
+}

@@ -1,0 +1,1 @@
+data Foo { f :: Float; i :: Int; c :: Char; b :: Bool; }

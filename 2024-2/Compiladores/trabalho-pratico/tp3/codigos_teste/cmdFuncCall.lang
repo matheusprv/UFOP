@@ -1,0 +1,7 @@
+teste() {
+    print 'a';
+}
+
+main() {
+    teste();
+}

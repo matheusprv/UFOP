@@ -1,0 +1,137 @@
+cabal-version:      3.0
+name:               imp
+
+version:            0.1.0.0
+
+license:            MIT
+
+license-file:       LICENSE
+
+author:             Rodrigo Ribeiro
+
+maintainer:         rodrigogribeiro@gmail.com
+
+category:           Language
+build-type:         Simple
+
+extra-doc-files:    CHANGELOG.md
+
+
+common warnings
+    ghc-options: -Wall
+
+library
+    -- Import common warning flags.
+    import:           warnings
+
+    -- Modules exported by the library.
+    exposed-modules:  
+      Imp.Backend.C.ExpCCodegen
+      Imp.Backend.C.StatementCCodegen
+      Imp.Backend.SVM.ExpCodegen 
+      Imp.Backend.SVM.StatementCodegen 
+      Imp.Frontend.Lexer.Lexer
+      Imp.Frontend.Parser.Parser 
+      Imp.Frontend.Semantics.Basics
+      Imp.Frontend.Semantics.ExpTypeChecker
+      Imp.Frontend.Semantics.StatementTypeChecker
+      Imp.Interpreter.ImpInterpreter
+      Imp.Syntax.Syntax
+      SVM.Instr
+      SVM.Interp
+      SVM.StackLexer
+      SVM.StackParser
+
+      Limp.Frontend.Lexer.Lexer
+      Limp.Frontend.Parser.Parser 
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    -- Other library packages from which modules are imported.
+    build-depends:    base ^>=4.18.2.1,
+                      containers,
+                      mtl,
+                      array,
+                      megaparsec,
+                      parser-combinators,
+                      filepath,
+                      pretty
+ 
+    -- Directories containing source files.
+    hs-source-dirs:   src
+
+    -- Base language which the package is written in.
+    default-language: Haskell2010
+
+executable imp
+    -- Import common warning flags.
+    import:           warnings
+
+    -- .hs or .lhs file containing the Main module.
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    -- Other library packages from which modules are imported.
+    build-depends:
+        base ^>=4.18.2.1,
+        pretty, 
+        filepath,
+        imp
+
+    -- Directories containing source files.
+    hs-source-dirs:   app
+
+    -- Base language which the package is written in.
+    default-language: Haskell2010
+
+test-suite imp-test
+    -- Import common warning flags.
+    import:           warnings
+
+    -- Base language which the package is written in.
+    default-language: Haskell2010
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    -- The interface type and version of the test suite.
+    type:             exitcode-stdio-1.0
+
+    -- Directories containing source files.
+    hs-source-dirs:   test
+
+    -- The entrypoint to the test suite.
+    main-is:          Main.hs
+
+    -- Test dependencies.
+    build-depends:
+        base ^>=4.18.2.1,
+        imp
+
+executable svm
+    import:           warnings
+    main-is:          VMMain.hs
+    -- other-modules:
+    -- other-extensions:
+    build-depends:
+        base ^>=4.18.2.1,
+        pretty, 
+        filepath,
+        imp
+
+    hs-source-dirs:   src/SVM
+    default-language: Haskell2010
+
+

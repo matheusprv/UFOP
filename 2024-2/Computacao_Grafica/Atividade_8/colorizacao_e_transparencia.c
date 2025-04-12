@@ -1,3 +1,5 @@
+// gcc colorizacao_e_transparencia.c -o exec -lGL -lGLU -lglut -lm
+
 #include <GL/glut.h>
 #include <math.h>
 #include <stdlib.h>
@@ -62,6 +64,7 @@ void exibirObjetoSelecionado() {
     else if(objeto_atual_selecionado == FUNDO)
         sprintf(label, "Selecionado: Background");
     
+    // Exibindo o texto na tela
     float x = -1.0f;
     float y = 0.90f;
     glRasterPos2f(x, y);
@@ -124,18 +127,6 @@ void display(void) {
     glutSwapBuffers();
 }
 
-void reshape(int w, int h) {
-    glViewport(0, 0, (GLsizei)w, (GLsizei)h);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    if (w <= h)
-        glOrtho(-1.0, 1.0, -1.0 * (GLfloat)h/(GLfloat)w, 1.0 * (GLfloat)h/(GLfloat)w, -1.0, 1.0);
-    else
-        glOrtho(-1.0 * (GLfloat)w/(GLfloat)h, 1.0 * (GLfloat)w/(GLfloat)h, -1.0, 1.0, -1.0, 1.0);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-}
-
 typedef struct Retorno{
     int rgb;
     bool incremento; // true para incremento e false para decremento
@@ -193,6 +184,7 @@ void keyboard(unsigned char key, int x, int y) {
     else if (key == 's' && objeto_atual_selecionado != FUNDO)
         objetos[objeto_atual_selecionado].cor[3] = fmaxf(0.0f, objetos[objeto_atual_selecionado].cor[3] - 0.1f);
     
+    // Alterando a cor dos objetos
     else {
         Retorno ret = mapear_teclas_e_valores(key);
         if(ret.valido){
@@ -214,6 +206,7 @@ void keyboard(unsigned char key, int x, int y) {
     glutPostRedisplay();
 }
 
+// Movimentando o objeto selecionado
 void specialKeys(int key, int x, int y) {
     float moveAmount = 0.05f;
     if (objeto_atual_selecionado == 3)
@@ -240,7 +233,6 @@ int main(int argc, char** argv) {
     
     instanciarObjetos();
     glutDisplayFunc(display);
-    glutReshapeFunc(reshape);
     glutKeyboardFunc(keyboard);
     glutSpecialFunc(specialKeys);
     

@@ -1,0 +1,51 @@
+data Pilha{
+    arr :: Int[];
+    qtdItens :: Int;
+    maximo :: Int;
+}
+
+novaPilha(n :: Int) : Pilha{
+    pilha :: Pilha;
+    pilha.arr = new Int[n];
+    pilha.maximo = n;
+    return pilha;
+}
+
+pilhaCheia(pilha :: Pilha) : Bool{
+    return (pilha.qtdItens == pilha.maximo);
+}
+
+inserirNaPilha(pilha :: Pilha, chave :: Int) : Pilha{
+    if(pilhaCheia(pilha)[0]){
+        print 'n';
+        return pilha;
+    }
+    
+    print 's';
+    
+    i :: Int = pilha.qtdItens;
+    pilha.arr[i] = chave;
+    pilha.qtdItens = pilha.qtdItens + 1;
+
+    print pilha.qtdItens;
+
+    return pilha;
+}
+
+exibirPilha(pilha :: Pilha){
+    i :: Int;
+    iterate(pilha.qtdItens){
+        print pilha.arr[i];
+        i = i + 1;
+    }
+}
+
+main(){
+    pilha :: Pilha = novaPilha(10)[0];
+
+    pilha = inserirNaPilha(pilha, 77)[0];
+    pilha = inserirNaPilha(pilha, 44)[0];
+    pilha = inserirNaPilha(pilha, 33)[0];
+
+    exibirPilha(pilha);
+}

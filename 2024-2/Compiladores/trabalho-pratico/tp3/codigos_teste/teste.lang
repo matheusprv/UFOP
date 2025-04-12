@@ -1,0 +1,23 @@
+teste(x :: Int, y :: Int) : Int, Int {
+    return x + y, x*x;
+    print 'o';
+}
+
+data Racional {
+    numerador :: Int;
+    denominador :: Int;
+}
+
+main(args :: Char []) {
+    -- a :: Int;
+    -- b :: Int;
+    -- teste(2, 3)<a, b>;
+    -- a = teste(2, 3)[0];
+-- 
+    -- print a;
+    -- print b;
+    a :: Racional;
+
+    a :: Int;
+    read a;
+}
