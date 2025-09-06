@@ -38,3 +38,9 @@
 * [Introdução a otimização](/2024-2/Introducao%20a%20otimizacao/)
 * [Redes Neurais](/2024-2/Redes%20Neurais/)
 
+# 7º Período - 2025-1
+* [Informática e Sociedade](/2025-1/Informatica_e_Sociedade/)
+* [Mineração de Dados](/2025-1/mineracao_de_dados/)
+* [Monografia I](/2025-1/Monografia_I/)
+* [Processamento de Imagens](/2025-1/PDI/)
+* [Reconhecimento de Padrões](/2025-1/Reconhecimento_de_padroes/)
