@@ -44,3 +44,8 @@
 * [Monografia I](/2025-1/Monografia_I/)
 * [Processamento de Imagens](/2025-1/PDI/)
 * [Reconhecimento de Padrões](/2025-1/Reconhecimento_de_padroes/)
+
+# 8º Período - 2025-2
+* [Inteligência Computacional](/2025-2/inteligencia_computacional/)
+* [Monografia](/2025-2/Monografia/)
+* [Programação paralela](/2025-2/programacao_paralela/)
